@@ -80,8 +80,8 @@
 
 每个工程的详细使用说明请查看对应目录下的README文件：
 
-- [LED模块说明](led/README.md)
-- [I2C模块说明](i2c/README.md)
+- [LED模块说明](led/readme.md)
+- [I2C模块说明](i2c/readme.md)
 
 
 
