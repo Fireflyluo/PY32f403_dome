@@ -1,0 +1,35 @@
+./objects/py32f403_hal_exti.o: \
+  ..\Firmware\PY32F403_HAL_Driver\Src\py32f403_hal_exti.c \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h \
+  ..\Application\Inc\py32f403_hal_conf.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_def.h \
+  ..\Firmware\CMSIS\Device\PUYA\PY32F403\Include\py32f4xx.h \
+  ..\Firmware\CMSIS\Device\PUYA\PY32F403\Include\py32f403xD.h \
+  ..\Firmware\CMSIS\Include\core_cm4.h \
+  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Firmware\CMSIS\Include\cmsis_version.h \
+  ..\Firmware\CMSIS\Include\cmsis_compiler.h \
+  ..\Firmware\CMSIS\Include\cmsis_armclang.h \
+  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  ..\Firmware\CMSIS\Device\PUYA\PY32F403\Include\system_py32f4xx.h \
+  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_dma.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_dma_ex.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_exti.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_flash.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_gpio.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_gpio_ex.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_rcc.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_rcc_ex.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_i2c.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_pwr.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_pwr_ex.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_spi.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_spi_ex.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_tim.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
+  ..\Firmware\PY32F403_HAL_Driver\Inc\py32f403_hal_usart.h
