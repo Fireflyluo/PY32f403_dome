@@ -94,15 +94,19 @@
 
 ## 更新日志
 
-- **2024-XX-XX**: 初始版本提交
+- **2025-09-12**: 初始版本提交
   - 添加LED控制示例
   - 添加I2C基础通信示例
+  - 添加陀螺仪QMI8658A驱动
+  - 添加气压计LPS22HB驱动
+  - 修改工程结构和文档描述
 
 ## 联系方式
 
-- 作者: TODO
-- 邮箱: TODO
-- 项目地址: TODO
+- 作者: Fireflyluo
+- qq: 2161486135
+- 邮箱: 2161486135@qq.com
+- 硬件开源地址：https://oshwhub.com/fireflyluo/py32f403-sensor-and-24g-developm
 
 ## 注意事项
 
