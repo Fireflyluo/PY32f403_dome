@@ -35,8 +35,45 @@
 │   └── ...             
 └── Readme.md         --文档
 ```
+## 工程结构
+```
+├── Application              # 应用层 (业务逻辑、任务调度、UI交互)
+│   └── Sensor_Factory       # 工厂模式接口实现 (可选，若与业务强相关可放这里)
+├── BSP                      # 板级支持包 (硬件直接操作层)
+│   ├── MCU_Peripheral       # 片上外设驱动 (GPIO/SPI/I2C等初始化与读写)
+│   └── Sensor_Driver        # 传感器裸寄存器驱动 (xxxx_reg.c)
+│       ├── lcd_reg.c        # LCD寄存器级操作
+│       ├── qmi8658a_reg.c   # IMU寄存器级操作
+│       └── si24r1_reg.c     # 射频模块寄存器级操作
+├── Drivers                  # 设备驱动层 (硬件抽象接口)
+│   ├── Sensor               # 传感器标准化接口 
+│   │   ├── lcd.c            # LCD的init/read/write接口
+│   │   ├── qmi8658a.c       # IMU的init/read/write接口
+│   │   └── si24r1.c         # 射频模块的init/read/write接口
+│   └── Sensor_Factory       # 工厂模式抽象层 (统一传感器访问接口)
+│       ├── sensor_factory.c 
+│       └── sensor_interface.h 
+├── Libraries                # 芯片厂商提供的底层库 
+│   ├── CMSIS                # ARM内核抽象层 (如STM32的CMSIS)
+│   └── HAL_Driver           # 厂商HAL/标准库 (如STM32 HAL)
+├── Middleware               # 通用中间件 (硬件无关)
+│   ├── Algorithm            # 算法库 (crc, filter, math)
+│   ├── Data_Structure       # 数据结构 (ringbuff, queue, list)
+│   └── Utilities            # 工具函数 (printf重定向, 位操作)
+├── Platform                 # 平台抽象层 (可选)
+│   ├── platform.c           # 系统时钟/延时抽象
+│   └── gpio_abstract.h      # GPIO操作抽象接口
+├── Project                  # 工程文件 (IDE相关)
+│   └── MDK-ARM              # Keil工程
+└── Include                  # 全局头文件 (替代Public)
+    ├── config.h             # 项目配置
+    ├── types.h              # 自定义数据类型
+    └── sensor_defines.h     # 传感器通用参数定义
+
+```
 
 ## 开发环境
+
 
 - **IDE/编译器**: keil/vscode eide
 - **编程语言**: C
