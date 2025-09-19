@@ -11,8 +11,6 @@ LED --> PB2
 │   ├── MCU_Peripheral       # 片上外设驱动 (GPIO/SPI/I2C等初始化与读写)
 │   └── Sensor_Driver        # 传感器裸寄存器驱动 (xxxx_reg.c)
 ├── Drivers                  # 设备驱动层 (硬件抽象接口)
-│   ├── Sensor               # 传感器标准化接口 
-│   └── Sesor_Factory       # 工厂模式抽象层 (统一传感器访问接口)
 ├── Libraries                # 芯片厂商提供的底层库 
 │   ├── CMSIS                # ARM内核抽象层 (如STM32的CMSIS)
 │   └── HAL_Driver           # 厂商HAL/标准库 (如STM32 HAL)

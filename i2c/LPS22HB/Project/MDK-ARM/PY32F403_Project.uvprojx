@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,PY32F403xD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Firmware\CMSIS\Include;..\Firmware\PY32F403_HAL_Driver\Inc;..\Firmware\CMSIS\Device\PUYA\PY32F403\Include;..\Application\Inc;..\BSP\MCU_Driver\Inc;..\BSP\Module_Driver\QMI8658A;..\Device</IncludePath>
+              <IncludePath>..\Libraries\CMSIS\Include;..\Libraries\PY32F403_HAL_Driver\Inc;..\Libraries\CMSIS\Device\PUYA\PY32F403\Include;..\Application\Inc;..\BSP\MCU_Peripheral\Inc;..\BSP\Sensor_Driver\QMI8658A;..\Drivers</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -413,67 +413,62 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>BSP/MCU_Driver</GroupName>
+          <GroupName>BSP/MCU_Peripheral</GroupName>
           <Files>
-            <File>
-              <FileName>i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\MCU_Driver\Src\i2c.c</FilePath>
-            </File>
-            <File>
-              <FileName>i2c.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\BSP\MCU_Driver\Inc\i2c.h</FilePath>
-            </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\MCU_Driver\Src\gpio.c</FilePath>
+              <FilePath>..\..\BSP\MCU_Peripheral\Src\gpio.c</FilePath>
             </File>
             <File>
-              <FileName>gpio.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\BSP\MCU_Driver\Inc\gpio.h</FilePath>
-            </File>
-            <File>
-              <FileName>usart.c</FileName>
+              <FileName>i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\MCU_Driver\Src\usart.c</FilePath>
+              <FilePath>..\..\BSP\MCU_Peripheral\Src\i2c.c</FilePath>
             </File>
             <File>
-              <FileName>usart.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\BSP\MCU_Driver\Inc\usart.h</FilePath>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\MCU_Peripheral\Src\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\MCU_Peripheral\Src\spi.c</FilePath>
             </File>
             <File>
               <FileName>tim.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\MCU_Driver\Src\tim.c</FilePath>
+              <FilePath>..\..\BSP\MCU_Peripheral\Src\tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\MCU_Peripheral\Src\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\MCU_Peripheral\Src\usart.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>BSP/Module_Driver</GroupName>
+          <GroupName>BSP/Sensor_Driver</GroupName>
           <Files>
             <File>
-              <FileName>qmi8658a_driver.c</FileName>
+              <FileName>lps22hb.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\Module_Driver\QMI8658A\qmi8658a_driver.c</FilePath>
+              <FilePath>..\..\BSP\Sensor_Driver\lps22hb\lps22hb.c</FilePath>
             </File>
             <File>
-              <FileName>qmi8658a_driver.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\BSP\Module_Driver\QMI8658A\qmi8658a_driver.h</FilePath>
-            </File>
-            <File>
-              <FileName>qmi8658a_reg.c</FileName>
+              <FileName>lps22hb_driver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\Module_Driver\QMI8658A\qmi8658a_reg.c</FilePath>
+              <FilePath>..\..\BSP\Sensor_Driver\lps22hb\lps22hb_driver.c</FilePath>
             </File>
             <File>
-              <FileName>qmi8658a_reg.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\BSP\Module_Driver\QMI8658A\qmi8658a_reg.h</FilePath>
+              <FileName>lps22hb_reg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\Sensor_Driver\lps22hb\lps22hb_reg.c</FilePath>
             </File>
           </Files>
         </Group>
