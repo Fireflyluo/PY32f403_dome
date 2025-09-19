@@ -16,18 +16,20 @@ LPS22HBTR 是一款高性能、超低功耗的压阻式绝对压力传感器，�
 ### 二、文件结构
 
 ```
-├── Application            -- 应用层代码目录
-├── DSP                      
-│   ├── MCU_Driver         -- 片上外设的驱动
-│   └── Module_Driver      -- 外部设备的硬件层驱动库 
-│       ├── lcd            -- lcd驱动
-│       └── lps22hb        -- lps22hb驱动 
-├── Device                 -- 驱动层代码          
-├── firmware               -- 固件代码
-├── Middleware             -- 中间层代码
-├── Public                 -- 公共文件
-├── MDK-ARM                -- 工程文件
-└── readme.md              -- 文档
+├── Application              # 应用层 (业务逻辑、任务调度、UI交互)
+├── BSP                      # 板级支持包 (硬件直接操作层)
+│   ├── MCU_Peripheral       # 片上外设驱动 (GPIO/SPI/I2C等初始化与读写)
+│   └── Sensor_Driver        # 传感器裸寄存器驱动 (xxxx_reg.c)
+│       ├── lcd              # LCD寄存器级操作
+│       └── lps22hb          # 气压计lps22hb
+├── Drivers                  # 设备驱动层 (硬件抽象接口)
+├── Libraries                # 芯片厂商提供的底层库 
+│   ├── CMSIS                # ARM内核抽象层 (如STM32的CMSIS)
+│   └── HAL_Driver           # 厂商HAL/标准库 (如STM32 HAL)
+├── Middleware               # 通用中间件 (硬件无关)
+├── Project                  # 工程文件 (IDE相关)
+│   └── MDK-ARM              # Keil工程
+└── Include                  # 全局头文件 (替代Public)
 ```
 
 ### 三、工程说明
