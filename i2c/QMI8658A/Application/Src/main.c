@@ -74,19 +74,6 @@ extern UART_HandleTypeDef huart2;
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClockConfig(void);
 
-static void APP_GpioConfig(void)
-{
-  GPIO_InitTypeDef  GPIO_InitStruct = {0};
-
-  __HAL_RCC_GPIOB_CLK_ENABLE();                            
-
-  GPIO_InitStruct.Pin = GPIO_PIN_2;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;            /* Push-pull output */
-  GPIO_InitStruct.Pull = GPIO_PULLUP;                    /* Enable pull-up */
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;          /* GPIO speed */  
-  /* GPIO Initialization */
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-}
 
 /**
   * @brief  main 函数
@@ -101,12 +88,11 @@ int main(void)
   SystemClockConfig();
 	
 
-//  APP_GpioConfig();
   MX_GPIO_Init();
   HAL_Delay(1);
-//  IIC_Init();
   MX_I2C2_Init();
   MX_USART2_UART_Init();
+  //检查i2c总线上挂载设备
   I2C2_ScanDevices();
   
   // 1. 初始化
@@ -142,7 +128,7 @@ int main(void)
             } else {
                 printf("Failed to read data!\n");
             }
-        HAL_Delay(10); // 延时 100ms
+        HAL_Delay(100); // 延时 100ms
       }
 
 }

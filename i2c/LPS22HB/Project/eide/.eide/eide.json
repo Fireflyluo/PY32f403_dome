@@ -1,0 +1,454 @@
+{
+  "name": "PY32F403_Project",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "Application",
+        "files": [
+          {
+            "path": "../../Application/Src/main.c"
+          },
+          {
+            "path": "../../Application/Src/py32f403_hal_msp.c"
+          },
+          {
+            "path": "../../Application/Src/py32f403_it.c"
+          },
+          {
+            "path": "../../Application/Inc/main.h"
+          },
+          {
+            "path": "../../Application/Inc/py32f403_hal_conf.h"
+          },
+          {
+            "path": "../../Application/Inc/py32f403_it.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "BSP",
+        "files": [],
+        "folders": [
+          {
+            "name": "MCU_Peripheral",
+            "files": [
+              {
+                "path": "../../BSP/MCU_Peripheral/Src/gpio.c"
+              },
+              {
+                "path": "../../BSP/MCU_Peripheral/Src/i2c.c"
+              },
+              {
+                "path": "../../BSP/MCU_Peripheral/Src/usart.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "Sensor_Driver",
+            "files": [
+              {
+                "path": "../../BSP/Sensor_Driver/lps22hb/lps22hb.c"
+              },
+              {
+                "path": "../../BSP/Sensor_Driver/lps22hb/lps22hb_driver.c"
+              },
+              {
+                "path": "../../BSP/Sensor_Driver/lps22hb/lps22hb_reg.c"
+              },
+              {
+                "path": "../../BSP/Sensor_Driver/lps22hb/lps22hb.h"
+              },
+              {
+                "path": "../../BSP/Sensor_Driver/lps22hb/lps22hb_driver.h"
+              },
+              {
+                "path": "../../BSP/Sensor_Driver/lps22hb/lps22hb_reg.h"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "Device",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "Middleware",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "Public",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "Libraries",
+        "files": [
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_adc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_adc_ex.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_canfd.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_cortex.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_crc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_ctc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_dma.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_esmc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_exti.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_flash.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_gpio.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_i2c.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_i2s.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_irda.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_iwdg.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_pwr.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_pwr_ex.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_rcc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_rcc_ex.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_rtc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_rtc_ex.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_sd.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_smartcard.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_spi.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_spi_ex.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_tim.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_tim_ex.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_uart.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_usart.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_wwdg.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_adc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_crc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_ctc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_dma.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_exti.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_gpio.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_i2c.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_pwr.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_rcc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_rtc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_sdmmc.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_spi.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_tim.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_usart.c"
+          },
+          {
+            "path": "../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_utils.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "star",
+        "files": [
+          {
+            "path": "../../Application/Src/startup_py32f403xx.s"
+          },
+          {
+            "path": "../../Application/Src/system_py32f403.c"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "37a3c8d114546717b3d351beda83ea98"
+  },
+  "targets": {
+    "Target 1": {
+      "excludeList": [],
+      "toolchain": "AC6",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "archExtensions": "",
+        "floatingPointHardware": "single",
+        "scatterFilePath": "",
+        "useCustomScatterFile": false,
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x10000"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x8000000",
+                "size": "0x60000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "pyOCD",
+      "uploadConfig": {
+        "bin": "",
+        "targetName": "cortex_m",
+        "baseAddr": "0x08000000",
+        "speed": "4M",
+        "config": ".eide/target 1.pyocd.yaml",
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "../../Libraries/CMSIS/Include",
+          "../../Libraries/PY32F403_HAL_Driver/Inc",
+          "../../Libraries/CMSIS/Device/PUYA/PY32F403/Include",
+          "../../Application/Inc",
+          "../../BSP/MCU_Peripheral/Inc",
+          "../../BSP/Sensor_Driver/QMI8658A",
+          "../../Drivers",
+          ".cmsis/include",
+          "../MDK-ARM/RTE/_Target 1"
+        ],
+        "libList": [],
+        "defineList": [
+          "USE_HAL_DRIVER",
+          "PY32F403xD"
+        ]
+      },
+      "builderOptions": {
+        "AC6": {
+          "version": 3,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "use-microLIB": true,
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-0",
+            "language-c": "c11",
+            "language-cpp": "c++11",
+            "link-time-optimization": false,
+            "one-elf-section-per-function": true,
+            "short-enums#wchar": true,
+            "warnings": "ac5-like-warnings"
+          },
+          "asm-compiler": {
+            "$use": "asm-auto",
+            "misc-controls": ""
+          },
+          "linker": {
+            "$outputTaskExcludes": [
+              ".bin"
+            ],
+            "output-format": "elf",
+            "misc-controls": "--diag_suppress=L6329",
+            "xo-base": "",
+            "ro-base": "0x08000000",
+            "rw-base": "0x20000000"
+          }
+        }
+      }
+    }
+  },
+  "version": "3.6"
+}

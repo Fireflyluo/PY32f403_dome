@@ -44,10 +44,11 @@
   ******************************************************************************
 -----------------------------------------------File Info------------------------------------------------
 ** File Name:               main.c 
-** Created date:            2025.7.1
+** Created date:            2025.9.21
 ** author:                  Fireflyluo
 ** Version:                 V0.1
 ** Descriptions:            C程序入口
+**                          包含一个最简单的点灯程序
 **--------------------------------------------------------------------------------------------------------
 */
 /* Includes ------------------------------------------------------------------*/
@@ -85,8 +86,6 @@ int main(void)
   
   /* 配置系统时钟 */
   SystemClockConfig();
-	
-
   APP_GpioConfig();
 
   /* USER CODE BEGIN WHILE */
@@ -97,7 +96,7 @@ int main(void)
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2,GPIO_PIN_SET);
     HAL_Delay(1000);
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2,GPIO_PIN_RESET);
-        HAL_Delay(1000);
+    HAL_Delay(1000);
   }
 }
 

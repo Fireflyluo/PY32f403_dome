@@ -14,7 +14,7 @@
 
 
 #include "gyro_factory.h"
-#include "qmi8658a_driver.h"
+//#include "qmi8658a_driver.h"
 #include <stdio.h>
 // #include "mpu6050_driver.h"  // 其他传感器驱动
 

@@ -58,15 +58,7 @@
 /* Private defines -----------------------------------------------------------*/
 #include "i2c.h"
 #include "usart.h"
-#include "gyro_device.h"
-#include "gyro_factory.h"
-#include "qmi8658a_driver.h"
-#define QMI8658_WHO_AM_I_REG        0x00  // 文档Table 8
-#define QMI8658_WHO_AM_I_VAL        0x05  // 文档固定值
 
-#define LSM_WHO_AM_I_REG         0x0F
-#define LSM_WHO_AM_I_VAL         0x6c
-#define LPS_WHO_AM_I_VAL        0xB1  // 文档固定值
 
 extern I2C_HandleTypeDef hi2c2;
 extern UART_HandleTypeDef huart1;
@@ -109,41 +101,41 @@ int main(void)
   MX_USART2_UART_Init();
   I2C2_ScanDevices();
   
-  // 1. 初始化
-  gyro_factory_init(GYRO_QMI8658A,&hi2c2);
-  // 2. 获取传感器接口
-  const gyro_device_t *sensor = gyro_factory_get_device();
-  // 3. 配置传感器参数
-    sensor->set_odr(GYRO_ODR_400HZ);       // 设置 ODR 为 100Hz
-    sensor->set_range(GYRO_RANGE_500DPS);  // 设置量程为 ±500DPS
-    // 4. 循环读取数据
-    sensor_data_t data;
-    while (1) {
-        int32_t ret = sensor->read_data(&data);
-            if (ret == 0) {
-                printf("Accel: %.2f m/s², %.2f m/s², %.2f m/s²\n",
-                       data.accel[0], data.accel[1], data.accel[2]);
-                printf("Gyro: %.2f rad/s, %.2f rad/s, %.2f rad/s\n",
-                       data.gyro[0], data.gyro[1], data.gyro[2]);
-                printf("Temp: %.2f °C\n", data.temp);
-                
-                int x,y,z,a;
-                float a2;
-                x=data.accel[0];
-                y=data.accel[1];
-                z=data.accel[2];
-                a=(x*x)+(y*y)+(z*z);
-                a2=sqrt(a);
-//                printf("%.2f,%.2f,%.2f\n",
+//  // 1. 初始化
+//  gyro_factory_init(GYRO_QMI8658A,&hi2c2);
+//  // 2. 获取传感器接口
+//  const gyro_device_t *sensor = gyro_factory_get_device();
+//  // 3. 配置传感器参数
+//    sensor->set_odr(GYRO_ODR_400HZ);       // 设置 ODR 为 100Hz
+//    sensor->set_range(GYRO_RANGE_500DPS);  // 设置量程为 ±500DPS
+//    // 4. 循环读取数据
+//    sensor_data_t data;
+//    while (1) {
+//        int32_t ret = sensor->read_data(&data);
+//            if (ret == 0) {
+//                printf("Accel: %.2f m/s², %.2f m/s², %.2f m/s²\n",
 //                       data.accel[0], data.accel[1], data.accel[2]);
-                printf("%.2f\n",a2);
-               HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_2);
+//                printf("Gyro: %.2f rad/s, %.2f rad/s, %.2f rad/s\n",
+//                       data.gyro[0], data.gyro[1], data.gyro[2]);
+//                printf("Temp: %.2f °C\n", data.temp);
+//                
+//                int x,y,z,a;
+//                float a2;
+//                x=data.accel[0];
+//                y=data.accel[1];
+//                z=data.accel[2];
+//                a=(x*x)+(y*y)+(z*z);
+//                a2=sqrt(a);
+////                printf("%.2f,%.2f,%.2f\n",
+////                       data.accel[0], data.accel[1], data.accel[2]);
+//                printf("%.2f\n",a2);
+//               HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_2);
 
-            } else {
-                printf("Failed to read data!\n");
-            }
-        HAL_Delay(10); // 延时 100ms
-      }
+//            } else {
+//                printf("Failed to read data!\n");
+//            }
+//        HAL_Delay(10); // 延时 100ms
+//      }
 
 }
 

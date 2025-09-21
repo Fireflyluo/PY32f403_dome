@@ -16,7 +16,7 @@
 #include "gyro_factory.h"
 #include "qmi8658a_driver.h"
 #include <stdio.h>
-// #include "mpu6050_driver.h"  // 其他传感器驱动
+// #include "LSM6DSO_driver.h"  // 其他传感器驱动
 
 /* 当前选择的传感器 */
 static const gyro_device_t *current_sensor = NULL;
@@ -29,9 +29,9 @@ int32_t gyro_factory_init(gyro_sensor_type_t type, void *hardware_handle)
             current_sensor = &qmi8658a_device;
             return qmi8658a_init(hardware_handle);
         /*
-        case GYRO_MPU6050:
-            current_sensor = &mpu6050_device;
-            return mpu6050_init(hardware_handle);
+        case GYRO_LSM6DSO:
+            current_sensor = &LSM6DSO_device;
+            return LSM6DSO_init(hardware_handle);
         */
         default:
             return -1; // 不支持的传感器类型
