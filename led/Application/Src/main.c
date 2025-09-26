@@ -53,51 +53,160 @@
 */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include "gpio.h"
+#include "tim.h"
+#include "ws2812.h"
+#include "dev_led.h"
 /* Private variables ---------------------------------------------------------*/
 /* Private includes ----------------------------------------------------------*/
 /* Private defines -----------------------------------------------------------*/
-
+#define code0   60
+#define code1   120
+#define code2   0
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClockConfig(void);
+uint32_t R_data[25]={
+                    code0,code0,code0,code0,code0,code0,code0,code0,
+                    code1,code1,code1,code1,code1,code1,code1,code1,
+                    code0,code0,code0,code0,code0,code0,code0,code0,
+                    code2
+                    };
+uint32_t G_data[25]={
+                    code1,code1,code1,code1,code1,code1,code1,code1,
+                    code0,code0,code0,code0,code0,code0,code0,code0,
+                    code0,code0,code0,code0,code0,code0,code0,code0,
+                    code2
+                    };
+uint32_t B_data[25]={
+                    code0,code0,code0,code0,code0,code0,code0,code0,
+                    code0,code0,code0,code0,code0,code0,code0,code0,
+                    code1,code1,code1,code1,code1,code1,code1,code1,
+                    code2
+                    };
+     
+                    
+// GPIO LED配置示例
+static const led_config_t gpio_led_config = {
+    .type = LED_TYPE_GPIO,
+    .gpio = {
+        .gpiox = GPIOB,
+        .pin = GPIO_PIN_2
+    }
+};
 
-static void APP_GpioConfig(void)
-{
-  GPIO_InitTypeDef  GPIO_InitStruct = {0};
-
-  __HAL_RCC_GPIOB_CLK_ENABLE();                            
-
-  GPIO_InitStruct.Pin = GPIO_PIN_2;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;            /* Push-pull output */
-  GPIO_InitStruct.Pull = GPIO_PULLUP;                    /* Enable pull-up */
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;          /* GPIO speed */  
-  /* GPIO Initialization */
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-}
-
+// WS2812 LED配置示例
+static const led_config_t ws2812_led_config = {
+    .type = LED_TYPE_ADDRESSABLE,
+    .addressable = {
+        .gpiox = GPIOA,
+        .pin = GPIO_PIN_1,
+        .led_count = 1  // 1个LED灯珠
+    }
+};
 /**
   * @brief  main 函数
   * @retval int
   */
+
+#define EXAMPLE_MODE 1  // 1: 示例1, 2: 示例2
 int main(void)
 {
   /* 外设复位，初始化SysTick */
   HAL_Init();
-  
   /* 配置系统时钟 */
   SystemClockConfig();
-  APP_GpioConfig();
+  
+//    HAL_NVIC_SetPriority(DMA2_Channel1_IRQn, 1, 0);
+//    HAL_NVIC_EnableIRQ(DMA2_Channel1_IRQn);
+    
+  MX_GPIO_Init();
+  MX_TIM2_Init();
+  
 
+#if EXAMPLE_MODE == 1
+
+   // 打开GPIO LED设备
+    dev_led_handle_t gpio_led = dev_led_open(&gpio_led_config);
+    if (gpio_led == NULL) {
+        // 错误处理
+        APP_ErrorHandler();
+    }
+    
+    // 打开WS2812 LED设备
+    dev_led_handle_t ws2812_led = dev_led_open(&ws2812_led_config);
+    if (ws2812_led == NULL) {
+        // 错误处理
+        APP_ErrorHandler();
+    }
+
+    
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	
-//   HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_2);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2,GPIO_PIN_SET);
-    HAL_Delay(1000);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2,GPIO_PIN_RESET);
-    HAL_Delay(1000);
+  
+        // 控制GPIO LED - 点亮
+        led_state_t state = LED_STATE_ON;
+        dev_led_ioctl(gpio_led, LED_IOCTL_SET_STATE, &state);
+        HAL_Delay(500);
+        
+        // 控制GPIO LED - 熄灭
+        state = LED_STATE_OFF;
+        dev_led_ioctl(gpio_led, LED_IOCTL_SET_STATE, &state);
+        HAL_Delay(500);
+
+        // 通过write接口控制WS2812 LED - 设置为紫色 (GRB格式)
+        uint8_t purple_color[3] = {0xFF, 0x00, 0xFF}; // GRB: Green=0xFF, Red=0x00, Blue=0xFF 实际显示紫色
+        dev_led_write(ws2812_led, purple_color, 3);
+        HAL_Delay(1000);
+        
+        // 控制WS2812 LED - 设置为红色
+        uint32_t red_color = 0xFF0000;
+        dev_led_ioctl(ws2812_led, LED_IOCTL_SET_RGB_COLOR, &red_color);
+        HAL_Delay(1000);
+        
+        // 控制WS2812 LED - 设置为绿色
+        uint32_t green_color = 0x00FF00;
+        dev_led_ioctl(ws2812_led, LED_IOCTL_SET_RGB_COLOR, &green_color);
+        HAL_Delay(1000);
+        
+        // 控制WS2812 LED - 设置为蓝色
+        uint32_t blue_color = 0x0000FF;
+        dev_led_ioctl(ws2812_led, LED_IOCTL_SET_RGB_COLOR, &blue_color);
+        HAL_Delay(1000);
+        
+        // 通过write接口控制GPIO LED - 点亮 (写入非0值)
+        uint8_t led_on = 1;
+        dev_led_write(gpio_led, &led_on, 1);
+        HAL_Delay(500);
+        
+        // 通过write接口控制GPIO LED - 熄灭 (写入0值)
+        uint8_t led_off = 0;
+        dev_led_write(gpio_led, &led_off, 1);
+        HAL_Delay(500);
+
+
   }
+  #endif
+#if EXAMPLE_MODE == 2
+
+
+WS2812_Init(&htim2,TIM_CHANNEL_2);
+  while(1)
+  {
+    for(uint8_t r=0;r <= 0xFF;r++)
+    {
+      WS2812_Set_All(r,-r,-r);
+      WS2812_Updata();
+  // HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_2);
+      HAL_Delay(10);
+      if(r % 50 == 0)
+      {
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_2);
+      }
+    }
+  }
+ 
+#endif
 }
 
 

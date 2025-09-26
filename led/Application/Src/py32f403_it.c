@@ -16,7 +16,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "py32f403_it.h"
-
+#include "tim.h"
+#include "ws2812.h"
 /* Private includes ----------------------------------------------------------*/
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -133,5 +134,48 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file.                                          */
 /******************************************************************************/
+/**
+  * @brief This function handles TIM2 global interrupt.
+  */
+void TIM2_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM2_IRQn 0 */
 
+  /* USER CODE END TIM2_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim2);
+  /* USER CODE BEGIN TIM2_IRQn 1 */
 
+  /* USER CODE END TIM2_IRQn 1 */
+}
+/**
+ * @brief  外部声明dev_led_dma_transfer_complete函数
+ * @retval None
+ */
+
+void WS2812_DMA_Transfer_Complete(void);
+void DMA2_Channel1_IRQHandler(void)
+{
+    HAL_DMA_IRQHandler(&hdma_tim2_ch2_ch4);
+        // 检查是否是传输完成中断
+    if(__HAL_DMA_GET_FLAG(&hdma_tim2_ch2_ch4, DMA_FLAG_TC1)) {
+        // 清除传输完成标志
+        __HAL_DMA_CLEAR_FLAG(&hdma_tim2_ch2_ch4, DMA_FLAG_TC1);
+        
+        // 调用完成处理函数
+
+        WS2812_DMA_Transfer_Complete();
+    }
+}
+
+/**
+ * @brief  DMA传输完成回调函数
+ * @param  hdma: DMA句柄
+ * @retval None
+ */
+void HAL_DMA_XferCpltCallback(DMA_HandleTypeDef *hdma)
+{
+    if (hdma == &hdma_tim2_ch2_ch4) {
+        // TIM2 CH2 DMA传输完成
+//        dev_led_dma_transfer_complete();
+    }
+}

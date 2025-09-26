@@ -38,7 +38,10 @@ void HAL_MspInit(void)
   __HAL_RCC_PWR_CLK_ENABLE();
 
   // 启用 GPIOA、GPIOB 时钟（用于 LED 和 IRQ）
+  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-
+  
+  __HAL_RCC_TIM2_CLK_ENABLE();
+  __HAL_RCC_DMA2_CLK_ENABLE();
 }
 

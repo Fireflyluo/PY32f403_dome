@@ -315,7 +315,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>3</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,PY32F403xD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\PY32F403_HAL_Driver\Inc;..\..\Libraries\CMSIS\Device\PUYA\PY32F403\Include;..\..\Application\Inc;..\..\BSP\MCU_Peripheral\Inc;..\..\Drivers</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\PY32F403_HAL_Driver\Inc;..\..\Libraries\CMSIS\Device\PUYA\PY32F403\Include;..\..\Application\Inc;..\..\BSP\MCU_Peripheral\Inc;..\..\Drivers;..\..\BSP\Device_REG</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -418,13 +418,64 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>BSP/MCU_Driver</GroupName>
+          <GroupName>BSP/MCU_Peripheral</GroupName>
+          <Files>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\MCU_Peripheral\Src\gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\BSP\MCU_Peripheral\Inc\gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\MCU_Peripheral\Src\tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\BSP\MCU_Peripheral\Inc\tim.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
-          <GroupName>BSP/Module_Driver</GroupName>
+          <GroupName>BSP/Device_REG</GroupName>
+          <Files>
+            <File>
+              <FileName>ws2812.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\Device_REG\ws2812.c</FilePath>
+            </File>
+            <File>
+              <FileName>ws2812.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\BSP\Device_REG\ws2812.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
-          <GroupName>Device</GroupName>
+          <GroupName>Drivers</GroupName>
+          <Files>
+            <File>
+              <FileName>dev_common.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Drivers\dev_common.h</FilePath>
+            </File>
+            <File>
+              <FileName>dev_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Drivers\dev_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>dev_led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Drivers\dev_led.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Middleware</GroupName>

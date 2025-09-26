@@ -1,36 +1,35 @@
 #ifndef __DEV_LED_H__
 #define __DEV_LED_H__
 
-
 #include "dev_common.h"
+#include "gpio.h"
+#include "tim.h"
 #include <math.h>
-#define M_PI		3.14159265358979323846
+// WS2812B相关定义
+#define WS2812_BIT_1_PERIOD 120   // 逻辑1的比较值 (0.833μs)
+#define WS2812_BIT_0_PERIOD 60    // 逻辑0的比较值 (0.417μs)
+#define WS2812_RESET_PERIOD 0     // 复位信号比较值 (低电平)
+#define M_PI    3.1415926
 // LED 设备句柄类型
 typedef void* dev_led_handle_t;
 
 // LED 类型
 typedef enum {
-    LED_TYPE_GPIO = 0,   // 普通 GPIO LED
-    LED_TYPE_PWM,        // PWM 调光 LED
-    LED_TYPE_RGB,        // RGB LED
-    LED_TYPE_ADDRESSABLE // 可寻址 LED (如 WS2812)
+    LED_TYPE_GPIO = 0,        // 普通 GPIO LED
+    LED_TYPE_ADDRESSABLE      // 可寻址 LED (如 WS2812)
 } led_type_t;
 
 // LED 状态
 typedef enum {
-    LED_STATE_OFF = 0,   // 关闭
-    LED_STATE_ON,        // 常亮
-    LED_STATE_BLINK,     // 闪烁
-    LED_STATE_BREATH,    // 呼吸效果
-    LED_STATE_PATTERN    // 自定义模式
+    LED_STATE_OFF = 0,        // 关闭
+    LED_STATE_ON,             // 常亮
+    LED_STATE_BLINK,          // 闪烁
+    LED_STATE_BREATH,         // 呼吸效果
+    LED_STATE_PATTERN         // 自定义模式
 } led_state_t;
 
-
 /**
- * @brief LED硬件配置结构体
- */
-/**
- * @brief LED配置结构体（优化后）
+ * @brief LED配置结构体
  */
 typedef struct {
     led_type_t type; /**< LED类型 */
@@ -44,33 +43,7 @@ typedef struct {
             GPIO_TypeDef *gpiox; /**< GPIO端口基地址 */
             uint16_t pin;        /**< GPIO引脚号 */
         } gpio;
-
-        /**
-         * @brief PWM调光模式配置
-         */
-        struct {
-            TIM_HandleTypeDef *htim; /**< 定时器句柄 */
-            uint32_t channel;        /**< 定时器通道 */
-            uint32_t pin;            /**< PWM输出引脚 */
-            uint32_t frequency;      /**< PWM频率 (Hz) */
-        } pwm;
-
-        /**
-         * @brief RGB LED模式配置
-         */
-        struct {
-            TIM_HandleTypeDef *htim_r; /**< 红色通道定时器句柄 */
-            TIM_HandleTypeDef *htim_g; /**< 绿色通道定时器句柄 */
-            TIM_HandleTypeDef *htim_b; /**< 蓝色通道定时器句柄 */
-            uint32_t channel_r;        /**< 红色通道号 */
-            uint32_t channel_g;        /**< 绿色通道号 */
-            uint32_t channel_b;        /**< 蓝色通道号 */
-            uint32_t pin_r;            /**< 红色LED引脚 */
-            uint32_t pin_g;            /**< 绿色LED引脚 */
-            uint32_t pin_b;            /**< 蓝色LED引脚 */
-            uint32_t frequency;        /**< RGB通道PWM频率 (Hz) */
-        } rgb;
-
+        
         /**
          * @brief 可寻址LED模式配置（如WS2812）
          */
@@ -87,7 +60,7 @@ typedef struct {
     led_state_t state;   // 目标状态
     uint8_t brightness;  // 亮度 (0-255)
     
-    // 闪烁/呼吸参数
+    // 闪烁参数
     struct {
         uint16_t on_time_ms;   // 亮灯时间(ms)
         uint16_t off_time_ms;  // 灭灯时间(ms)
@@ -121,13 +94,22 @@ typedef enum {
     LED_IOCTL_SET_PATTERN,         // 设置自定义模式 (arg: uint8_t* 数组)
 } led_ioctl_cmd_t;
 
+// LED设备内部状态结构
+typedef struct {
+    led_config_t config;              // LED配置
+    led_control_t control;            // 当前控制参数
+    TIM_HandleTypeDef* timer_handle;  // 定时器句柄
+    uint32_t timer_channel;           // 定时器通道
+} led_device_t;
 
 /* 函数声明 */
-
 dev_led_handle_t dev_led_open(const led_config_t *config);
 dev_error_t dev_led_close(dev_led_handle_t handle);
 dev_error_t dev_led_ioctl(dev_led_handle_t handle, led_ioctl_cmd_t cmd, void *arg);
 int dev_led_write(dev_led_handle_t handle, const void *data, size_t size);
 int dev_led_read(dev_led_handle_t handle, void *buffer, size_t size);
+
+// DMA传输完成回调函数
+void dev_led_dma_transfer_complete(void);
 
 #endif

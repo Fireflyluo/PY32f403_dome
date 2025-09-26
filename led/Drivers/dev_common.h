@@ -22,9 +22,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-
-#include "bsp_core.h"
-
+#include "py32f4xx_hal.h"
 
 // dev 错误码
 typedef enum {
