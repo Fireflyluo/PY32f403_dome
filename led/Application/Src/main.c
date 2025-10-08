@@ -144,45 +144,45 @@ int main(void)
   while (1)
   {
   
-        // 控制GPIO LED - 点亮
-        led_state_t state = LED_STATE_ON;
-        dev_led_ioctl(gpio_led, LED_IOCTL_SET_STATE, &state);
-        HAL_Delay(500);
-        
-        // 控制GPIO LED - 熄灭
-        state = LED_STATE_OFF;
-        dev_led_ioctl(gpio_led, LED_IOCTL_SET_STATE, &state);
-        HAL_Delay(500);
+//        // 控制GPIO LED - 点亮
+//        led_state_t state = LED_STATE_ON;
+//        dev_led_ioctl(gpio_led, LED_IOCTL_SET_STATE, &state);
+//        HAL_Delay(500);
+//        
+//        // 控制GPIO LED - 熄灭
+//        state = LED_STATE_OFF;
+//        dev_led_ioctl(gpio_led, LED_IOCTL_SET_STATE, &state);
+//        HAL_Delay(500);
 
         // 通过write接口控制WS2812 LED - 设置为紫色 (GRB格式)
-        uint8_t purple_color[3] = {0xFF, 0x00, 0xFF}; // GRB: Green=0xFF, Red=0x00, Blue=0xFF 实际显示紫色
+        uint8_t purple_color[3] = {0xFF, 0xFF, 0xFF}; // GRB: Green=0xFF, Red=0x00, Blue=0xFF 实际显示紫色
         dev_led_write(ws2812_led, purple_color, 3);
         HAL_Delay(1000);
-        
-        // 控制WS2812 LED - 设置为红色
-        uint32_t red_color = 0xFF0000;
-        dev_led_ioctl(ws2812_led, LED_IOCTL_SET_RGB_COLOR, &red_color);
-        HAL_Delay(1000);
-        
-        // 控制WS2812 LED - 设置为绿色
-        uint32_t green_color = 0x00FF00;
-        dev_led_ioctl(ws2812_led, LED_IOCTL_SET_RGB_COLOR, &green_color);
-        HAL_Delay(1000);
-        
-        // 控制WS2812 LED - 设置为蓝色
-        uint32_t blue_color = 0x0000FF;
-        dev_led_ioctl(ws2812_led, LED_IOCTL_SET_RGB_COLOR, &blue_color);
-        HAL_Delay(1000);
-        
-        // 通过write接口控制GPIO LED - 点亮 (写入非0值)
-        uint8_t led_on = 1;
-        dev_led_write(gpio_led, &led_on, 1);
-        HAL_Delay(500);
-        
-        // 通过write接口控制GPIO LED - 熄灭 (写入0值)
-        uint8_t led_off = 0;
-        dev_led_write(gpio_led, &led_off, 1);
-        HAL_Delay(500);
+//        
+//        // 控制WS2812 LED - 设置为红色
+//        uint32_t red_color = 0xFF0000;
+//        dev_led_ioctl(ws2812_led, LED_IOCTL_SET_RGB_COLOR, &red_color);
+//        HAL_Delay(1000);
+//        
+//        // 控制WS2812 LED - 设置为绿色
+//        uint32_t green_color = 0x00FF00;
+//        dev_led_ioctl(ws2812_led, LED_IOCTL_SET_RGB_COLOR, &green_color);
+//        HAL_Delay(1000);
+//        
+//        // 控制WS2812 LED - 设置为蓝色
+//        uint32_t blue_color = 0x0000FF;
+//        dev_led_ioctl(ws2812_led, LED_IOCTL_SET_RGB_COLOR, &blue_color);
+//        HAL_Delay(1000);
+//        
+//        // 通过write接口控制GPIO LED - 点亮 (写入非0值)
+//        uint8_t led_on = 1;
+//        dev_led_write(gpio_led, &led_on, 1);
+//        HAL_Delay(500);
+//        
+//        // 通过write接口控制GPIO LED - 熄灭 (写入0值)
+//        uint8_t led_off = 0;
+//        dev_led_write(gpio_led, &led_off, 1);
+//        HAL_Delay(500);
 
 
   }

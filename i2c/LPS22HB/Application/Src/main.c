@@ -100,7 +100,7 @@ int main(void)
   MX_I2C2_Init();
   MX_USART2_UART_Init();
   I2C2_ScanDevices();
-  
+  get_pressure();
 //  // 1. 初始化
 //  gyro_factory_init(GYRO_QMI8658A,&hi2c2);
 //  // 2. 获取传感器接口

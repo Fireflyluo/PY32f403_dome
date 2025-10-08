@@ -84,8 +84,8 @@
 
 1. **克隆项目**
    ```bash
-   git clone <项目地址>
-   cd py32f403-validation-board
+   git clone https://github.com/Fireflyluo/PY32f403_dome.git
+   cd py32f403
    ```
 
 2. **导入工程**

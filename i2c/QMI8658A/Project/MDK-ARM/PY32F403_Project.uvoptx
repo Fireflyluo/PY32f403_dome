@@ -152,18 +152,66 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>68</LineNumber>
+          <LineNumber>96</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
+          <Address>134234510</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>D:\Desktop\Ad Hoc Network\PY32f403_dome\i2c\QMI8658A\BSP\Module_Driver\QMI8658A\qmi8658a_driver.c</Filename>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\Application\Src\main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression></Expression>
+          <Expression>\\PY32F403_Project\../../Application/Src/main.c\96</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>126</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134229768</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\BSP\MCU_Peripheral\Src\i2c.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\PY32F403_Project\../../BSP/MCU_Peripheral/Src/i2c.c\126</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>99</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134234516</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\Application\Src\main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\PY32F403_Project\../../Application/Src/main.c\99</Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>126</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134234904</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\Application\Src\main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\PY32F403_Project\../../Application/Src/main.c\126</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>

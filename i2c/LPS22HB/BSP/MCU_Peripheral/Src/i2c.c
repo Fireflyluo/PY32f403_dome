@@ -185,25 +185,25 @@ void get_pressure(void)
  uint8_t who_am_i1;
     uint8_t who_am_i;
   uint8_t swreset = 1 << 2;
-  HAL_I2C_Mem_Write(&hi2c2,0xBA,0x11,I2C_MEMADD_SIZE_8BIT,&swreset,1,0x100);
+  HAL_I2C_Mem_Write(&hi2c2,0xBB,0x11,I2C_MEMADD_SIZE_8BIT,&swreset,1,0x100);
   uint8_t ctrl_reg2;
-  HAL_I2C_Mem_Read(&hi2c2,0xBA,0x11,I2C_MEMADD_SIZE_8BIT,&ctrl_reg2,1,0x100);
+  HAL_I2C_Mem_Read(&hi2c2,0xBB,0x11,I2C_MEMADD_SIZE_8BIT,&ctrl_reg2,1,0x100);
   //读取who am i
-  HAL_I2C_Mem_Read(&hi2c2,0xBA,0x0f,I2C_MEMADD_SIZE_8BIT,&who_am_i1,1,0x100);
-  HAL_I2C_Mem_Read(&hi2c2,0xBA,0x0f,I2C_MEMADD_SIZE_8BIT,&who_am_i,1,0x100);
+  HAL_I2C_Mem_Read(&hi2c2,0xBB,0x0f,I2C_MEMADD_SIZE_8BIT,&who_am_i1,1,0x100);
+  HAL_I2C_Mem_Read(&hi2c2,0xBB,0x0f,I2C_MEMADD_SIZE_8BIT,&who_am_i,1,0x100);
   //设置odr
   uint8_t odr = 0x04 << 4;//100 = 50Hz
-  HAL_I2C_Mem_Write(&hi2c2,0xBA,0x10,I2C_MEMADD_SIZE_8BIT,&odr,1,0x100);
+  HAL_I2C_Mem_Write(&hi2c2,0xB9,0x10,I2C_MEMADD_SIZE_8BIT,&odr,1,0x100);
   //得到压力
   if(1)
   {
-    HAL_I2C_Mem_Read(&hi2c2,0xBA,0x28+0,I2C_MEMADD_SIZE_8BIT,&buf[0],3,0x100);
-    HAL_I2C_Mem_Read(&hi2c2,0xBA,0x28+1,I2C_MEMADD_SIZE_8BIT,&buf[1],3,0x100);
-    HAL_I2C_Mem_Read(&hi2c2,0xBA,0x28+2,I2C_MEMADD_SIZE_8BIT,&buf[2],3,0x100);
+    HAL_I2C_Mem_Read(&hi2c2,0xB9,0x28+0,I2C_MEMADD_SIZE_8BIT,&buf[0],3,0x100);
+    HAL_I2C_Mem_Read(&hi2c2,0xB9,0x28+1,I2C_MEMADD_SIZE_8BIT,&buf[1],3,0x100);
+    HAL_I2C_Mem_Read(&hi2c2,0xB9,0x28+2,I2C_MEMADD_SIZE_8BIT,&buf[2],3,0x100);
   }
   else
   {
-    HAL_I2C_Mem_Read(&hi2c2,0xBA,0x28,I2C_MEMADD_SIZE_8BIT,buf,3,0x100);
+    HAL_I2C_Mem_Read(&hi2c2,0xB9,0x28,I2C_MEMADD_SIZE_8BIT,buf,3,0x100);
   }
   int32_t press = buf[2] << 16 | buf[1] << 8 | buf[0];
   if(press & 0x00800000)press |= 0xFF000000;
