@@ -460,6 +460,16 @@
               <FileType>5</FileType>
               <FilePath>..\..\BSP\Sensor_Driver\QMI8658A\qmi8658a_reg.h</FilePath>
             </File>
+            <File>
+              <FileName>icp20100.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\Sensor_Driver\ICP20100\icp20100.c</FilePath>
+            </File>
+            <File>
+              <FileName>icp20100.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\BSP\Sensor_Driver\ICP20100\icp20100.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

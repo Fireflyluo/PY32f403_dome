@@ -7,6 +7,7 @@
 ".\objects\i2c.o"
 ".\objects\qmi8658a_driver.o"
 ".\objects\qmi8658a_reg.o"
+".\objects\icp20100.o"
 ".\objects\gyro_factory.o"
 ".\objects\system_py32f403.o"
 ".\objects\startup_py32f403xx.o"

@@ -188,6 +188,75 @@ Section Cross References
     qmi8658a_reg.o(.text.qmi8658a_fifo_read_mode_disable) refers to qmi8658a_reg.o(.text.qmi8658a_read_reg) for qmi8658a_read_reg
     qmi8658a_reg.o(.text.qmi8658a_fifo_read_mode_disable) refers to qmi8658a_reg.o(.text.qmi8658a_write_reg) for qmi8658a_write_reg
     qmi8658a_reg.o(.ARM.exidx.text.qmi8658a_fifo_read_mode_disable) refers to qmi8658a_reg.o(.text.qmi8658a_fifo_read_mode_disable) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_init) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.text.icp20100_init) refers to icp20100.o(.text.read_chip_id) for read_chip_id
+    icp20100.o(.ARM.exidx.text.icp20100_init) refers to icp20100.o(.text.icp20100_init) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.null_ptr_check) refers to icp20100.o(.text.null_ptr_check) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.read_chip_id) refers to icp20100.o(.text.read_chip_id) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_soft_reset) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.ARM.exidx.text.icp20100_soft_reset) refers to icp20100.o(.text.icp20100_soft_reset) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_boot_sequence) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.text.icp20100_boot_sequence) refers to icp20100.o(.text.check_boot_required) for check_boot_required
+    icp20100.o(.text.icp20100_boot_sequence) refers to icp20100.o(.text.otp_read_sequence) for otp_read_sequence
+    icp20100.o(.ARM.exidx.text.icp20100_boot_sequence) refers to icp20100.o(.text.icp20100_boot_sequence) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.check_boot_required) refers to icp20100.o(.text.check_boot_required) for [Anonymous Symbol]
+    icp20100.o(.text.otp_read_sequence) refers to icp20100.o(.text.otp_prepare_device) for otp_prepare_device
+    icp20100.o(.text.otp_read_sequence) refers to icp20100.o(.text.otp_enable_interface) for otp_enable_interface
+    icp20100.o(.text.otp_read_sequence) refers to icp20100.o(.text.otp_configure_redundant_read) for otp_configure_redundant_read
+    icp20100.o(.text.otp_read_sequence) refers to icp20100.o(.text.otp_read_calibration_data) for otp_read_calibration_data
+    icp20100.o(.text.otp_read_sequence) refers to icp20100.o(.text.otp_write_trim_registers) for otp_write_trim_registers
+    icp20100.o(.text.otp_read_sequence) refers to icp20100.o(.text.otp_finalize_sequence) for otp_finalize_sequence
+    icp20100.o(.ARM.exidx.text.otp_read_sequence) refers to icp20100.o(.text.otp_read_sequence) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_set_config) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.text.icp20100_set_config) refers to icp20100.o(.text.wait_mode_sync) for wait_mode_sync
+    icp20100.o(.ARM.exidx.text.icp20100_set_config) refers to icp20100.o(.text.icp20100_set_config) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.wait_mode_sync) refers to icp20100.o(.text.wait_mode_sync) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_get_config) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.ARM.exidx.text.icp20100_get_config) refers to icp20100.o(.text.icp20100_get_config) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_get_data) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.text.icp20100_get_data) refers to icp20100.o(.text.read_raw_data) for read_raw_data
+    icp20100.o(.text.icp20100_get_data) refers to icp20100.o(.text.convert_pressure) for convert_pressure
+    icp20100.o(.text.icp20100_get_data) refers to icp20100.o(.text.convert_temperature) for convert_temperature
+    icp20100.o(.ARM.exidx.text.icp20100_get_data) refers to icp20100.o(.text.icp20100_get_data) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.read_raw_data) refers to icp20100.o(.text.read_raw_data) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.convert_pressure) refers to icp20100.o(.text.convert_pressure) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.convert_temperature) refers to icp20100.o(.text.convert_temperature) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_trigger_measurement) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.text.icp20100_trigger_measurement) refers to icp20100.o(.text.wait_mode_sync) for wait_mode_sync
+    icp20100.o(.ARM.exidx.text.icp20100_trigger_measurement) refers to icp20100.o(.text.icp20100_trigger_measurement) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_set_power_mode) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.text.icp20100_set_power_mode) refers to icp20100.o(.text.wait_mode_sync) for wait_mode_sync
+    icp20100.o(.ARM.exidx.text.icp20100_set_power_mode) refers to icp20100.o(.text.icp20100_set_power_mode) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_get_power_mode) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.ARM.exidx.text.icp20100_get_power_mode) refers to icp20100.o(.text.icp20100_get_power_mode) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_set_int_config) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.ARM.exidx.text.icp20100_set_int_config) refers to icp20100.o(.text.icp20100_set_int_config) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_get_int_status) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.ARM.exidx.text.icp20100_get_int_status) refers to icp20100.o(.text.icp20100_get_int_status) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_clear_int_status) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.ARM.exidx.text.icp20100_clear_int_status) refers to icp20100.o(.text.icp20100_clear_int_status) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_get_fifo_length) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.ARM.exidx.text.icp20100_get_fifo_length) refers to icp20100.o(.text.icp20100_get_fifo_length) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_read_fifo) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.text.icp20100_read_fifo) refers to icp20100.o(.text.icp20100_get_fifo_length) for icp20100_get_fifo_length
+    icp20100.o(.text.icp20100_read_fifo) refers to icp20100.o(.text.convert_pressure) for convert_pressure
+    icp20100.o(.text.icp20100_read_fifo) refers to icp20100.o(.text.convert_temperature) for convert_temperature
+    icp20100.o(.ARM.exidx.text.icp20100_read_fifo) refers to icp20100.o(.text.icp20100_read_fifo) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_flush_fifo) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.ARM.exidx.text.icp20100_flush_fifo) refers to icp20100.o(.text.icp20100_flush_fifo) for [Anonymous Symbol]
+    icp20100.o(.text.icp20100_fir_filter_settling) refers to icp20100.o(.text.null_ptr_check) for null_ptr_check
+    icp20100.o(.text.icp20100_fir_filter_settling) refers to icp20100.o(.text.icp20100_flush_fifo) for icp20100_flush_fifo
+    icp20100.o(.ARM.exidx.text.icp20100_fir_filter_settling) refers to icp20100.o(.text.icp20100_fir_filter_settling) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.otp_prepare_device) refers to icp20100.o(.text.otp_prepare_device) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.otp_enable_interface) refers to icp20100.o(.text.otp_enable_interface) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.otp_configure_redundant_read) refers to icp20100.o(.text.otp_configure_redundant_read) for [Anonymous Symbol]
+    icp20100.o(.text.otp_read_calibration_data) refers to icp20100.o(.text.read_otp_data) for read_otp_data
+    icp20100.o(.ARM.exidx.text.otp_read_calibration_data) refers to icp20100.o(.text.otp_read_calibration_data) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.otp_write_trim_registers) refers to icp20100.o(.text.otp_write_trim_registers) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.otp_finalize_sequence) refers to icp20100.o(.text.otp_finalize_sequence) for [Anonymous Symbol]
+    icp20100.o(.text.read_otp_data) refers to icp20100.o(.text.wait_otp_ready) for wait_otp_ready
+    icp20100.o(.ARM.exidx.text.read_otp_data) refers to icp20100.o(.text.read_otp_data) for [Anonymous Symbol]
+    icp20100.o(.ARM.exidx.text.wait_otp_ready) refers to icp20100.o(.text.wait_otp_ready) for [Anonymous Symbol]
     gyro_factory.o(.text.gyro_factory_init) refers to gyro_factory.o(.bss.current_sensor) for current_sensor
     gyro_factory.o(.text.gyro_factory_init) refers to qmi8658a_driver.o(.rodata.qmi8658a_device) for qmi8658a_device
     gyro_factory.o(.text.gyro_factory_init) refers to qmi8658a_driver.o(.text.qmi8658a_init) for qmi8658a_init
@@ -1756,6 +1825,71 @@ Removing Unused input sections from the image.
     Removing qmi8658a_reg.o(.ARM.exidx.text.qmi8658a_fifo_read), (8 bytes).
     Removing qmi8658a_reg.o(.text.qmi8658a_fifo_read_mode_disable), (66 bytes).
     Removing qmi8658a_reg.o(.ARM.exidx.text.qmi8658a_fifo_read_mode_disable), (8 bytes).
+    Removing icp20100.o(.text), (0 bytes).
+    Removing icp20100.o(.text.icp20100_init), (132 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_init), (8 bytes).
+    Removing icp20100.o(.text.null_ptr_check), (56 bytes).
+    Removing icp20100.o(.ARM.exidx.text.null_ptr_check), (8 bytes).
+    Removing icp20100.o(.text.read_chip_id), (114 bytes).
+    Removing icp20100.o(.ARM.exidx.text.read_chip_id), (8 bytes).
+    Removing icp20100.o(.text.icp20100_soft_reset), (40 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_soft_reset), (8 bytes).
+    Removing icp20100.o(.text.icp20100_boot_sequence), (152 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_boot_sequence), (8 bytes).
+    Removing icp20100.o(.text.check_boot_required), (90 bytes).
+    Removing icp20100.o(.ARM.exidx.text.check_boot_required), (8 bytes).
+    Removing icp20100.o(.text.otp_read_sequence), (160 bytes).
+    Removing icp20100.o(.ARM.exidx.text.otp_read_sequence), (8 bytes).
+    Removing icp20100.o(.text.icp20100_set_config), (238 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_set_config), (8 bytes).
+    Removing icp20100.o(.text.wait_mode_sync), (120 bytes).
+    Removing icp20100.o(.ARM.exidx.text.wait_mode_sync), (8 bytes).
+    Removing icp20100.o(.text.icp20100_get_config), (190 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_get_config), (8 bytes).
+    Removing icp20100.o(.text.icp20100_get_data), (114 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_get_data), (8 bytes).
+    Removing icp20100.o(.text.read_raw_data), (106 bytes).
+    Removing icp20100.o(.ARM.exidx.text.read_raw_data), (8 bytes).
+    Removing icp20100.o(.text.convert_pressure), (68 bytes).
+    Removing icp20100.o(.ARM.exidx.text.convert_pressure), (8 bytes).
+    Removing icp20100.o(.text.convert_temperature), (64 bytes).
+    Removing icp20100.o(.ARM.exidx.text.convert_temperature), (8 bytes).
+    Removing icp20100.o(.text.icp20100_trigger_measurement), (120 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_trigger_measurement), (8 bytes).
+    Removing icp20100.o(.text.icp20100_set_power_mode), (202 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_set_power_mode), (8 bytes).
+    Removing icp20100.o(.text.icp20100_get_power_mode), (102 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_get_power_mode), (8 bytes).
+    Removing icp20100.o(.text.icp20100_set_int_config), (220 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_set_int_config), (8 bytes).
+    Removing icp20100.o(.text.icp20100_get_int_status), (78 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_get_int_status), (8 bytes).
+    Removing icp20100.o(.text.icp20100_clear_int_status), (60 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_clear_int_status), (8 bytes).
+    Removing icp20100.o(.text.icp20100_get_fifo_length), (102 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_get_fifo_length), (8 bytes).
+    Removing icp20100.o(.text.icp20100_read_fifo), (440 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_read_fifo), (8 bytes).
+    Removing icp20100.o(.text.icp20100_flush_fifo), (100 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_flush_fifo), (8 bytes).
+    Removing icp20100.o(.text.icp20100_fir_filter_settling), (358 bytes).
+    Removing icp20100.o(.ARM.exidx.text.icp20100_fir_filter_settling), (8 bytes).
+    Removing icp20100.o(.text.otp_prepare_device), (92 bytes).
+    Removing icp20100.o(.ARM.exidx.text.otp_prepare_device), (8 bytes).
+    Removing icp20100.o(.text.otp_enable_interface), (244 bytes).
+    Removing icp20100.o(.ARM.exidx.text.otp_enable_interface), (8 bytes).
+    Removing icp20100.o(.text.otp_configure_redundant_read), (226 bytes).
+    Removing icp20100.o(.ARM.exidx.text.otp_configure_redundant_read), (8 bytes).
+    Removing icp20100.o(.text.otp_read_calibration_data), (82 bytes).
+    Removing icp20100.o(.ARM.exidx.text.otp_read_calibration_data), (8 bytes).
+    Removing icp20100.o(.text.otp_write_trim_registers), (276 bytes).
+    Removing icp20100.o(.ARM.exidx.text.otp_write_trim_registers), (8 bytes).
+    Removing icp20100.o(.text.otp_finalize_sequence), (166 bytes).
+    Removing icp20100.o(.ARM.exidx.text.otp_finalize_sequence), (8 bytes).
+    Removing icp20100.o(.text.read_otp_data), (170 bytes).
+    Removing icp20100.o(.ARM.exidx.text.read_otp_data), (8 bytes).
+    Removing icp20100.o(.text.wait_otp_ready), (120 bytes).
+    Removing icp20100.o(.ARM.exidx.text.wait_otp_ready), (8 bytes).
     Removing gyro_factory.o(.text), (0 bytes).
     Removing gyro_factory.o(.ARM.exidx.text.gyro_factory_init), (8 bytes).
     Removing gyro_factory.o(.ARM.exidx.text.gyro_factory_get_device), (8 bytes).
@@ -2954,7 +3088,7 @@ Removing Unused input sections from the image.
     Removing py32f403_ll_utils.o(.text.LL_RCC_SetAPB2Prescaler), (28 bytes).
     Removing py32f403_ll_utils.o(.ARM.exidx.text.LL_RCC_SetAPB2Prescaler), (8 bytes).
 
-1297 unused section(s) (total 94091 bytes) removed from the image.
+1362 unused section(s) (total 99149 bytes) removed from the image.
 
 ==============================================================================
 
@@ -3008,6 +3142,7 @@ Image Symbol Table
     gyro_factory.c                           0x00000000   Number         0  gyro_factory.o ABSOLUTE
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
     i2c.c                                    0x00000000   Number         0  i2c.o ABSOLUTE
+    icp20100.c                               0x00000000   Number         0  icp20100.o ABSOLUTE
     init.s                                   0x00000000   Number         0  init.o ABSOLUTE
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
     py32f403_hal.c                           0x00000000   Number         0  py32f403_hal.o ABSOLUTE
@@ -3482,109 +3617,109 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x00000130   Data   RO          228    RESET               startup_py32f403xx.o
-    0x08000130   0x08000130   0x00000000   Code   RO         1592  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000130   0x08000130   0x00000004   Code   RO         1635    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000134   0x08000134   0x00000004   Code   RO         1638    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         1640    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         1642    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000138   0x08000138   0x00000008   Code   RO         1643    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         1645    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         1647    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000140   0x08000140   0x00000004   Code   RO         1636    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000144   0x08000144   0x00000034   Code   RO          229    .text               startup_py32f403xx.o
-    0x08000178   0x08000178   0x00000024   Code   RO         1595    .text               mc_w.l(memcpya.o)
-    0x0800019c   0x0800019c   0x00000024   Code   RO         1597    .text               mc_w.l(memseta.o)
-    0x080001c0   0x080001c0   0x00000022   Code   RO         1629    .text               mf_w.l(dflti.o)
-    0x080001e2   0x080001e2   0x00000026   Code   RO         1631    .text               mf_w.l(f2d.o)
-    0x08000208   0x08000208   0x00000038   Code   RO         1633    .text               mf_w.l(d2f.o)
-    0x08000240   0x08000240   0x0000002c   Code   RO         1659    .text               mc_w.l(uidiv.o)
-    0x0800026c   0x0800026c   0x00000062   Code   RO         1661    .text               mc_w.l(uldiv.o)
-    0x080002ce   0x080002ce   0x00000000   Code   RO         1670    .text               mc_w.l(iusefp.o)
-    0x080002ce   0x080002ce   0x0000006e   Code   RO         1671    .text               mf_w.l(fepilogue.o)
-    0x0800033c   0x0800033c   0x000000ba   Code   RO         1673    .text               mf_w.l(depilogue.o)
-    0x080003f6   0x080003f6   0x0000014e   Code   RO         1675    .text               mf_w.l(dadd.o)
-    0x08000544   0x08000544   0x000000e4   Code   RO         1677    .text               mf_w.l(dmul.o)
-    0x08000628   0x08000628   0x000000de   Code   RO         1679    .text               mf_w.l(ddiv.o)
-    0x08000706   0x08000706   0x000000a2   Code   RO         1681    .text               mf_w.l(dsqrt.o)
-    0x080007a8   0x080007a8   0x00000030   Code   RO         1683    .text               mf_w.l(dfixul.o)
-    0x080007d8   0x080007d8   0x00000030   Code   RO         1685    .text               mf_w.l(cdrcmple.o)
-    0x08000808   0x08000808   0x00000024   Code   RO         1687    .text               mc_w.l(init.o)
-    0x0800082c   0x0800082c   0x0000001e   Code   RO         1689    .text               mc_w.l(llshl.o)
-    0x0800084a   0x0800084a   0x00000020   Code   RO         1691    .text               mc_w.l(llushr.o)
-    0x0800086a   0x0800086a   0x00000024   Code   RO         1693    .text               mc_w.l(llsshr.o)
+    0x08000000   0x08000000   0x00000130   Data   RO          299    RESET               startup_py32f403xx.o
+    0x08000130   0x08000130   0x00000000   Code   RO         1663  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x08000130   0x00000004   Code   RO         1706    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x08000134   0x00000004   Code   RO         1709    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         1711    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         1713    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000138   0x08000138   0x00000008   Code   RO         1714    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         1716    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         1718    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000140   0x08000140   0x00000004   Code   RO         1707    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000144   0x08000144   0x00000034   Code   RO          300    .text               startup_py32f403xx.o
+    0x08000178   0x08000178   0x00000024   Code   RO         1666    .text               mc_w.l(memcpya.o)
+    0x0800019c   0x0800019c   0x00000024   Code   RO         1668    .text               mc_w.l(memseta.o)
+    0x080001c0   0x080001c0   0x00000022   Code   RO         1700    .text               mf_w.l(dflti.o)
+    0x080001e2   0x080001e2   0x00000026   Code   RO         1702    .text               mf_w.l(f2d.o)
+    0x08000208   0x08000208   0x00000038   Code   RO         1704    .text               mf_w.l(d2f.o)
+    0x08000240   0x08000240   0x0000002c   Code   RO         1730    .text               mc_w.l(uidiv.o)
+    0x0800026c   0x0800026c   0x00000062   Code   RO         1732    .text               mc_w.l(uldiv.o)
+    0x080002ce   0x080002ce   0x00000000   Code   RO         1741    .text               mc_w.l(iusefp.o)
+    0x080002ce   0x080002ce   0x0000006e   Code   RO         1742    .text               mf_w.l(fepilogue.o)
+    0x0800033c   0x0800033c   0x000000ba   Code   RO         1744    .text               mf_w.l(depilogue.o)
+    0x080003f6   0x080003f6   0x0000014e   Code   RO         1746    .text               mf_w.l(dadd.o)
+    0x08000544   0x08000544   0x000000e4   Code   RO         1748    .text               mf_w.l(dmul.o)
+    0x08000628   0x08000628   0x000000de   Code   RO         1750    .text               mf_w.l(ddiv.o)
+    0x08000706   0x08000706   0x000000a2   Code   RO         1752    .text               mf_w.l(dsqrt.o)
+    0x080007a8   0x080007a8   0x00000030   Code   RO         1754    .text               mf_w.l(dfixul.o)
+    0x080007d8   0x080007d8   0x00000030   Code   RO         1756    .text               mf_w.l(cdrcmple.o)
+    0x08000808   0x08000808   0x00000024   Code   RO         1758    .text               mc_w.l(init.o)
+    0x0800082c   0x0800082c   0x0000001e   Code   RO         1760    .text               mc_w.l(llshl.o)
+    0x0800084a   0x0800084a   0x00000020   Code   RO         1762    .text               mc_w.l(llushr.o)
+    0x0800086a   0x0800086a   0x00000024   Code   RO         1764    .text               mc_w.l(llsshr.o)
     0x0800088e   0x0800088e   0x00000002   PAD
     0x08000890   0x08000890   0x00000004   Code   RO           12    .text.APP_ErrorHandler  main.o
     0x08000894   0x08000894   0x00000004   Code   RO           44    .text.BusFault_Handler  py32f403_it.o
     0x08000898   0x08000898   0x00000002   Code   RO           50    .text.DebugMon_Handler  py32f403_it.o
     0x0800089a   0x0800089a   0x00000002   PAD
     0x0800089c   0x0800089c   0x00000014   Code   RO           58    .text.EXTI9_5_IRQHandler  py32f403_it.o
-    0x080008b0   0x080008b0   0x00000318   Code   RO          402    .text.HAL_DMA_Abort_IT  py32f403_hal_dma.o
-    0x08000bc8   0x08000bc8   0x00000042   Code   RO          256    .text.HAL_Delay     py32f403_hal.o
+    0x080008b0   0x080008b0   0x00000318   Code   RO          473    .text.HAL_DMA_Abort_IT  py32f403_hal_dma.o
+    0x08000bc8   0x08000bc8   0x00000042   Code   RO          327    .text.HAL_Delay     py32f403_hal.o
     0x08000c0a   0x08000c0a   0x00000002   PAD
     0x08000c0c   0x08000c0c   0x00000048   Code   RO           69    .text.HAL_GPIO_EXTI_Callback  gpio.o
-    0x08000c54   0x08000c54   0x00000038   Code   RO          527    .text.HAL_GPIO_EXTI_IRQHandler  py32f403_hal_gpio.o
-    0x08000c8c   0x08000c8c   0x0000034e   Code   RO          513    .text.HAL_GPIO_Init  py32f403_hal_gpio.o
+    0x08000c54   0x08000c54   0x00000038   Code   RO          598    .text.HAL_GPIO_EXTI_IRQHandler  py32f403_hal_gpio.o
+    0x08000c8c   0x08000c8c   0x0000034e   Code   RO          584    .text.HAL_GPIO_Init  py32f403_hal_gpio.o
     0x08000fda   0x08000fda   0x00000002   PAD
-    0x08000fdc   0x08000fdc   0x0000002e   Code   RO          521    .text.HAL_GPIO_TogglePin  py32f403_hal_gpio.o
+    0x08000fdc   0x08000fdc   0x0000002e   Code   RO          592    .text.HAL_GPIO_TogglePin  py32f403_hal_gpio.o
     0x0800100a   0x0800100a   0x00000002   PAD
-    0x0800100c   0x0800100c   0x0000002c   Code   RO          519    .text.HAL_GPIO_WritePin  py32f403_hal_gpio.o
-    0x08001038   0x08001038   0x0000000c   Code   RO          248    .text.HAL_GetTick   py32f403_hal.o
-    0x08001044   0x08001044   0x0000028c   Code   RO          540    .text.HAL_I2C_Init  py32f403_hal_i2c.o
-    0x080012d0   0x080012d0   0x00000208   Code   RO          548    .text.HAL_I2C_Master_Transmit  py32f403_hal_i2c.o
-    0x080014d8   0x080014d8   0x00000460   Code   RO          594    .text.HAL_I2C_Mem_Read  py32f403_hal_i2c.o
-    0x08001938   0x08001938   0x00000210   Code   RO          590    .text.HAL_I2C_Mem_Write  py32f403_hal_i2c.o
+    0x0800100c   0x0800100c   0x0000002c   Code   RO          590    .text.HAL_GPIO_WritePin  py32f403_hal_gpio.o
+    0x08001038   0x08001038   0x0000000c   Code   RO          319    .text.HAL_GetTick   py32f403_hal.o
+    0x08001044   0x08001044   0x0000028c   Code   RO          611    .text.HAL_I2C_Init  py32f403_hal_i2c.o
+    0x080012d0   0x080012d0   0x00000208   Code   RO          619    .text.HAL_I2C_Master_Transmit  py32f403_hal_i2c.o
+    0x080014d8   0x080014d8   0x00000460   Code   RO          665    .text.HAL_I2C_Mem_Read  py32f403_hal_i2c.o
+    0x08001938   0x08001938   0x00000210   Code   RO          661    .text.HAL_I2C_Mem_Write  py32f403_hal_i2c.o
     0x08001b48   0x08001b48   0x00000088   Code   RO           95    .text.HAL_I2C_MspInit  i2c.o
-    0x08001bd0   0x08001bd0   0x0000001a   Code   RO          246    .text.HAL_IncTick   py32f403_hal.o
+    0x08001bd0   0x08001bd0   0x0000001a   Code   RO          317    .text.HAL_IncTick   py32f403_hal.o
     0x08001bea   0x08001bea   0x00000002   PAD
-    0x08001bec   0x08001bec   0x00000016   Code   RO          236    .text.HAL_Init      py32f403_hal.o
+    0x08001bec   0x08001bec   0x00000016   Code   RO          307    .text.HAL_Init      py32f403_hal.o
     0x08001c02   0x08001c02   0x00000002   PAD
-    0x08001c04   0x08001c04   0x00000070   Code   RO          238    .text.HAL_InitTick  py32f403_hal.o
+    0x08001c04   0x08001c04   0x00000070   Code   RO          309    .text.HAL_InitTick  py32f403_hal.o
     0x08001c74   0x08001c74   0x0000011c   Code   RO           23    .text.HAL_MspInit   py32f403_hal_msp.o
-    0x08001d90   0x08001d90   0x00000014   Code   RO          335    .text.HAL_NVIC_EnableIRQ  py32f403_hal_cortex.o
-    0x08001da4   0x08001da4   0x00000032   Code   RO          327    .text.HAL_NVIC_SetPriority  py32f403_hal_cortex.o
+    0x08001d90   0x08001d90   0x00000014   Code   RO          406    .text.HAL_NVIC_EnableIRQ  py32f403_hal_cortex.o
+    0x08001da4   0x08001da4   0x00000032   Code   RO          398    .text.HAL_NVIC_SetPriority  py32f403_hal_cortex.o
     0x08001dd6   0x08001dd6   0x00000002   PAD
-    0x08001dd8   0x08001dd8   0x00000010   Code   RO          323    .text.HAL_NVIC_SetPriorityGrouping  py32f403_hal_cortex.o
-    0x08001de8   0x08001de8   0x00000262   Code   RO          784    .text.HAL_RCC_ClockConfig  py32f403_hal_rcc.o
+    0x08001dd8   0x08001dd8   0x00000010   Code   RO          394    .text.HAL_NVIC_SetPriorityGrouping  py32f403_hal_cortex.o
+    0x08001de8   0x08001de8   0x00000262   Code   RO          855    .text.HAL_RCC_ClockConfig  py32f403_hal_rcc.o
     0x0800204a   0x0800204a   0x00000002   PAD
-    0x0800204c   0x0800204c   0x0000000c   Code   RO          794    .text.HAL_RCC_GetHCLKFreq  py32f403_hal_rcc.o
-    0x08002058   0x08002058   0x00000022   Code   RO          796    .text.HAL_RCC_GetPCLK1Freq  py32f403_hal_rcc.o
+    0x0800204c   0x0800204c   0x0000000c   Code   RO          865    .text.HAL_RCC_GetHCLKFreq  py32f403_hal_rcc.o
+    0x08002058   0x08002058   0x00000022   Code   RO          867    .text.HAL_RCC_GetPCLK1Freq  py32f403_hal_rcc.o
     0x0800207a   0x0800207a   0x00000002   PAD
-    0x0800207c   0x0800207c   0x00000022   Code   RO          798    .text.HAL_RCC_GetPCLK2Freq  py32f403_hal_rcc.o
+    0x0800207c   0x0800207c   0x00000022   Code   RO          869    .text.HAL_RCC_GetPCLK2Freq  py32f403_hal_rcc.o
     0x0800209e   0x0800209e   0x00000002   PAD
-    0x080020a0   0x080020a0   0x000000ec   Code   RO          786    .text.HAL_RCC_GetSysClockFreq  py32f403_hal_rcc.o
-    0x0800218c   0x0800218c   0x000007c6   Code   RO          780    .text.HAL_RCC_OscConfig  py32f403_hal_rcc.o
+    0x080020a0   0x080020a0   0x000000ec   Code   RO          857    .text.HAL_RCC_GetSysClockFreq  py32f403_hal_rcc.o
+    0x0800218c   0x0800218c   0x000007c6   Code   RO          851    .text.HAL_RCC_OscConfig  py32f403_hal_rcc.o
     0x08002952   0x08002952   0x00000002   PAD
-    0x08002954   0x08002954   0x00000010   Code   RO          347    .text.HAL_SYSTICK_Config  py32f403_hal_cortex.o
-    0x08002964   0x08002964   0x00000008   Code   RO         1379    .text.HAL_UART_ErrorCallback  py32f403_hal_uart.o
-    0x0800296c   0x0800296c   0x00000236   Code   RO         1373    .text.HAL_UART_IRQHandler  py32f403_hal_uart.o
+    0x08002954   0x08002954   0x00000010   Code   RO          418    .text.HAL_SYSTICK_Config  py32f403_hal_cortex.o
+    0x08002964   0x08002964   0x00000008   Code   RO         1450    .text.HAL_UART_ErrorCallback  py32f403_hal_uart.o
+    0x0800296c   0x0800296c   0x00000236   Code   RO         1444    .text.HAL_UART_IRQHandler  py32f403_hal_uart.o
     0x08002ba2   0x08002ba2   0x00000002   PAD
-    0x08002ba4   0x08002ba4   0x00000008   Code   RO         1381    .text.HAL_UART_IdleFrameDetectCpltCallback  py32f403_hal_uart.o
-    0x08002bac   0x08002bac   0x000000aa   Code   RO         1295    .text.HAL_UART_Init  py32f403_hal_uart.o
+    0x08002ba4   0x08002ba4   0x00000008   Code   RO         1452    .text.HAL_UART_IdleFrameDetectCpltCallback  py32f403_hal_uart.o
+    0x08002bac   0x08002bac   0x000000aa   Code   RO         1366    .text.HAL_UART_Init  py32f403_hal_uart.o
     0x08002c56   0x08002c56   0x00000002   PAD
     0x08002c58   0x08002c58   0x0000009e   Code   RO           25    .text.HAL_UART_MspInit  py32f403_hal_msp.o
     0x08002cf6   0x08002cf6   0x00000002   PAD
-    0x08002cf8   0x08002cf8   0x00000008   Code   RO         1391    .text.HAL_UART_RxCpltCallback  py32f403_hal_uart.o
-    0x08002d00   0x08002d00   0x00000176   Code   RO         1313    .text.HAL_UART_Transmit  py32f403_hal_uart.o
+    0x08002cf8   0x08002cf8   0x00000008   Code   RO         1462    .text.HAL_UART_RxCpltCallback  py32f403_hal_uart.o
+    0x08002d00   0x08002d00   0x00000176   Code   RO         1384    .text.HAL_UART_Transmit  py32f403_hal_uart.o
     0x08002e76   0x08002e76   0x00000002   PAD
-    0x08002e78   0x08002e78   0x00000008   Code   RO         1387    .text.HAL_UART_TxCpltCallback  py32f403_hal_uart.o
+    0x08002e78   0x08002e78   0x00000008   Code   RO         1458    .text.HAL_UART_TxCpltCallback  py32f403_hal_uart.o
     0x08002e80   0x08002e80   0x00000004   Code   RO           40    .text.HardFault_Handler  py32f403_it.o
     0x08002e84   0x08002e84   0x0000010c   Code   RO           99    .text.I2C2_ScanDevices  i2c.o
-    0x08002f90   0x08002f90   0x00000064   Code   RO          696    .text.I2C_IsAcknowledgeFailed  py32f403_hal_i2c.o
-    0x08002ff4   0x08002ff4   0x000000fa   Code   RO          552    .text.I2C_MasterRequestWrite  py32f403_hal_i2c.o
+    0x08002f90   0x08002f90   0x00000064   Code   RO          767    .text.I2C_IsAcknowledgeFailed  py32f403_hal_i2c.o
+    0x08002ff4   0x08002ff4   0x000000fa   Code   RO          623    .text.I2C_MasterRequestWrite  py32f403_hal_i2c.o
     0x080030ee   0x080030ee   0x00000002   PAD
-    0x080030f0   0x080030f0   0x000001b2   Code   RO          596    .text.I2C_RequestMemoryRead  py32f403_hal_i2c.o
+    0x080030f0   0x080030f0   0x000001b2   Code   RO          667    .text.I2C_RequestMemoryRead  py32f403_hal_i2c.o
     0x080032a2   0x080032a2   0x00000002   PAD
-    0x080032a4   0x080032a4   0x00000122   Code   RO          592    .text.I2C_RequestMemoryWrite  py32f403_hal_i2c.o
+    0x080032a4   0x080032a4   0x00000122   Code   RO          663    .text.I2C_RequestMemoryWrite  py32f403_hal_i2c.o
     0x080033c6   0x080033c6   0x00000002   PAD
-    0x080033c8   0x080033c8   0x00000096   Code   RO          556    .text.I2C_WaitOnBTFFlagUntilTimeout  py32f403_hal_i2c.o
+    0x080033c8   0x080033c8   0x00000096   Code   RO          627    .text.I2C_WaitOnBTFFlagUntilTimeout  py32f403_hal_i2c.o
     0x0800345e   0x0800345e   0x00000002   PAD
-    0x08003460   0x08003460   0x000000be   Code   RO          550    .text.I2C_WaitOnFlagUntilTimeout  py32f403_hal_i2c.o
+    0x08003460   0x08003460   0x000000be   Code   RO          621    .text.I2C_WaitOnFlagUntilTimeout  py32f403_hal_i2c.o
     0x0800351e   0x0800351e   0x00000002   PAD
-    0x08003520   0x08003520   0x00000110   Code   RO          694    .text.I2C_WaitOnMasterAddressFlagUntilTimeout  py32f403_hal_i2c.o
-    0x08003630   0x08003630   0x000000da   Code   RO          562    .text.I2C_WaitOnRXNEFlagUntilTimeout  py32f403_hal_i2c.o
+    0x08003520   0x08003520   0x00000110   Code   RO          765    .text.I2C_WaitOnMasterAddressFlagUntilTimeout  py32f403_hal_i2c.o
+    0x08003630   0x08003630   0x000000da   Code   RO          633    .text.I2C_WaitOnRXNEFlagUntilTimeout  py32f403_hal_i2c.o
     0x0800370a   0x0800370a   0x00000002   PAD
-    0x0800370c   0x0800370c   0x00000094   Code   RO          554    .text.I2C_WaitOnTXEFlagUntilTimeout  py32f403_hal_i2c.o
+    0x0800370c   0x0800370c   0x00000094   Code   RO          625    .text.I2C_WaitOnTXEFlagUntilTimeout  py32f403_hal_i2c.o
     0x080037a0   0x080037a0   0x000000c2   Code   RO           67    .text.MX_GPIO_Init  gpio.o
     0x08003862   0x08003862   0x00000002   PAD
     0x08003864   0x08003864   0x00000048   Code   RO           93    .text.MX_I2C2_Init  i2c.o
@@ -3592,42 +3727,42 @@ Memory Map of the image
     0x08003900   0x08003900   0x00000004   Code   RO           42    .text.MemManage_Handler  py32f403_it.o
     0x08003904   0x08003904   0x00000002   Code   RO           38    .text.NMI_Handler   py32f403_it.o
     0x08003906   0x08003906   0x00000002   PAD
-    0x08003908   0x08003908   0x0000006c   Code   RO          333    .text.NVIC_EncodePriority  py32f403_hal_cortex.o
+    0x08003908   0x08003908   0x0000006c   Code   RO          404    .text.NVIC_EncodePriority  py32f403_hal_cortex.o
     0x08003974   0x08003974   0x00000002   Code   RO           52    .text.PendSV_Handler  py32f403_it.o
     0x08003976   0x08003976   0x00000002   PAD
-    0x08003978   0x08003978   0x0000003a   Code   RO          782    .text.RCC_Delay     py32f403_hal_rcc.o
+    0x08003978   0x08003978   0x0000003a   Code   RO          853    .text.RCC_Delay     py32f403_hal_rcc.o
     0x080039b2   0x080039b2   0x00000002   PAD
     0x080039b4   0x080039b4   0x00000002   Code   RO           48    .text.SVC_Handler   py32f403_it.o
     0x080039b6   0x080039b6   0x00000002   PAD
-    0x080039b8   0x080039b8   0x00000054   Code   RO          349    .text.SysTick_Config  py32f403_hal_cortex.o
+    0x080039b8   0x080039b8   0x00000054   Code   RO          420    .text.SysTick_Config  py32f403_hal_cortex.o
     0x08003a0c   0x08003a0c   0x00000008   Code   RO           54    .text.SysTick_Handler  py32f403_it.o
     0x08003a14   0x08003a14   0x0000007c   Code   RO            4    .text.SystemClockConfig  main.o
-    0x08003a90   0x08003a90   0x00000010   Code   RO          211    .text.SystemInit    system_py32f403.o
-    0x08003aa0   0x08003aa0   0x0000004e   Code   RO         1301    .text.UART_AdvFeatureConfig  py32f403_hal_uart.o
+    0x08003a90   0x08003a90   0x00000010   Code   RO          282    .text.SystemInit    system_py32f403.o
+    0x08003aa0   0x08003aa0   0x0000004e   Code   RO         1372    .text.UART_AdvFeatureConfig  py32f403_hal_uart.o
     0x08003aee   0x08003aee   0x00000002   PAD
-    0x08003af0   0x08003af0   0x00000020   Code   RO         1377    .text.UART_DMAAbortOnError  py32f403_hal_uart.o
-    0x08003b10   0x08003b10   0x00000028   Code   RO         1345    .text.UART_EndRxTransfer  py32f403_hal_uart.o
-    0x08003b38   0x08003b38   0x00000026   Code   RO         1385    .text.UART_EndTransmit_IT  py32f403_hal_uart.o
+    0x08003af0   0x08003af0   0x00000020   Code   RO         1448    .text.UART_DMAAbortOnError  py32f403_hal_uart.o
+    0x08003b10   0x08003b10   0x00000028   Code   RO         1416    .text.UART_EndRxTransfer  py32f403_hal_uart.o
+    0x08003b38   0x08003b38   0x00000026   Code   RO         1456    .text.UART_EndTransmit_IT  py32f403_hal_uart.o
     0x08003b5e   0x08003b5e   0x00000002   PAD
-    0x08003b60   0x08003b60   0x000000b6   Code   RO         1375    .text.UART_Receive_IT  py32f403_hal_uart.o
+    0x08003b60   0x08003b60   0x000000b6   Code   RO         1446    .text.UART_Receive_IT  py32f403_hal_uart.o
     0x08003c16   0x08003c16   0x00000002   PAD
-    0x08003c18   0x08003c18   0x000001ce   Code   RO         1299    .text.UART_SetConfig  py32f403_hal_uart.o
+    0x08003c18   0x08003c18   0x000001ce   Code   RO         1370    .text.UART_SetConfig  py32f403_hal_uart.o
     0x08003de6   0x08003de6   0x00000002   PAD
-    0x08003de8   0x08003de8   0x0000009c   Code   RO         1383    .text.UART_Transmit_IT  py32f403_hal_uart.o
-    0x08003e84   0x08003e84   0x0000009c   Code   RO         1315    .text.UART_WaitOnFlagUntilTimeout  py32f403_hal_uart.o
+    0x08003de8   0x08003de8   0x0000009c   Code   RO         1454    .text.UART_Transmit_IT  py32f403_hal_uart.o
+    0x08003e84   0x08003e84   0x0000009c   Code   RO         1386    .text.UART_WaitOnFlagUntilTimeout  py32f403_hal_uart.o
     0x08003f20   0x08003f20   0x00000010   Code   RO           56    .text.USART1_IRQHandler  py32f403_it.o
     0x08003f30   0x08003f30   0x00000004   Code   RO           46    .text.UsageFault_Handler  py32f403_it.o
-    0x08003f34   0x08003f34   0x00000030   Code   RO          337    .text.__NVIC_EnableIRQ  py32f403_hal_cortex.o
-    0x08003f64   0x08003f64   0x00000010   Code   RO          329    .text.__NVIC_GetPriorityGrouping  py32f403_hal_cortex.o
-    0x08003f74   0x08003f74   0x00000042   Code   RO          331    .text.__NVIC_SetPriority  py32f403_hal_cortex.o
+    0x08003f34   0x08003f34   0x00000030   Code   RO          408    .text.__NVIC_EnableIRQ  py32f403_hal_cortex.o
+    0x08003f64   0x08003f64   0x00000010   Code   RO          400    .text.__NVIC_GetPriorityGrouping  py32f403_hal_cortex.o
+    0x08003f74   0x08003f74   0x00000042   Code   RO          402    .text.__NVIC_SetPriority  py32f403_hal_cortex.o
     0x08003fb6   0x08003fb6   0x00000002   PAD
-    0x08003fb8   0x08003fb8   0x0000003c   Code   RO          325    .text.__NVIC_SetPriorityGrouping  py32f403_hal_cortex.o
+    0x08003fb8   0x08003fb8   0x0000003c   Code   RO          396    .text.__NVIC_SetPriorityGrouping  py32f403_hal_cortex.o
     0x08003ff4   0x08003ff4   0x00000084   Code   RO          124    .text.convert_accel  qmi8658a_driver.o
     0x08004078   0x08004078   0x00000084   Code   RO          126    .text.convert_gyro  qmi8658a_driver.o
     0x080040fc   0x080040fc   0x00000022   Code   RO            6    .text.fputc         main.o
     0x0800411e   0x0800411e   0x00000002   PAD
-    0x08004120   0x08004120   0x0000000c   Code   RO          199    .text.gyro_factory_get_device  gyro_factory.o
-    0x0800412c   0x0800412c   0x0000003c   Code   RO          197    .text.gyro_factory_init  gyro_factory.o
+    0x08004120   0x08004120   0x0000000c   Code   RO          270    .text.gyro_factory_get_device  gyro_factory.o
+    0x0800412c   0x0800412c   0x0000003c   Code   RO          268    .text.gyro_factory_init  gyro_factory.o
     0x08004168   0x08004168   0x000001cc   Code   RO            2    .text.main          main.o
     0x08004334   0x08004334   0x00000018   Code   RO          148    .text.qmi8658a_device_id_get  qmi8658a_reg.o
     0x0800434c   0x0800434c   0x00000050   Code   RO          158    .text.qmi8658a_gyro_data_rate_set  qmi8658a_reg.o
@@ -3644,48 +3779,48 @@ Memory Map of the image
     0x080047d0   0x080047d0   0x00000020   Code   RO          120    .text.qmi8658a_sleep  qmi8658a_driver.o
     0x080047f0   0x080047f0   0x00000020   Code   RO          122    .text.qmi8658a_wakeup  qmi8658a_driver.o
     0x08004810   0x08004810   0x00000044   Code   RO          144    .text.qmi8658a_write_reg  qmi8658a_reg.o
-    0x08004854   0x08004854   0x00000020   Code   RO         1602    i.__0printf         mc_w.l(printfa.o)
-    0x08004874   0x08004874   0x0000007a   Code   RO         1586    i.__hardfp_sqrt     m_wm.l(sqrt.o)
-    0x080048ee   0x080048ee   0x0000000e   Code   RO         1697    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x080048fc   0x080048fc   0x00000002   Code   RO         1698    i.__scatterload_null  mc_w.l(handlers.o)
-    0x080048fe   0x080048fe   0x0000000e   Code   RO         1699    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0800490c   0x0800490c   0x0000000c   Code   RO         1665    i.__set_errno       mc_w.l(errno.o)
-    0x08004918   0x08004918   0x00000184   Code   RO         1609    i._fp_digits        mc_w.l(printfa.o)
-    0x08004a9c   0x08004a9c   0x000006dc   Code   RO         1610    i._printf_core      mc_w.l(printfa.o)
-    0x08005178   0x08005178   0x00000024   Code   RO         1611    i._printf_post_padding  mc_w.l(printfa.o)
-    0x0800519c   0x0800519c   0x0000002e   Code   RO         1612    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x080051ca   0x080051ca   0x00000040   Data   RO          808    .rodata..L__const.HAL_RCC_GetSysClockFreq.aPLLMULFactorTable  py32f403_hal_rcc.o
-    0x0800520a   0x0800520a   0x00000010   Data   RO          216    .rodata.AHBPrescTable  system_py32f403.o
-    0x0800521a   0x0800521a   0x00000008   Data   RO          217    .rodata.APBPrescTable  system_py32f403.o
+    0x08004854   0x08004854   0x00000020   Code   RO         1673    i.__0printf         mc_w.l(printfa.o)
+    0x08004874   0x08004874   0x0000007a   Code   RO         1657    i.__hardfp_sqrt     m_wm.l(sqrt.o)
+    0x080048ee   0x080048ee   0x0000000e   Code   RO         1768    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080048fc   0x080048fc   0x00000002   Code   RO         1769    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080048fe   0x080048fe   0x0000000e   Code   RO         1770    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800490c   0x0800490c   0x0000000c   Code   RO         1736    i.__set_errno       mc_w.l(errno.o)
+    0x08004918   0x08004918   0x00000184   Code   RO         1680    i._fp_digits        mc_w.l(printfa.o)
+    0x08004a9c   0x08004a9c   0x000006dc   Code   RO         1681    i._printf_core      mc_w.l(printfa.o)
+    0x08005178   0x08005178   0x00000024   Code   RO         1682    i._printf_post_padding  mc_w.l(printfa.o)
+    0x0800519c   0x0800519c   0x0000002e   Code   RO         1683    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x080051ca   0x080051ca   0x00000040   Data   RO          879    .rodata..L__const.HAL_RCC_GetSysClockFreq.aPLLMULFactorTable  py32f403_hal_rcc.o
+    0x0800520a   0x0800520a   0x00000010   Data   RO          287    .rodata.AHBPrescTable  system_py32f403.o
+    0x0800521a   0x0800521a   0x00000008   Data   RO          288    .rodata.APBPrescTable  system_py32f403.o
     0x08005222   0x08005222   0x00000002   PAD
     0x08005224   0x08005224   0x00000018   Data   RO          129    .rodata.qmi8658a_device  qmi8658a_driver.o
     0x0800523c   0x0800523c   0x00000081   Data   RO           14    .rodata.str1.1      main.o
     0x080052bd   0x080052bd   0x0000002f   Data   RO          104    .rodata.str1.1      i2c.o
-    0x080052ec   0x080052ec   0x00000020   Data   RO         1696    Region$$Table       anon$$obj.o
+    0x080052ec   0x080052ec   0x00000020   Data   RO         1767    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08005310, Size: 0x00000598, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08005310   0x00000004   Data   RW         1649    .data               mc_w.l(stdout.o)
-    0x20000004   0x08005314   0x00000004   Data   RW         1666    .data               mc_w.l(errno.o)
-    0x20000008   0x08005318   0x00000004   Data   RW          215    .data.SystemCoreClock  system_py32f403.o
-    0x2000000c   0x0800531c   0x00000001   Data   RW          311    .data.uwTickFreq    py32f403_hal.o
+    0x20000000   0x08005310   0x00000004   Data   RW         1720    .data               mc_w.l(stdout.o)
+    0x20000004   0x08005314   0x00000004   Data   RW         1737    .data               mc_w.l(errno.o)
+    0x20000008   0x08005318   0x00000004   Data   RW          286    .data.SystemCoreClock  system_py32f403.o
+    0x2000000c   0x0800531c   0x00000001   Data   RW          382    .data.uwTickFreq    py32f403_hal.o
     0x2000000d   0x0800531d   0x00000003   PAD
-    0x20000010   0x08005320   0x00000004   Data   RW          310    .data.uwTickPrio    py32f403_hal.o
+    0x20000010   0x08005320   0x00000004   Data   RW          381    .data.uwTickPrio    py32f403_hal.o
     0x20000014   0x08005324   0x00000004   PAD
     0x20000018        -       0x00000014   Zero   RW          128    .bss.ctx            qmi8658a_driver.o
-    0x2000002c        -       0x00000004   Zero   RW          203    .bss.current_sensor  gyro_factory.o
+    0x2000002c        -       0x00000004   Zero   RW          274    .bss.current_sensor  gyro_factory.o
     0x20000030        -       0x00000054   Zero   RW          101    .bss.hi2c2          i2c.o
     0x20000084        -       0x0000004c   Zero   RW           84    .bss.huart1         usart.o
     0x200000d0        -       0x0000004c   Zero   RW           85    .bss.huart2         usart.o
     0x2000011c        -       0x00000001   Zero   RW          102    .bss.i2c2_device_count  i2c.o
     0x2000011d        -       0x00000070   Zero   RW          103    .bss.i2c2_device_list  i2c.o
     0x2000018d   0x08005324   0x00000003   PAD
-    0x20000190        -       0x00000004   Zero   RW          312    .bss.uwTick         py32f403_hal.o
+    0x20000190        -       0x00000004   Zero   RW          383    .bss.uwTick         py32f403_hal.o
     0x20000194   0x08005324   0x00000004   PAD
-    0x20000198        -       0x00000400   Zero   RW          226    STACK               startup_py32f403xx.o
+    0x20000198        -       0x00000400   Zero   RW          297    STACK               startup_py32f403xx.o
 
 
 ==============================================================================

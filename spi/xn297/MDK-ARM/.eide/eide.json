@@ -1,0 +1,514 @@
+{
+  "name": "Project",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "Application",
+        "files": [
+          {
+            "path": "../Application/Src/main.c"
+          },
+          {
+            "path": "../Application/Inc/main.h"
+          },
+          {
+            "path": "../Application/Src/py32f403_it.c"
+          },
+          {
+            "path": "../Application/Inc/py32f403_it.h"
+          },
+          {
+            "path": "../Application/Src/py32f403_hal_msp.c"
+          },
+          {
+            "path": "../Application/Inc/py32f403_hal_conf.h"
+          },
+          {
+            "path": "../Application/Inc/userConfig.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "BSP",
+        "files": [],
+        "folders": [
+          {
+            "name": "MCU_Driver",
+            "files": [
+              {
+                "path": "../BSP/MCU_Driver/Inc/bsp_common.h"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Src/bsp_core.c"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Inc/bsp_core.h"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Src/bsp_gpio.c"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Inc/bsp_exti.h"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Inc/bsp_gpio.h"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Src/bsp_exti.c"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Src/bsp_uasrt.c"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Inc/bsp_uasrt.h"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Src/bsp_spi.c"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Inc/bsp_spi.h"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Src/LED.c"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Inc/LED.h"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Src/bsp_tim.c"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Inc/bsp_tim.h"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Src/bsp_pwm.c"
+              },
+              {
+                "path": "../BSP/MCU_Driver/Inc/bsp_pwm.h"
+              },
+              {
+                "path": "../../../SerialNet/Py32f403/Event_v1.0/BSP/MCU_Driver/Src/tim.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "Module_Driver",
+            "files": [
+              {
+                "path": "../BSP/Module_Driver/SI24R1/SI24R1.c"
+              },
+              {
+                "path": "../BSP/Module_Driver/SI24R1/SI24R1.h"
+              },
+              {
+                "path": "../BSP/Module_Driver/lcd/lcd.c"
+              },
+              {
+                "path": "../BSP/Module_Driver/lcd/lcd.h"
+              },
+              {
+                "path": "../BSP/Module_Driver/lcd/lcd_font.h"
+              },
+              {
+                "path": "../BSP/Module_Driver/xl2400p/xn297L.c"
+              },
+              {
+                "path": "../BSP/Module_Driver/xl2400p/xn297L.h"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "Device",
+        "files": [
+          {
+            "path": "../Device/dev_common.h"
+          },
+          {
+            "path": "../Device/dev_led.c"
+          },
+          {
+            "path": "../Device/dev_led.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Middleware",
+        "files": [
+          {
+            "path": "../Middleware/serial.c"
+          },
+          {
+            "path": "../Middleware/serial.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Public",
+        "files": [
+          {
+            "path": "../Public/RingBuffer/kfifo.c"
+          },
+          {
+            "path": "../Public/RingBuffer/kfifo.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "FWLIB",
+        "files": [
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_adc.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_adc_ex.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_canfd.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_cortex.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_crc.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_ctc.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_dma.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_esmc.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_exti.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_flash.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_gpio.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_i2c.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_i2s.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_irda.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_iwdg.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_pwr.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_pwr_ex.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_rcc.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_rcc_ex.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_rtc.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_rtc_ex.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_sd.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_smartcard.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_spi.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_spi_ex.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_tim.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_tim_ex.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_uart.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_usart.c"
+          },
+          {
+            "path": "../firmware/PY32F403_HAL_Driver/Src/py32f403_hal_wwdg.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Doc",
+        "files": [
+          {
+            "path": "../readme.md"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "::CMSIS",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "::Device",
+        "files": [
+          {
+            "path": "RTE/Device/PY32F403xD/startup_py32f4xx.s"
+          },
+          {
+            "path": "RTE/Device/PY32F403xD/system_py32f4xx.c"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": "PY32F403xD",
+  "packDir": ".pack/Puya/PY32F4xx_DFP.1.0.0",
+  "miscInfo": {
+    "uid": "708afc6e2226c1b7acf27a77c80fa116"
+  },
+  "targets": {
+    "Project": {
+      "excludeList": [],
+      "toolchain": "AC6",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "archExtensions": "",
+        "floatingPointHardware": "single",
+        "scatterFilePath": "Objects/Project.sct",
+        "useCustomScatterFile": false,
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x10000"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x8000000",
+                "size": "0x60000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "pyOCD",
+      "uploadConfig": {
+        "bin": "",
+        "targetName": "py32f403xd",
+        "baseAddr": "0x08000000",
+        "speed": "4M",
+        "config": ".eide/project.pyocd.yaml",
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        },
+        "pyOCD": {
+          "bin": "",
+          "targetName": "py32f403xd",
+          "baseAddr": "0x08000000",
+          "speed": "4M",
+          "config": ".eide/project.pyocd.yaml",
+          "otherCmds": ""
+        },
+        "OpenOCD": {
+          "bin": "",
+          "target": "py32f403",
+          "interface": "cmsis-dap",
+          "baseAddr": "0x08000000"
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          ".",
+          "../firmware/PY32F403_HAL_Driver/Inc",
+          "../firmware/CMSIS/Device/PUYA/PY32F403/Include",
+          "../firmware/CMSIS/Include",
+          "../firmware/BSP/PY32F403xx_Start_Kit",
+          "../Application/Inc",
+          "../Middleware",
+          "../Public/RingBuffer",
+          "../Public/mavlink",
+          "../BSP/MCU_Driver/Src",
+          "../BSP/MCU_Driver/Inc",
+          "../BSP/Module_Driver/lcd",
+          "../BSP/Module_Driver/SI24R1",
+          "../BSP/Module_Driver/xl2400p",
+          "../Device",
+          ".cmsis/include",
+          "RTE/_Project"
+        ],
+        "libList": [],
+        "defineList": [
+          "USE_HAL_DRIVER",
+          "PY32F403xD"
+        ]
+      },
+      "builderOptions": {
+        "AC6": {
+          "version": 3,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "output-debug-info": "enable",
+            "use-microLIB": true
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-0",
+            "language-c": "c11",
+            "language-cpp": "c++11",
+            "one-elf-section-per-function": true,
+            "short-enums#wchar": true,
+            "warnings": "misra-compatible"
+          },
+          "asm-compiler": {
+            "$use": "asm-auto"
+          },
+          "linker": {
+            "output-format": "elf",
+            "misc-controls": "--diag_suppress=L6329",
+            "ro-base": "0x00000000",
+            "rw-base": "0x20000000"
+          }
+        }
+      }
+    }
+  },
+  "version": "3.6"
+}
