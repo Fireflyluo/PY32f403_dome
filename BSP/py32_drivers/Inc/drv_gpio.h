@@ -3,15 +3,15 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-
+#include "py32f4xx_hal.h"
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
 /* 使用RT-Thread风格的宏定义 */
-#define __N32_PORT(port) GPIO##port##_BASE
-#define GET_PIN(PORTx, PIN) (uint16_t)((16 * (((uint16_t)__N32_PORT(PORTx) - (uint16_t)GPIOA_BASE) / (0x0400UL))) + PIN)
+#define __PY32_PORT(port) GPIO##port##_BASE
+#define GET_PIN(PORTx, PIN) (uint16_t)((16 * (((uint16_t)__PY32_PORT(PORTx) - (uint16_t)GPIOA_BASE) / (0x0400UL))) + PIN)
 
   /* 基础类型定义 */
   typedef int32_t gpio_err_t;
@@ -26,20 +26,20 @@ extern "C"
   /* 引脚模式定义 */
   typedef enum
   {
-    GPIO_MODE_INPUT = 0,
-    GPIO_MODE_OUTPUT,
-    GPIO_MODE_INPUT_PULLUP,
-    GPIO_MODE_INPUT_PULLDOWN,
-    GPIO_MODE_OUTPUT_OD,
-  } gpio_mode_t;
+    PIN_MODE_INPUT = 0,
+    PIN_MODE_OUTPUT,
+    PIN_MODE_INPUT_PULLUP,
+    PIN_MODE_INPUT_PULLDOWN,
+    PIN_MODE_OUTPUT_OD,
+  } pin_mode_t;
 
   /* 中断模式定义 */
   typedef enum
   {
-    GPIO_IRQ_MODE_RISING = 0,
-    GPIO_IRQ_MODE_FALLING,
-    GPIO_IRQ_MODE_RISING_FALLING,
-  } gpio_irq_mode_t;
+    PIN_IRQ_MODE_RISING = 0,
+    PIN_IRQ_MODE_FALLING,
+    PIN_IRQ_MODE_RISING_FALLING,
+  } pin_irq_mode_t;
 
   /* 中断使能定义 */
   typedef enum
@@ -48,12 +48,8 @@ extern "C"
     GPIO_IRQ_ENABLE = 1
   } gpio_irq_enable_t;
 
-  /* 引脚电平定义 */
-  typedef enum
-  {
-    GPIO_PIN_RESET = 0,
-    GPIO_PIN_SET = 1
-  } gpio_pin_state_t;
+
+
 
   /* 引脚索引结构 - 适配新的宏定义 */
   struct gpio_pin_index
@@ -66,11 +62,11 @@ extern "C"
 
   /* API函数声明 */
   gpio_err_t gpio_init(void);
-  gpio_err_t gpio_mode(gpio_pin_t pin, gpio_mode_t mode);
-  void gpio_write(gpio_pin_t pin, gpio_pin_state_t value);
-  gpio_pin_state_t gpio_read(gpio_pin_t pin);
+  gpio_err_t gpio_mode(gpio_pin_t pin, pin_mode_t mode);
+  void gpio_write(gpio_pin_t pin, GPIO_PinState value);
+  GPIO_PinState gpio_read(gpio_pin_t pin);
   gpio_err_t gpio_toggle(gpio_pin_t pin);
-  gpio_err_t gpio_attach_irq(gpio_pin_t pin, gpio_irq_mode_t mode,
+  gpio_err_t gpio_attach_irq(gpio_pin_t pin, pin_irq_mode_t mode,
                              void (*hdr)(void *args), void *args);
   gpio_err_t gpio_detach_irq(gpio_pin_t pin);
   gpio_err_t gpio_irq_enable(gpio_pin_t pin, gpio_irq_enable_t enabled);

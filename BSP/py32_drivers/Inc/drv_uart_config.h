@@ -1,6 +1,6 @@
 #ifndef __DRV_UART_CONFIG_H__
 #define __DRV_UART_CONFIG_H__
-
+#include "main.h"
 /* ========== 模式选择宏定义 ========== */
 
 /* 工作模式选择 (必须三选一) */

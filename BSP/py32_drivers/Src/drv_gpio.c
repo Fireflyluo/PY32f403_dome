@@ -102,19 +102,7 @@ static const struct gpio_pin_index gpio_pins[] = {
 #define GPIO_PIN_COUNT (sizeof(gpio_pins) / sizeof(gpio_pins[0]))
 
 /* ========== 工具函数 ========== */
-/* 获取引脚名称函数 */
-const char *gpio_get_pin_name(gpio_pin_t pin)
-{
-  const struct gpio_pin_index *index;
 
-  index = gpio_get_pin(pin);
-  if (index == NULL)
-  {
-    return "UNKNOWN";
-  }
-
-  return index->name;
-}
 /* 根据引脚号查找引脚信息 - 优化版本 */
 static const struct gpio_pin_index *gpio_get_pin(gpio_pin_t pin)
 {
@@ -130,7 +118,19 @@ static const struct gpio_pin_index *gpio_get_pin(gpio_pin_t pin)
   }
   return NULL;
 }
+/* 获取引脚名称函数 */
+const char *gpio_get_pin_name(gpio_pin_t pin)
+{
+  const struct gpio_pin_index *index;
 
+  index = gpio_get_pin(pin);
+  if (index == NULL)
+  {
+    return "UNKNOWN";
+  }
+
+  return index->name;
+}
 /* 位值转换为位索引 - 修复返回类型 */
 static uint8_t gpio_bit_to_index(uint16_t bit)
 {
@@ -161,7 +161,7 @@ gpio_err_t gpio_init(void)
 }
 
 /* 设置GPIO模式 */
-gpio_err_t gpio_mode(gpio_pin_t pin, gpio_mode_t mode)
+gpio_err_t gpio_mode(gpio_pin_t pin, pin_mode_t mode)
 {
   const struct gpio_pin_index *index;
   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -178,27 +178,27 @@ gpio_err_t gpio_mode(gpio_pin_t pin, gpio_mode_t mode)
 
   switch (mode)
   {
-  case GPIO_MODE_OUTPUT:
+  case PIN_MODE_OUTPUT:
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     break;
 
-  case GPIO_MODE_INPUT:
+  case PIN_MODE_INPUT:
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     break;
 
-  case GPIO_MODE_INPUT_PULLUP:
+  case PIN_MODE_INPUT_PULLUP:
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
     GPIO_InitStruct.Pull = GPIO_PULLUP;
     break;
 
-  case GPIO_MODE_INPUT_PULLDOWN:
+  case PIN_MODE_INPUT_PULLDOWN:
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
     GPIO_InitStruct.Pull = GPIO_PULLDOWN;
     break;
 
-  case GPIO_MODE_OUTPUT_OD:
+  case PIN_MODE_OUTPUT_OD:
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     break;
@@ -212,7 +212,7 @@ gpio_err_t gpio_mode(gpio_pin_t pin, gpio_mode_t mode)
 }
 
 /* 写GPIO引脚 */
-void gpio_write(gpio_pin_t pin, gpio_pin_state_t value)
+void gpio_write(gpio_pin_t pin, GPIO_PinState value)
 {
   const struct gpio_pin_index *index;
 
@@ -227,7 +227,7 @@ void gpio_write(gpio_pin_t pin, gpio_pin_state_t value)
 }
 
 /* 读GPIO引脚 */
-gpio_pin_state_t gpio_read(gpio_pin_t pin)
+GPIO_PinState gpio_read(gpio_pin_t pin)
 {
   const struct gpio_pin_index *index;
 
@@ -295,7 +295,7 @@ static struct
 static uint32_t gpio_irq_enable_mask = 0;
 
 /* 绑定中断处理函数 */
-gpio_err_t gpio_attach_irq(gpio_pin_t pin, gpio_irq_mode_t mode,
+gpio_err_t gpio_attach_irq(gpio_pin_t pin, pin_irq_mode_t mode,
                            void (*hdr)(void *args), void *args)
 {
   const struct gpio_pin_index *index;
@@ -402,13 +402,13 @@ gpio_err_t gpio_irq_enable(gpio_pin_t pin, gpio_irq_enable_t enabled)
 
     switch (gpio_irq_handlers[irq_index].mode)
     {
-    case GPIO_IRQ_MODE_RISING:
+    case PIN_IRQ_MODE_RISING:
       GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
       break;
-    case GPIO_IRQ_MODE_FALLING:
+    case PIN_IRQ_MODE_FALLING:
       GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
       break;
-    case GPIO_IRQ_MODE_RISING_FALLING:
+    case PIN_IRQ_MODE_RISING_FALLING:
       GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
       break;
     default:

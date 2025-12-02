@@ -4,6 +4,7 @@
 #include "drv_uart_config.h"
 #include "main.h"
 #include "board.h"
+#include "py32f4xx_hal.h"
 
 #include <stdint.h>
 #include <stdbool.h>

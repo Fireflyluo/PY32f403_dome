@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 #include "main.h"
-#include "bsp_common.h"
+
 
 
 #ifdef __cplusplus
