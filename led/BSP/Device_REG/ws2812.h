@@ -11,7 +11,7 @@ extern "C" {
 #include "gpio.h"
 #include "tim.h"
 
-// WS2812B时序参数 800kHz
+// 根据移植单片机主频，使用定时器生成WS2812B时序参数 800kHz
 #define WS2812_BIT_1_PERIOD 120  
 #define WS2812_BIT_0_PERIOD 60    
 #define WS2812_RESET_PERIOD 0   

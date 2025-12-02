@@ -1,0 +1,254 @@
+version: "4.1"
+name: PY32F403_Project
+type: ARM
+deviceName: null
+packDir: .pack/Puya/PY32F4xx_DFP.1.0.0
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: Application
+      files:
+        - path: ../../Application/Src/main.c
+        - path: ../../Application/Src/py32f403_hal_msp.c
+        - path: ../../Application/Src/py32f403_it.c
+        - path: ../../Application/Inc/main.h
+        - path: ../../Application/Inc/py32f403_hal_conf.h
+        - path: ../../Application/Inc/py32f403_it.h
+      folders: []
+    - name: BSP
+      files: []
+      folders:
+        - name: MCU_Peripheral
+          files:
+            - path: ../../BSP/MCU_Peripheral/Src/gpio.c
+            - path: ../../BSP/MCU_Peripheral/Src/usart.c
+            - path: ../../BSP/MCU_Peripheral/Src/i2c.c
+          folders: []
+        - name: Sensor_Driver
+          files:
+            - path: ../../BSP/Sensor_Driver/QMI8658A/qmi8658a_driver.c
+            - path: ../../BSP/Sensor_Driver/QMI8658A/qmi8658a_driver.h
+            - path: ../../BSP/Sensor_Driver/QMI8658A/qmi8658a_reg.c
+            - path: ../../BSP/Sensor_Driver/QMI8658A/qmi8658a_reg.h
+          folders: []
+    - name: Drivers
+      files:
+        - path: ../../Drivers/gyro_device.h
+        - path: ../../Drivers/gyro_factory.c
+        - path: ../../Drivers/gyro_factory.h
+      folders: []
+    - name: Middleware
+      files: []
+      folders: []
+    - name: Public
+      files: []
+      folders: []
+    - name: star
+      files:
+        - path: ../../Application/Src/system_py32f403.c
+        - path: ../../Application/Src/startup_py32f403xx.s
+      folders: []
+    - name: Libraries
+      files:
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_adc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_adc_ex.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_canfd.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_cortex.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_crc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_ctc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_dma.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_esmc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_exti.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_flash.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_gpio.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_i2c.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_i2s.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_irda.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_iwdg.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_pwr.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_pwr_ex.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_rcc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_rcc_ex.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_rtc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_rtc_ex.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_sd.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_smartcard.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_spi.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_spi_ex.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_tim.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_tim_ex.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_uart.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_usart.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_hal_wwdg.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_adc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_crc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_ctc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_dma.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_exti.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_gpio.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_i2c.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_pwr.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_rcc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_rtc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_sdmmc.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_spi.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_tim.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_usart.c
+        - path: ../../Libraries/PY32F403_HAL_Driver/Src/py32f403_ll_utils.c
+      folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: 9df5e0817740613fd02f13c746c5f6bd
+targets:
+  Target 1:
+    cppPreprocessAttrs:
+      defineList:
+        - USE_HAL_DRIVER
+        - PY32F403xD
+      incList:
+        - .
+        - ../../Libraries/CMSIS/Include
+        - ../../Libraries/PY32F403_HAL_Driver/Inc
+        - ../../Libraries/CMSIS/Device/PUYA/PY32F403/Include
+        - ../../Application/Inc
+        - ../../BSP/MCU_Peripheral/Inc
+        - ../../BSP/Sensor_Driver/QMI8658A
+        - ../../Drivers
+        - .cmsis/include
+        - ../MDK-ARM/RTE/_Target 1
+      libList: []
+    excludeList: []
+    toolchain: AC6
+    toolchainConfigMap:
+      AC6:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 3
+          afterBuildTasks: []
+          asm-compiler:
+            $use: asm-auto
+            misc-controls: ""
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            language-c: c11
+            language-cpp: c++11
+            link-time-optimization: false
+            one-elf-section-per-function: true
+            optimization: level-0
+            short-enums#wchar: true
+            warnings: ac5-like-warnings
+          global:
+            output-debug-info: enable
+            use-microLIB: true
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            misc-controls: --diag_suppress=L6329
+            output-format: elf
+            ro-base: "0x08000000"
+            rw-base: "0x20000000"
+            xo-base: ""
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x10000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x60000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: "null"
+          vendor: "null"
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: stlink
+        target: stm32f1x
+      pyOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        config: .eide/target 1.pyocd.yaml
+        otherCmds: ""
+        speed: 4M
+        targetName: cortex_m
+    uploader: pyOCD
