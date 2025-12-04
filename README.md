@@ -10,7 +10,7 @@
 
 - **主控芯片**: PY32F403C1DT6
 - **传感器**:
-  - 陀螺仪（型号: QMI8658A）
+  - 陀螺仪（型号: QMI8658A|ICM42688p）
   - 气压计（型号: LPS22HHTR/LPS22HBTR/IPC20100）
   - 温湿度计（SHT30）
   - 磁力计（QMC5883P）
@@ -27,6 +27,11 @@
 ## 项目结构
 
 ```
+├── BSP                           -- 板级支持包
+│   ├── example                     -- 示例工程
+│   ├── py32_drivers                -- PY32外设驱动库
+│   └── PY32f403_Firmware_Library  
+├── example project               -- BSP驱动包示例工程  
 ├── I2C               -- i2c相关芯片驱动工程
 │   ├── qmi8658a         -- 外部设备的驱动库
 │   └── ...             
@@ -109,8 +114,17 @@
 - [x] 陀螺仪数据读取
 - [x] 气压计数据读取
 - [x] 2.4G射频通信
-- [ ] LCD显示驱动
-- [ ] W25Q138读写操作
+
+## 正在实现功能
+
+-  BSP层重构，创建py32外设驱动框架
+   - [x] drv_gpio.c
+   - [x] drv_uart.c
+   - [ ] drv_spi.c
+   - [ ] drv_i2c.c
+   - [ ] drv_tim.c
+   - [ ] drv_adc.c
+
 
 ## 待实现功能
 
