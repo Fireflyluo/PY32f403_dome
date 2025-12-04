@@ -1,5 +1,7 @@
-./objects/main.o: ..\..\Application\Src\main.c \
-  ..\..\Application\Inc\main.h \
+./objects/gpio_example.o: ..\..\..\BSP\example\gpio\gpio_example.c \
+  ..\..\..\BSP\py32_drivers\Inc\drv_gpio.h \
+  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h \
   ..\..\Application\Inc\py32f403_hal_conf.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h \
@@ -7,7 +9,6 @@
   ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include\py32f4xx.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include\py32f403xD.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include\core_cm4.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include\cmsis_version.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include\cmsis_compiler.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include\cmsis_armclang.h \
@@ -30,4 +31,4 @@
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
-  ..\..\..\BSP\example\uart\uart_polling_example.h
+  ..\..\Application\Inc\main.h

@@ -1,4 +1,7 @@
-./objects/main.o: ..\..\Application\Src\main.c \
+./objects/uart_polling_example.o: \
+  ..\..\..\BSP\example\uart\uart_polling_example.c \
+  ..\..\..\BSP\py32_drivers\Inc\drv_uart.h \
+  ..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h \
   ..\..\Application\Inc\main.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h \
   ..\..\Application\Inc\py32f403_hal_conf.h \
@@ -30,4 +33,6 @@
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
-  ..\..\..\BSP\example\uart\uart_polling_example.h
+  ..\..\..\BSP\board.h \
+  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h

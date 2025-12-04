@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,PY32F403xD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include;..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include;..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc;..\..\Application\Inc;..\..\..\BSP\py32_drivers\Inc;..\..\..\BSP</IncludePath>
+              <IncludePath>..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include;..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include;..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc;..\..\Application\Inc;..\..\..\BSP\py32_drivers\Inc;..\..\..\BSP;..\..\..\BSP\example\uart;..\..\..\BSP\example\gpio</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -418,6 +418,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>example</GroupName>
+          <Files>
+            <File>
+              <FileName>uart_polling_example.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\BSP\example\uart\uart_polling_example.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_example.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\BSP\example\gpio\gpio_example.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>py32_drivers</GroupName>
           <Files>
             <File>
@@ -426,29 +441,14 @@
               <FilePath>..\..\..\BSP\py32_drivers\Src\drv_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>drv_i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\BSP\py32_drivers\Src\drv_i2c.c</FilePath>
-            </File>
-            <File>
-              <FileName>drv_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\BSP\py32_drivers\Src\drv_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>drv_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\BSP\py32_drivers\Src\drv_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>drv_uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\BSP\py32_drivers\Src\drv_uart.c</FilePath>
-            </File>
-            <File>
               <FileName>drv_gpio.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\BSP\py32_drivers\Inc\drv_gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>drv_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\BSP\py32_drivers\Src\drv_i2c.c</FilePath>
             </File>
             <File>
               <FileName>drv_i2c.h</FileName>
@@ -456,14 +456,29 @@
               <FilePath>..\..\..\BSP\py32_drivers\Inc\drv_i2c.h</FilePath>
             </File>
             <File>
+              <FileName>drv_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\BSP\py32_drivers\Src\drv_spi.c</FilePath>
+            </File>
+            <File>
               <FileName>drv_spi.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\BSP\py32_drivers\Inc\drv_spi.h</FilePath>
             </File>
             <File>
+              <FileName>drv_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\BSP\py32_drivers\Src\drv_tim.c</FilePath>
+            </File>
+            <File>
               <FileName>drv_tim.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\BSP\py32_drivers\Inc\drv_tim.h</FilePath>
+            </File>
+            <File>
+              <FileName>drv_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\BSP\py32_drivers\Src\drv_uart.c</FilePath>
             </File>
             <File>
               <FileName>drv_uart.h</FileName>
@@ -474,6 +489,16 @@
               <FileName>drv_uart_config.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>drv_tool.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\BSP\py32_drivers\Src\drv_tool.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_tool.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\BSP\py32_drivers\Inc\drv_tool.h</FilePath>
             </File>
           </Files>
         </Group>
