@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,PY32F403xD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include;..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include;..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc;..\..\Application\Inc;..\..\..\BSP\py32_drivers\Inc;..\..\..\BSP;..\..\..\BSP\example\uart;..\..\..\BSP\example\gpio</IncludePath>
+              <IncludePath>..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include;..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include;..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc;..\..\Application\Inc;..\..\..\BSP\py32_drivers\Inc;..\..\..\BSP;..\..\..\BSP\example\uart;..\..\..\BSP\example\gpio;..\..\..\OSAL\MemMang;..\..\..\OSAL\OS;..\..\..\OSAL\osConfig;..\..\..\OSAL\osHardware</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -433,6 +433,91 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>osal</GroupName>
+          <Files>
+            <File>
+              <FileName>osHardware.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\OSAL\osHardware\osHardware.c</FilePath>
+            </File>
+            <File>
+              <FileName>osHardware.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\OSAL\osHardware\osHardware.h</FilePath>
+            </File>
+            <File>
+              <FileName>osConfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\OSAL\osConfig\osConfig.h</FilePath>
+            </File>
+            <File>
+              <FileName>osTypedef.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\OSAL\osConfig\osTypedef.h</FilePath>
+            </File>
+            <File>
+              <FileName>osEvent.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\OSAL\OS\osEvent.c</FilePath>
+            </File>
+            <File>
+              <FileName>osEvent.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\OSAL\OS\osEvent.h</FilePath>
+            </File>
+            <File>
+              <FileName>osInclude.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\OSAL\OS\osInclude.h</FilePath>
+            </File>
+            <File>
+              <FileName>osQueue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\OSAL\OS\osQueue.c</FilePath>
+            </File>
+            <File>
+              <FileName>osQueue.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\OSAL\OS\osQueue.h</FilePath>
+            </File>
+            <File>
+              <FileName>osScheduler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\OSAL\OS\osScheduler.c</FilePath>
+            </File>
+            <File>
+              <FileName>osScheduler.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\OSAL\OS\osScheduler.h</FilePath>
+            </File>
+            <File>
+              <FileName>osTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\OSAL\OS\osTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>osTask.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\OSAL\OS\osTask.h</FilePath>
+            </File>
+            <File>
+              <FileName>osTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\OSAL\OS\osTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>osTimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\OSAL\OS\osTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>heap_4.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\OSAL\MemMang\heap_4.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>py32_drivers</GroupName>
           <Files>
             <File>
@@ -499,6 +584,11 @@
               <FileName>drv_tool.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\BSP\py32_drivers\Inc\drv_tool.h</FilePath>
+            </File>
+            <File>
+              <FileName>drv_iwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\BSP\py32_drivers\Src\drv_iwdg.c</FilePath>
             </File>
           </Files>
         </Group>

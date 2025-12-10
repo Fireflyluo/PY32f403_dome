@@ -76,7 +76,8 @@ int main(void)
 
   /* 选择示例 */
   // gpio_example();
-  uart_polling_example();
+  // uart_polling_example();
+  // osal_example();
 }
 
 /**
@@ -100,7 +101,7 @@ static void SystemClockConfig(void)
   OscInitstruct.LSEState = RCC_LSE_OFF;      // 禁用外部低速时钟 (LSE)
   // OscInitstruct.LSEDriver = RCC_LSEDRIVE_HIGH;                   //
   // 设置驱动能力等级为高
-  OscInitstruct.LSIState = RCC_LSI_OFF;            // 禁用内部低速时钟 (LSI)
+  OscInitstruct.LSIState = RCC_LSI_ON;            // 启用内部低速时钟 (LSI)
   OscInitstruct.PLL.PLLState = RCC_PLL_ON;         // 启用PLL
   OscInitstruct.PLL.PLLSource = RCC_PLLSOURCE_HSE; // PLL时钟源选择HSE
   OscInitstruct.PLL.PLLMUL = RCC_PLL_MUL9;         // PLL倍频系数为9   16*9=144MHz
