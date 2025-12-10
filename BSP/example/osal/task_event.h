@@ -41,11 +41,12 @@ uint16 statistics_task_event_process(uint8 task_id, uint16 task_event);
 // 系统消息事件，默认保留为osal系统使用，用于收发消息
 #define SYS_EVENT_MSG 0x8000
 
-// 打印任务的任务事件定义
-// #define PRINTF_STR 0X0001 // 打印字符串事件
 // LED任务事件定义
 #define LED_BLINK_EVENT 0x0001
 #define LED_PATTERN_EVENT 0x0002
+// 打印任务的任务事件定义
+#define PRINTF_STR 0X0003 // 打印字符串事件
+
 // 统计任务的系统消息事件定义
 #define PRINTF_STATISTICS 1 // 打印统计消息事件
 
