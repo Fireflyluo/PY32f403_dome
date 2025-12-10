@@ -1,5 +1,6 @@
-./objects/py32f403_it.o: ..\..\Application\Src\py32f403_it.c \
-  ..\..\Application\Inc\main.h \
+./objects/led_task.o: ..\..\..\BSP\example\osal\led_task.c \
+  ..\..\..\BSP\example\osal\task_event.h ..\..\..\OSAL\osal.h \
+  ..\..\..\OSAL\type.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h \
   ..\..\Application\Inc\py32f403_hal_conf.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h \
@@ -31,4 +32,7 @@
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h \
-  ..\..\Application\Inc\py32f403_it.h
+  ..\..\..\OSAL\osal_timer.h ..\..\..\OSAL\hal\timer.h \
+  ..\..\..\OSAL\osal_event.h ..\..\..\OSAL\osal_memory.h \
+  ..\..\..\OSAL\osal_msg.h ..\..\..\BSP\py32_drivers\Inc\drv_gpio.h \
+  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h

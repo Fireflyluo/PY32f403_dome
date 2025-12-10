@@ -14,8 +14,9 @@ void osal_main(void)
     osal_init_system();
 
     // 添加任务
-    osal_add_Task(print_task_init, print_task_event_process, 1);
-    osal_add_Task(statistics_task_init, statistics_task_event_process, 2);
+    osal_add_Task(led_task_init, led_task_event_process, 1);
+    // osal_add_Task(print_task_init, print_task_event_process, 1);
+    // osal_add_Task(statistics_task_init, statistics_task_event_process, 2);
 
     // 添加的任务统一进行初始化
     osal_Task_init();

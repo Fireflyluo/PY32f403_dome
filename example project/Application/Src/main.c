@@ -58,8 +58,8 @@ Info------------------------------------------------
 /* example --------------------------------------------------------------------*/
 // 可以从./BSP/example/... 下导入相关示例
 // #include "gpio_example.h"
-#include "uart_polling_example.h"
-
+//#include "uart_polling_example.h"
+#include "osal_examplie.h"
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClockConfig(void);
 
@@ -77,7 +77,7 @@ int main(void)
   /* 选择示例 */
   // gpio_example();
   // uart_polling_example();
-  // osal_example();
+   osal_main();
 }
 
 /**

@@ -6,7 +6,7 @@ extern "C"
 {
 #endif
 
-    void osal_example(void);
+    void osal_main(void);
 
 #ifdef __cplusplus
 }
