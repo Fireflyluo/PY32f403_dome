@@ -1,0 +1,21 @@
+[
+{
+  "directory": "D:\\Desktop\\Ad Hoc Network\\xmake",
+  "arguments": ["D:\\APP\\path\\arm-gcc-14.2\\bin\\arm-none-eabi-gcc.exe", "-c", "-Iinc", "-IBSP\\py32_drivers", "-IBSP\\PY32f403_Firmware_Library\\CMSIS\\Include", "-IBSP\\PY32f403_Firmware_Library\\PY32F403_HAL_Driver\\Inc", "-IBSP\\PY32f403_Firmware_Library\\CMSIS\\Device\\PUYA\\PY32F403\\Include", "-DARM_MATH_CM4", "-DUSE_STDPERIPH_DRIVER", "-DPY32F403xD", "-DDEBUG=1", "-mcpu=cortex-m4", "-mthumb", "-mfpu=fpv4-sp-d16", "-mfloat-abi=hard", "-Wall", "-Wextra", "-Wno-unused-parameter", "-ffunction-sections", "-fdata-sections", "-g", "-O0", "-std=c11", "-o", "build\\.objs\\arm_mcu\\cross\\arm\\debug\\src\\main.c.o", "src\\main.c"],
+  "file": "src\\main.c"
+},
+{
+  "directory": "D:\\Desktop\\Ad Hoc Network\\xmake",
+  "arguments": ["D:\\APP\\path\\arm-gcc-14.2\\bin\\arm-none-eabi-gcc.exe", "-c", "-Iinc", "-IBSP\\py32_drivers", "-IBSP\\PY32f403_Firmware_Library\\CMSIS\\Include", "-IBSP\\PY32f403_Firmware_Library\\PY32F403_HAL_Driver\\Inc", "-IBSP\\PY32f403_Firmware_Library\\CMSIS\\Device\\PUYA\\PY32F403\\Include", "-DARM_MATH_CM4", "-DUSE_STDPERIPH_DRIVER", "-DPY32F403xD", "-DDEBUG=1", "-mcpu=cortex-m4", "-mthumb", "-mfpu=fpv4-sp-d16", "-mfloat-abi=hard", "-Wall", "-Wextra", "-Wno-unused-parameter", "-ffunction-sections", "-fdata-sections", "-g", "-O0", "-std=c11", "-o", "build\\.objs\\arm_mcu\\cross\\arm\\debug\\src\\syscalls.c.o", "src\\syscalls.c"],
+  "file": "src\\syscalls.c"
+},
+{
+  "directory": "D:\\Desktop\\Ad Hoc Network\\xmake",
+  "arguments": ["D:\\APP\\path\\arm-gcc-14.2\\bin\\arm-none-eabi-gcc.exe", "-c", "-Iinc", "-IBSP\\py32_drivers", "-IBSP\\PY32f403_Firmware_Library\\CMSIS\\Include", "-IBSP\\PY32f403_Firmware_Library\\PY32F403_HAL_Driver\\Inc", "-IBSP\\PY32f403_Firmware_Library\\CMSIS\\Device\\PUYA\\PY32F403\\Include", "-DARM_MATH_CM4", "-DUSE_STDPERIPH_DRIVER", "-DPY32F403xD", "-DDEBUG=1", "-mcpu=cortex-m4", "-mthumb", "-mfpu=fpv4-sp-d16", "-mfloat-abi=hard", "-Wall", "-Wextra", "-Wno-unused-parameter", "-ffunction-sections", "-fdata-sections", "-g", "-O0", "-std=c11", "-o", "build\\.objs\\arm_mcu\\cross\\arm\\debug\\src\\system_py32f403.c.o", "src\\system_py32f403.c"],
+  "file": "src\\system_py32f403.c"
+},
+{
+  "directory": "D:\\Desktop\\Ad Hoc Network\\xmake",
+  "arguments": ["D:\\APP\\path\\arm-gcc-14.2\\bin\\arm-none-eabi-gcc.exe", "-c", "-g", "-O0", "-std=c11", "-Iinc", "-IBSP\\py32_drivers", "-IBSP\\PY32f403_Firmware_Library\\CMSIS\\Include", "-IBSP\\PY32f403_Firmware_Library\\PY32F403_HAL_Driver\\Inc", "-IBSP\\PY32f403_Firmware_Library\\CMSIS\\Device\\PUYA\\PY32F403\\Include", "-DARM_MATH_CM4", "-DUSE_STDPERIPH_DRIVER", "-DPY32F403xD", "-DDEBUG=1", "-o", "build\\.objs\\arm_mcu\\cross\\arm\\debug\\startup\\startup_py32f403xx.s.o", "startup\\startup_py32f403xx.s"],
+  "file": "startup\\startup_py32f403xx.s"
+}]
