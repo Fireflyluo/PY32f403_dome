@@ -6,14 +6,15 @@
  */
 
 #include "drv_uart.h"
+#include "uart_example.h"
 #include "main.h"
 #include <string.h>
-
+#if (UART_WORK_MODE == UART_MODE_POLLING)
 /* 配置为轮询模式 */
 
-#if (UART_WORK_MODE != UART_MODE_POLLING)
-#error "此示例需要配置为轮询模式,请检查drv_uart_config.h中的UART_WORK_MODE设置"
-#endif
+// #if (UART_WORK_MODE != UART_MODE_POLLING)
+// #error "此示例需要配置为轮询模式,请检查drv_uart_config.h中的UART_WORK_MODE设置"
+// #endif
 
 static uart_instance_t g_uart_instance = UART_INSTANCE_2;
 
@@ -123,3 +124,5 @@ int uart_polling_example(void)
     }
     return 0;
 }
+
+#endif

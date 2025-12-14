@@ -6,6 +6,7 @@
 ".\objects\gpio_example.o"
 ".\objects\led_task.o"
 ".\objects\osal_examplie.o"
+".\objects\uart_it_example.o"
 ".\objects\osal.o"
 ".\objects\osal_event.o"
 ".\objects\osal_memory.o"

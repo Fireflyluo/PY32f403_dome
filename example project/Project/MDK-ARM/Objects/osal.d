@@ -7,15 +7,7 @@
   ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include\py32f4xx.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include\py32f403xD.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include\core_cm4.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include\cmsis_version.h \
-  ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include\cmsis_compiler.h \
-  ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include\cmsis_armclang.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include\system_py32f4xx.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_dma.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_dma_ex.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_exti.h \
@@ -32,5 +24,4 @@
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h \
   ..\..\..\OSAL\osal_event.h ..\..\..\OSAL\osal_timer.h \
-  ..\..\..\OSAL\hal\timer.h ..\..\..\OSAL\osal_memory.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h
+  ..\..\..\OSAL\hal\timer.h ..\..\..\OSAL\osal_memory.h

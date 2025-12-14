@@ -11,7 +11,7 @@
 
 /* 选择工作模式 */
 #ifndef UART_WORK_MODE
-#define UART_WORK_MODE UART_MODE_POLLING /* 默认模式 */
+#define UART_WORK_MODE UART_MODE_INTERRUPT /* 默认模式 */
 #endif
 
 /* 缓冲区配置 */

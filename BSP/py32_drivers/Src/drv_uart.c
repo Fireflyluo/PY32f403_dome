@@ -156,7 +156,7 @@ uart_err_t uart_init(uart_instance_t instance, uint32_t baudrate)
 #endif
 
     /* 配置中断优先级 */
-    //    uart_configure_irq_priority(instance);
+        uart_configure_irq_priority(instance);
 
     return UART_OK;
 }
@@ -619,6 +619,10 @@ const char *uart_get_instance_name(uart_instance_t instance)
 }
 
 /* =========================================== HAL回调处理 ======================================================== */
+void USART2_IRQHandler(void)
+{
+  HAL_UART_IRQHandler(&uart_devices[1].huart);
+}
 /* 发送完成回调 */
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
