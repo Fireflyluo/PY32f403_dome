@@ -56,11 +56,19 @@ Info------------------------------------------------
 #include "main.h"
 
 /* example --------------------------------------------------------------------*/
-// 可以从./BSP/example/... 下导入相关示例
+/* 可以从./BSP/example/... 下导入相关示例    */
+// GPIO 示例
 // #include "gpio_example.h"
-//#include "uart_polling_example.h"
+
+// UART 示例
 #include "uart_example.h"
+
+// OSAL 示例
 // #include "osal_examplie.h"
+
+
+
+
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClockConfig(void);
 

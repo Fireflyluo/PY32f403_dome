@@ -421,14 +421,19 @@
           <GroupName>example</GroupName>
           <Files>
             <File>
+              <FileName>gpio_example.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\BSP\example\gpio\gpio_example.c</FilePath>
+            </File>
+            <File>
               <FileName>uart_polling_example.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\BSP\example\uart\uart_polling_example.c</FilePath>
             </File>
             <File>
-              <FileName>gpio_example.c</FileName>
+              <FileName>uart_it_example.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\BSP\example\gpio\gpio_example.c</FilePath>
+              <FilePath>..\..\..\BSP\example\uart\uart_it_example.c</FilePath>
             </File>
             <File>
               <FileName>led_task.c</FileName>
@@ -439,11 +444,6 @@
               <FileName>osal_examplie.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\BSP\example\osal\osal_examplie.c</FilePath>
-            </File>
-            <File>
-              <FileName>uart_it_example.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\BSP\example\uart\uart_it_example.c</FilePath>
             </File>
           </Files>
         </Group>

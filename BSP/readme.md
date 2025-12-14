@@ -8,6 +8,10 @@
 
 ```
 BSP
+├── example         # bsp示例
+│   ├── gpio        # 通用输入输出
+│   ├── uart        # 串口
+│   └── osal        # OSAL
 ├── py32_driver     # 设备驱动
 │   ├── Inc         # 头文件
 │   └── Src         # 源文件
@@ -22,10 +26,14 @@ BSP
 
 ## 三、主要特性
 
-### 3.1 drv_gpio.c/.h
+### 3.1 通用输入输出GPIO 
+
+涉及文件drv_gpio.c/.h
+
 - 该GPIO驱动实现了对py32f403的通用输入输出接口的抽象封装
 - 对上提供通用API函数
-- 关键API:gpio_init|gpio_write|gpio_read|gpio_toggle|gpio_attach_irq|gpio_detach_irq|gpio_irq_enable
+- 关键API: 
+gpio_init | gpio_write | gpio_read | gpio_toggle | gpio_attach_irq |gpio_detach_irq | gpio_irq_enable
 - 使用GET_PIN宏定义引脚，格式为GET_PIN(端口字母, 引脚号)
 
 ```c
@@ -65,7 +73,7 @@ gpio_attach_irq(GET_PIN(B, 3), GPIO_IRQ_MODE_FALLING, button_irq_handler, NULL);
 // 使能中断
 gpio_irq_enable(GET_PIN(B, 3), GPIO_IRQ_ENABLE);
 ```
-####注意事项
+#### 注意事项
   - 引脚有效性检查：
 
     - 驱动会自动检查引脚是否有效，无效引脚操作将返回GPIO_EINVAL错误。
@@ -88,7 +96,8 @@ gpio_irq_enable(GET_PIN(B, 3), GPIO_IRQ_ENABLE);
     - 例如：if (gpio_mode(pin, mode) != GPIO_OK) { /* 处理错误 */ }
 
 
-### 3.2 drv_uart.c/.h
+### 3.2 通用串行输出 UART
+涉及文件drv_uart.c/.h
 - 该驱动实现了对py32f403的串口的抽象封装
 - 对上提供通用API函数,详情见drv_uart.h
 - 支持3种模式(使用前需要在drv_uart_config.h中选择工作模式)
@@ -151,8 +160,12 @@ uart_write_to_ring_buffer(UART_INSTANCE_2, data, size);
 ```c
 // 三选一模式配置
 #define UART_WORK_MODE UART_MODE_DMA          // DMA模式
-// #define UART_WORK_MODE UART_MODE_INTERRUPT  // 中断模式  
-// #define UART_WORK_MODE UART_MODE_POLLING    // 轮询模式
+#define UART_WORK_MODE UART_MODE_INTERRUPT  // 中断模式  
+#define UART_WORK_MODE UART_MODE_POLLING    // 轮询模式
+/* 选择工作模式 */
+#ifndef UART_WORK_MODE
+#define UART_WORK_MODE UART_MODE_INTERRUPT /* 默认模式 */
+#endif
 
 // 缓冲区配置
 #define UART_RX_BUFFER_SIZE 256
@@ -215,6 +228,7 @@ typedef enum {
     UART_ERROR_DMA = -6,    // DMA错误
 } uart_err_t;
 ```
+
 
 
 未完待续。。。。。
