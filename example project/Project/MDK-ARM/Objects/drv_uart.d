@@ -25,4 +25,4 @@
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h \
-  ..\..\..\BSP\board.h
+  ..\..\..\BSP\board.h ..\..\..\BSP\py32_drivers\Inc\drv_tool.h

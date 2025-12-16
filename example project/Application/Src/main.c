@@ -85,8 +85,12 @@ int main(void)
 
   /* 选择示例 */
   // gpio_example();
-  uart_it_example();
-  //  osal_main();
+  
+  // uart_example();
+  // uart_it_example();
+   uart_dma_example();
+  
+  // osal_main();
 }
 
 /**

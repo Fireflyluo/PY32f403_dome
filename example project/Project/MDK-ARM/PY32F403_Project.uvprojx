@@ -436,6 +436,11 @@
               <FilePath>..\..\..\BSP\example\uart\uart_it_example.c</FilePath>
             </File>
             <File>
+              <FileName>uart_dma_example.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\BSP\example\uart\uart_dma_example.c</FilePath>
+            </File>
+            <File>
               <FileName>led_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\BSP\example\osal\led_task.c</FilePath>

@@ -1,5 +1,8 @@
-./objects/drv_i2c.o: ..\..\..\BSP\py32_drivers\Src\drv_i2c.c \
-  ..\..\..\BSP\py32_drivers\Inc\drv_i2c.h ..\..\Application\Inc\main.h \
+./objects/uart_dma_example.o: \
+  ..\..\..\BSP\example\uart\uart_dma_example.c \
+  ..\..\..\BSP\py32_drivers\Inc\drv_uart.h \
+  ..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h \
+  ..\..\Application\Inc\main.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h \
   ..\..\Application\Inc\py32f403_hal_conf.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h \
@@ -23,4 +26,5 @@
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h \
-  ..\..\..\BSP\board.h ..\..\..\BSP\py32_drivers\Inc\drv_gpio.h
+  ..\..\..\BSP\board.h ..\..\..\BSP\py32_drivers\Inc\drv_tool.h \
+  ..\..\..\BSP\example\uart\uart_example.h

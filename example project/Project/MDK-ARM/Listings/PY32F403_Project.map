@@ -6,7 +6,7 @@ Section Cross References
 
     main.o(.text.main) refers to py32f403_hal.o(.text.HAL_Init) for HAL_Init
     main.o(.text.main) refers to main.o(.text.SystemClockConfig) for SystemClockConfig
-    main.o(.text.main) refers to uart_it_example.o(.text.uart_it_example) for uart_it_example
+    main.o(.text.main) refers to uart_dma_example.o(.text.uart_dma_example) for uart_dma_example
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
     main.o(.text.SystemClockConfig) refers to memseta.o(.text) for __aeabi_memclr4
     main.o(.text.SystemClockConfig) refers to py32f403_hal_rcc.o(.text.HAL_RCC_OscConfig) for HAL_RCC_OscConfig
@@ -38,6 +38,33 @@ Section Cross References
     gpio_example.o(.text.gpio_example) refers to py32f403_hal.o(.text.HAL_Delay) for HAL_Delay
     gpio_example.o(.text.gpio_example) refers to drv_gpio.o(.text.gpio_toggle) for gpio_toggle
     gpio_example.o(.ARM.exidx.text.gpio_example) refers to gpio_example.o(.text.gpio_example) for [Anonymous Symbol]
+    uart_dma_example.o(.text.uart_dma_init) refers to uart_dma_example.o(.data.g_uart_instance) for g_uart_instance
+    uart_dma_example.o(.text.uart_dma_init) refers to drv_uart.o(.text.uart_init) for uart_init
+    uart_dma_example.o(.text.uart_dma_init) refers to uart_dma_example.o(.bss.dummy_rx_buffer) for dummy_rx_buffer
+    uart_dma_example.o(.text.uart_dma_init) refers to drv_uart.o(.text.uart_receive_async) for uart_receive_async
+    uart_dma_example.o(.ARM.exidx.text.uart_dma_init) refers to uart_dma_example.o(.text.uart_dma_init) for [Anonymous Symbol]
+    uart_dma_example.o(.text.uart_send_string) refers to strlen.o(.text) for strlen
+    uart_dma_example.o(.text.uart_send_string) refers to uart_dma_example.o(.data.g_uart_instance) for g_uart_instance
+    uart_dma_example.o(.text.uart_send_string) refers to drv_uart.o(.text.uart_send) for uart_send
+    uart_dma_example.o(.ARM.exidx.text.uart_send_string) refers to uart_dma_example.o(.text.uart_send_string) for [Anonymous Symbol]
+    uart_dma_example.o(.text.uart_process_received_data) refers to uart_dma_example.o(.data.g_uart_instance) for g_uart_instance
+    uart_dma_example.o(.text.uart_process_received_data) refers to drv_uart.o(.text.uart_read_from_ring_buffer) for uart_read_from_ring_buffer
+    uart_dma_example.o(.text.uart_process_received_data) refers to drv_uart.o(.text.uart_send_async) for uart_send_async
+    uart_dma_example.o(.text.uart_process_received_data) refers to uart_dma_example.o(.rodata.str1.1) for .L.str
+    uart_dma_example.o(.text.uart_process_received_data) refers to uart_dma_example.o(.text.uart_send_string) for uart_send_string
+    uart_dma_example.o(.ARM.exidx.text.uart_process_received_data) refers to uart_dma_example.o(.text.uart_process_received_data) for [Anonymous Symbol]
+    uart_dma_example.o(.text.uart_echo_test) refers to uart_dma_example.o(.rodata.str1.1) for .L.str.1
+    uart_dma_example.o(.text.uart_echo_test) refers to uart_dma_example.o(.text.uart_send_string) for uart_send_string
+    uart_dma_example.o(.text.uart_echo_test) refers to uart_dma_example.o(.text.uart_process_received_data) for uart_process_received_data
+    uart_dma_example.o(.text.uart_echo_test) refers to py32f403_hal.o(.text.HAL_Delay) for HAL_Delay
+    uart_dma_example.o(.ARM.exidx.text.uart_echo_test) refers to uart_dma_example.o(.text.uart_echo_test) for [Anonymous Symbol]
+    uart_dma_example.o(.text.uart_dma_example) refers to uart_dma_example.o(.text.uart_dma_init) for uart_dma_init
+    uart_dma_example.o(.text.uart_dma_example) refers to main.o(.text.APP_ErrorHandler) for APP_ErrorHandler
+    uart_dma_example.o(.text.uart_dma_example) refers to uart_dma_example.o(.rodata.str1.1) for .L.str.2
+    uart_dma_example.o(.text.uart_dma_example) refers to uart_dma_example.o(.text.uart_send_string) for uart_send_string
+    uart_dma_example.o(.text.uart_dma_example) refers to uart_dma_example.o(.text.uart_echo_test) for uart_echo_test
+    uart_dma_example.o(.text.uart_dma_example) refers to py32f403_hal.o(.text.HAL_Delay) for HAL_Delay
+    uart_dma_example.o(.ARM.exidx.text.uart_dma_example) refers to uart_dma_example.o(.text.uart_dma_example) for [Anonymous Symbol]
     led_task.o(.text.led_task_init) refers to led_task.o(.bss.led_task_id) for led_task_id
     led_task.o(.text.led_task_init) refers to drv_gpio.o(.text.gpio_init) for gpio_init
     led_task.o(.text.led_task_init) refers to drv_gpio.o(.text.gpio_mode) for gpio_mode
@@ -55,30 +82,6 @@ Section Cross References
     osal_examplie.o(.text.osal_main) refers to osal_memory.o(.text.osal_mem_kick) for osal_mem_kick
     osal_examplie.o(.text.osal_main) refers to osal.o(.text.osal_start_system) for osal_start_system
     osal_examplie.o(.ARM.exidx.text.osal_main) refers to osal_examplie.o(.text.osal_main) for [Anonymous Symbol]
-    uart_it_example.o(.text.uart_it_init) refers to uart_it_example.o(.data.g_uart_instance) for g_uart_instance
-    uart_it_example.o(.text.uart_it_init) refers to drv_uart.o(.text.uart_init) for uart_init
-    uart_it_example.o(.ARM.exidx.text.uart_it_init) refers to uart_it_example.o(.text.uart_it_init) for [Anonymous Symbol]
-    uart_it_example.o(.text.uart_send_string) refers to strlen.o(.text) for strlen
-    uart_it_example.o(.text.uart_send_string) refers to uart_it_example.o(.data.g_uart_instance) for g_uart_instance
-    uart_it_example.o(.text.uart_send_string) refers to drv_uart.o(.text.uart_send) for uart_send
-    uart_it_example.o(.ARM.exidx.text.uart_send_string) refers to uart_it_example.o(.text.uart_send_string) for [Anonymous Symbol]
-    uart_it_example.o(.text.uart_receive_data) refers to uart_it_example.o(.data.g_uart_instance) for g_uart_instance
-    uart_it_example.o(.text.uart_receive_data) refers to drv_uart.o(.text.uart_receive) for uart_receive
-    uart_it_example.o(.ARM.exidx.text.uart_receive_data) refers to uart_it_example.o(.text.uart_receive_data) for [Anonymous Symbol]
-    uart_it_example.o(.text.uart_echo_test) refers to uart_it_example.o(.rodata.str1.1) for .L.str
-    uart_it_example.o(.text.uart_echo_test) refers to uart_it_example.o(.text.uart_send_string) for uart_send_string
-    uart_it_example.o(.text.uart_echo_test) refers to uart_it_example.o(.text.uart_receive_data) for uart_receive_data
-    uart_it_example.o(.text.uart_echo_test) refers to uart_it_example.o(.data.g_uart_instance) for g_uart_instance
-    uart_it_example.o(.text.uart_echo_test) refers to drv_uart.o(.text.uart_send) for uart_send
-    uart_it_example.o(.text.uart_echo_test) refers to py32f403_hal.o(.text.HAL_Delay) for HAL_Delay
-    uart_it_example.o(.ARM.exidx.text.uart_echo_test) refers to uart_it_example.o(.text.uart_echo_test) for [Anonymous Symbol]
-    uart_it_example.o(.text.uart_it_example) refers to uart_it_example.o(.text.uart_it_init) for uart_it_init
-    uart_it_example.o(.text.uart_it_example) refers to main.o(.text.APP_ErrorHandler) for APP_ErrorHandler
-    uart_it_example.o(.text.uart_it_example) refers to uart_it_example.o(.rodata.str1.1) for .L.str.2
-    uart_it_example.o(.text.uart_it_example) refers to uart_it_example.o(.text.uart_send_string) for uart_send_string
-    uart_it_example.o(.text.uart_it_example) refers to uart_it_example.o(.text.uart_echo_test) for uart_echo_test
-    uart_it_example.o(.text.uart_it_example) refers to py32f403_hal.o(.text.HAL_Delay) for HAL_Delay
-    uart_it_example.o(.ARM.exidx.text.uart_it_example) refers to uart_it_example.o(.text.uart_it_example) for [Anonymous Symbol]
     osal.o(.text.osal_init_system) refers to osal_memory.o(.text.osal_mem_init) for osal_mem_init
     osal.o(.text.osal_init_system) refers to osal.o(.bss.osal_qHead) for osal_qHead
     osal.o(.text.osal_init_system) refers to osal_timer.o(.text.osalTimerInit) for osalTimerInit
@@ -284,32 +287,53 @@ Section Cross References
     drv_uart.o(.text.uart_init) refers to memseta.o(.text) for __aeabi_memclr4
     drv_uart.o(.text.uart_init) refers to drv_uart.o(.rodata.uart_bases) for uart_bases
     drv_uart.o(.text.uart_init) refers to py32f403_hal_uart.o(.text.HAL_UART_Init) for HAL_UART_Init
+    drv_uart.o(.text.uart_init) refers to drv_uart.o(.text.uart_dma_init) for uart_dma_init
+    drv_uart.o(.text.uart_init) refers to py32f403_hal_uart.o(.text.HAL_UART_DeInit) for HAL_UART_DeInit
     drv_uart.o(.text.uart_init) refers to drv_uart.o(.text.uart_configure_irq_priority) for uart_configure_irq_priority
     drv_uart.o(.ARM.exidx.text.uart_init) refers to drv_uart.o(.text.uart_init) for [Anonymous Symbol]
+    drv_uart.o(.text.uart_dma_init) refers to drv_uart.o(.text.get_uart_device) for get_uart_device
+    drv_uart.o(.text.uart_dma_init) refers to memseta.o(.text) for __aeabi_memclr4
+    drv_uart.o(.text.uart_dma_init) refers to py32f403_hal_dma.o(.text.HAL_DMA_Init) for HAL_DMA_Init
+    drv_uart.o(.text.uart_dma_init) refers to py32f403_hal_dma.o(.text.HAL_DMA_DeInit) for HAL_DMA_DeInit
+    drv_uart.o(.text.uart_dma_init) refers to drv_uart.o(.rodata.uart_dma_tx_channel_map) for uart_dma_tx_channel_map
+    drv_uart.o(.text.uart_dma_init) refers to py32f403_hal_dma.o(.text.HAL_DMA_ChannelMap) for HAL_DMA_ChannelMap
+    drv_uart.o(.text.uart_dma_init) refers to drv_uart.o(.rodata.uart_dma_rx_channel_map) for uart_dma_rx_channel_map
+    drv_uart.o(.text.uart_dma_init) refers to drv_tool.o(.text.ring_buffer_init) for ring_buffer_init
+    drv_uart.o(.ARM.exidx.text.uart_dma_init) refers to drv_uart.o(.text.uart_dma_init) for [Anonymous Symbol]
     drv_uart.o(.text.uart_configure_irq_priority) refers to drv_uart.o(.rodata.uart_irqs) for uart_irqs
     drv_uart.o(.text.uart_configure_irq_priority) refers to py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
     drv_uart.o(.text.uart_configure_irq_priority) refers to py32f403_hal_cortex.o(.text.HAL_NVIC_EnableIRQ) for HAL_NVIC_EnableIRQ
+    drv_uart.o(.text.uart_configure_irq_priority) refers to drv_uart.o(.bss.uart_devices) for uart_devices
     drv_uart.o(.ARM.exidx.text.uart_configure_irq_priority) refers to drv_uart.o(.text.uart_configure_irq_priority) for [Anonymous Symbol]
     drv_uart.o(.text.uart_deinit) refers to drv_uart.o(.text.is_uart_initialized) for is_uart_initialized
     drv_uart.o(.text.uart_deinit) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.uart_deinit) refers to drv_uart.o(.text.uart_dma_deinit) for uart_dma_deinit
     drv_uart.o(.text.uart_deinit) refers to py32f403_hal_uart.o(.text.HAL_UART_DeInit) for HAL_UART_DeInit
     drv_uart.o(.text.uart_deinit) refers to memseta.o(.text) for __aeabi_memclr4
     drv_uart.o(.ARM.exidx.text.uart_deinit) refers to drv_uart.o(.text.uart_deinit) for [Anonymous Symbol]
     drv_uart.o(.text.is_uart_initialized) refers to drv_uart.o(.text.get_uart_device) for get_uart_device
     drv_uart.o(.ARM.exidx.text.is_uart_initialized) refers to drv_uart.o(.text.is_uart_initialized) for [Anonymous Symbol]
+    drv_uart.o(.text.uart_dma_deinit) refers to drv_uart.o(.text.get_uart_device) for get_uart_device
+    drv_uart.o(.text.uart_dma_deinit) refers to py32f403_hal_dma.o(.text.HAL_DMA_DeInit) for HAL_DMA_DeInit
+    drv_uart.o(.ARM.exidx.text.uart_dma_deinit) refers to drv_uart.o(.text.uart_dma_deinit) for [Anonymous Symbol]
     drv_uart.o(.text.uart_set_irq_priority) refers to drv_uart.o(.rodata.uart_irqs) for uart_irqs
     drv_uart.o(.text.uart_set_irq_priority) refers to py32f403_hal_cortex.o(.text.HAL_NVIC_DisableIRQ) for HAL_NVIC_DisableIRQ
     drv_uart.o(.text.uart_set_irq_priority) refers to py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
     drv_uart.o(.text.uart_set_irq_priority) refers to py32f403_hal_cortex.o(.text.HAL_NVIC_EnableIRQ) for HAL_NVIC_EnableIRQ
     drv_uart.o(.ARM.exidx.text.uart_set_irq_priority) refers to drv_uart.o(.text.uart_set_irq_priority) for [Anonymous Symbol]
+    drv_uart.o(.text.uart_set_dma_irq_priority) refers to drv_uart.o(.text.is_uart_initialized) for is_uart_initialized
+    drv_uart.o(.text.uart_set_dma_irq_priority) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.uart_set_dma_irq_priority) refers to py32f403_hal_cortex.o(.text.HAL_NVIC_DisableIRQ) for HAL_NVIC_DisableIRQ
+    drv_uart.o(.text.uart_set_dma_irq_priority) refers to py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
+    drv_uart.o(.text.uart_set_dma_irq_priority) refers to py32f403_hal_cortex.o(.text.HAL_NVIC_EnableIRQ) for HAL_NVIC_EnableIRQ
     drv_uart.o(.ARM.exidx.text.uart_set_dma_irq_priority) refers to drv_uart.o(.text.uart_set_dma_irq_priority) for [Anonymous Symbol]
     drv_uart.o(.text.uart_send) refers to drv_uart.o(.text.is_uart_initialized) for is_uart_initialized
     drv_uart.o(.text.uart_send) refers to drv_uart.o(.bss.uart_devices) for uart_devices
-    drv_uart.o(.text.uart_send) refers to py32f403_hal_uart.o(.text.HAL_UART_Transmit_IT) for HAL_UART_Transmit_IT
+    drv_uart.o(.text.uart_send) refers to py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA) for HAL_UART_Transmit_DMA
     drv_uart.o(.ARM.exidx.text.uart_send) refers to drv_uart.o(.text.uart_send) for [Anonymous Symbol]
     drv_uart.o(.text.uart_receive) refers to drv_uart.o(.text.is_uart_initialized) for is_uart_initialized
     drv_uart.o(.text.uart_receive) refers to drv_uart.o(.bss.uart_devices) for uart_devices
-    drv_uart.o(.text.uart_receive) refers to py32f403_hal_uart.o(.text.HAL_UART_Receive_IT) for HAL_UART_Receive_IT
+    drv_uart.o(.text.uart_receive) refers to py32f403_hal_uart.o(.text.HAL_UART_Receive_DMA) for HAL_UART_Receive_DMA
     drv_uart.o(.ARM.exidx.text.uart_receive) refers to drv_uart.o(.text.uart_receive) for [Anonymous Symbol]
     drv_uart.o(.text.uart_send_async) refers to drv_uart.o(.text.uart_send) for uart_send
     drv_uart.o(.ARM.exidx.text.uart_send_async) refers to drv_uart.o(.text.uart_send_async) for [Anonymous Symbol]
@@ -336,14 +360,52 @@ Section Cross References
     drv_uart.o(.text.USART2_IRQHandler) refers to drv_uart.o(.bss.uart_devices) for uart_devices
     drv_uart.o(.text.USART2_IRQHandler) refers to py32f403_hal_uart.o(.text.HAL_UART_IRQHandler) for HAL_UART_IRQHandler
     drv_uart.o(.ARM.exidx.text.USART2_IRQHandler) refers to drv_uart.o(.text.USART2_IRQHandler) for [Anonymous Symbol]
+    drv_uart.o(.text.DMA1_Channel1_IRQHandler) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.DMA1_Channel1_IRQHandler) refers to py32f403_hal_dma.o(.text.HAL_DMA_IRQHandler) for HAL_DMA_IRQHandler
+    drv_uart.o(.ARM.exidx.text.DMA1_Channel1_IRQHandler) refers to drv_uart.o(.text.DMA1_Channel1_IRQHandler) for [Anonymous Symbol]
+    drv_uart.o(.text.DMA1_Channel2_IRQHandler) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.DMA1_Channel2_IRQHandler) refers to py32f403_hal_dma.o(.text.HAL_DMA_IRQHandler) for HAL_DMA_IRQHandler
+    drv_uart.o(.ARM.exidx.text.DMA1_Channel2_IRQHandler) refers to drv_uart.o(.text.DMA1_Channel2_IRQHandler) for [Anonymous Symbol]
     drv_uart.o(.text.HAL_UART_TxCpltCallback) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.HAL_UART_TxCpltCallback) refers to drv_tool.o(.text.ring_buffer_skip) for ring_buffer_skip
+    drv_uart.o(.text.HAL_UART_TxCpltCallback) refers to drv_tool.o(.text.ring_buffer_available) for ring_buffer_available
+    drv_uart.o(.text.HAL_UART_TxCpltCallback) refers to drv_uart.o(.text.uart_start_tx_from_ring_buffer) for uart_start_tx_from_ring_buffer
     drv_uart.o(.ARM.exidx.text.HAL_UART_TxCpltCallback) refers to drv_uart.o(.text.HAL_UART_TxCpltCallback) for [Anonymous Symbol]
+    drv_uart.o(.text.uart_start_tx_from_ring_buffer) refers to drv_uart.o(.text.is_uart_initialized) for is_uart_initialized
+    drv_uart.o(.text.uart_start_tx_from_ring_buffer) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.uart_start_tx_from_ring_buffer) refers to drv_tool.o(.text.ring_buffer_available) for ring_buffer_available
+    drv_uart.o(.text.uart_start_tx_from_ring_buffer) refers to drv_tool.o(.text.ring_buffer_peek_multiple) for ring_buffer_peek_multiple
+    drv_uart.o(.text.uart_start_tx_from_ring_buffer) refers to py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA) for HAL_UART_Transmit_DMA
+    drv_uart.o(.ARM.exidx.text.uart_start_tx_from_ring_buffer) refers to drv_uart.o(.text.uart_start_tx_from_ring_buffer) for [Anonymous Symbol]
     drv_uart.o(.text.HAL_UART_RxCpltCallback) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.HAL_UART_RxCpltCallback) refers to drv_uart.o(.text.uart_dma_buffer_to_ring) for uart_dma_buffer_to_ring
     drv_uart.o(.ARM.exidx.text.HAL_UART_RxCpltCallback) refers to drv_uart.o(.text.HAL_UART_RxCpltCallback) for [Anonymous Symbol]
+    drv_uart.o(.text.uart_dma_buffer_to_ring) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.uart_dma_buffer_to_ring) refers to drv_tool.o(.text.ring_buffer_put) for ring_buffer_put
+    drv_uart.o(.ARM.exidx.text.uart_dma_buffer_to_ring) refers to drv_uart.o(.text.uart_dma_buffer_to_ring) for [Anonymous Symbol]
     drv_uart.o(.text.HAL_UART_RxHalfCpltCallback) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.HAL_UART_RxHalfCpltCallback) refers to drv_uart.o(.text.uart_dma_buffer_to_ring) for uart_dma_buffer_to_ring
     drv_uart.o(.ARM.exidx.text.HAL_UART_RxHalfCpltCallback) refers to drv_uart.o(.text.HAL_UART_RxHalfCpltCallback) for [Anonymous Symbol]
     drv_uart.o(.text.HAL_UART_ErrorCallback) refers to drv_uart.o(.bss.uart_devices) for uart_devices
     drv_uart.o(.ARM.exidx.text.HAL_UART_ErrorCallback) refers to drv_uart.o(.text.HAL_UART_ErrorCallback) for [Anonymous Symbol]
+    drv_uart.o(.text.HAL_UART_IdleCallback) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.HAL_UART_IdleCallback) refers to drv_uart.o(.text.uart_dma_buffer_to_ring) for uart_dma_buffer_to_ring
+    drv_uart.o(.ARM.exidx.text.HAL_UART_IdleCallback) refers to drv_uart.o(.text.HAL_UART_IdleCallback) for [Anonymous Symbol]
+    drv_uart.o(.text.uart_read_from_ring_buffer) refers to drv_uart.o(.text.is_uart_initialized) for is_uart_initialized
+    drv_uart.o(.text.uart_read_from_ring_buffer) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.uart_read_from_ring_buffer) refers to drv_uart.o(.text.uart_dma_buffer_to_ring) for uart_dma_buffer_to_ring
+    drv_uart.o(.text.uart_read_from_ring_buffer) refers to drv_tool.o(.text.ring_buffer_get_multiple) for ring_buffer_get_multiple
+    drv_uart.o(.ARM.exidx.text.uart_read_from_ring_buffer) refers to drv_uart.o(.text.uart_read_from_ring_buffer) for [Anonymous Symbol]
+    drv_uart.o(.text.uart_write_to_ring_buffer) refers to drv_uart.o(.text.is_uart_initialized) for is_uart_initialized
+    drv_uart.o(.text.uart_write_to_ring_buffer) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.uart_write_to_ring_buffer) refers to drv_tool.o(.text.ring_buffer_put_multiple) for ring_buffer_put_multiple
+    drv_uart.o(.text.uart_write_to_ring_buffer) refers to drv_uart.o(.text.uart_start_tx_from_ring_buffer) for uart_start_tx_from_ring_buffer
+    drv_uart.o(.ARM.exidx.text.uart_write_to_ring_buffer) refers to drv_uart.o(.text.uart_write_to_ring_buffer) for [Anonymous Symbol]
+    drv_uart.o(.text.uart_get_ring_buffer_stats) refers to drv_uart.o(.text.is_uart_initialized) for is_uart_initialized
+    drv_uart.o(.text.uart_get_ring_buffer_stats) refers to drv_uart.o(.bss.uart_devices) for uart_devices
+    drv_uart.o(.text.uart_get_ring_buffer_stats) refers to drv_tool.o(.text.ring_buffer_available) for ring_buffer_available
+    drv_uart.o(.text.uart_get_ring_buffer_stats) refers to drv_tool.o(.text.ring_buffer_free_space) for ring_buffer_free_space
+    drv_uart.o(.ARM.exidx.text.uart_get_ring_buffer_stats) refers to drv_uart.o(.text.uart_get_ring_buffer_stats) for [Anonymous Symbol]
     drv_uart.o(.text.get_uart_device) refers to drv_uart.o(.bss.uart_devices) for uart_devices
     drv_uart.o(.ARM.exidx.text.get_uart_device) refers to drv_uart.o(.text.get_uart_device) for [Anonymous Symbol]
     drv_uart.o(.data.uart_instance_names) refers to drv_uart.o(.rodata.str1.1) for [Anonymous Symbol]
@@ -1436,6 +1498,8 @@ Section Cross References
     startup_py32f403xx.o(RESET) refers to drv_gpio.o(.text.EXTI2_IRQHandler) for EXTI2_IRQHandler
     startup_py32f403xx.o(RESET) refers to drv_gpio.o(.text.EXTI3_IRQHandler) for EXTI3_IRQHandler
     startup_py32f403xx.o(RESET) refers to drv_gpio.o(.text.EXTI4_IRQHandler) for EXTI4_IRQHandler
+    startup_py32f403xx.o(RESET) refers to drv_uart.o(.text.DMA1_Channel1_IRQHandler) for DMA1_Channel1_IRQHandler
+    startup_py32f403xx.o(RESET) refers to drv_uart.o(.text.DMA1_Channel2_IRQHandler) for DMA1_Channel2_IRQHandler
     startup_py32f403xx.o(RESET) refers to drv_gpio.o(.text.EXTI9_5_IRQHandler) for EXTI9_5_IRQHandler
     startup_py32f403xx.o(RESET) refers to py32f403_it.o(.text.TIM2_IRQHandler) for TIM2_IRQHandler
     startup_py32f403xx.o(RESET) refers to drv_uart.o(.text.USART2_IRQHandler) for USART2_IRQHandler
@@ -1492,10 +1556,17 @@ Removing Unused input sections from the image.
     Removing py32f403_it.o(.ARM.exidx.text.DMA2_Channel1_IRQHandler), (8 bytes).
     Removing py32f403_it.o(.text.HAL_DMA_XferCpltCallback), (8 bytes).
     Removing py32f403_it.o(.ARM.exidx.text.HAL_DMA_XferCpltCallback), (8 bytes).
-    Removing uart_polling_example.o(.text), (0 bytes).
     Removing gpio_example.o(.text), (0 bytes).
     Removing gpio_example.o(.text.gpio_example), (66 bytes).
     Removing gpio_example.o(.ARM.exidx.text.gpio_example), (8 bytes).
+    Removing uart_polling_example.o(.text), (0 bytes).
+    Removing uart_it_example.o(.text), (0 bytes).
+    Removing uart_dma_example.o(.text), (0 bytes).
+    Removing uart_dma_example.o(.ARM.exidx.text.uart_dma_init), (8 bytes).
+    Removing uart_dma_example.o(.ARM.exidx.text.uart_send_string), (8 bytes).
+    Removing uart_dma_example.o(.ARM.exidx.text.uart_process_received_data), (8 bytes).
+    Removing uart_dma_example.o(.ARM.exidx.text.uart_echo_test), (8 bytes).
+    Removing uart_dma_example.o(.ARM.exidx.text.uart_dma_example), (8 bytes).
     Removing led_task.o(.text), (0 bytes).
     Removing led_task.o(.text.led_task_init), (56 bytes).
     Removing led_task.o(.ARM.exidx.text.led_task_init), (8 bytes).
@@ -1505,12 +1576,6 @@ Removing Unused input sections from the image.
     Removing osal_examplie.o(.text), (0 bytes).
     Removing osal_examplie.o(.text.osal_main), (56 bytes).
     Removing osal_examplie.o(.ARM.exidx.text.osal_main), (8 bytes).
-    Removing uart_it_example.o(.text), (0 bytes).
-    Removing uart_it_example.o(.ARM.exidx.text.uart_it_init), (8 bytes).
-    Removing uart_it_example.o(.ARM.exidx.text.uart_send_string), (8 bytes).
-    Removing uart_it_example.o(.ARM.exidx.text.uart_receive_data), (8 bytes).
-    Removing uart_it_example.o(.ARM.exidx.text.uart_echo_test), (8 bytes).
-    Removing uart_it_example.o(.ARM.exidx.text.uart_it_example), (8 bytes).
     Removing osal.o(.text), (0 bytes).
     Removing osal.o(.text.osal_init_system), (30 bytes).
     Removing osal.o(.ARM.exidx.text.osal_init_system), (8 bytes).
@@ -1660,19 +1725,20 @@ Removing Unused input sections from the image.
     Removing drv_tim.o(.text), (0 bytes).
     Removing drv_uart.o(.text), (0 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_init), (8 bytes).
+    Removing drv_uart.o(.ARM.exidx.text.uart_dma_init), (8 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_configure_irq_priority), (8 bytes).
-    Removing drv_uart.o(.text.uart_deinit), (80 bytes).
+    Removing drv_uart.o(.text.uart_deinit), (90 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_deinit), (8 bytes).
     Removing drv_uart.o(.ARM.exidx.text.is_uart_initialized), (8 bytes).
+    Removing drv_uart.o(.text.uart_dma_deinit), (64 bytes).
+    Removing drv_uart.o(.ARM.exidx.text.uart_dma_deinit), (8 bytes).
     Removing drv_uart.o(.text.uart_set_irq_priority), (100 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_set_irq_priority), (8 bytes).
-    Removing drv_uart.o(.text.uart_set_dma_irq_priority), (22 bytes).
+    Removing drv_uart.o(.text.uart_set_dma_irq_priority), (130 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_set_dma_irq_priority), (8 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_send), (8 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_receive), (8 bytes).
-    Removing drv_uart.o(.text.uart_send_async), (36 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_send_async), (8 bytes).
-    Removing drv_uart.o(.text.uart_receive_async), (36 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_receive_async), (8 bytes).
     Removing drv_uart.o(.text.uart_register_tx_complete_callback), (82 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_register_tx_complete_callback), (8 bytes).
@@ -1687,20 +1753,27 @@ Removing Unused input sections from the image.
     Removing drv_uart.o(.text.uart_get_instance_name), (54 bytes).
     Removing drv_uart.o(.ARM.exidx.text.uart_get_instance_name), (8 bytes).
     Removing drv_uart.o(.ARM.exidx.text.USART2_IRQHandler), (8 bytes).
+    Removing drv_uart.o(.ARM.exidx.text.DMA1_Channel1_IRQHandler), (8 bytes).
+    Removing drv_uart.o(.ARM.exidx.text.DMA1_Channel2_IRQHandler), (8 bytes).
     Removing drv_uart.o(.ARM.exidx.text.HAL_UART_TxCpltCallback), (8 bytes).
+    Removing drv_uart.o(.ARM.exidx.text.uart_start_tx_from_ring_buffer), (8 bytes).
     Removing drv_uart.o(.ARM.exidx.text.HAL_UART_RxCpltCallback), (8 bytes).
-    Removing drv_uart.o(.text.HAL_UART_RxHalfCpltCallback), (104 bytes).
+    Removing drv_uart.o(.ARM.exidx.text.uart_dma_buffer_to_ring), (8 bytes).
     Removing drv_uart.o(.ARM.exidx.text.HAL_UART_RxHalfCpltCallback), (8 bytes).
     Removing drv_uart.o(.ARM.exidx.text.HAL_UART_ErrorCallback), (8 bytes).
+    Removing drv_uart.o(.text.HAL_UART_IdleCallback), (130 bytes).
+    Removing drv_uart.o(.ARM.exidx.text.HAL_UART_IdleCallback), (8 bytes).
+    Removing drv_uart.o(.ARM.exidx.text.uart_read_from_ring_buffer), (8 bytes).
+    Removing drv_uart.o(.text.uart_write_to_ring_buffer), (140 bytes).
+    Removing drv_uart.o(.ARM.exidx.text.uart_write_to_ring_buffer), (8 bytes).
+    Removing drv_uart.o(.text.uart_get_ring_buffer_stats), (138 bytes).
+    Removing drv_uart.o(.ARM.exidx.text.uart_get_ring_buffer_stats), (8 bytes).
     Removing drv_uart.o(.ARM.exidx.text.get_uart_device), (8 bytes).
     Removing drv_uart.o(.rodata.str1.1), (43 bytes).
     Removing drv_uart.o(.data.uart_instance_names), (20 bytes).
     Removing drv_tool.o(.text), (0 bytes).
-    Removing drv_tool.o(.text.ring_buffer_init), (82 bytes).
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_init), (8 bytes).
-    Removing drv_tool.o(.text.ring_buffer_put), (90 bytes).
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_put), (8 bytes).
-    Removing drv_tool.o(.text.ring_buffer_is_full), (48 bytes).
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_is_full), (8 bytes).
     Removing drv_tool.o(.text.ring_buffer_get), (94 bytes).
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_get), (8 bytes).
@@ -1710,13 +1783,9 @@ Removing Unused input sections from the image.
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_put_multiple), (8 bytes).
     Removing drv_tool.o(.text.ring_buffer_free_space), (36 bytes).
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_free_space), (8 bytes).
-    Removing drv_tool.o(.text.ring_buffer_get_multiple), (188 bytes).
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_get_multiple), (8 bytes).
-    Removing drv_tool.o(.text.ring_buffer_available), (32 bytes).
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_available), (8 bytes).
-    Removing drv_tool.o(.text.ring_buffer_peek_multiple), (228 bytes).
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_peek_multiple), (8 bytes).
-    Removing drv_tool.o(.text.ring_buffer_skip), (114 bytes).
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_skip), (8 bytes).
     Removing drv_tool.o(.text.ring_buffer_clear), (30 bytes).
     Removing drv_tool.o(.ARM.exidx.text.ring_buffer_clear), (8 bytes).
@@ -1847,28 +1916,22 @@ Removing Unused input sections from the image.
     Removing py32f403_hal_crc.o(.text), (0 bytes).
     Removing py32f403_hal_ctc.o(.text), (0 bytes).
     Removing py32f403_hal_dma.o(.text), (0 bytes).
-    Removing py32f403_hal_dma.o(.text.HAL_DMA_Init), (244 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_Init), (8 bytes).
-    Removing py32f403_hal_dma.o(.text.HAL_DMA_DeInit), (240 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_DeInit), (8 bytes).
     Removing py32f403_hal_dma.o(.text.HAL_DMA_Start), (154 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_Start), (8 bytes).
-    Removing py32f403_hal_dma.o(.text.DMA_SetConfig), (80 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.DMA_SetConfig), (8 bytes).
-    Removing py32f403_hal_dma.o(.text.HAL_DMA_Start_IT), (202 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_Start_IT), (8 bytes).
     Removing py32f403_hal_dma.o(.text.HAL_DMA_Abort), (124 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_Abort), (8 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_Abort_IT), (8 bytes).
     Removing py32f403_hal_dma.o(.text.HAL_DMA_PollForTransfer), (3062 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_PollForTransfer), (8 bytes).
-    Removing py32f403_hal_dma.o(.text.HAL_DMA_IRQHandler), (1668 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_IRQHandler), (8 bytes).
     Removing py32f403_hal_dma.o(.text.HAL_DMA_RegisterCallback), (164 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_RegisterCallback), (8 bytes).
     Removing py32f403_hal_dma.o(.text.HAL_DMA_UnRegisterCallback), (184 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_UnRegisterCallback), (8 bytes).
-    Removing py32f403_hal_dma.o(.text.HAL_DMA_ChannelMap), (172 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_ChannelMap), (8 bytes).
     Removing py32f403_hal_dma.o(.text.HAL_DMA_GetState), (14 bytes).
     Removing py32f403_hal_dma.o(.ARM.exidx.text.HAL_DMA_GetState), (8 bytes).
@@ -2558,9 +2621,7 @@ Removing Unused input sections from the image.
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_LIN_Init), (8 bytes).
     Removing py32f403_hal_uart.o(.text.HAL_MultiProcessor_Init), (198 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_MultiProcessor_Init), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.HAL_UART_DeInit), (92 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_DeInit), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.HAL_UART_MspDeInit), (8 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_MspDeInit), (8 bytes).
     Removing py32f403_hal_uart.o(.text.HAL_UART_Transmit), (374 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_Transmit), (8 bytes).
@@ -2568,21 +2629,16 @@ Removing Unused input sections from the image.
     Removing py32f403_hal_uart.o(.ARM.exidx.text.UART_WaitOnFlagUntilTimeout), (8 bytes).
     Removing py32f403_hal_uart.o(.text.HAL_UART_Receive), (344 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_Receive), (8 bytes).
+    Removing py32f403_hal_uart.o(.text.HAL_UART_Transmit_IT), (162 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_Transmit_IT), (8 bytes).
+    Removing py32f403_hal_uart.o(.text.HAL_UART_Receive_IT), (186 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_Receive_IT), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA), (246 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_Transmit_DMA), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.UART_DMATransmitCplt), (70 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.UART_DMATransmitCplt), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.UART_DMATxHalfCplt), (22 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.UART_DMATxHalfCplt), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.UART_DMAError), (124 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.UART_DMAError), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.HAL_UART_Receive_DMA), (314 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_Receive_DMA), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.UART_DMAReceiveCplt), (88 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.UART_DMAReceiveCplt), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.UART_DMARxHalfCplt), (22 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.UART_DMARxHalfCplt), (8 bytes).
     Removing py32f403_hal_uart.o(.text.HAL_UART_DMAPause), (182 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_DMAPause), (8 bytes).
@@ -2590,7 +2646,6 @@ Removing Unused input sections from the image.
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_DMAResume), (8 bytes).
     Removing py32f403_hal_uart.o(.text.HAL_UART_DMAStop), (152 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_DMAStop), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.UART_EndTxTransfer), (28 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.UART_EndTxTransfer), (8 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.UART_EndRxTransfer), (8 bytes).
     Removing py32f403_hal_uart.o(.text.HAL_UART_Abort), (248 bytes).
@@ -2629,7 +2684,6 @@ Removing Unused input sections from the image.
     Removing py32f403_hal_uart.o(.ARM.exidx.text.UART_EndTransmit_IT), (8 bytes).
     Removing py32f403_hal_uart.o(.text.HAL_UART_TxCpltCallback), (8 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_TxCpltCallback), (8 bytes).
-    Removing py32f403_hal_uart.o(.text.HAL_UART_TxHalfCpltCallback), (8 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_TxHalfCpltCallback), (8 bytes).
     Removing py32f403_hal_uart.o(.text.HAL_UART_RxCpltCallback), (8 bytes).
     Removing py32f403_hal_uart.o(.ARM.exidx.text.HAL_UART_RxCpltCallback), (8 bytes).
@@ -2728,7 +2782,7 @@ Removing Unused input sections from the image.
     Removing system_py32f403.o(.rodata..L__const.SystemCoreClockUpdate.aPLLMULFactorTable), (64 bytes).
     Removing system_py32f403.o(.rodata..L__const.SystemCoreClockUpdate.aPredivFactorTable), (2 bytes).
 
-1257 unused section(s) (total 86652 bytes) removed from the image.
+1247 unused section(s) (total 83084 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2825,6 +2879,7 @@ Image Symbol Table
     py32f403_ll_utils.c                      0x00000000   Number         0  py32f403_ll_utils.o ABSOLUTE
     system_py32f403.c                        0x00000000   Number         0  system_py32f403.o ABSOLUTE
     timer.c                                  0x00000000   Number         0  timer.o ABSOLUTE
+    uart_dma_example.c                       0x00000000   Number         0  uart_dma_example.o ABSOLUTE
     uart_it_example.c                        0x00000000   Number         0  uart_it_example.o ABSOLUTE
     uart_polling_example.c                   0x00000000   Number         0  uart_polling_example.o ABSOLUTE
     RESET                                    0x08000000   Section      304  startup_py32f403xx.o(RESET)
@@ -2846,122 +2901,167 @@ Image Symbol Table
     .text                                    0x080001c0   Section       48  init.o(.text)
     [Anonymous Symbol]                       0x080001f0   Section        0  main.o(.text.APP_ErrorHandler)
     [Anonymous Symbol]                       0x080001f4   Section        0  py32f403_it.o(.text.BusFault_Handler)
-    [Anonymous Symbol]                       0x080001f8   Section        0  py32f403_it.o(.text.DMA2_Channel1_IRQHandler)
-    [Anonymous Symbol]                       0x080001fc   Section        0  py32f403_it.o(.text.DebugMon_Handler)
-    [Anonymous Symbol]                       0x08000200   Section        0  drv_gpio.o(.text.EXTI0_IRQHandler)
-    [Anonymous Symbol]                       0x08000228   Section        0  drv_gpio.o(.text.EXTI15_10_IRQHandler)
-    [Anonymous Symbol]                       0x0800031c   Section        0  drv_gpio.o(.text.EXTI1_IRQHandler)
-    [Anonymous Symbol]                       0x08000348   Section        0  drv_gpio.o(.text.EXTI2_IRQHandler)
-    [Anonymous Symbol]                       0x08000374   Section        0  drv_gpio.o(.text.EXTI3_IRQHandler)
-    [Anonymous Symbol]                       0x080003a0   Section        0  drv_gpio.o(.text.EXTI4_IRQHandler)
-    [Anonymous Symbol]                       0x080003cc   Section        0  drv_gpio.o(.text.EXTI9_5_IRQHandler)
-    [Anonymous Symbol]                       0x08000494   Section        0  py32f403_hal_dma.o(.text.HAL_DMA_Abort_IT)
-    [Anonymous Symbol]                       0x080007ac   Section        0  py32f403_hal.o(.text.HAL_Delay)
-    [Anonymous Symbol]                       0x080007f0   Section        0  py32f403_hal_gpio.o(.text.HAL_GPIO_Init)
-    [Anonymous Symbol]                       0x08000b40   Section        0  py32f403_hal.o(.text.HAL_GetTick)
-    [Anonymous Symbol]                       0x08000b4c   Section        0  py32f403_hal.o(.text.HAL_IncTick)
-    [Anonymous Symbol]                       0x08000b68   Section        0  py32f403_hal.o(.text.HAL_Init)
-    [Anonymous Symbol]                       0x08000b80   Section        0  py32f403_hal.o(.text.HAL_InitTick)
-    [Anonymous Symbol]                       0x08000bf0   Section        0  py32f403_hal_msp.o(.text.HAL_MspInit)
-    [Anonymous Symbol]                       0x08000c70   Section        0  py32f403_hal_cortex.o(.text.HAL_NVIC_EnableIRQ)
-    [Anonymous Symbol]                       0x08000c84   Section        0  py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriority)
-    [Anonymous Symbol]                       0x08000cb8   Section        0  py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping)
-    [Anonymous Symbol]                       0x08000cc8   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_ClockConfig)
-    [Anonymous Symbol]                       0x08000f2c   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_GetHCLKFreq)
-    [Anonymous Symbol]                       0x08000f38   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_GetPCLK1Freq)
-    [Anonymous Symbol]                       0x08000f5c   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_GetPCLK2Freq)
-    [Anonymous Symbol]                       0x08000f80   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_GetSysClockFreq)
-    [Anonymous Symbol]                       0x0800106c   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_OscConfig)
-    [Anonymous Symbol]                       0x08001834   Section        0  py32f403_hal_cortex.o(.text.HAL_SYSTICK_Callback)
-    [Anonymous Symbol]                       0x08001838   Section        0  py32f403_hal_cortex.o(.text.HAL_SYSTICK_Config)
-    [Anonymous Symbol]                       0x08001848   Section        0  py32f403_hal_cortex.o(.text.HAL_SYSTICK_IRQHandler)
-    [Anonymous Symbol]                       0x08001850   Section        0  drv_uart.o(.text.HAL_UART_ErrorCallback)
-    [Anonymous Symbol]                       0x080018d0   Section        0  py32f403_hal_uart.o(.text.HAL_UART_IRQHandler)
-    [Anonymous Symbol]                       0x08001b08   Section        0  py32f403_hal_uart.o(.text.HAL_UART_IdleFrameDetectCpltCallback)
-    [Anonymous Symbol]                       0x08001b10   Section        0  py32f403_hal_uart.o(.text.HAL_UART_Init)
-    [Anonymous Symbol]                       0x08001bbc   Section        0  py32f403_hal_msp.o(.text.HAL_UART_MspInit)
-    [Anonymous Symbol]                       0x08001c54   Section        0  py32f403_hal_uart.o(.text.HAL_UART_Receive_IT)
-    [Anonymous Symbol]                       0x08001d10   Section        0  drv_uart.o(.text.HAL_UART_RxCpltCallback)
-    [Anonymous Symbol]                       0x08001d80   Section        0  py32f403_hal_uart.o(.text.HAL_UART_Transmit_IT)
-    [Anonymous Symbol]                       0x08001e24   Section        0  drv_uart.o(.text.HAL_UART_TxCpltCallback)
-    [Anonymous Symbol]                       0x08001e94   Section        0  py32f403_it.o(.text.HardFault_Handler)
-    [Anonymous Symbol]                       0x08001e98   Section        0  py32f403_it.o(.text.MemManage_Handler)
-    [Anonymous Symbol]                       0x08001e9c   Section        0  py32f403_it.o(.text.NMI_Handler)
-    NVIC_EncodePriority                      0x08001ea1   Thumb Code   108  py32f403_hal_cortex.o(.text.NVIC_EncodePriority)
-    [Anonymous Symbol]                       0x08001ea0   Section        0  py32f403_hal_cortex.o(.text.NVIC_EncodePriority)
-    [Anonymous Symbol]                       0x08001f0c   Section        0  py32f403_it.o(.text.PendSV_Handler)
-    RCC_Delay                                0x08001f11   Thumb Code    58  py32f403_hal_rcc.o(.text.RCC_Delay)
-    [Anonymous Symbol]                       0x08001f10   Section        0  py32f403_hal_rcc.o(.text.RCC_Delay)
-    [Anonymous Symbol]                       0x08001f4c   Section        0  py32f403_it.o(.text.SVC_Handler)
-    SysTick_Config                           0x08001f51   Thumb Code    84  py32f403_hal_cortex.o(.text.SysTick_Config)
-    [Anonymous Symbol]                       0x08001f50   Section        0  py32f403_hal_cortex.o(.text.SysTick_Config)
-    [Anonymous Symbol]                       0x08001fa4   Section        0  py32f403_it.o(.text.SysTick_Handler)
-    SystemClockConfig                        0x08001fb9   Thumb Code   124  main.o(.text.SystemClockConfig)
-    [Anonymous Symbol]                       0x08001fb8   Section        0  main.o(.text.SystemClockConfig)
-    [Anonymous Symbol]                       0x08002034   Section        0  system_py32f403.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x08002044   Section        0  py32f403_it.o(.text.TIM2_IRQHandler)
-    UART_AdvFeatureConfig                    0x08002049   Thumb Code    78  py32f403_hal_uart.o(.text.UART_AdvFeatureConfig)
-    [Anonymous Symbol]                       0x08002048   Section        0  py32f403_hal_uart.o(.text.UART_AdvFeatureConfig)
-    UART_DMAAbortOnError                     0x08002099   Thumb Code    32  py32f403_hal_uart.o(.text.UART_DMAAbortOnError)
-    [Anonymous Symbol]                       0x08002098   Section        0  py32f403_hal_uart.o(.text.UART_DMAAbortOnError)
-    UART_EndRxTransfer                       0x080020b9   Thumb Code    40  py32f403_hal_uart.o(.text.UART_EndRxTransfer)
-    [Anonymous Symbol]                       0x080020b8   Section        0  py32f403_hal_uart.o(.text.UART_EndRxTransfer)
-    UART_EndTransmit_IT                      0x080020e1   Thumb Code    38  py32f403_hal_uart.o(.text.UART_EndTransmit_IT)
-    [Anonymous Symbol]                       0x080020e0   Section        0  py32f403_hal_uart.o(.text.UART_EndTransmit_IT)
-    UART_Receive_IT                          0x08002109   Thumb Code   182  py32f403_hal_uart.o(.text.UART_Receive_IT)
-    [Anonymous Symbol]                       0x08002108   Section        0  py32f403_hal_uart.o(.text.UART_Receive_IT)
-    UART_SetConfig                           0x080021c1   Thumb Code   462  py32f403_hal_uart.o(.text.UART_SetConfig)
-    [Anonymous Symbol]                       0x080021c0   Section        0  py32f403_hal_uart.o(.text.UART_SetConfig)
-    UART_Transmit_IT                         0x08002391   Thumb Code   156  py32f403_hal_uart.o(.text.UART_Transmit_IT)
-    [Anonymous Symbol]                       0x08002390   Section        0  py32f403_hal_uart.o(.text.UART_Transmit_IT)
-    [Anonymous Symbol]                       0x0800242c   Section        0  drv_uart.o(.text.USART2_IRQHandler)
-    [Anonymous Symbol]                       0x08002440   Section        0  py32f403_it.o(.text.UsageFault_Handler)
-    __NVIC_EnableIRQ                         0x08002445   Thumb Code    48  py32f403_hal_cortex.o(.text.__NVIC_EnableIRQ)
-    [Anonymous Symbol]                       0x08002444   Section        0  py32f403_hal_cortex.o(.text.__NVIC_EnableIRQ)
-    __NVIC_GetPriorityGrouping               0x08002475   Thumb Code    16  py32f403_hal_cortex.o(.text.__NVIC_GetPriorityGrouping)
-    [Anonymous Symbol]                       0x08002474   Section        0  py32f403_hal_cortex.o(.text.__NVIC_GetPriorityGrouping)
-    __NVIC_SetPriority                       0x08002485   Thumb Code    66  py32f403_hal_cortex.o(.text.__NVIC_SetPriority)
-    [Anonymous Symbol]                       0x08002484   Section        0  py32f403_hal_cortex.o(.text.__NVIC_SetPriority)
-    __NVIC_SetPriorityGrouping               0x080024c9   Thumb Code    60  py32f403_hal_cortex.o(.text.__NVIC_SetPriorityGrouping)
-    [Anonymous Symbol]                       0x080024c8   Section        0  py32f403_hal_cortex.o(.text.__NVIC_SetPriorityGrouping)
-    get_uart_device                          0x08002505   Thumb Code    52  drv_uart.o(.text.get_uart_device)
-    [Anonymous Symbol]                       0x08002504   Section        0  drv_uart.o(.text.get_uart_device)
-    gpio_irq_handler                         0x08002539   Thumb Code    68  drv_gpio.o(.text.gpio_irq_handler)
-    [Anonymous Symbol]                       0x08002538   Section        0  drv_gpio.o(.text.gpio_irq_handler)
-    is_uart_initialized                      0x0800257d   Thumb Code    52  drv_uart.o(.text.is_uart_initialized)
-    [Anonymous Symbol]                       0x0800257c   Section        0  drv_uart.o(.text.is_uart_initialized)
-    [Anonymous Symbol]                       0x080025b0   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x080025c4   Section        0  osal_event.o(.text.osalFindTask)
-    [Anonymous Symbol]                       0x08002608   Section        0  osal_timer.o(.text.osalTimerUpdate)
-    [Anonymous Symbol]                       0x08002724   Section        0  osal_memory.o(.text.osal_mem_alloc)
-    [Anonymous Symbol]                       0x0800295c   Section        0  osal_memory.o(.text.osal_mem_free)
-    [Anonymous Symbol]                       0x080029d8   Section        0  osal_memory.o(.text.osal_mem_init)
-    [Anonymous Symbol]                       0x08002a6c   Section        0  osal_event.o(.text.osal_set_event)
-    uart_configure_irq_priority              0x08002ab9   Thumb Code    82  drv_uart.o(.text.uart_configure_irq_priority)
-    [Anonymous Symbol]                       0x08002ab8   Section        0  drv_uart.o(.text.uart_configure_irq_priority)
-    [Anonymous Symbol]                       0x08002b0c   Section        0  uart_it_example.o(.text.uart_echo_test)
-    [Anonymous Symbol]                       0x08002b74   Section        0  drv_uart.o(.text.uart_init)
-    [Anonymous Symbol]                       0x08002c24   Section        0  uart_it_example.o(.text.uart_it_example)
-    [Anonymous Symbol]                       0x08002c60   Section        0  uart_it_example.o(.text.uart_it_init)
-    [Anonymous Symbol]                       0x08002c9c   Section        0  drv_uart.o(.text.uart_receive)
-    [Anonymous Symbol]                       0x08002d30   Section        0  uart_it_example.o(.text.uart_receive_data)
-    [Anonymous Symbol]                       0x08002d98   Section        0  drv_uart.o(.text.uart_send)
-    [Anonymous Symbol]                       0x08002e38   Section        0  uart_it_example.o(.text.uart_send_string)
-    i.__scatterload_copy                     0x08002e7c   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08002e8a   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08002e8c   Section       14  handlers.o(i.__scatterload_zeroinit)
-    .L__const.HAL_RCC_GetSysClockFreq.aPLLMULFactorTable 0x08002e9a   Data          64  py32f403_hal_rcc.o(.rodata..L__const.HAL_RCC_GetSysClockFreq.aPLLMULFactorTable)
-    .L.str.2                                 0x08002ef2   Data          35  uart_it_example.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x08002ef2   Section        0  uart_it_example.o(.rodata.str1.1)
-    .L.str.3                                 0x08002f15   Data          20  uart_it_example.o(.rodata.str1.1)
-    .L.str.1                                 0x08002f29   Data          24  uart_it_example.o(.rodata.str1.1)
-    .L.str                                   0x08002f41   Data          44  uart_it_example.o(.rodata.str1.1)
-    uart_bases                               0x08002f70   Data          20  drv_uart.o(.rodata.uart_bases)
-    [Anonymous Symbol]                       0x08002f70   Section        0  drv_uart.o(.rodata.uart_bases)
-    uart_irqs                                0x08002f84   Data           5  drv_uart.o(.rodata.uart_irqs)
-    [Anonymous Symbol]                       0x08002f84   Section        0  drv_uart.o(.rodata.uart_irqs)
-    g_uart_instance                          0x20000004   Data           1  uart_it_example.o(.data.g_uart_instance)
-    [Anonymous Symbol]                       0x20000004   Section        0  uart_it_example.o(.data.g_uart_instance)
+    [Anonymous Symbol]                       0x080001f8   Section        0  drv_uart.o(.text.DMA1_Channel1_IRQHandler)
+    [Anonymous Symbol]                       0x0800020c   Section        0  drv_uart.o(.text.DMA1_Channel2_IRQHandler)
+    [Anonymous Symbol]                       0x08000220   Section        0  py32f403_it.o(.text.DMA2_Channel1_IRQHandler)
+    DMA_SetConfig                            0x08000225   Thumb Code    80  py32f403_hal_dma.o(.text.DMA_SetConfig)
+    [Anonymous Symbol]                       0x08000224   Section        0  py32f403_hal_dma.o(.text.DMA_SetConfig)
+    [Anonymous Symbol]                       0x08000274   Section        0  py32f403_it.o(.text.DebugMon_Handler)
+    [Anonymous Symbol]                       0x08000278   Section        0  drv_gpio.o(.text.EXTI0_IRQHandler)
+    [Anonymous Symbol]                       0x080002a0   Section        0  drv_gpio.o(.text.EXTI15_10_IRQHandler)
+    [Anonymous Symbol]                       0x08000394   Section        0  drv_gpio.o(.text.EXTI1_IRQHandler)
+    [Anonymous Symbol]                       0x080003c0   Section        0  drv_gpio.o(.text.EXTI2_IRQHandler)
+    [Anonymous Symbol]                       0x080003ec   Section        0  drv_gpio.o(.text.EXTI3_IRQHandler)
+    [Anonymous Symbol]                       0x08000418   Section        0  drv_gpio.o(.text.EXTI4_IRQHandler)
+    [Anonymous Symbol]                       0x08000444   Section        0  drv_gpio.o(.text.EXTI9_5_IRQHandler)
+    [Anonymous Symbol]                       0x0800050c   Section        0  py32f403_hal_dma.o(.text.HAL_DMA_Abort_IT)
+    [Anonymous Symbol]                       0x08000824   Section        0  py32f403_hal_dma.o(.text.HAL_DMA_ChannelMap)
+    [Anonymous Symbol]                       0x080008d0   Section        0  py32f403_hal_dma.o(.text.HAL_DMA_DeInit)
+    [Anonymous Symbol]                       0x080009c0   Section        0  py32f403_hal_dma.o(.text.HAL_DMA_IRQHandler)
+    [Anonymous Symbol]                       0x08001044   Section        0  py32f403_hal_dma.o(.text.HAL_DMA_Init)
+    [Anonymous Symbol]                       0x08001138   Section        0  py32f403_hal_dma.o(.text.HAL_DMA_Start_IT)
+    [Anonymous Symbol]                       0x08001204   Section        0  py32f403_hal.o(.text.HAL_Delay)
+    [Anonymous Symbol]                       0x08001248   Section        0  py32f403_hal_gpio.o(.text.HAL_GPIO_Init)
+    [Anonymous Symbol]                       0x08001598   Section        0  py32f403_hal.o(.text.HAL_GetTick)
+    [Anonymous Symbol]                       0x080015a4   Section        0  py32f403_hal.o(.text.HAL_IncTick)
+    [Anonymous Symbol]                       0x080015c0   Section        0  py32f403_hal.o(.text.HAL_Init)
+    [Anonymous Symbol]                       0x080015d8   Section        0  py32f403_hal.o(.text.HAL_InitTick)
+    [Anonymous Symbol]                       0x08001648   Section        0  py32f403_hal_msp.o(.text.HAL_MspInit)
+    [Anonymous Symbol]                       0x080016c8   Section        0  py32f403_hal_cortex.o(.text.HAL_NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x080016dc   Section        0  py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08001710   Section        0  py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping)
+    [Anonymous Symbol]                       0x08001720   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_ClockConfig)
+    [Anonymous Symbol]                       0x08001984   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_GetHCLKFreq)
+    [Anonymous Symbol]                       0x08001990   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_GetPCLK1Freq)
+    [Anonymous Symbol]                       0x080019b4   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_GetPCLK2Freq)
+    [Anonymous Symbol]                       0x080019d8   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_GetSysClockFreq)
+    [Anonymous Symbol]                       0x08001ac4   Section        0  py32f403_hal_rcc.o(.text.HAL_RCC_OscConfig)
+    [Anonymous Symbol]                       0x0800228c   Section        0  py32f403_hal_cortex.o(.text.HAL_SYSTICK_Callback)
+    [Anonymous Symbol]                       0x08002290   Section        0  py32f403_hal_cortex.o(.text.HAL_SYSTICK_Config)
+    [Anonymous Symbol]                       0x080022a0   Section        0  py32f403_hal_cortex.o(.text.HAL_SYSTICK_IRQHandler)
+    [Anonymous Symbol]                       0x080022a8   Section        0  py32f403_hal_uart.o(.text.HAL_UART_DeInit)
+    [Anonymous Symbol]                       0x08002304   Section        0  drv_uart.o(.text.HAL_UART_ErrorCallback)
+    [Anonymous Symbol]                       0x08002394   Section        0  py32f403_hal_uart.o(.text.HAL_UART_IRQHandler)
+    [Anonymous Symbol]                       0x080025cc   Section        0  py32f403_hal_uart.o(.text.HAL_UART_IdleFrameDetectCpltCallback)
+    [Anonymous Symbol]                       0x080025d4   Section        0  py32f403_hal_uart.o(.text.HAL_UART_Init)
+    [Anonymous Symbol]                       0x08002680   Section        0  py32f403_hal_uart.o(.text.HAL_UART_MspDeInit)
+    [Anonymous Symbol]                       0x08002688   Section        0  py32f403_hal_msp.o(.text.HAL_UART_MspInit)
+    [Anonymous Symbol]                       0x08002720   Section        0  py32f403_hal_uart.o(.text.HAL_UART_Receive_DMA)
+    [Anonymous Symbol]                       0x0800285c   Section        0  drv_uart.o(.text.HAL_UART_RxCpltCallback)
+    [Anonymous Symbol]                       0x080028f4   Section        0  drv_uart.o(.text.HAL_UART_RxHalfCpltCallback)
+    [Anonymous Symbol]                       0x08002964   Section        0  py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
+    [Anonymous Symbol]                       0x08002a5c   Section        0  drv_uart.o(.text.HAL_UART_TxCpltCallback)
+    [Anonymous Symbol]                       0x08002b04   Section        0  py32f403_hal_uart.o(.text.HAL_UART_TxHalfCpltCallback)
+    [Anonymous Symbol]                       0x08002b0c   Section        0  py32f403_it.o(.text.HardFault_Handler)
+    [Anonymous Symbol]                       0x08002b10   Section        0  py32f403_it.o(.text.MemManage_Handler)
+    [Anonymous Symbol]                       0x08002b14   Section        0  py32f403_it.o(.text.NMI_Handler)
+    NVIC_EncodePriority                      0x08002b19   Thumb Code   108  py32f403_hal_cortex.o(.text.NVIC_EncodePriority)
+    [Anonymous Symbol]                       0x08002b18   Section        0  py32f403_hal_cortex.o(.text.NVIC_EncodePriority)
+    [Anonymous Symbol]                       0x08002b84   Section        0  py32f403_it.o(.text.PendSV_Handler)
+    RCC_Delay                                0x08002b89   Thumb Code    58  py32f403_hal_rcc.o(.text.RCC_Delay)
+    [Anonymous Symbol]                       0x08002b88   Section        0  py32f403_hal_rcc.o(.text.RCC_Delay)
+    [Anonymous Symbol]                       0x08002bc4   Section        0  py32f403_it.o(.text.SVC_Handler)
+    SysTick_Config                           0x08002bc9   Thumb Code    84  py32f403_hal_cortex.o(.text.SysTick_Config)
+    [Anonymous Symbol]                       0x08002bc8   Section        0  py32f403_hal_cortex.o(.text.SysTick_Config)
+    [Anonymous Symbol]                       0x08002c1c   Section        0  py32f403_it.o(.text.SysTick_Handler)
+    SystemClockConfig                        0x08002c31   Thumb Code   124  main.o(.text.SystemClockConfig)
+    [Anonymous Symbol]                       0x08002c30   Section        0  main.o(.text.SystemClockConfig)
+    [Anonymous Symbol]                       0x08002cac   Section        0  system_py32f403.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08002cbc   Section        0  py32f403_it.o(.text.TIM2_IRQHandler)
+    UART_AdvFeatureConfig                    0x08002cc1   Thumb Code    78  py32f403_hal_uart.o(.text.UART_AdvFeatureConfig)
+    [Anonymous Symbol]                       0x08002cc0   Section        0  py32f403_hal_uart.o(.text.UART_AdvFeatureConfig)
+    UART_DMAAbortOnError                     0x08002d11   Thumb Code    32  py32f403_hal_uart.o(.text.UART_DMAAbortOnError)
+    [Anonymous Symbol]                       0x08002d10   Section        0  py32f403_hal_uart.o(.text.UART_DMAAbortOnError)
+    UART_DMAError                            0x08002d31   Thumb Code   124  py32f403_hal_uart.o(.text.UART_DMAError)
+    [Anonymous Symbol]                       0x08002d30   Section        0  py32f403_hal_uart.o(.text.UART_DMAError)
+    UART_DMAReceiveCplt                      0x08002dad   Thumb Code    88  py32f403_hal_uart.o(.text.UART_DMAReceiveCplt)
+    [Anonymous Symbol]                       0x08002dac   Section        0  py32f403_hal_uart.o(.text.UART_DMAReceiveCplt)
+    UART_DMARxHalfCplt                       0x08002e05   Thumb Code    22  py32f403_hal_uart.o(.text.UART_DMARxHalfCplt)
+    [Anonymous Symbol]                       0x08002e04   Section        0  py32f403_hal_uart.o(.text.UART_DMARxHalfCplt)
+    UART_DMATransmitCplt                     0x08002e1d   Thumb Code    70  py32f403_hal_uart.o(.text.UART_DMATransmitCplt)
+    [Anonymous Symbol]                       0x08002e1c   Section        0  py32f403_hal_uart.o(.text.UART_DMATransmitCplt)
+    UART_DMATxHalfCplt                       0x08002e65   Thumb Code    22  py32f403_hal_uart.o(.text.UART_DMATxHalfCplt)
+    [Anonymous Symbol]                       0x08002e64   Section        0  py32f403_hal_uart.o(.text.UART_DMATxHalfCplt)
+    UART_EndRxTransfer                       0x08002e7d   Thumb Code    40  py32f403_hal_uart.o(.text.UART_EndRxTransfer)
+    [Anonymous Symbol]                       0x08002e7c   Section        0  py32f403_hal_uart.o(.text.UART_EndRxTransfer)
+    UART_EndTransmit_IT                      0x08002ea5   Thumb Code    38  py32f403_hal_uart.o(.text.UART_EndTransmit_IT)
+    [Anonymous Symbol]                       0x08002ea4   Section        0  py32f403_hal_uart.o(.text.UART_EndTransmit_IT)
+    UART_EndTxTransfer                       0x08002ecd   Thumb Code    28  py32f403_hal_uart.o(.text.UART_EndTxTransfer)
+    [Anonymous Symbol]                       0x08002ecc   Section        0  py32f403_hal_uart.o(.text.UART_EndTxTransfer)
+    UART_Receive_IT                          0x08002ee9   Thumb Code   182  py32f403_hal_uart.o(.text.UART_Receive_IT)
+    [Anonymous Symbol]                       0x08002ee8   Section        0  py32f403_hal_uart.o(.text.UART_Receive_IT)
+    UART_SetConfig                           0x08002fa1   Thumb Code   462  py32f403_hal_uart.o(.text.UART_SetConfig)
+    [Anonymous Symbol]                       0x08002fa0   Section        0  py32f403_hal_uart.o(.text.UART_SetConfig)
+    UART_Transmit_IT                         0x08003171   Thumb Code   156  py32f403_hal_uart.o(.text.UART_Transmit_IT)
+    [Anonymous Symbol]                       0x08003170   Section        0  py32f403_hal_uart.o(.text.UART_Transmit_IT)
+    [Anonymous Symbol]                       0x0800320c   Section        0  drv_uart.o(.text.USART2_IRQHandler)
+    [Anonymous Symbol]                       0x08003220   Section        0  py32f403_it.o(.text.UsageFault_Handler)
+    __NVIC_EnableIRQ                         0x08003225   Thumb Code    48  py32f403_hal_cortex.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x08003224   Section        0  py32f403_hal_cortex.o(.text.__NVIC_EnableIRQ)
+    __NVIC_GetPriorityGrouping               0x08003255   Thumb Code    16  py32f403_hal_cortex.o(.text.__NVIC_GetPriorityGrouping)
+    [Anonymous Symbol]                       0x08003254   Section        0  py32f403_hal_cortex.o(.text.__NVIC_GetPriorityGrouping)
+    __NVIC_SetPriority                       0x08003265   Thumb Code    66  py32f403_hal_cortex.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08003264   Section        0  py32f403_hal_cortex.o(.text.__NVIC_SetPriority)
+    __NVIC_SetPriorityGrouping               0x080032a9   Thumb Code    60  py32f403_hal_cortex.o(.text.__NVIC_SetPriorityGrouping)
+    [Anonymous Symbol]                       0x080032a8   Section        0  py32f403_hal_cortex.o(.text.__NVIC_SetPriorityGrouping)
+    get_uart_device                          0x080032e5   Thumb Code    52  drv_uart.o(.text.get_uart_device)
+    [Anonymous Symbol]                       0x080032e4   Section        0  drv_uart.o(.text.get_uart_device)
+    gpio_irq_handler                         0x08003319   Thumb Code    68  drv_gpio.o(.text.gpio_irq_handler)
+    [Anonymous Symbol]                       0x08003318   Section        0  drv_gpio.o(.text.gpio_irq_handler)
+    is_uart_initialized                      0x0800335d   Thumb Code    52  drv_uart.o(.text.is_uart_initialized)
+    [Anonymous Symbol]                       0x0800335c   Section        0  drv_uart.o(.text.is_uart_initialized)
+    [Anonymous Symbol]                       0x08003390   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x080033a4   Section        0  osal_event.o(.text.osalFindTask)
+    [Anonymous Symbol]                       0x080033e8   Section        0  osal_timer.o(.text.osalTimerUpdate)
+    [Anonymous Symbol]                       0x08003504   Section        0  osal_memory.o(.text.osal_mem_alloc)
+    [Anonymous Symbol]                       0x0800373c   Section        0  osal_memory.o(.text.osal_mem_free)
+    [Anonymous Symbol]                       0x080037b8   Section        0  osal_memory.o(.text.osal_mem_init)
+    [Anonymous Symbol]                       0x0800384c   Section        0  osal_event.o(.text.osal_set_event)
+    [Anonymous Symbol]                       0x08003898   Section        0  drv_tool.o(.text.ring_buffer_available)
+    [Anonymous Symbol]                       0x080038b8   Section        0  drv_tool.o(.text.ring_buffer_get_multiple)
+    [Anonymous Symbol]                       0x08003974   Section        0  drv_tool.o(.text.ring_buffer_init)
+    [Anonymous Symbol]                       0x080039c8   Section        0  drv_tool.o(.text.ring_buffer_is_full)
+    [Anonymous Symbol]                       0x080039f8   Section        0  drv_tool.o(.text.ring_buffer_peek_multiple)
+    [Anonymous Symbol]                       0x08003adc   Section        0  drv_tool.o(.text.ring_buffer_put)
+    [Anonymous Symbol]                       0x08003b38   Section        0  drv_tool.o(.text.ring_buffer_skip)
+    uart_configure_irq_priority              0x08003bad   Thumb Code   142  drv_uart.o(.text.uart_configure_irq_priority)
+    [Anonymous Symbol]                       0x08003bac   Section        0  drv_uart.o(.text.uart_configure_irq_priority)
+    uart_dma_buffer_to_ring                  0x08003c3d   Thumb Code   234  drv_uart.o(.text.uart_dma_buffer_to_ring)
+    [Anonymous Symbol]                       0x08003c3c   Section        0  drv_uart.o(.text.uart_dma_buffer_to_ring)
+    [Anonymous Symbol]                       0x08003d28   Section        0  uart_dma_example.o(.text.uart_dma_example)
+    [Anonymous Symbol]                       0x08003d64   Section        0  uart_dma_example.o(.text.uart_dma_init)
+    uart_dma_init                            0x08003dbd   Thumb Code   470  drv_uart.o(.text.uart_dma_init)
+    [Anonymous Symbol]                       0x08003dbc   Section        0  drv_uart.o(.text.uart_dma_init)
+    [Anonymous Symbol]                       0x08003f94   Section        0  uart_dma_example.o(.text.uart_echo_test)
+    [Anonymous Symbol]                       0x08003fb0   Section        0  drv_uart.o(.text.uart_init)
+    [Anonymous Symbol]                       0x08004084   Section        0  uart_dma_example.o(.text.uart_process_received_data)
+    [Anonymous Symbol]                       0x080040f8   Section        0  drv_uart.o(.text.uart_read_from_ring_buffer)
+    [Anonymous Symbol]                       0x08004164   Section        0  drv_uart.o(.text.uart_receive)
+    [Anonymous Symbol]                       0x0800420c   Section        0  drv_uart.o(.text.uart_receive_async)
+    [Anonymous Symbol]                       0x08004230   Section        0  drv_uart.o(.text.uart_send)
+    [Anonymous Symbol]                       0x080042e4   Section        0  drv_uart.o(.text.uart_send_async)
+    [Anonymous Symbol]                       0x08004308   Section        0  uart_dma_example.o(.text.uart_send_string)
+    uart_start_tx_from_ring_buffer           0x0800434d   Thumb Code   200  drv_uart.o(.text.uart_start_tx_from_ring_buffer)
+    [Anonymous Symbol]                       0x0800434c   Section        0  drv_uart.o(.text.uart_start_tx_from_ring_buffer)
+    i.__scatterload_copy                     0x08004414   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08004422   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08004424   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .L__const.HAL_RCC_GetSysClockFreq.aPLLMULFactorTable 0x08004432   Data          64  py32f403_hal_rcc.o(.rodata..L__const.HAL_RCC_GetSysClockFreq.aPLLMULFactorTable)
+    .L.str.2                                 0x0800448a   Data          29  uart_dma_example.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0800448a   Section        0  uart_dma_example.o(.rodata.str1.1)
+    .L.str.3                                 0x080044a7   Data          20  uart_dma_example.o(.rodata.str1.1)
+    .L.str                                   0x080044bb   Data          24  uart_dma_example.o(.rodata.str1.1)
+    .L.str.1                                 0x080044d3   Data          40  uart_dma_example.o(.rodata.str1.1)
+    uart_bases                               0x080044fc   Data          20  drv_uart.o(.rodata.uart_bases)
+    [Anonymous Symbol]                       0x080044fc   Section        0  drv_uart.o(.rodata.uart_bases)
+    uart_dma_rx_channel_map                  0x08004510   Data          20  drv_uart.o(.rodata.uart_dma_rx_channel_map)
+    [Anonymous Symbol]                       0x08004510   Section        0  drv_uart.o(.rodata.uart_dma_rx_channel_map)
+    uart_dma_tx_channel_map                  0x08004524   Data          20  drv_uart.o(.rodata.uart_dma_tx_channel_map)
+    [Anonymous Symbol]                       0x08004524   Section        0  drv_uart.o(.rodata.uart_dma_tx_channel_map)
+    uart_irqs                                0x08004538   Data           5  drv_uart.o(.rodata.uart_irqs)
+    [Anonymous Symbol]                       0x08004538   Section        0  drv_uart.o(.rodata.uart_irqs)
+    g_uart_instance                          0x20000004   Data           1  uart_dma_example.o(.data.g_uart_instance)
+    [Anonymous Symbol]                       0x20000004   Section        0  uart_dma_example.o(.data.g_uart_instance)
     theHeap                                  0x20000008   Data           4  osal_memory.o(.data.theHeap)
     [Anonymous Symbol]                       0x20000008   Section        0  osal_memory.o(.data.theHeap)
     _theHeap                                 0x2000001c   Data        6144  osal_memory.o(.bss._theHeap)
@@ -2972,23 +3072,25 @@ Image Symbol Table
     [Anonymous Symbol]                       0x2000181e   Section        0  osal_memory.o(.bss.blkFree)
     blkMax                                   0x20001820   Data           2  osal_memory.o(.bss.blkMax)
     [Anonymous Symbol]                       0x20001820   Section        0  osal_memory.o(.bss.blkMax)
-    ff1                                      0x20001824   Data           4  osal_memory.o(.bss.ff1)
-    [Anonymous Symbol]                       0x20001824   Section        0  osal_memory.o(.bss.ff1)
-    ff2                                      0x20001828   Data           4  osal_memory.o(.bss.ff2)
-    [Anonymous Symbol]                       0x20001828   Section        0  osal_memory.o(.bss.ff2)
-    gpio_irq_handlers                        0x2000182c   Data         256  drv_gpio.o(.bss.gpio_irq_handlers)
-    [Anonymous Symbol]                       0x2000182c   Section        0  drv_gpio.o(.bss.gpio_irq_handlers)
-    memAlo                                   0x2000192c   Data           2  osal_memory.o(.bss.memAlo)
-    [Anonymous Symbol]                       0x2000192c   Section        0  osal_memory.o(.bss.memAlo)
-    memMax                                   0x2000192e   Data           2  osal_memory.o(.bss.memMax)
-    [Anonymous Symbol]                       0x2000192e   Section        0  osal_memory.o(.bss.memMax)
-    osal_systemClock                         0x20001930   Data           4  osal_timer.o(.bss.osal_systemClock)
-    [Anonymous Symbol]                       0x20001930   Section        0  osal_timer.o(.bss.osal_systemClock)
-    ready                                    0x20001934   Data           1  osal_memory.o(.bss.ready)
-    [Anonymous Symbol]                       0x20001934   Section        0  osal_memory.o(.bss.ready)
-    uart_devices                             0x2000193c   Data         620  drv_uart.o(.bss.uart_devices)
-    [Anonymous Symbol]                       0x2000193c   Section        0  drv_uart.o(.bss.uart_devices)
-    STACK                                    0x20001bb0   Section     1024  startup_py32f403xx.o(STACK)
+    dummy_rx_buffer                          0x20001822   Data         256  uart_dma_example.o(.bss.dummy_rx_buffer)
+    [Anonymous Symbol]                       0x20001822   Section        0  uart_dma_example.o(.bss.dummy_rx_buffer)
+    ff1                                      0x20001924   Data           4  osal_memory.o(.bss.ff1)
+    [Anonymous Symbol]                       0x20001924   Section        0  osal_memory.o(.bss.ff1)
+    ff2                                      0x20001928   Data           4  osal_memory.o(.bss.ff2)
+    [Anonymous Symbol]                       0x20001928   Section        0  osal_memory.o(.bss.ff2)
+    gpio_irq_handlers                        0x2000192c   Data         256  drv_gpio.o(.bss.gpio_irq_handlers)
+    [Anonymous Symbol]                       0x2000192c   Section        0  drv_gpio.o(.bss.gpio_irq_handlers)
+    memAlo                                   0x20001a2c   Data           2  osal_memory.o(.bss.memAlo)
+    [Anonymous Symbol]                       0x20001a2c   Section        0  osal_memory.o(.bss.memAlo)
+    memMax                                   0x20001a2e   Data           2  osal_memory.o(.bss.memMax)
+    [Anonymous Symbol]                       0x20001a2e   Section        0  osal_memory.o(.bss.memMax)
+    osal_systemClock                         0x20001a30   Data           4  osal_timer.o(.bss.osal_systemClock)
+    [Anonymous Symbol]                       0x20001a30   Section        0  osal_timer.o(.bss.osal_systemClock)
+    ready                                    0x20001a34   Data           1  osal_memory.o(.bss.ready)
+    [Anonymous Symbol]                       0x20001a34   Section        0  osal_memory.o(.bss.ready)
+    uart_devices                             0x20001a3c   Data        5360  drv_uart.o(.bss.uart_devices)
+    [Anonymous Symbol]                       0x20001a3c   Section        0  drv_uart.o(.bss.uart_devices)
+    STACK                                    0x20002f30   Section     1024  startup_py32f403xx.o(STACK)
 
     Global Symbols
 
@@ -3017,8 +3119,6 @@ Image Symbol Table
     ADC3_IRQHandler                          0x0800015f   Thumb Code     0  startup_py32f403xx.o(.text)
     CAN1_RX1_IRQHandler                      0x0800015f   Thumb Code     0  startup_py32f403xx.o(.text)
     CAN1_SCE_IRQHandler                      0x0800015f   Thumb Code     0  startup_py32f403xx.o(.text)
-    DMA1_Channel1_IRQHandler                 0x0800015f   Thumb Code     0  startup_py32f403xx.o(.text)
-    DMA1_Channel2_IRQHandler                 0x0800015f   Thumb Code     0  startup_py32f403xx.o(.text)
     DMA1_Channel3_IRQHandler                 0x0800015f   Thumb Code     0  startup_py32f403xx.o(.text)
     DMA1_Channel4_IRQHandler                 0x0800015f   Thumb Code     0  startup_py32f403xx.o(.text)
     DMA1_Channel5_IRQHandler                 0x0800015f   Thumb Code     0  startup_py32f403xx.o(.text)
@@ -3078,83 +3178,104 @@ Image Symbol Table
     __scatterload_rt2                        0x080001c1   Thumb Code     0  init.o(.text)
     APP_ErrorHandler                         0x080001f1   Thumb Code     4  main.o(.text.APP_ErrorHandler)
     BusFault_Handler                         0x080001f5   Thumb Code     4  py32f403_it.o(.text.BusFault_Handler)
-    DMA2_Channel1_IRQHandler                 0x080001f9   Thumb Code     2  py32f403_it.o(.text.DMA2_Channel1_IRQHandler)
-    DebugMon_Handler                         0x080001fd   Thumb Code     2  py32f403_it.o(.text.DebugMon_Handler)
-    EXTI0_IRQHandler                         0x08000201   Thumb Code    40  drv_gpio.o(.text.EXTI0_IRQHandler)
-    EXTI15_10_IRQHandler                     0x08000229   Thumb Code   244  drv_gpio.o(.text.EXTI15_10_IRQHandler)
-    EXTI1_IRQHandler                         0x0800031d   Thumb Code    42  drv_gpio.o(.text.EXTI1_IRQHandler)
-    EXTI2_IRQHandler                         0x08000349   Thumb Code    42  drv_gpio.o(.text.EXTI2_IRQHandler)
-    EXTI3_IRQHandler                         0x08000375   Thumb Code    42  drv_gpio.o(.text.EXTI3_IRQHandler)
-    EXTI4_IRQHandler                         0x080003a1   Thumb Code    42  drv_gpio.o(.text.EXTI4_IRQHandler)
-    EXTI9_5_IRQHandler                       0x080003cd   Thumb Code   198  drv_gpio.o(.text.EXTI9_5_IRQHandler)
-    HAL_DMA_Abort_IT                         0x08000495   Thumb Code   792  py32f403_hal_dma.o(.text.HAL_DMA_Abort_IT)
-    HAL_Delay                                0x080007ad   Thumb Code    66  py32f403_hal.o(.text.HAL_Delay)
-    HAL_GPIO_Init                            0x080007f1   Thumb Code   846  py32f403_hal_gpio.o(.text.HAL_GPIO_Init)
-    HAL_GetTick                              0x08000b41   Thumb Code    12  py32f403_hal.o(.text.HAL_GetTick)
-    HAL_IncTick                              0x08000b4d   Thumb Code    26  py32f403_hal.o(.text.HAL_IncTick)
-    HAL_Init                                 0x08000b69   Thumb Code    22  py32f403_hal.o(.text.HAL_Init)
-    HAL_InitTick                             0x08000b81   Thumb Code   112  py32f403_hal.o(.text.HAL_InitTick)
-    HAL_MspInit                              0x08000bf1   Thumb Code   126  py32f403_hal_msp.o(.text.HAL_MspInit)
-    HAL_NVIC_EnableIRQ                       0x08000c71   Thumb Code    20  py32f403_hal_cortex.o(.text.HAL_NVIC_EnableIRQ)
-    HAL_NVIC_SetPriority                     0x08000c85   Thumb Code    50  py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriority)
-    HAL_NVIC_SetPriorityGrouping             0x08000cb9   Thumb Code    16  py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping)
-    HAL_RCC_ClockConfig                      0x08000cc9   Thumb Code   610  py32f403_hal_rcc.o(.text.HAL_RCC_ClockConfig)
-    HAL_RCC_GetHCLKFreq                      0x08000f2d   Thumb Code    12  py32f403_hal_rcc.o(.text.HAL_RCC_GetHCLKFreq)
-    HAL_RCC_GetPCLK1Freq                     0x08000f39   Thumb Code    34  py32f403_hal_rcc.o(.text.HAL_RCC_GetPCLK1Freq)
-    HAL_RCC_GetPCLK2Freq                     0x08000f5d   Thumb Code    34  py32f403_hal_rcc.o(.text.HAL_RCC_GetPCLK2Freq)
-    HAL_RCC_GetSysClockFreq                  0x08000f81   Thumb Code   236  py32f403_hal_rcc.o(.text.HAL_RCC_GetSysClockFreq)
-    HAL_RCC_OscConfig                        0x0800106d   Thumb Code  1990  py32f403_hal_rcc.o(.text.HAL_RCC_OscConfig)
-    HAL_SYSTICK_Callback                     0x08001835   Thumb Code     2  py32f403_hal_cortex.o(.text.HAL_SYSTICK_Callback)
-    HAL_SYSTICK_Config                       0x08001839   Thumb Code    16  py32f403_hal_cortex.o(.text.HAL_SYSTICK_Config)
-    HAL_SYSTICK_IRQHandler                   0x08001849   Thumb Code     8  py32f403_hal_cortex.o(.text.HAL_SYSTICK_IRQHandler)
-    HAL_UART_ErrorCallback                   0x08001851   Thumb Code   126  drv_uart.o(.text.HAL_UART_ErrorCallback)
-    HAL_UART_IRQHandler                      0x080018d1   Thumb Code   566  py32f403_hal_uart.o(.text.HAL_UART_IRQHandler)
-    HAL_UART_IdleFrameDetectCpltCallback     0x08001b09   Thumb Code     8  py32f403_hal_uart.o(.text.HAL_UART_IdleFrameDetectCpltCallback)
-    HAL_UART_Init                            0x08001b11   Thumb Code   170  py32f403_hal_uart.o(.text.HAL_UART_Init)
-    HAL_UART_MspInit                         0x08001bbd   Thumb Code   150  py32f403_hal_msp.o(.text.HAL_UART_MspInit)
-    HAL_UART_Receive_IT                      0x08001c55   Thumb Code   186  py32f403_hal_uart.o(.text.HAL_UART_Receive_IT)
-    HAL_UART_RxCpltCallback                  0x08001d11   Thumb Code   112  drv_uart.o(.text.HAL_UART_RxCpltCallback)
-    HAL_UART_Transmit_IT                     0x08001d81   Thumb Code   162  py32f403_hal_uart.o(.text.HAL_UART_Transmit_IT)
-    HAL_UART_TxCpltCallback                  0x08001e25   Thumb Code   112  drv_uart.o(.text.HAL_UART_TxCpltCallback)
-    HardFault_Handler                        0x08001e95   Thumb Code     4  py32f403_it.o(.text.HardFault_Handler)
-    MemManage_Handler                        0x08001e99   Thumb Code     4  py32f403_it.o(.text.MemManage_Handler)
-    NMI_Handler                              0x08001e9d   Thumb Code     2  py32f403_it.o(.text.NMI_Handler)
-    PendSV_Handler                           0x08001f0d   Thumb Code     2  py32f403_it.o(.text.PendSV_Handler)
-    SVC_Handler                              0x08001f4d   Thumb Code     2  py32f403_it.o(.text.SVC_Handler)
-    SysTick_Handler                          0x08001fa5   Thumb Code    18  py32f403_it.o(.text.SysTick_Handler)
-    SystemInit                               0x08002035   Thumb Code    16  system_py32f403.o(.text.SystemInit)
-    TIM2_IRQHandler                          0x08002045   Thumb Code     2  py32f403_it.o(.text.TIM2_IRQHandler)
-    USART2_IRQHandler                        0x0800242d   Thumb Code    18  drv_uart.o(.text.USART2_IRQHandler)
-    UsageFault_Handler                       0x08002441   Thumb Code     4  py32f403_it.o(.text.UsageFault_Handler)
-    main                                     0x080025b1   Thumb Code    18  main.o(.text.main)
-    osalFindTask                             0x080025c5   Thumb Code    66  osal_event.o(.text.osalFindTask)
-    osalTimerUpdate                          0x08002609   Thumb Code   284  osal_timer.o(.text.osalTimerUpdate)
-    osal_mem_alloc                           0x08002725   Thumb Code   566  osal_memory.o(.text.osal_mem_alloc)
-    osal_mem_free                            0x0800295d   Thumb Code   122  osal_memory.o(.text.osal_mem_free)
-    osal_mem_init                            0x080029d9   Thumb Code   146  osal_memory.o(.text.osal_mem_init)
-    osal_set_event                           0x08002a6d   Thumb Code    76  osal_event.o(.text.osal_set_event)
-    uart_echo_test                           0x08002b0d   Thumb Code   102  uart_it_example.o(.text.uart_echo_test)
-    uart_init                                0x08002b75   Thumb Code   174  drv_uart.o(.text.uart_init)
-    uart_it_example                          0x08002c25   Thumb Code    58  uart_it_example.o(.text.uart_it_example)
-    uart_it_init                             0x08002c61   Thumb Code    60  uart_it_example.o(.text.uart_it_init)
-    uart_receive                             0x08002c9d   Thumb Code   148  drv_uart.o(.text.uart_receive)
-    uart_receive_data                        0x08002d31   Thumb Code   104  uart_it_example.o(.text.uart_receive_data)
-    uart_send                                0x08002d99   Thumb Code   160  drv_uart.o(.text.uart_send)
-    uart_send_string                         0x08002e39   Thumb Code    68  uart_it_example.o(.text.uart_send_string)
-    __scatterload_copy                       0x08002e7d   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08002e8b   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08002e8d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    AHBPrescTable                            0x08002eda   Data          16  system_py32f403.o(.rodata.AHBPrescTable)
-    APBPrescTable                            0x08002eea   Data           8  system_py32f403.o(.rodata.APBPrescTable)
-    Region$$Table$$Base                      0x08002f8c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08002fac   Number         0  anon$$obj.o(Region$$Table)
+    DMA1_Channel1_IRQHandler                 0x080001f9   Thumb Code    20  drv_uart.o(.text.DMA1_Channel1_IRQHandler)
+    DMA1_Channel2_IRQHandler                 0x0800020d   Thumb Code    20  drv_uart.o(.text.DMA1_Channel2_IRQHandler)
+    DMA2_Channel1_IRQHandler                 0x08000221   Thumb Code     2  py32f403_it.o(.text.DMA2_Channel1_IRQHandler)
+    DebugMon_Handler                         0x08000275   Thumb Code     2  py32f403_it.o(.text.DebugMon_Handler)
+    EXTI0_IRQHandler                         0x08000279   Thumb Code    40  drv_gpio.o(.text.EXTI0_IRQHandler)
+    EXTI15_10_IRQHandler                     0x080002a1   Thumb Code   244  drv_gpio.o(.text.EXTI15_10_IRQHandler)
+    EXTI1_IRQHandler                         0x08000395   Thumb Code    42  drv_gpio.o(.text.EXTI1_IRQHandler)
+    EXTI2_IRQHandler                         0x080003c1   Thumb Code    42  drv_gpio.o(.text.EXTI2_IRQHandler)
+    EXTI3_IRQHandler                         0x080003ed   Thumb Code    42  drv_gpio.o(.text.EXTI3_IRQHandler)
+    EXTI4_IRQHandler                         0x08000419   Thumb Code    42  drv_gpio.o(.text.EXTI4_IRQHandler)
+    EXTI9_5_IRQHandler                       0x08000445   Thumb Code   198  drv_gpio.o(.text.EXTI9_5_IRQHandler)
+    HAL_DMA_Abort_IT                         0x0800050d   Thumb Code   792  py32f403_hal_dma.o(.text.HAL_DMA_Abort_IT)
+    HAL_DMA_ChannelMap                       0x08000825   Thumb Code   172  py32f403_hal_dma.o(.text.HAL_DMA_ChannelMap)
+    HAL_DMA_DeInit                           0x080008d1   Thumb Code   240  py32f403_hal_dma.o(.text.HAL_DMA_DeInit)
+    HAL_DMA_IRQHandler                       0x080009c1   Thumb Code  1668  py32f403_hal_dma.o(.text.HAL_DMA_IRQHandler)
+    HAL_DMA_Init                             0x08001045   Thumb Code   244  py32f403_hal_dma.o(.text.HAL_DMA_Init)
+    HAL_DMA_Start_IT                         0x08001139   Thumb Code   202  py32f403_hal_dma.o(.text.HAL_DMA_Start_IT)
+    HAL_Delay                                0x08001205   Thumb Code    66  py32f403_hal.o(.text.HAL_Delay)
+    HAL_GPIO_Init                            0x08001249   Thumb Code   846  py32f403_hal_gpio.o(.text.HAL_GPIO_Init)
+    HAL_GetTick                              0x08001599   Thumb Code    12  py32f403_hal.o(.text.HAL_GetTick)
+    HAL_IncTick                              0x080015a5   Thumb Code    26  py32f403_hal.o(.text.HAL_IncTick)
+    HAL_Init                                 0x080015c1   Thumb Code    22  py32f403_hal.o(.text.HAL_Init)
+    HAL_InitTick                             0x080015d9   Thumb Code   112  py32f403_hal.o(.text.HAL_InitTick)
+    HAL_MspInit                              0x08001649   Thumb Code   126  py32f403_hal_msp.o(.text.HAL_MspInit)
+    HAL_NVIC_EnableIRQ                       0x080016c9   Thumb Code    20  py32f403_hal_cortex.o(.text.HAL_NVIC_EnableIRQ)
+    HAL_NVIC_SetPriority                     0x080016dd   Thumb Code    50  py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriority)
+    HAL_NVIC_SetPriorityGrouping             0x08001711   Thumb Code    16  py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping)
+    HAL_RCC_ClockConfig                      0x08001721   Thumb Code   610  py32f403_hal_rcc.o(.text.HAL_RCC_ClockConfig)
+    HAL_RCC_GetHCLKFreq                      0x08001985   Thumb Code    12  py32f403_hal_rcc.o(.text.HAL_RCC_GetHCLKFreq)
+    HAL_RCC_GetPCLK1Freq                     0x08001991   Thumb Code    34  py32f403_hal_rcc.o(.text.HAL_RCC_GetPCLK1Freq)
+    HAL_RCC_GetPCLK2Freq                     0x080019b5   Thumb Code    34  py32f403_hal_rcc.o(.text.HAL_RCC_GetPCLK2Freq)
+    HAL_RCC_GetSysClockFreq                  0x080019d9   Thumb Code   236  py32f403_hal_rcc.o(.text.HAL_RCC_GetSysClockFreq)
+    HAL_RCC_OscConfig                        0x08001ac5   Thumb Code  1990  py32f403_hal_rcc.o(.text.HAL_RCC_OscConfig)
+    HAL_SYSTICK_Callback                     0x0800228d   Thumb Code     2  py32f403_hal_cortex.o(.text.HAL_SYSTICK_Callback)
+    HAL_SYSTICK_Config                       0x08002291   Thumb Code    16  py32f403_hal_cortex.o(.text.HAL_SYSTICK_Config)
+    HAL_SYSTICK_IRQHandler                   0x080022a1   Thumb Code     8  py32f403_hal_cortex.o(.text.HAL_SYSTICK_IRQHandler)
+    HAL_UART_DeInit                          0x080022a9   Thumb Code    92  py32f403_hal_uart.o(.text.HAL_UART_DeInit)
+    HAL_UART_ErrorCallback                   0x08002305   Thumb Code   142  drv_uart.o(.text.HAL_UART_ErrorCallback)
+    HAL_UART_IRQHandler                      0x08002395   Thumb Code   566  py32f403_hal_uart.o(.text.HAL_UART_IRQHandler)
+    HAL_UART_IdleFrameDetectCpltCallback     0x080025cd   Thumb Code     8  py32f403_hal_uart.o(.text.HAL_UART_IdleFrameDetectCpltCallback)
+    HAL_UART_Init                            0x080025d5   Thumb Code   170  py32f403_hal_uart.o(.text.HAL_UART_Init)
+    HAL_UART_MspDeInit                       0x08002681   Thumb Code     8  py32f403_hal_uart.o(.text.HAL_UART_MspDeInit)
+    HAL_UART_MspInit                         0x08002689   Thumb Code   150  py32f403_hal_msp.o(.text.HAL_UART_MspInit)
+    HAL_UART_Receive_DMA                     0x08002721   Thumb Code   314  py32f403_hal_uart.o(.text.HAL_UART_Receive_DMA)
+    HAL_UART_RxCpltCallback                  0x0800285d   Thumb Code   152  drv_uart.o(.text.HAL_UART_RxCpltCallback)
+    HAL_UART_RxHalfCpltCallback              0x080028f5   Thumb Code   112  drv_uart.o(.text.HAL_UART_RxHalfCpltCallback)
+    HAL_UART_Transmit_DMA                    0x08002965   Thumb Code   246  py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
+    HAL_UART_TxCpltCallback                  0x08002a5d   Thumb Code   166  drv_uart.o(.text.HAL_UART_TxCpltCallback)
+    HAL_UART_TxHalfCpltCallback              0x08002b05   Thumb Code     8  py32f403_hal_uart.o(.text.HAL_UART_TxHalfCpltCallback)
+    HardFault_Handler                        0x08002b0d   Thumb Code     4  py32f403_it.o(.text.HardFault_Handler)
+    MemManage_Handler                        0x08002b11   Thumb Code     4  py32f403_it.o(.text.MemManage_Handler)
+    NMI_Handler                              0x08002b15   Thumb Code     2  py32f403_it.o(.text.NMI_Handler)
+    PendSV_Handler                           0x08002b85   Thumb Code     2  py32f403_it.o(.text.PendSV_Handler)
+    SVC_Handler                              0x08002bc5   Thumb Code     2  py32f403_it.o(.text.SVC_Handler)
+    SysTick_Handler                          0x08002c1d   Thumb Code    18  py32f403_it.o(.text.SysTick_Handler)
+    SystemInit                               0x08002cad   Thumb Code    16  system_py32f403.o(.text.SystemInit)
+    TIM2_IRQHandler                          0x08002cbd   Thumb Code     2  py32f403_it.o(.text.TIM2_IRQHandler)
+    USART2_IRQHandler                        0x0800320d   Thumb Code    20  drv_uart.o(.text.USART2_IRQHandler)
+    UsageFault_Handler                       0x08003221   Thumb Code     4  py32f403_it.o(.text.UsageFault_Handler)
+    main                                     0x08003391   Thumb Code    18  main.o(.text.main)
+    osalFindTask                             0x080033a5   Thumb Code    66  osal_event.o(.text.osalFindTask)
+    osalTimerUpdate                          0x080033e9   Thumb Code   284  osal_timer.o(.text.osalTimerUpdate)
+    osal_mem_alloc                           0x08003505   Thumb Code   566  osal_memory.o(.text.osal_mem_alloc)
+    osal_mem_free                            0x0800373d   Thumb Code   122  osal_memory.o(.text.osal_mem_free)
+    osal_mem_init                            0x080037b9   Thumb Code   146  osal_memory.o(.text.osal_mem_init)
+    osal_set_event                           0x0800384d   Thumb Code    76  osal_event.o(.text.osal_set_event)
+    ring_buffer_available                    0x08003899   Thumb Code    32  drv_tool.o(.text.ring_buffer_available)
+    ring_buffer_get_multiple                 0x080038b9   Thumb Code   188  drv_tool.o(.text.ring_buffer_get_multiple)
+    ring_buffer_init                         0x08003975   Thumb Code    82  drv_tool.o(.text.ring_buffer_init)
+    ring_buffer_is_full                      0x080039c9   Thumb Code    48  drv_tool.o(.text.ring_buffer_is_full)
+    ring_buffer_peek_multiple                0x080039f9   Thumb Code   228  drv_tool.o(.text.ring_buffer_peek_multiple)
+    ring_buffer_put                          0x08003add   Thumb Code    90  drv_tool.o(.text.ring_buffer_put)
+    ring_buffer_skip                         0x08003b39   Thumb Code   114  drv_tool.o(.text.ring_buffer_skip)
+    uart_dma_example                         0x08003d29   Thumb Code    58  uart_dma_example.o(.text.uart_dma_example)
+    uart_dma_init                            0x08003d65   Thumb Code    86  uart_dma_example.o(.text.uart_dma_init)
+    uart_echo_test                           0x08003f95   Thumb Code    28  uart_dma_example.o(.text.uart_echo_test)
+    uart_init                                0x08003fb1   Thumb Code   212  drv_uart.o(.text.uart_init)
+    uart_process_received_data               0x08004085   Thumb Code   116  uart_dma_example.o(.text.uart_process_received_data)
+    uart_read_from_ring_buffer               0x080040f9   Thumb Code   108  drv_uart.o(.text.uart_read_from_ring_buffer)
+    uart_receive                             0x08004165   Thumb Code   166  drv_uart.o(.text.uart_receive)
+    uart_receive_async                       0x0800420d   Thumb Code    36  drv_uart.o(.text.uart_receive_async)
+    uart_send                                0x08004231   Thumb Code   178  drv_uart.o(.text.uart_send)
+    uart_send_async                          0x080042e5   Thumb Code    36  drv_uart.o(.text.uart_send_async)
+    uart_send_string                         0x08004309   Thumb Code    68  uart_dma_example.o(.text.uart_send_string)
+    __scatterload_copy                       0x08004415   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08004423   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08004425   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    AHBPrescTable                            0x08004472   Data          16  system_py32f403.o(.rodata.AHBPrescTable)
+    APBPrescTable                            0x08004482   Data           8  system_py32f403.o(.rodata.APBPrescTable)
+    Region$$Table$$Base                      0x08004540   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08004560   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_py32f403.o(.data.SystemCoreClock)
     uwTickFreq                               0x2000000c   Data           1  py32f403_hal.o(.data.uwTickFreq)
     uwTickPrio                               0x20000010   Data           4  py32f403_hal.o(.data.uwTickPrio)
     TaskHead                                 0x20000018   Data           4  osal_event.o(.bss.TaskHead)
-    timerHead                                0x20001938   Data           4  osal_timer.o(.bss.timerHead)
-    uwTick                                   0x20001ba8   Data           4  py32f403_hal.o(.bss.uwTick)
-    __initial_sp                             0x20001fb0   Data           0  startup_py32f403xx.o(STACK)
+    timerHead                                0x20001a38   Data           4  osal_timer.o(.bss.timerHead)
+    uwTick                                   0x20002f2c   Data           4  py32f403_hal.o(.bss.uwTick)
+    __initial_sp                             0x20003330   Data           0  startup_py32f403xx.o(STACK)
 
 
 
@@ -3164,202 +3285,245 @@ Memory Map of the image
 
   Image Entry point : 0x08000131
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002fc8, Max: 0x00060000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004578, Max: 0x00060000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002fac, Max: 0x00060000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00004560, Max: 0x00060000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x00000130   Data   RO         1554    RESET               startup_py32f403xx.o
-    0x08000130   0x08000130   0x00000000   Code   RO         1577  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000130   0x08000130   0x00000004   Code   RO         1588    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000134   0x08000134   0x00000004   Code   RO         1591    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         1593    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         1595    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000138   0x08000138   0x00000008   Code   RO         1596    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         1598    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         1600    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000140   0x08000140   0x00000004   Code   RO         1589    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000144   0x08000144   0x00000024   Code   RO         1555    .text               startup_py32f403xx.o
-    0x08000168   0x08000168   0x00000024   Code   RO         1580    .text               mc_w.l(memcpya.o)
-    0x0800018c   0x0800018c   0x00000024   Code   RO         1582    .text               mc_w.l(memseta.o)
-    0x080001b0   0x080001b0   0x0000000e   Code   RO         1584    .text               mc_w.l(strlen.o)
+    0x08000000   0x08000000   0x00000130   Data   RO         1578    RESET               startup_py32f403xx.o
+    0x08000130   0x08000130   0x00000000   Code   RO         1601  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x08000130   0x00000004   Code   RO         1612    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x08000134   0x00000004   Code   RO         1615    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         1617    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         1619    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000138   0x08000138   0x00000008   Code   RO         1620    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         1622    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         1624    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000140   0x08000140   0x00000004   Code   RO         1613    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000144   0x08000144   0x00000024   Code   RO         1579    .text               startup_py32f403xx.o
+    0x08000168   0x08000168   0x00000024   Code   RO         1604    .text               mc_w.l(memcpya.o)
+    0x0800018c   0x0800018c   0x00000024   Code   RO         1606    .text               mc_w.l(memseta.o)
+    0x080001b0   0x080001b0   0x0000000e   Code   RO         1608    .text               mc_w.l(strlen.o)
     0x080001be   0x080001be   0x00000002   PAD
-    0x080001c0   0x080001c0   0x00000030   Code   RO         1602    .text               mc_w.l(init.o)
+    0x080001c0   0x080001c0   0x00000030   Code   RO         1626    .text               mc_w.l(init.o)
     0x080001f0   0x080001f0   0x00000004   Code   RO            6    .text.APP_ErrorHandler  main.o
     0x080001f4   0x080001f4   0x00000004   Code   RO           33    .text.BusFault_Handler  py32f403_it.o
-    0x080001f8   0x080001f8   0x00000002   Code   RO           47    .text.DMA2_Channel1_IRQHandler  py32f403_it.o
-    0x080001fa   0x080001fa   0x00000002   PAD
-    0x080001fc   0x080001fc   0x00000002   Code   RO           39    .text.DebugMon_Handler  py32f403_it.o
-    0x080001fe   0x080001fe   0x00000002   PAD
-    0x08000200   0x08000200   0x00000028   Code   RO          293    .text.EXTI0_IRQHandler  drv_gpio.o
-    0x08000228   0x08000228   0x000000f4   Code   RO          307    .text.EXTI15_10_IRQHandler  drv_gpio.o
-    0x0800031c   0x0800031c   0x0000002a   Code   RO          297    .text.EXTI1_IRQHandler  drv_gpio.o
-    0x08000346   0x08000346   0x00000002   PAD
-    0x08000348   0x08000348   0x0000002a   Code   RO          299    .text.EXTI2_IRQHandler  drv_gpio.o
-    0x08000372   0x08000372   0x00000002   PAD
-    0x08000374   0x08000374   0x0000002a   Code   RO          301    .text.EXTI3_IRQHandler  drv_gpio.o
-    0x0800039e   0x0800039e   0x00000002   PAD
-    0x080003a0   0x080003a0   0x0000002a   Code   RO          303    .text.EXTI4_IRQHandler  drv_gpio.o
-    0x080003ca   0x080003ca   0x00000002   PAD
-    0x080003cc   0x080003cc   0x000000c6   Code   RO          305    .text.EXTI9_5_IRQHandler  drv_gpio.o
-    0x08000492   0x08000492   0x00000002   PAD
-    0x08000494   0x08000494   0x00000318   Code   RO          585    .text.HAL_DMA_Abort_IT  py32f403_hal_dma.o
-    0x080007ac   0x080007ac   0x00000042   Code   RO          439    .text.HAL_Delay     py32f403_hal.o
-    0x080007ee   0x080007ee   0x00000002   PAD
-    0x080007f0   0x080007f0   0x0000034e   Code   RO          696    .text.HAL_GPIO_Init  py32f403_hal_gpio.o
-    0x08000b3e   0x08000b3e   0x00000002   PAD
-    0x08000b40   0x08000b40   0x0000000c   Code   RO          431    .text.HAL_GetTick   py32f403_hal.o
-    0x08000b4c   0x08000b4c   0x0000001a   Code   RO          429    .text.HAL_IncTick   py32f403_hal.o
-    0x08000b66   0x08000b66   0x00000002   PAD
-    0x08000b68   0x08000b68   0x00000016   Code   RO          419    .text.HAL_Init      py32f403_hal.o
-    0x08000b7e   0x08000b7e   0x00000002   PAD
-    0x08000b80   0x08000b80   0x00000070   Code   RO          421    .text.HAL_InitTick  py32f403_hal.o
-    0x08000bf0   0x08000bf0   0x0000007e   Code   RO           16    .text.HAL_MspInit   py32f403_hal_msp.o
-    0x08000c6e   0x08000c6e   0x00000002   PAD
-    0x08000c70   0x08000c70   0x00000014   Code   RO          518    .text.HAL_NVIC_EnableIRQ  py32f403_hal_cortex.o
-    0x08000c84   0x08000c84   0x00000032   Code   RO          510    .text.HAL_NVIC_SetPriority  py32f403_hal_cortex.o
-    0x08000cb6   0x08000cb6   0x00000002   PAD
-    0x08000cb8   0x08000cb8   0x00000010   Code   RO          506    .text.HAL_NVIC_SetPriorityGrouping  py32f403_hal_cortex.o
-    0x08000cc8   0x08000cc8   0x00000262   Code   RO          977    .text.HAL_RCC_ClockConfig  py32f403_hal_rcc.o
-    0x08000f2a   0x08000f2a   0x00000002   PAD
-    0x08000f2c   0x08000f2c   0x0000000c   Code   RO          987    .text.HAL_RCC_GetHCLKFreq  py32f403_hal_rcc.o
-    0x08000f38   0x08000f38   0x00000022   Code   RO          989    .text.HAL_RCC_GetPCLK1Freq  py32f403_hal_rcc.o
-    0x08000f5a   0x08000f5a   0x00000002   PAD
-    0x08000f5c   0x08000f5c   0x00000022   Code   RO          991    .text.HAL_RCC_GetPCLK2Freq  py32f403_hal_rcc.o
-    0x08000f7e   0x08000f7e   0x00000002   PAD
-    0x08000f80   0x08000f80   0x000000ec   Code   RO          979    .text.HAL_RCC_GetSysClockFreq  py32f403_hal_rcc.o
-    0x0800106c   0x0800106c   0x000007c6   Code   RO          973    .text.HAL_RCC_OscConfig  py32f403_hal_rcc.o
-    0x08001832   0x08001832   0x00000002   PAD
-    0x08001834   0x08001834   0x00000002   Code   RO          562    .text.HAL_SYSTICK_Callback  py32f403_hal_cortex.o
-    0x08001836   0x08001836   0x00000002   PAD
-    0x08001838   0x08001838   0x00000010   Code   RO          530    .text.HAL_SYSTICK_Config  py32f403_hal_cortex.o
-    0x08001848   0x08001848   0x00000008   Code   RO          560    .text.HAL_SYSTICK_IRQHandler  py32f403_hal_cortex.o
-    0x08001850   0x08001850   0x0000007e   Code   RO          363    .text.HAL_UART_ErrorCallback  drv_uart.o
-    0x080018ce   0x080018ce   0x00000002   PAD
-    0x080018d0   0x080018d0   0x00000236   Code   RO         1433    .text.HAL_UART_IRQHandler  py32f403_hal_uart.o
-    0x08001b06   0x08001b06   0x00000002   PAD
-    0x08001b08   0x08001b08   0x00000008   Code   RO         1441    .text.HAL_UART_IdleFrameDetectCpltCallback  py32f403_hal_uart.o
-    0x08001b10   0x08001b10   0x000000aa   Code   RO         1355    .text.HAL_UART_Init  py32f403_hal_uart.o
-    0x08001bba   0x08001bba   0x00000002   PAD
-    0x08001bbc   0x08001bbc   0x00000096   Code   RO           18    .text.HAL_UART_MspInit  py32f403_hal_msp.o
-    0x08001c52   0x08001c52   0x00000002   PAD
-    0x08001c54   0x08001c54   0x000000ba   Code   RO         1381    .text.HAL_UART_Receive_IT  py32f403_hal_uart.o
-    0x08001d0e   0x08001d0e   0x00000002   PAD
-    0x08001d10   0x08001d10   0x00000070   Code   RO          359    .text.HAL_UART_RxCpltCallback  drv_uart.o
-    0x08001d80   0x08001d80   0x000000a2   Code   RO         1379    .text.HAL_UART_Transmit_IT  py32f403_hal_uart.o
-    0x08001e22   0x08001e22   0x00000002   PAD
-    0x08001e24   0x08001e24   0x00000070   Code   RO          357    .text.HAL_UART_TxCpltCallback  drv_uart.o
-    0x08001e94   0x08001e94   0x00000004   Code   RO           29    .text.HardFault_Handler  py32f403_it.o
-    0x08001e98   0x08001e98   0x00000004   Code   RO           31    .text.MemManage_Handler  py32f403_it.o
-    0x08001e9c   0x08001e9c   0x00000002   Code   RO           27    .text.NMI_Handler   py32f403_it.o
-    0x08001e9e   0x08001e9e   0x00000002   PAD
-    0x08001ea0   0x08001ea0   0x0000006c   Code   RO          516    .text.NVIC_EncodePriority  py32f403_hal_cortex.o
-    0x08001f0c   0x08001f0c   0x00000002   Code   RO           41    .text.PendSV_Handler  py32f403_it.o
-    0x08001f0e   0x08001f0e   0x00000002   PAD
-    0x08001f10   0x08001f10   0x0000003a   Code   RO          975    .text.RCC_Delay     py32f403_hal_rcc.o
-    0x08001f4a   0x08001f4a   0x00000002   PAD
-    0x08001f4c   0x08001f4c   0x00000002   Code   RO           37    .text.SVC_Handler   py32f403_it.o
-    0x08001f4e   0x08001f4e   0x00000002   PAD
-    0x08001f50   0x08001f50   0x00000054   Code   RO          532    .text.SysTick_Config  py32f403_hal_cortex.o
-    0x08001fa4   0x08001fa4   0x00000012   Code   RO           43    .text.SysTick_Handler  py32f403_it.o
-    0x08001fb6   0x08001fb6   0x00000002   PAD
-    0x08001fb8   0x08001fb8   0x0000007c   Code   RO            4    .text.SystemClockConfig  main.o
-    0x08002034   0x08002034   0x00000010   Code   RO         1562    .text.SystemInit    system_py32f403.o
-    0x08002044   0x08002044   0x00000002   Code   RO           45    .text.TIM2_IRQHandler  py32f403_it.o
-    0x08002046   0x08002046   0x00000002   PAD
-    0x08002048   0x08002048   0x0000004e   Code   RO         1361    .text.UART_AdvFeatureConfig  py32f403_hal_uart.o
-    0x08002096   0x08002096   0x00000002   PAD
-    0x08002098   0x08002098   0x00000020   Code   RO         1437    .text.UART_DMAAbortOnError  py32f403_hal_uart.o
-    0x080020b8   0x080020b8   0x00000028   Code   RO         1405    .text.UART_EndRxTransfer  py32f403_hal_uart.o
-    0x080020e0   0x080020e0   0x00000026   Code   RO         1445    .text.UART_EndTransmit_IT  py32f403_hal_uart.o
-    0x08002106   0x08002106   0x00000002   PAD
-    0x08002108   0x08002108   0x000000b6   Code   RO         1435    .text.UART_Receive_IT  py32f403_hal_uart.o
-    0x080021be   0x080021be   0x00000002   PAD
-    0x080021c0   0x080021c0   0x000001ce   Code   RO         1359    .text.UART_SetConfig  py32f403_hal_uart.o
-    0x0800238e   0x0800238e   0x00000002   PAD
-    0x08002390   0x08002390   0x0000009c   Code   RO         1443    .text.UART_Transmit_IT  py32f403_hal_uart.o
-    0x0800242c   0x0800242c   0x00000012   Code   RO          355    .text.USART2_IRQHandler  drv_uart.o
-    0x0800243e   0x0800243e   0x00000002   PAD
-    0x08002440   0x08002440   0x00000004   Code   RO           35    .text.UsageFault_Handler  py32f403_it.o
-    0x08002444   0x08002444   0x00000030   Code   RO          520    .text.__NVIC_EnableIRQ  py32f403_hal_cortex.o
-    0x08002474   0x08002474   0x00000010   Code   RO          512    .text.__NVIC_GetPriorityGrouping  py32f403_hal_cortex.o
-    0x08002484   0x08002484   0x00000042   Code   RO          514    .text.__NVIC_SetPriority  py32f403_hal_cortex.o
-    0x080024c6   0x080024c6   0x00000002   PAD
-    0x080024c8   0x080024c8   0x0000003c   Code   RO          508    .text.__NVIC_SetPriorityGrouping  py32f403_hal_cortex.o
-    0x08002504   0x08002504   0x00000034   Code   RO          365    .text.get_uart_device  drv_uart.o
-    0x08002538   0x08002538   0x00000044   Code   RO          295    .text.gpio_irq_handler  drv_gpio.o
-    0x0800257c   0x0800257c   0x00000034   Code   RO          329    .text.is_uart_initialized  drv_uart.o
-    0x080025b0   0x080025b0   0x00000012   Code   RO            2    .text.main          main.o
-    0x080025c2   0x080025c2   0x00000002   PAD
-    0x080025c4   0x080025c4   0x00000042   Code   RO          132    .text.osalFindTask  osal_event.o
-    0x08002606   0x08002606   0x00000002   PAD
-    0x08002608   0x08002608   0x0000011c   Code   RO          241    .text.osalTimerUpdate  osal_timer.o
-    0x08002724   0x08002724   0x00000236   Code   RO          157    .text.osal_mem_alloc  osal_memory.o
-    0x0800295a   0x0800295a   0x00000002   PAD
-    0x0800295c   0x0800295c   0x0000007a   Code   RO          161    .text.osal_mem_free  osal_memory.o
-    0x080029d6   0x080029d6   0x00000002   PAD
-    0x080029d8   0x080029d8   0x00000092   Code   RO          155    .text.osal_mem_init  osal_memory.o
-    0x08002a6a   0x08002a6a   0x00000002   PAD
-    0x08002a6c   0x08002a6c   0x0000004c   Code   RO          130    .text.osal_set_event  osal_event.o
-    0x08002ab8   0x08002ab8   0x00000052   Code   RO          325    .text.uart_configure_irq_priority  drv_uart.o
-    0x08002b0a   0x08002b0a   0x00000002   PAD
-    0x08002b0c   0x08002b0c   0x00000066   Code   RO           93    .text.uart_echo_test  uart_it_example.o
-    0x08002b72   0x08002b72   0x00000002   PAD
-    0x08002b74   0x08002b74   0x000000ae   Code   RO          323    .text.uart_init     drv_uart.o
-    0x08002c22   0x08002c22   0x00000002   PAD
-    0x08002c24   0x08002c24   0x0000003a   Code   RO           95    .text.uart_it_example  uart_it_example.o
-    0x08002c5e   0x08002c5e   0x00000002   PAD
-    0x08002c60   0x08002c60   0x0000003c   Code   RO           87    .text.uart_it_init  uart_it_example.o
-    0x08002c9c   0x08002c9c   0x00000094   Code   RO          337    .text.uart_receive  drv_uart.o
-    0x08002d30   0x08002d30   0x00000068   Code   RO           91    .text.uart_receive_data  uart_it_example.o
-    0x08002d98   0x08002d98   0x000000a0   Code   RO          335    .text.uart_send     drv_uart.o
-    0x08002e38   0x08002e38   0x00000044   Code   RO           89    .text.uart_send_string  uart_it_example.o
-    0x08002e7c   0x08002e7c   0x0000000e   Code   RO         1606    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08002e8a   0x08002e8a   0x00000002   Code   RO         1607    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08002e8c   0x08002e8c   0x0000000e   Code   RO         1608    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08002e9a   0x08002e9a   0x00000040   Data   RO         1001    .rodata..L__const.HAL_RCC_GetSysClockFreq.aPLLMULFactorTable  py32f403_hal_rcc.o
-    0x08002eda   0x08002eda   0x00000010   Data   RO         1567    .rodata.AHBPrescTable  system_py32f403.o
-    0x08002eea   0x08002eea   0x00000008   Data   RO         1568    .rodata.APBPrescTable  system_py32f403.o
-    0x08002ef2   0x08002ef2   0x0000007b   Data   RO           98    .rodata.str1.1      uart_it_example.o
-    0x08002f6d   0x08002f6d   0x00000003   PAD
-    0x08002f70   0x08002f70   0x00000014   Data   RO          368    .rodata.uart_bases  drv_uart.o
-    0x08002f84   0x08002f84   0x00000005   Data   RO          369    .rodata.uart_irqs   drv_uart.o
-    0x08002f89   0x08002f89   0x00000003   PAD
-    0x08002f8c   0x08002f8c   0x00000020   Data   RO         1605    Region$$Table       anon$$obj.o
+    0x080001f8   0x080001f8   0x00000014   Code   RO          363    .text.DMA1_Channel1_IRQHandler  drv_uart.o
+    0x0800020c   0x0800020c   0x00000014   Code   RO          365    .text.DMA1_Channel2_IRQHandler  drv_uart.o
+    0x08000220   0x08000220   0x00000002   Code   RO           47    .text.DMA2_Channel1_IRQHandler  py32f403_it.o
+    0x08000222   0x08000222   0x00000002   PAD
+    0x08000224   0x08000224   0x00000050   Code   RO          603    .text.DMA_SetConfig  py32f403_hal_dma.o
+    0x08000274   0x08000274   0x00000002   Code   RO           39    .text.DebugMon_Handler  py32f403_it.o
+    0x08000276   0x08000276   0x00000002   PAD
+    0x08000278   0x08000278   0x00000028   Code   RO          295    .text.EXTI0_IRQHandler  drv_gpio.o
+    0x080002a0   0x080002a0   0x000000f4   Code   RO          309    .text.EXTI15_10_IRQHandler  drv_gpio.o
+    0x08000394   0x08000394   0x0000002a   Code   RO          299    .text.EXTI1_IRQHandler  drv_gpio.o
+    0x080003be   0x080003be   0x00000002   PAD
+    0x080003c0   0x080003c0   0x0000002a   Code   RO          301    .text.EXTI2_IRQHandler  drv_gpio.o
+    0x080003ea   0x080003ea   0x00000002   PAD
+    0x080003ec   0x080003ec   0x0000002a   Code   RO          303    .text.EXTI3_IRQHandler  drv_gpio.o
+    0x08000416   0x08000416   0x00000002   PAD
+    0x08000418   0x08000418   0x0000002a   Code   RO          305    .text.EXTI4_IRQHandler  drv_gpio.o
+    0x08000442   0x08000442   0x00000002   PAD
+    0x08000444   0x08000444   0x000000c6   Code   RO          307    .text.EXTI9_5_IRQHandler  drv_gpio.o
+    0x0800050a   0x0800050a   0x00000002   PAD
+    0x0800050c   0x0800050c   0x00000318   Code   RO          609    .text.HAL_DMA_Abort_IT  py32f403_hal_dma.o
+    0x08000824   0x08000824   0x000000ac   Code   RO          619    .text.HAL_DMA_ChannelMap  py32f403_hal_dma.o
+    0x080008d0   0x080008d0   0x000000f0   Code   RO          599    .text.HAL_DMA_DeInit  py32f403_hal_dma.o
+    0x080009c0   0x080009c0   0x00000684   Code   RO          613    .text.HAL_DMA_IRQHandler  py32f403_hal_dma.o
+    0x08001044   0x08001044   0x000000f4   Code   RO          597    .text.HAL_DMA_Init  py32f403_hal_dma.o
+    0x08001138   0x08001138   0x000000ca   Code   RO          605    .text.HAL_DMA_Start_IT  py32f403_hal_dma.o
+    0x08001202   0x08001202   0x00000002   PAD
+    0x08001204   0x08001204   0x00000042   Code   RO          463    .text.HAL_Delay     py32f403_hal.o
+    0x08001246   0x08001246   0x00000002   PAD
+    0x08001248   0x08001248   0x0000034e   Code   RO          720    .text.HAL_GPIO_Init  py32f403_hal_gpio.o
+    0x08001596   0x08001596   0x00000002   PAD
+    0x08001598   0x08001598   0x0000000c   Code   RO          455    .text.HAL_GetTick   py32f403_hal.o
+    0x080015a4   0x080015a4   0x0000001a   Code   RO          453    .text.HAL_IncTick   py32f403_hal.o
+    0x080015be   0x080015be   0x00000002   PAD
+    0x080015c0   0x080015c0   0x00000016   Code   RO          443    .text.HAL_Init      py32f403_hal.o
+    0x080015d6   0x080015d6   0x00000002   PAD
+    0x080015d8   0x080015d8   0x00000070   Code   RO          445    .text.HAL_InitTick  py32f403_hal.o
+    0x08001648   0x08001648   0x0000007e   Code   RO           16    .text.HAL_MspInit   py32f403_hal_msp.o
+    0x080016c6   0x080016c6   0x00000002   PAD
+    0x080016c8   0x080016c8   0x00000014   Code   RO          542    .text.HAL_NVIC_EnableIRQ  py32f403_hal_cortex.o
+    0x080016dc   0x080016dc   0x00000032   Code   RO          534    .text.HAL_NVIC_SetPriority  py32f403_hal_cortex.o
+    0x0800170e   0x0800170e   0x00000002   PAD
+    0x08001710   0x08001710   0x00000010   Code   RO          530    .text.HAL_NVIC_SetPriorityGrouping  py32f403_hal_cortex.o
+    0x08001720   0x08001720   0x00000262   Code   RO         1001    .text.HAL_RCC_ClockConfig  py32f403_hal_rcc.o
+    0x08001982   0x08001982   0x00000002   PAD
+    0x08001984   0x08001984   0x0000000c   Code   RO         1011    .text.HAL_RCC_GetHCLKFreq  py32f403_hal_rcc.o
+    0x08001990   0x08001990   0x00000022   Code   RO         1013    .text.HAL_RCC_GetPCLK1Freq  py32f403_hal_rcc.o
+    0x080019b2   0x080019b2   0x00000002   PAD
+    0x080019b4   0x080019b4   0x00000022   Code   RO         1015    .text.HAL_RCC_GetPCLK2Freq  py32f403_hal_rcc.o
+    0x080019d6   0x080019d6   0x00000002   PAD
+    0x080019d8   0x080019d8   0x000000ec   Code   RO         1003    .text.HAL_RCC_GetSysClockFreq  py32f403_hal_rcc.o
+    0x08001ac4   0x08001ac4   0x000007c6   Code   RO          997    .text.HAL_RCC_OscConfig  py32f403_hal_rcc.o
+    0x0800228a   0x0800228a   0x00000002   PAD
+    0x0800228c   0x0800228c   0x00000002   Code   RO          586    .text.HAL_SYSTICK_Callback  py32f403_hal_cortex.o
+    0x0800228e   0x0800228e   0x00000002   PAD
+    0x08002290   0x08002290   0x00000010   Code   RO          554    .text.HAL_SYSTICK_Config  py32f403_hal_cortex.o
+    0x080022a0   0x080022a0   0x00000008   Code   RO          584    .text.HAL_SYSTICK_IRQHandler  py32f403_hal_cortex.o
+    0x080022a8   0x080022a8   0x0000005c   Code   RO         1393    .text.HAL_UART_DeInit  py32f403_hal_uart.o
+    0x08002304   0x08002304   0x0000008e   Code   RO          377    .text.HAL_UART_ErrorCallback  drv_uart.o
+    0x08002392   0x08002392   0x00000002   PAD
+    0x08002394   0x08002394   0x00000236   Code   RO         1457    .text.HAL_UART_IRQHandler  py32f403_hal_uart.o
+    0x080025ca   0x080025ca   0x00000002   PAD
+    0x080025cc   0x080025cc   0x00000008   Code   RO         1465    .text.HAL_UART_IdleFrameDetectCpltCallback  py32f403_hal_uart.o
+    0x080025d4   0x080025d4   0x000000aa   Code   RO         1379    .text.HAL_UART_Init  py32f403_hal_uart.o
+    0x0800267e   0x0800267e   0x00000002   PAD
+    0x08002680   0x08002680   0x00000008   Code   RO         1395    .text.HAL_UART_MspDeInit  py32f403_hal_uart.o
+    0x08002688   0x08002688   0x00000096   Code   RO           18    .text.HAL_UART_MspInit  py32f403_hal_msp.o
+    0x0800271e   0x0800271e   0x00000002   PAD
+    0x08002720   0x08002720   0x0000013a   Code   RO         1415    .text.HAL_UART_Receive_DMA  py32f403_hal_uart.o
+    0x0800285a   0x0800285a   0x00000002   PAD
+    0x0800285c   0x0800285c   0x00000098   Code   RO          371    .text.HAL_UART_RxCpltCallback  drv_uart.o
+    0x080028f4   0x080028f4   0x00000070   Code   RO          375    .text.HAL_UART_RxHalfCpltCallback  drv_uart.o
+    0x08002964   0x08002964   0x000000f6   Code   RO         1407    .text.HAL_UART_Transmit_DMA  py32f403_hal_uart.o
+    0x08002a5a   0x08002a5a   0x00000002   PAD
+    0x08002a5c   0x08002a5c   0x000000a6   Code   RO          367    .text.HAL_UART_TxCpltCallback  drv_uart.o
+    0x08002b02   0x08002b02   0x00000002   PAD
+    0x08002b04   0x08002b04   0x00000008   Code   RO         1473    .text.HAL_UART_TxHalfCpltCallback  py32f403_hal_uart.o
+    0x08002b0c   0x08002b0c   0x00000004   Code   RO           29    .text.HardFault_Handler  py32f403_it.o
+    0x08002b10   0x08002b10   0x00000004   Code   RO           31    .text.MemManage_Handler  py32f403_it.o
+    0x08002b14   0x08002b14   0x00000002   Code   RO           27    .text.NMI_Handler   py32f403_it.o
+    0x08002b16   0x08002b16   0x00000002   PAD
+    0x08002b18   0x08002b18   0x0000006c   Code   RO          540    .text.NVIC_EncodePriority  py32f403_hal_cortex.o
+    0x08002b84   0x08002b84   0x00000002   Code   RO           41    .text.PendSV_Handler  py32f403_it.o
+    0x08002b86   0x08002b86   0x00000002   PAD
+    0x08002b88   0x08002b88   0x0000003a   Code   RO          999    .text.RCC_Delay     py32f403_hal_rcc.o
+    0x08002bc2   0x08002bc2   0x00000002   PAD
+    0x08002bc4   0x08002bc4   0x00000002   Code   RO           37    .text.SVC_Handler   py32f403_it.o
+    0x08002bc6   0x08002bc6   0x00000002   PAD
+    0x08002bc8   0x08002bc8   0x00000054   Code   RO          556    .text.SysTick_Config  py32f403_hal_cortex.o
+    0x08002c1c   0x08002c1c   0x00000012   Code   RO           43    .text.SysTick_Handler  py32f403_it.o
+    0x08002c2e   0x08002c2e   0x00000002   PAD
+    0x08002c30   0x08002c30   0x0000007c   Code   RO            4    .text.SystemClockConfig  main.o
+    0x08002cac   0x08002cac   0x00000010   Code   RO         1586    .text.SystemInit    system_py32f403.o
+    0x08002cbc   0x08002cbc   0x00000002   Code   RO           45    .text.TIM2_IRQHandler  py32f403_it.o
+    0x08002cbe   0x08002cbe   0x00000002   PAD
+    0x08002cc0   0x08002cc0   0x0000004e   Code   RO         1385    .text.UART_AdvFeatureConfig  py32f403_hal_uart.o
+    0x08002d0e   0x08002d0e   0x00000002   PAD
+    0x08002d10   0x08002d10   0x00000020   Code   RO         1461    .text.UART_DMAAbortOnError  py32f403_hal_uart.o
+    0x08002d30   0x08002d30   0x0000007c   Code   RO         1413    .text.UART_DMAError  py32f403_hal_uart.o
+    0x08002dac   0x08002dac   0x00000058   Code   RO         1417    .text.UART_DMAReceiveCplt  py32f403_hal_uart.o
+    0x08002e04   0x08002e04   0x00000016   Code   RO         1419    .text.UART_DMARxHalfCplt  py32f403_hal_uart.o
+    0x08002e1a   0x08002e1a   0x00000002   PAD
+    0x08002e1c   0x08002e1c   0x00000046   Code   RO         1409    .text.UART_DMATransmitCplt  py32f403_hal_uart.o
+    0x08002e62   0x08002e62   0x00000002   PAD
+    0x08002e64   0x08002e64   0x00000016   Code   RO         1411    .text.UART_DMATxHalfCplt  py32f403_hal_uart.o
+    0x08002e7a   0x08002e7a   0x00000002   PAD
+    0x08002e7c   0x08002e7c   0x00000028   Code   RO         1429    .text.UART_EndRxTransfer  py32f403_hal_uart.o
+    0x08002ea4   0x08002ea4   0x00000026   Code   RO         1469    .text.UART_EndTransmit_IT  py32f403_hal_uart.o
+    0x08002eca   0x08002eca   0x00000002   PAD
+    0x08002ecc   0x08002ecc   0x0000001c   Code   RO         1427    .text.UART_EndTxTransfer  py32f403_hal_uart.o
+    0x08002ee8   0x08002ee8   0x000000b6   Code   RO         1459    .text.UART_Receive_IT  py32f403_hal_uart.o
+    0x08002f9e   0x08002f9e   0x00000002   PAD
+    0x08002fa0   0x08002fa0   0x000001ce   Code   RO         1383    .text.UART_SetConfig  py32f403_hal_uart.o
+    0x0800316e   0x0800316e   0x00000002   PAD
+    0x08003170   0x08003170   0x0000009c   Code   RO         1467    .text.UART_Transmit_IT  py32f403_hal_uart.o
+    0x0800320c   0x0800320c   0x00000014   Code   RO          361    .text.USART2_IRQHandler  drv_uart.o
+    0x08003220   0x08003220   0x00000004   Code   RO           35    .text.UsageFault_Handler  py32f403_it.o
+    0x08003224   0x08003224   0x00000030   Code   RO          544    .text.__NVIC_EnableIRQ  py32f403_hal_cortex.o
+    0x08003254   0x08003254   0x00000010   Code   RO          536    .text.__NVIC_GetPriorityGrouping  py32f403_hal_cortex.o
+    0x08003264   0x08003264   0x00000042   Code   RO          538    .text.__NVIC_SetPriority  py32f403_hal_cortex.o
+    0x080032a6   0x080032a6   0x00000002   PAD
+    0x080032a8   0x080032a8   0x0000003c   Code   RO          532    .text.__NVIC_SetPriorityGrouping  py32f403_hal_cortex.o
+    0x080032e4   0x080032e4   0x00000034   Code   RO          387    .text.get_uart_device  drv_uart.o
+    0x08003318   0x08003318   0x00000044   Code   RO          297    .text.gpio_irq_handler  drv_gpio.o
+    0x0800335c   0x0800335c   0x00000034   Code   RO          333    .text.is_uart_initialized  drv_uart.o
+    0x08003390   0x08003390   0x00000012   Code   RO            2    .text.main          main.o
+    0x080033a2   0x080033a2   0x00000002   PAD
+    0x080033a4   0x080033a4   0x00000042   Code   RO          134    .text.osalFindTask  osal_event.o
+    0x080033e6   0x080033e6   0x00000002   PAD
+    0x080033e8   0x080033e8   0x0000011c   Code   RO          243    .text.osalTimerUpdate  osal_timer.o
+    0x08003504   0x08003504   0x00000236   Code   RO          159    .text.osal_mem_alloc  osal_memory.o
+    0x0800373a   0x0800373a   0x00000002   PAD
+    0x0800373c   0x0800373c   0x0000007a   Code   RO          163    .text.osal_mem_free  osal_memory.o
+    0x080037b6   0x080037b6   0x00000002   PAD
+    0x080037b8   0x080037b8   0x00000092   Code   RO          157    .text.osal_mem_init  osal_memory.o
+    0x0800384a   0x0800384a   0x00000002   PAD
+    0x0800384c   0x0800384c   0x0000004c   Code   RO          132    .text.osal_set_event  osal_event.o
+    0x08003898   0x08003898   0x00000020   Code   RO          419    .text.ring_buffer_available  drv_tool.o
+    0x080038b8   0x080038b8   0x000000bc   Code   RO          417    .text.ring_buffer_get_multiple  drv_tool.o
+    0x08003974   0x08003974   0x00000052   Code   RO          403    .text.ring_buffer_init  drv_tool.o
+    0x080039c6   0x080039c6   0x00000002   PAD
+    0x080039c8   0x080039c8   0x00000030   Code   RO          407    .text.ring_buffer_is_full  drv_tool.o
+    0x080039f8   0x080039f8   0x000000e4   Code   RO          421    .text.ring_buffer_peek_multiple  drv_tool.o
+    0x08003adc   0x08003adc   0x0000005a   Code   RO          405    .text.ring_buffer_put  drv_tool.o
+    0x08003b36   0x08003b36   0x00000002   PAD
+    0x08003b38   0x08003b38   0x00000072   Code   RO          423    .text.ring_buffer_skip  drv_tool.o
+    0x08003baa   0x08003baa   0x00000002   PAD
+    0x08003bac   0x08003bac   0x0000008e   Code   RO          329    .text.uart_configure_irq_priority  drv_uart.o
+    0x08003c3a   0x08003c3a   0x00000002   PAD
+    0x08003c3c   0x08003c3c   0x000000ea   Code   RO          373    .text.uart_dma_buffer_to_ring  drv_uart.o
+    0x08003d26   0x08003d26   0x00000002   PAD
+    0x08003d28   0x08003d28   0x0000003a   Code   RO           76    .text.uart_dma_example  uart_dma_example.o
+    0x08003d62   0x08003d62   0x00000002   PAD
+    0x08003d64   0x08003d64   0x00000056   Code   RO           68    .text.uart_dma_init  uart_dma_example.o
+    0x08003dba   0x08003dba   0x00000002   PAD
+    0x08003dbc   0x08003dbc   0x000001d6   Code   RO          327    .text.uart_dma_init  drv_uart.o
+    0x08003f92   0x08003f92   0x00000002   PAD
+    0x08003f94   0x08003f94   0x0000001c   Code   RO           74    .text.uart_echo_test  uart_dma_example.o
+    0x08003fb0   0x08003fb0   0x000000d4   Code   RO          325    .text.uart_init     drv_uart.o
+    0x08004084   0x08004084   0x00000074   Code   RO           72    .text.uart_process_received_data  uart_dma_example.o
+    0x080040f8   0x080040f8   0x0000006c   Code   RO          381    .text.uart_read_from_ring_buffer  drv_uart.o
+    0x08004164   0x08004164   0x000000a6   Code   RO          343    .text.uart_receive  drv_uart.o
+    0x0800420a   0x0800420a   0x00000002   PAD
+    0x0800420c   0x0800420c   0x00000024   Code   RO          347    .text.uart_receive_async  drv_uart.o
+    0x08004230   0x08004230   0x000000b2   Code   RO          341    .text.uart_send     drv_uart.o
+    0x080042e2   0x080042e2   0x00000002   PAD
+    0x080042e4   0x080042e4   0x00000024   Code   RO          345    .text.uart_send_async  drv_uart.o
+    0x08004308   0x08004308   0x00000044   Code   RO           70    .text.uart_send_string  uart_dma_example.o
+    0x0800434c   0x0800434c   0x000000c8   Code   RO          369    .text.uart_start_tx_from_ring_buffer  drv_uart.o
+    0x08004414   0x08004414   0x0000000e   Code   RO         1630    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08004422   0x08004422   0x00000002   Code   RO         1631    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08004424   0x08004424   0x0000000e   Code   RO         1632    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08004432   0x08004432   0x00000040   Data   RO         1025    .rodata..L__const.HAL_RCC_GetSysClockFreq.aPLLMULFactorTable  py32f403_hal_rcc.o
+    0x08004472   0x08004472   0x00000010   Data   RO         1591    .rodata.AHBPrescTable  system_py32f403.o
+    0x08004482   0x08004482   0x00000008   Data   RO         1592    .rodata.APBPrescTable  system_py32f403.o
+    0x0800448a   0x0800448a   0x00000071   Data   RO           80    .rodata.str1.1      uart_dma_example.o
+    0x080044fb   0x080044fb   0x00000001   PAD
+    0x080044fc   0x080044fc   0x00000014   Data   RO          390    .rodata.uart_bases  drv_uart.o
+    0x08004510   0x08004510   0x00000014   Data   RO          395    .rodata.uart_dma_rx_channel_map  drv_uart.o
+    0x08004524   0x08004524   0x00000014   Data   RO          394    .rodata.uart_dma_tx_channel_map  drv_uart.o
+    0x08004538   0x08004538   0x00000005   Data   RO          391    .rodata.uart_irqs   drv_uart.o
+    0x0800453d   0x0800453d   0x00000003   PAD
+    0x08004540   0x08004540   0x00000020   Data   RO         1629    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002fb0, Size: 0x00001fb0, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08004560, Size: 0x00003330, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08002fb0   0x00000004   Data   RW         1566    .data.SystemCoreClock  system_py32f403.o
-    0x20000004   0x08002fb4   0x00000001   Data   RW           97    .data.g_uart_instance  uart_it_example.o
-    0x20000005   0x08002fb5   0x00000003   PAD
-    0x20000008   0x08002fb8   0x00000004   Data   RW          175    .data.theHeap       osal_memory.o
-    0x2000000c   0x08002fbc   0x00000001   Data   RW          494    .data.uwTickFreq    py32f403_hal.o
-    0x2000000d   0x08002fbd   0x00000003   PAD
-    0x20000010   0x08002fc0   0x00000004   Data   RW          493    .data.uwTickPrio    py32f403_hal.o
-    0x20000014   0x08002fc4   0x00000004   PAD
-    0x20000018        -       0x00000004   Zero   RW          144    .bss.TaskHead       osal_event.o
-    0x2000001c        -       0x00001800   Zero   RW          184    .bss._theHeap       osal_memory.o
-    0x2000181c        -       0x00000002   Zero   RW          180    .bss.blkCnt         osal_memory.o
-    0x2000181e        -       0x00000002   Zero   RW          179    .bss.blkFree        osal_memory.o
-    0x20001820        -       0x00000002   Zero   RW          182    .bss.blkMax         osal_memory.o
-    0x20001822   0x08002fc4   0x00000002   PAD
-    0x20001824        -       0x00000004   Zero   RW          177    .bss.ff1            osal_memory.o
-    0x20001828        -       0x00000004   Zero   RW          178    .bss.ff2            osal_memory.o
-    0x2000182c        -       0x00000100   Zero   RW          310    .bss.gpio_irq_handlers  drv_gpio.o
-    0x2000192c        -       0x00000002   Zero   RW          181    .bss.memAlo         osal_memory.o
-    0x2000192e        -       0x00000002   Zero   RW          183    .bss.memMax         osal_memory.o
-    0x20001930        -       0x00000004   Zero   RW          249    .bss.osal_systemClock  osal_timer.o
-    0x20001934        -       0x00000001   Zero   RW          176    .bss.ready          osal_memory.o
-    0x20001935   0x08002fc4   0x00000003   PAD
-    0x20001938        -       0x00000004   Zero   RW          250    .bss.timerHead      osal_timer.o
-    0x2000193c        -       0x0000026c   Zero   RW          367    .bss.uart_devices   drv_uart.o
-    0x20001ba8        -       0x00000004   Zero   RW          495    .bss.uwTick         py32f403_hal.o
-    0x20001bac   0x08002fc4   0x00000004   PAD
-    0x20001bb0        -       0x00000400   Zero   RW         1552    STACK               startup_py32f403xx.o
+    0x20000000   0x08004560   0x00000004   Data   RW         1590    .data.SystemCoreClock  system_py32f403.o
+    0x20000004   0x08004564   0x00000001   Data   RW           78    .data.g_uart_instance  uart_dma_example.o
+    0x20000005   0x08004565   0x00000003   PAD
+    0x20000008   0x08004568   0x00000004   Data   RW          177    .data.theHeap       osal_memory.o
+    0x2000000c   0x0800456c   0x00000001   Data   RW          518    .data.uwTickFreq    py32f403_hal.o
+    0x2000000d   0x0800456d   0x00000003   PAD
+    0x20000010   0x08004570   0x00000004   Data   RW          517    .data.uwTickPrio    py32f403_hal.o
+    0x20000014   0x08004574   0x00000004   PAD
+    0x20000018        -       0x00000004   Zero   RW          146    .bss.TaskHead       osal_event.o
+    0x2000001c        -       0x00001800   Zero   RW          186    .bss._theHeap       osal_memory.o
+    0x2000181c        -       0x00000002   Zero   RW          182    .bss.blkCnt         osal_memory.o
+    0x2000181e        -       0x00000002   Zero   RW          181    .bss.blkFree        osal_memory.o
+    0x20001820        -       0x00000002   Zero   RW          184    .bss.blkMax         osal_memory.o
+    0x20001822        -       0x00000100   Zero   RW           79    .bss.dummy_rx_buffer  uart_dma_example.o
+    0x20001922   0x08004574   0x00000002   PAD
+    0x20001924        -       0x00000004   Zero   RW          179    .bss.ff1            osal_memory.o
+    0x20001928        -       0x00000004   Zero   RW          180    .bss.ff2            osal_memory.o
+    0x2000192c        -       0x00000100   Zero   RW          312    .bss.gpio_irq_handlers  drv_gpio.o
+    0x20001a2c        -       0x00000002   Zero   RW          183    .bss.memAlo         osal_memory.o
+    0x20001a2e        -       0x00000002   Zero   RW          185    .bss.memMax         osal_memory.o
+    0x20001a30        -       0x00000004   Zero   RW          251    .bss.osal_systemClock  osal_timer.o
+    0x20001a34        -       0x00000001   Zero   RW          178    .bss.ready          osal_memory.o
+    0x20001a35   0x08004574   0x00000003   PAD
+    0x20001a38        -       0x00000004   Zero   RW          252    .bss.timerHead      osal_timer.o
+    0x20001a3c        -       0x000014f0   Zero   RW          389    .bss.uart_devices   drv_uart.o
+    0x20002f2c        -       0x00000004   Zero   RW          519    .bss.uwTick         py32f403_hal.o
+    0x20002f30        -       0x00000400   Zero   RW         1576    STACK               startup_py32f403xx.o
 
 
 ==============================================================================
@@ -3370,27 +3534,28 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        718          0          0          0        256       9351   drv_gpio.o
-      1036          0         25          0        620      10655   drv_uart.o
-       146          0          0          0          0       1652   main.o
+       782          0          0          0          0       3606   drv_tool.o
+      2518          0         65          0       5360      15013   drv_uart.o
+       146          0          0          0          0       1654   main.o
        142          0          0          0          4       2411   osal_event.o
        834          0          0          4       6163       2742   osal_memory.o
        284          0          0          0          8       3811   osal_timer.o
        238          0          0          5          4       8120   py32f403_hal.o
        494          0          0          0          0       7946   py32f403_hal_cortex.o
-       792          0          0          0          0       8397   py32f403_hal_dma.o
+      3398          0          0          0          0       8397   py32f403_hal_dma.o
        846          0          0          0          0       5040   py32f403_hal_gpio.o
        276          0          0          0          0       4267   py32f403_hal_msp.o
       2974          0         64          0          0       7981   py32f403_hal_rcc.o
-      2080          0          0          0          0      16002   py32f403_hal_uart.o
+      2754          0          0          0          0      16002   py32f403_hal_uart.o
         46          0          0          0          0       2822   py32f403_it.o
         36          8        304          0       1024        900   startup_py32f403xx.o
         16          0         24          4          0       2343   system_py32f403.o
-       392          0        123          1          0       2272   uart_it_example.o
+       356          0        113          1        256       2246   uart_dma_example.o
 
     ----------------------------------------------------------------------
-     11440          8        578         20       8092      96712   Object Totals
+     16968          8        606         20      13084     104652   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        90          0          6          6         13          0   (incl. Padding)
+       110          0          4          6          9          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -3430,15 +3595,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     11626         26        578         20       8092      96876   Grand Totals
-     11626         26        578         20       8092      96876   ELF Image Totals
-     11626         26        578         20          0          0   ROM Totals
+     17154         26        606         20      13084     104796   Grand Totals
+     17154         26        606         20      13084     104796   ELF Image Totals
+     17154         26        606         20          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                12204 (  11.92kB)
-    Total RW  Size (RW Data + ZI Data)              8112 (   7.92kB)
-    Total ROM Size (Code + RO Data + RW Data)      12224 (  11.94kB)
+    Total RO  Size (Code + RO Data)                17760 (  17.34kB)
+    Total RW  Size (RW Data + ZI Data)             13104 (  12.80kB)
+    Total ROM Size (Code + RO Data + RW Data)      17780 (  17.36kB)
 
 ==============================================================================
 

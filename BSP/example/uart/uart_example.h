@@ -8,6 +8,7 @@ extern "C"
 
     int uart_polling_example(void);
     int uart_it_example(void);
+    int uart_dma_example(void);
     void uart_echo_test(void);
 #ifdef __cplusplus
 }

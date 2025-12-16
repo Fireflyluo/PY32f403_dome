@@ -74,6 +74,11 @@ extern "C"
     uint16_t uart_dma_get_rx_remaining(uart_instance_t instance);
     uint16_t uart_dma_get_rx_data_count(uart_instance_t instance);
     uart_err_t uart_dma_set_rx_buffer(uart_instance_t instance, uint8_t *buffer, uint16_t size);
+
+    /* 新增DMA环形缓冲区操作 */
+    uint16_t uart_read_from_ring_buffer(uart_instance_t instance, uint8_t *buffer, uint16_t size);
+    uint16_t uart_write_to_ring_buffer(uart_instance_t instance, const uint8_t *data, uint16_t size);
+    uart_err_t uart_get_ring_buffer_stats(uart_instance_t instance, uint16_t *rx_available, uint16_t *tx_available, uint16_t *rx_free_space);
 #endif
 
     /* 回调函数注册 */
@@ -87,9 +92,8 @@ extern "C"
     /* 状态查询 */
     bool uart_is_tx_busy(uart_instance_t instance);
     bool uart_is_rx_busy(uart_instance_t instance);
-
     const char *uart_get_instance_name(uart_instance_t instance);
-    
+
     /* 中断优先级配置 */
     uart_err_t uart_set_irq_priority(uart_instance_t instance, uint8_t preempt_priority, uint8_t sub_priority);
     uart_err_t uart_set_dma_irq_priority(uart_instance_t instance, uint8_t preempt_priority, uint8_t sub_priority);

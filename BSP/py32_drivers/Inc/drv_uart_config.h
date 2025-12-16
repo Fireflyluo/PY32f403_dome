@@ -11,17 +11,17 @@
 
 /* 选择工作模式 */
 #ifndef UART_WORK_MODE
-#define UART_WORK_MODE UART_MODE_INTERRUPT /* 默认模式 */
+#define UART_WORK_MODE UART_MODE_DMA /* 默认模式 */
 #endif
 
 /* 缓冲区配置 */
 #define RING_BUFFER_ENABLED
 #define UART_RX_BUFFER_SIZE 256  /* 接收缓冲区大小 */
 #define UART_TX_BUFFER_SIZE 256  /* 发送缓冲区大小 */
-#define UART_DMA_BUFFER_SIZE 128 /* DMA缓冲区大小 */
+#define UART_DMA_BUFFER_SIZE 256 /* DMA缓冲区大小，建议为2的幂次方 */
 
 /* DMA配置 (仅在DMA模式下有效) */
-#define UART_USE_DMA_IDLE_DETECTION 1                /* 使用DMA空闲中断检测 */
+#define UART_USE_DMA_IDLE_DETECTION 1                /* 使用串口空闲中断检测 */
 #define UART_DMA_RX_TIMEOUT_MS 10                    /* DMA接收超时时间(ms) */
 #define UART_DMA_DEFAULT_MODE UART_DMA_MODE_CIRCULAR /* 默认DMA模式 */
 
@@ -73,6 +73,18 @@
 #define UART1_RX_DMA_CHANNEL DMA1_Channel5
 // 其他UART实例的DMA映射...
 #endif
+
+/* DMA通道映射定义 */
+#define DMA_CHANNEL_MAP_USART1_WR 0
+#define DMA_CHANNEL_MAP_USART1_RD 1
+#define DMA_CHANNEL_MAP_USART2_WR 2
+#define DMA_CHANNEL_MAP_USART2_RD 3
+#define DMA_CHANNEL_MAP_USART3_WR 4
+#define DMA_CHANNEL_MAP_USART3_RD 5
+#define DMA_CHANNEL_MAP_USART4_WR 6
+#define DMA_CHANNEL_MAP_USART4_RD 7
+#define DMA_CHANNEL_MAP_USART5_WR 8
+#define DMA_CHANNEL_MAP_USART5_RD 9
 
 /* ========== 编译时检查 ========== */
 
