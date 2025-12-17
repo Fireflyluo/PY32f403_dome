@@ -10,6 +10,6 @@ void MX_IWDG_Init(void)
     hiwdg.Init.Reload = 1;
     if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
     {
-        APP_ErrorHandler();
+//        APP_ErrorHandler();
     }
 }

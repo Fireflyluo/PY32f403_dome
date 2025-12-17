@@ -1,5 +1,5 @@
 #include "drv_gpio.h"
-#include "board.h"
+//#include "board.h"
 
 /* ========== 使用新的宏定义生成引脚映射表 ========== */
 
