@@ -67,24 +67,25 @@
 #define UART2_TX_DMA_STREAM DMA1_Stream6
 #define UART2_RX_DMA_STREAM DMA1_Stream5
 // 其他UART实例的DMA映射...
-#elif defined(PY32F4xx)
-/* PY32F4系列DMA配置 */
-#define UART1_TX_DMA_CHANNEL DMA1_Channel4
-#define UART1_RX_DMA_CHANNEL DMA1_Channel5
+#elif defined(PY32F403xD)
+#define UART1_TX_DMA_CHANNEL        NULL
+#define UART1_RX_DMA_CHANNEL        NULL
+
+#define UART2_TX_DMA_CHANNEL        DMA1_Channel1
+#define UART2_RX_DMA_CHANNEL        DMA1_Channel2
+
+#define UART3_TX_DMA_CHANNEL        NULL
+#define UART3_RX_DMA_CHANNEL        NULL
+
+#define UART4_TX_DMA_CHANNEL        NULL
+#define UART4_RX_DMA_CHANNEL        NULL
+
+#define UART5_TX_DMA_CHANNEL        NULL
+#define UART5_RX_DMA_CHANNEL        NULL
 // 其他UART实例的DMA映射...
 #endif
 
-/* DMA通道映射定义 */
-#define DMA_CHANNEL_MAP_USART1_WR 0
-#define DMA_CHANNEL_MAP_USART1_RD 1
-#define DMA_CHANNEL_MAP_USART2_WR 2
-#define DMA_CHANNEL_MAP_USART2_RD 3
-#define DMA_CHANNEL_MAP_USART3_WR 4
-#define DMA_CHANNEL_MAP_USART3_RD 5
-#define DMA_CHANNEL_MAP_USART4_WR 6
-#define DMA_CHANNEL_MAP_USART4_RD 7
-#define DMA_CHANNEL_MAP_USART5_WR 8
-#define DMA_CHANNEL_MAP_USART5_RD 9
+
 
 /* ========== 编译时检查 ========== */
 

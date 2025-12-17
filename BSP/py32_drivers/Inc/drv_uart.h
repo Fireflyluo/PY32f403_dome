@@ -71,9 +71,9 @@ extern "C"
     uart_err_t uart_dma_stop_tx(uart_instance_t instance);
     bool uart_dma_is_rx_busy(uart_instance_t instance);
     bool uart_dma_is_tx_busy(uart_instance_t instance);
-    uint16_t uart_dma_get_rx_remaining(uart_instance_t instance);
-    uint16_t uart_dma_get_rx_data_count(uart_instance_t instance);
-    uart_err_t uart_dma_set_rx_buffer(uart_instance_t instance, uint8_t *buffer, uint16_t size);
+ 
+
+
 
     /* 新增DMA环形缓冲区操作 */
     uint16_t uart_read_from_ring_buffer(uart_instance_t instance, uint8_t *buffer, uint16_t size);

@@ -90,7 +90,23 @@ static const uint32_t uart_dma_rx_channel_map[UART_INSTANCE_MAX] = {
     DMA_CHANNEL_MAP_USART3_RD,
     DMA_CHANNEL_MAP_USART4_RD,
     DMA_CHANNEL_MAP_USART5_RD};
+    
+/* DMA通道映射数组定义 */
+static const DMA_Channel_TypeDef* const uart_dma_tx_channels[UART_INSTANCE_MAX] = {
+    UART1_TX_DMA_CHANNEL,
+    UART2_TX_DMA_CHANNEL, 
+    UART3_TX_DMA_CHANNEL,
+    UART4_TX_DMA_CHANNEL,
+    UART5_TX_DMA_CHANNEL
+};
 
+static const DMA_Channel_TypeDef* const uart_dma_rx_channels[UART_INSTANCE_MAX] = {
+    UART1_RX_DMA_CHANNEL,
+    UART2_RX_DMA_CHANNEL,
+    UART3_RX_DMA_CHANNEL, 
+    UART4_RX_DMA_CHANNEL,
+    UART5_RX_DMA_CHANNEL
+};
 /* ==================== 静态函数前向声明 ==================== */
 static uart_err_t uart_configure_irq_priority(uart_instance_t instance);
 
@@ -220,7 +236,7 @@ static uart_err_t uart_dma_init(uart_instance_t instance)
 
     /* 初始化TX DMA */
     memset(&dev->hdma_tx, 0, sizeof(DMA_HandleTypeDef));
-    dev->hdma_tx.Instance = DMA1_Channel1; // 根据实例动态设置
+    dev->hdma_tx.Instance = (DMA_Channel_TypeDef*)uart_dma_tx_channels[instance]; // 根据实例动态设置
     dev->hdma_tx.Init.Direction = DMA_MEMORY_TO_PERIPH;
     dev->hdma_tx.Init.PeriphInc = DMA_PINC_DISABLE;
     dev->hdma_tx.Init.MemInc = DMA_MINC_ENABLE;
@@ -239,7 +255,7 @@ static uart_err_t uart_dma_init(uart_instance_t instance)
 
     /* 初始化RX DMA - 配置为循环模式并开启中断 */
     memset(&dev->hdma_rx, 0, sizeof(DMA_HandleTypeDef));
-    dev->hdma_rx.Instance = DMA1_Channel2; // 根据实例动态设置
+    dev->hdma_rx.Instance = (DMA_Channel_TypeDef*)uart_dma_rx_channels[instance]; // 根据实例动态设置
     dev->hdma_rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
     dev->hdma_rx.Init.PeriphInc = DMA_PINC_DISABLE;
     dev->hdma_rx.Init.MemInc = DMA_MINC_ENABLE;
@@ -430,7 +446,6 @@ static uint16_t uart_dma_process_idle_data(uart_instance_t instance)
     uart_device_t *dev = &uart_devices[instance];
     uint16_t current_pos = UART_DMA_BUFFER_SIZE - __HAL_DMA_GET_COUNTER(dev->huart.hdmarx);
     dev->dma_rx_current_pos = current_pos;
-
     uint16_t half_size = UART_DMA_BUFFER_SIZE / 2;
     uint16_t data_start, data_end, data_size = 0;
 
@@ -715,30 +730,8 @@ bool uart_dma_is_tx_busy(uart_instance_t instance)
     return uart_devices[instance].dma_tx_busy;
 }
 
-uint16_t uart_dma_get_rx_remaining(uart_instance_t instance)
-{
-    if (!is_uart_initialized(instance))
-    {
-        return 0;
-    }
-    uart_device_t *dev = &uart_devices[instance];
-    return __HAL_DMA_GET_COUNTER(dev->huart.hdmarx);
-}
 
-uint16_t uart_dma_get_rx_data_count(uart_instance_t instance)
-{
-    if (!is_uart_initialized(instance))
-    {
-        return 0;
-    }
-    return uart_devices[instance].dma_rx_data_count;
-}
 
-uart_err_t uart_dma_set_rx_buffer(uart_instance_t instance, uint8_t *buffer, uint16_t size)
-{
-    /* 此功能在当前实现中不适用，因为使用固定的DMA缓冲区 */
-    return UART_ERROR_MODE;
-}
 #endif /* UART_USE_DMA */
 
 /* ==================================== 中断相关函数 ==================================================== */
@@ -967,26 +960,6 @@ uart_err_t uart_receive(uart_instance_t instance, uint8_t *buffer, uint16_t size
     {
         dev->rx_total += size;
         return UART_OK;
-    }
-    else if (timeout > 0)
-    {
-        /* 支持超时等待 */
-        uint32_t start_time = HAL_GetTick();
-        uint16_t total_read = read_size;
-
-        while ((HAL_GetTick() - start_time) < timeout)
-        {
-            read_size = uart_read_from_ring_buffer(instance, buffer + total_read, size - total_read);
-            total_read += read_size;
-
-            if (total_read >= size)
-            {
-                dev->rx_total += total_read;
-                return UART_OK;
-            }
-            HAL_Delay(1);
-        }
-        return UART_ERROR_TIMEOUT;
     }
     else
     {
