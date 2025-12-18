@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\PY32F403_Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\PY32F403_Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Sun Dec 14 13:53:36 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Thu Dec 18 10:55:11 2025
 <BR><P>
 <H3>Maximum Stack Usage =        216 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -22,8 +22,8 @@ Function Pointers
  <LI><a href="#[4]">BusFault_Handler</a> from py32f403_it.o(.text.BusFault_Handler) referenced from startup_py32f403xx.o(RESET)
  <LI><a href="#[1f]">CAN1_RX1_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
  <LI><a href="#[20]">CAN1_SCE_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
- <LI><a href="#[15]">DMA1_Channel1_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
- <LI><a href="#[16]">DMA1_Channel2_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
+ <LI><a href="#[15]">DMA1_Channel1_IRQHandler</a> from drv_uart.o(.text.DMA1_Channel1_IRQHandler) referenced from startup_py32f403xx.o(RESET)
+ <LI><a href="#[16]">DMA1_Channel2_IRQHandler</a> from drv_uart.o(.text.DMA1_Channel2_IRQHandler) referenced from startup_py32f403xx.o(RESET)
  <LI><a href="#[17]">DMA1_Channel3_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
  <LI><a href="#[18]">DMA1_Channel4_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
  <LI><a href="#[19]">DMA1_Channel5_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
@@ -80,8 +80,12 @@ Function Pointers
  <LI><a href="#[36]">TIM8_UP_TIM13_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
  <LI><a href="#[3e]">UART4_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
  <LI><a href="#[3f]">UART5_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
+ <LI><a href="#[49]">UART_DMAAbortOnError</a> from py32f403_hal_uart.o(.text.UART_DMAAbortOnError) referenced 2 times from py32f403_hal_uart.o(.text.HAL_UART_IRQHandler)
+ <LI><a href="#[4c]">UART_DMAError</a> from py32f403_hal_uart.o(.text.UART_DMAError) referenced 2 times from py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
+ <LI><a href="#[4a]">UART_DMATransmitCplt</a> from py32f403_hal_uart.o(.text.UART_DMATransmitCplt) referenced 2 times from py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
+ <LI><a href="#[4b]">UART_DMATxHalfCplt</a> from py32f403_hal_uart.o(.text.UART_DMATxHalfCplt) referenced 2 times from py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
  <LI><a href="#[2f]">USART1_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
- <LI><a href="#[30]">USART2_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
+ <LI><a href="#[30]">USART2_IRQHandler</a> from drv_uart.o(.text.USART2_IRQHandler) referenced from startup_py32f403xx.o(RESET)
  <LI><a href="#[31]">USART3_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
  <LI><a href="#[34]">USBWakeUp_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
  <LI><a href="#[1d]">USB_HP_CAN1_TX_IRQHandler</a> from startup_py32f403xx.o(.text) referenced from startup_py32f403xx.o(RESET)
@@ -98,25 +102,25 @@ Global Symbols
 <P><STRONG><a name="[48]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(.text)
 </UL>
-<P><STRONG><a name="[88]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[94]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
-<P><STRONG><a name="[49]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[4d]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[4e]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[52]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[89]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[95]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[8a]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[96]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[8b]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[97]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[8c]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[98]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[8d]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[99]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_py32f403xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
@@ -135,12 +139,6 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
 <P><STRONG><a name="[20]"></a>CAN1_SCE_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_py32f403xx.o(.text))
-<BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
-</UL>
-<P><STRONG><a name="[15]"></a>DMA1_Channel1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_py32f403xx.o(.text))
-<BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
-</UL>
-<P><STRONG><a name="[16]"></a>DMA1_Channel2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_py32f403xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
 <P><STRONG><a name="[17]"></a>DMA1_Channel3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_py32f403xx.o(.text))
@@ -260,9 +258,6 @@ Global Symbols
 <P><STRONG><a name="[2f]"></a>USART1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_py32f403xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
-<P><STRONG><a name="[30]"></a>USART2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_py32f403xx.o(.text))
-<BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
-</UL>
 <P><STRONG><a name="[31]"></a>USART3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_py32f403xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
@@ -278,57 +273,66 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_py32f403xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
-<P><STRONG><a name="[63]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_queue
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
+<P><STRONG><a name="[64]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pull_queue
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_queue
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
 
-<P><STRONG><a name="[8e]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[9a]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[8f]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[9b]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[4c]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<P><STRONG><a name="[50]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[90]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[9c]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[91]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[9d]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[4b]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<P><STRONG><a name="[4f]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[71]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
+<P><STRONG><a name="[7c]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
 </UL>
 
-<P><STRONG><a name="[92]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[9e]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[4d]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<P><STRONG><a name="[51]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[87]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send_string
+<P><STRONG><a name="[4e]"></a>__scatterload</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[4a]"></a>__scatterload</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
-</UL>
-<BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
-</UL>
+<P><STRONG><a name="[9f]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[93]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
-
-<P><STRONG><a name="[72]"></a>APP_ErrorHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, main.o(.text.APP_ErrorHandler))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_it_example
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
+<P><STRONG><a name="[7d]"></a>APP_ErrorHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, main.o(.text.APP_ErrorHandler))
+<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
 </UL>
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, py32f403_it.o(.text.BusFault_Handler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
+</UL>
+<P><STRONG><a name="[15]"></a>DMA1_Channel1_IRQHandler</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, drv_uart.o(.text.DMA1_Channel1_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = DMA1_Channel1_IRQHandler &rArr; HAL_DMA_IRQHandler
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_IRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
+</UL>
+<P><STRONG><a name="[16]"></a>DMA1_Channel2_IRQHandler</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, drv_uart.o(.text.DMA1_Channel2_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = DMA1_Channel2_IRQHandler &rArr; HAL_DMA_IRQHandler
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_IRQHandler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
 <P><STRONG><a name="[42]"></a>DMA2_Channel1_IRQHandler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, py32f403_it.o(.text.DMA2_Channel1_IRQHandler))
@@ -340,227 +344,245 @@ Global Symbols
 <P><STRONG><a name="[10]"></a>EXTI0_IRQHandler</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, drv_gpio.o(.text.EXTI0_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = EXTI0_IRQHandler &rArr; gpio_irq_handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
 <P><STRONG><a name="[32]"></a>EXTI15_10_IRQHandler</STRONG> (Thumb, 244 bytes, Stack size 8 bytes, drv_gpio.o(.text.EXTI15_10_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = EXTI15_10_IRQHandler &rArr; gpio_irq_handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
 <P><STRONG><a name="[11]"></a>EXTI1_IRQHandler</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, drv_gpio.o(.text.EXTI1_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = EXTI1_IRQHandler &rArr; gpio_irq_handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
 <P><STRONG><a name="[12]"></a>EXTI2_IRQHandler</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, drv_gpio.o(.text.EXTI2_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = EXTI2_IRQHandler &rArr; gpio_irq_handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
 <P><STRONG><a name="[13]"></a>EXTI3_IRQHandler</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, drv_gpio.o(.text.EXTI3_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = EXTI3_IRQHandler &rArr; gpio_irq_handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
 <P><STRONG><a name="[14]"></a>EXTI4_IRQHandler</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, drv_gpio.o(.text.EXTI4_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = EXTI4_IRQHandler &rArr; gpio_irq_handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
 <P><STRONG><a name="[21]"></a>EXTI9_5_IRQHandler</STRONG> (Thumb, 198 bytes, Stack size 8 bytes, drv_gpio.o(.text.EXTI9_5_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = EXTI9_5_IRQHandler &rArr; gpio_irq_handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_irq_handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
-<P><STRONG><a name="[50]"></a>HAL_Delay</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, py32f403_hal.o(.text.HAL_Delay))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HAL_Delay
+<P><STRONG><a name="[6d]"></a>HAL_DMA_Abort_IT</STRONG> (Thumb, 792 bytes, Stack size 96 bytes, py32f403_hal_dma.o(.text.HAL_DMA_Abort_IT))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_DMA_Abort_IT
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-</UL>
-<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_echo_test
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_it_example
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 </UL>
 
-<P><STRONG><a name="[6d]"></a>HAL_GPIO_Init</STRONG> (Thumb, 846 bytes, Stack size 40 bytes, py32f403_hal_gpio.o(.text.HAL_GPIO_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_GPIO_Init
+<P><STRONG><a name="[53]"></a>HAL_DMA_IRQHandler</STRONG> (Thumb, 1668 bytes, Stack size 184 bytes, py32f403_hal_dma.o(.text.HAL_DMA_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = HAL_DMA_IRQHandler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-</UL>
-
-<P><STRONG><a name="[51]"></a>HAL_GetTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, py32f403_hal.o(.text.HAL_GetTick))
-<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+<BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Channel2_IRQHandler
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Channel1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[6e]"></a>HAL_IncTick</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, py32f403_hal.o(.text.HAL_IncTick))
-<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
+<P><STRONG><a name="[55]"></a>HAL_DMA_Start_IT</STRONG> (Thumb, 202 bytes, Stack size 32 bytes, py32f403_hal_dma.o(.text.HAL_DMA_Start_IT))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = HAL_DMA_Start_IT &rArr; DMA_SetConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_SetConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
+</UL>
+
+<P><STRONG><a name="[62]"></a>HAL_GetTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, py32f403_hal.o(.text.HAL_GetTick))
+<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+</UL>
+
+<P><STRONG><a name="[79]"></a>HAL_IncTick</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, py32f403_hal.o(.text.HAL_IncTick))
+<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[52]"></a>HAL_Init</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, py32f403_hal.o(.text.HAL_Init))
+<P><STRONG><a name="[57]"></a>HAL_Init</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, py32f403_hal.o(.text.HAL_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = HAL_Init &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[54]"></a>HAL_InitTick</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, py32f403_hal.o(.text.HAL_InitTick))
+<P><STRONG><a name="[59]"></a>HAL_InitTick</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, py32f403_hal.o(.text.HAL_InitTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
+<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
-<P><STRONG><a name="[55]"></a>HAL_MspInit</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, py32f403_hal_msp.o(.text.HAL_MspInit))
+<P><STRONG><a name="[5a]"></a>HAL_MspInit</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, py32f403_hal_msp.o(.text.HAL_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
-<P><STRONG><a name="[58]"></a>HAL_NVIC_EnableIRQ</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, py32f403_hal_cortex.o(.text.HAL_NVIC_EnableIRQ))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_NVIC_EnableIRQ &rArr; __NVIC_EnableIRQ
-</UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
-</UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_configure_irq_priority
-</UL>
-
-<P><STRONG><a name="[57]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 50 bytes, Stack size 32 bytes, py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriority))
+<P><STRONG><a name="[5c]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 50 bytes, Stack size 32 bytes, py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EncodePriority
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_GetPriorityGrouping
+<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EncodePriority
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_GetPriorityGrouping
 </UL>
-<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_configure_irq_priority
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_tick_init
 </UL>
 
-<P><STRONG><a name="[53]"></a>HAL_NVIC_SetPriorityGrouping</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping))
+<P><STRONG><a name="[58]"></a>HAL_NVIC_SetPriorityGrouping</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, py32f403_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = HAL_NVIC_SetPriorityGrouping &rArr; __NVIC_SetPriorityGrouping
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriorityGrouping
+<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriorityGrouping
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
-<P><STRONG><a name="[5e]"></a>HAL_RCC_ClockConfig</STRONG> (Thumb, 610 bytes, Stack size 24 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_ClockConfig))
+<P><STRONG><a name="[61]"></a>HAL_RCC_ClockConfig</STRONG> (Thumb, 610 bytes, Stack size 24 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_ClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
-</UL>
-
-<P><STRONG><a name="[61]"></a>HAL_RCC_GetHCLKFreq</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_GetHCLKFreq))
-<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK1Freq
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK2Freq
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
 </UL>
 
-<P><STRONG><a name="[60]"></a>HAL_RCC_GetPCLK1Freq</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_GetPCLK1Freq))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_RCC_GetPCLK1Freq
-</UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+<P><STRONG><a name="[92]"></a>HAL_RCC_GetHCLKFreq</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_GetHCLKFreq))
+<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_tick_init
 </UL>
 
-<P><STRONG><a name="[62]"></a>HAL_RCC_GetPCLK2Freq</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_GetPCLK2Freq))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_RCC_GetPCLK2Freq
-</UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
-</UL>
-
-<P><STRONG><a name="[5f]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 236 bytes, Stack size 104 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_GetSysClockFreq))
+<P><STRONG><a name="[63]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 236 bytes, Stack size 104 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_GetSysClockFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 </UL>
 
-<P><STRONG><a name="[64]"></a>HAL_RCC_OscConfig</STRONG> (Thumb, 1990 bytes, Stack size 32 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_OscConfig))
+<P><STRONG><a name="[65]"></a>HAL_RCC_OscConfig</STRONG> (Thumb, 1990 bytes, Stack size 32 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_OscConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_RCC_OscConfig &rArr; RCC_Delay
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Delay
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
-</UL>
-
-<P><STRONG><a name="[68]"></a>HAL_SYSTICK_Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, py32f403_hal_cortex.o(.text.HAL_SYSTICK_Callback))
-<BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
 </UL>
 
-<P><STRONG><a name="[56]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, py32f403_hal_cortex.o(.text.HAL_SYSTICK_Config))
+<P><STRONG><a name="[93]"></a>HAL_SYSTICK_CLKSourceConfig</STRONG> (Thumb, 52 bytes, Stack size 4 bytes, py32f403_hal_cortex.o(.text.HAL_SYSTICK_CLKSourceConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_SYSTICK_CLKSourceConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_tick_init
+</UL>
+
+<P><STRONG><a name="[69]"></a>HAL_SYSTICK_Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, py32f403_hal_cortex.o(.text.HAL_SYSTICK_Callback))
+<BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
+</UL>
+
+<P><STRONG><a name="[5b]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, py32f403_hal_cortex.o(.text.HAL_SYSTICK_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = HAL_SYSTICK_Config &rArr; SysTick_Config &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
 </UL>
-<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_tick_init
 </UL>
 
-<P><STRONG><a name="[67]"></a>HAL_SYSTICK_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, py32f403_hal_cortex.o(.text.HAL_SYSTICK_IRQHandler))
+<P><STRONG><a name="[68]"></a>HAL_SYSTICK_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, py32f403_hal_cortex.o(.text.HAL_SYSTICK_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_SYSTICK_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Callback
+<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Callback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[69]"></a>HAL_UART_Init</STRONG> (Thumb, 170 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.HAL_UART_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
+<P><STRONG><a name="[6e]"></a>HAL_UART_ErrorCallback</STRONG> (Thumb, 142 bytes, Stack size 24 bytes, drv_uart.o(.text.HAL_UART_ErrorCallback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HAL_UART_ErrorCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_AdvFeatureConfig
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
-</UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMAAbortOnError
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMAError
 </UL>
 
-<P><STRONG><a name="[6a]"></a>HAL_UART_MspInit</STRONG> (Thumb, 150 bytes, Stack size 56 bytes, py32f403_hal_msp.o(.text.HAL_UART_MspInit))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_UART_MspInit &rArr; HAL_GPIO_Init
+<P><STRONG><a name="[6a]"></a>HAL_UART_IRQHandler</STRONG> (Thumb, 566 bytes, Stack size 40 bytes, py32f403_hal_uart.o(.text.HAL_UART_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = HAL_UART_IRQHandler &rArr; UART_EndTransmit_IT &rArr; HAL_UART_TxCpltCallback &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort_IT
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IdleFrameDetectCpltCallback
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTransmit_IT
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Transmit_IT
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Receive_IT
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
 
-<P><STRONG><a name="[85]"></a>HAL_UART_Receive_IT</STRONG> (Thumb, 186 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.HAL_UART_Receive_IT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_UART_Receive_IT
+<P><STRONG><a name="[6f]"></a>HAL_UART_IdleFrameDetectCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_uart.o(.text.HAL_UART_IdleFrameDetectCpltCallback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_UART_IdleFrameDetectCpltCallback
 </UL>
-<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_receive
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 </UL>
 
-<P><STRONG><a name="[86]"></a>HAL_UART_Transmit_IT</STRONG> (Thumb, 162 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.HAL_UART_Transmit_IT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_UART_Transmit_IT
+<P><STRONG><a name="[72]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, drv_uart.o(.text.HAL_UART_RxCpltCallback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = HAL_UART_RxCpltCallback &rArr; uart_dma_process_full_data &rArr; ring_buffer_put_multiple &rArr; ring_buffer_free_space
 </UL>
-<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_dma_process_full_data
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Receive_IT
+</UL>
+
+<P><STRONG><a name="[74]"></a>HAL_UART_Transmit_DMA</STRONG> (Thumb, 246 bytes, Stack size 32 bytes, py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Start_IT
+</UL>
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+</UL>
+
+<P><STRONG><a name="[75]"></a>HAL_UART_TxCpltCallback</STRONG> (Thumb, 166 bytes, Stack size 24 bytes, drv_uart.o(.text.HAL_UART_TxCpltCallback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = HAL_UART_TxCpltCallback &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_skip
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+</UL>
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTransmit_IT
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMATransmitCplt
+</UL>
+
+<P><STRONG><a name="[7f]"></a>HAL_UART_TxHalfCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_uart.o(.text.HAL_UART_TxHalfCpltCallback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_UART_TxHalfCpltCallback
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMATxHalfCplt
 </UL>
 
 <P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, py32f403_it.o(.text.HardFault_Handler))
@@ -581,9 +603,9 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, py32f403_it.o(.text.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = SysTick_Handler &rArr; os_systick_handler &rArr; send_msg_to_task &rArr; push_queue &rArr; get_queue_data_num
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
@@ -593,183 +615,203 @@ Global Symbols
 <P><STRONG><a name="[26]"></a>TIM2_IRQHandler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, py32f403_it.o(.text.TIM2_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
+<P><STRONG><a name="[30]"></a>USART2_IRQHandler</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, drv_uart.o(.text.USART2_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = USART2_IRQHandler &rArr; HAL_UART_IRQHandler &rArr; UART_EndTransmit_IT &rArr; HAL_UART_TxCpltCallback &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
+</UL>
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, py32f403_it.o(.text.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
-<P><STRONG><a name="[77]"></a>disDebugTypedefPrintf</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, osscheduler.o(.text.disDebugTypedefPrintf))
+<P><STRONG><a name="[84]"></a>disDebugTypedefPrintf</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, osscheduler.o(.text.disDebugTypedefPrintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = disDebugTypedefPrintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_scheduler
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_msg_to_task
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_event_timer_isr
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_scheduler
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_msg_to_task
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_event_timer_isr
 </UL>
 
-<P><STRONG><a name="[7c]"></a>get_queue_data_num</STRONG> (Thumb, 12 bytes, Stack size 4 bytes, osqueue.o(.text.get_queue_data_num))
+<P><STRONG><a name="[87]"></a>event_scheduler</STRONG> (Thumb, 206 bytes, Stack size 24 bytes, osevent.o(.text.event_scheduler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = event_scheduler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_scheduler
+</UL>
+
+<P><STRONG><a name="[8d]"></a>get_queue_data_num</STRONG> (Thumb, 12 bytes, Stack size 4 bytes, osqueue.o(.text.get_queue_data_num))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = get_queue_data_num
 </UL>
-<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_msg_to_task
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_queue
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_msg_to_task
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;task_scheduler
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pull_queue
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_queue
 </UL>
 
 <P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = main &rArr; SystemClockConfig &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_it_example
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_scheduler
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[76]"></a>os_event_timer_isr</STRONG> (Thumb, 200 bytes, Stack size 16 bytes, osevent.o(.text.os_event_timer_isr))
+<P><STRONG><a name="[83]"></a>os_event_timer_isr</STRONG> (Thumb, 200 bytes, Stack size 16 bytes, osevent.o(.text.os_event_timer_isr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = os_event_timer_isr &rArr; disDebugTypedefPrintf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disDebugTypedefPrintf
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disDebugTypedefPrintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
-</UL>
-
-<P><STRONG><a name="[7a]"></a>os_scheduler_timer_isr</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, osscheduler.o(.text.os_scheduler_timer_isr))
-<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
+<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
 </UL>
 
-<P><STRONG><a name="[6f]"></a>os_systick_handler</STRONG> (Thumb, 116 bytes, Stack size 8 bytes, oshardware.o(.text.os_systick_handler))
+<P><STRONG><a name="[82]"></a>os_scheduler</STRONG> (Thumb, 128 bytes, Stack size 8 bytes, osscheduler.o(.text.os_scheduler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = os_scheduler &rArr; task_scheduler &rArr; pull_queue &rArr; get_queue_data_num
+</UL>
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;task_scheduler
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wdt_init
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_tick_init
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_scheduler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[8b]"></a>os_scheduler_timer_isr</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, osscheduler.o(.text.os_scheduler_timer_isr))
+<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
+</UL>
+
+<P><STRONG><a name="[7a]"></a>os_systick_handler</STRONG> (Thumb, 116 bytes, Stack size 8 bytes, oshardware.o(.text.os_systick_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = os_systick_handler &rArr; send_msg_to_task &rArr; push_queue &rArr; get_queue_data_num
 </UL>
-<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_scheduler
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_msg_to_task
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_scheduler_timer_isr
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_event_timer_isr
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_scheduler
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_msg_to_task
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_scheduler_timer_isr
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_event_timer_isr
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[7b]"></a>push_queue</STRONG> (Thumb, 294 bytes, Stack size 40 bytes, osqueue.o(.text.push_queue))
+<P><STRONG><a name="[8c]"></a>pull_queue</STRONG> (Thumb, 320 bytes, Stack size 48 bytes, osqueue.o(.text.pull_queue))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = pull_queue &rArr; get_queue_data_num
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_queue_data_num
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;task_scheduler
+</UL>
+
+<P><STRONG><a name="[8e]"></a>push_queue</STRONG> (Thumb, 294 bytes, Stack size 40 bytes, osqueue.o(.text.push_queue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = push_queue &rArr; get_queue_data_num
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_queue_data_num
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_queue_data_num
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_msg_to_task
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_msg_to_task
 </UL>
 
-<P><STRONG><a name="[78]"></a>send_msg_to_task</STRONG> (Thumb, 248 bytes, Stack size 40 bytes, ostask.o(.text.send_msg_to_task))
+<P><STRONG><a name="[77]"></a>ring_buffer_available</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, drv_tool.o(.text.ring_buffer_available))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ring_buffer_available
+</UL>
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_skip
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_peek_multiple
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+</UL>
+
+<P><STRONG><a name="[91]"></a>ring_buffer_free_space</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, drv_tool.o(.text.ring_buffer_free_space))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ring_buffer_free_space
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
+</UL>
+
+<P><STRONG><a name="[8f]"></a>ring_buffer_peek_multiple</STRONG> (Thumb, 228 bytes, Stack size 40 bytes, drv_tool.o(.text.ring_buffer_peek_multiple))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = ring_buffer_peek_multiple &rArr; ring_buffer_available
+</UL>
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
+</UL>
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+</UL>
+
+<P><STRONG><a name="[90]"></a>ring_buffer_put_multiple</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, drv_tool.o(.text.ring_buffer_put_multiple))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = ring_buffer_put_multiple &rArr; ring_buffer_free_space
+</UL>
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_free_space
+</UL>
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_dma_process_full_data
+</UL>
+
+<P><STRONG><a name="[76]"></a>ring_buffer_skip</STRONG> (Thumb, 114 bytes, Stack size 24 bytes, drv_tool.o(.text.ring_buffer_skip))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ring_buffer_skip &rArr; ring_buffer_available
+</UL>
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
+</UL>
+<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
+</UL>
+
+<P><STRONG><a name="[89]"></a>send_msg_to_task</STRONG> (Thumb, 248 bytes, Stack size 40 bytes, ostask.o(.text.send_msg_to_task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = send_msg_to_task &rArr; push_queue &rArr; get_queue_data_num
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_queue
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_queue_data_num
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disDebugTypedefPrintf
+<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;push_queue
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_queue_data_num
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disDebugTypedefPrintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
+<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
 </UL>
 
-<P><STRONG><a name="[79]"></a>timer_scheduler</STRONG> (Thumb, 212 bytes, Stack size 16 bytes, ostimer.o(.text.timer_scheduler))
+<P><STRONG><a name="[85]"></a>sys_tick_init</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, oshardware.o(.text.sys_tick_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = sys_tick_init &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
+</UL>
+<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_CLKSourceConfig
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_scheduler
+</UL>
+
+<P><STRONG><a name="[88]"></a>task_scheduler</STRONG> (Thumb, 164 bytes, Stack size 24 bytes, ostask.o(.text.task_scheduler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = task_scheduler &rArr; pull_queue &rArr; get_queue_data_num
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pull_queue
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_queue_data_num
+</UL>
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_scheduler
+</UL>
+
+<P><STRONG><a name="[8a]"></a>timer_scheduler</STRONG> (Thumb, 212 bytes, Stack size 16 bytes, ostimer.o(.text.timer_scheduler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = timer_scheduler &rArr; disDebugTypedefPrintf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disDebugTypedefPrintf
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disDebugTypedefPrintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
-</UL>
-
-<P><STRONG><a name="[7e]"></a>uart_echo_test</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, uart_it_example.o(.text.uart_echo_test))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = uart_echo_test &rArr; uart_receive_data &rArr; uart_receive &rArr; is_uart_initialized &rArr; get_uart_device
-</UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_receive_data
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send_string
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-</UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_it_example
+<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_systick_handler
 </UL>
 
-<P><STRONG><a name="[82]"></a>uart_init</STRONG> (Thumb, 174 bytes, Stack size 24 bytes, drv_uart.o(.text.uart_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = uart_init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_configure_irq_priority
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-</UL>
-<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_it_init
+<P><STRONG><a name="[86]"></a>wdt_init</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, oshardware.o(.text.wdt_init))
+<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_scheduler
 </UL>
 
-<P><STRONG><a name="[75]"></a>uart_it_example</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, uart_it_example.o(.text.uart_it_example))
-<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = uart_it_example &rArr; uart_it_init &rArr; uart_init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_echo_test
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send_string
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_it_init
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_ErrorHandler
-</UL>
-<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
+<P><STRONG><a name="[a0]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[83]"></a>uart_it_init</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, uart_it_example.o(.text.uart_it_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = uart_it_init &rArr; uart_init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_it_example
-</UL>
+<P><STRONG><a name="[a1]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[84]"></a>uart_receive</STRONG> (Thumb, 148 bytes, Stack size 32 bytes, drv_uart.o(.text.uart_receive))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = uart_receive &rArr; is_uart_initialized &rArr; get_uart_device
-</UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
-</UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_receive_data
-</UL>
-
-<P><STRONG><a name="[80]"></a>uart_receive_data</STRONG> (Thumb, 104 bytes, Stack size 32 bytes, uart_it_example.o(.text.uart_receive_data))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = uart_receive_data &rArr; uart_receive &rArr; is_uart_initialized &rArr; get_uart_device
-</UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_receive
-</UL>
-<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_echo_test
-</UL>
-
-<P><STRONG><a name="[81]"></a>uart_send</STRONG> (Thumb, 160 bytes, Stack size 32 bytes, drv_uart.o(.text.uart_send))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = uart_send &rArr; is_uart_initialized &rArr; get_uart_device
-</UL>
-<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_IT
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
-</UL>
-<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_echo_test
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send_string
-</UL>
-
-<P><STRONG><a name="[7f]"></a>uart_send_string</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, uart_it_example.o(.text.uart_send_string))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = uart_send_string &rArr; uart_send &rArr; is_uart_initialized &rArr; get_uart_device
-</UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-</UL>
-<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_echo_test
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_it_example
-</UL>
-
-<P><STRONG><a name="[94]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
-
-<P><STRONG><a name="[95]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
-
-<P><STRONG><a name="[96]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[a2]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[70]"></a>SystemClockConfig</STRONG> (Thumb, 124 bytes, Stack size 80 bytes, main.o(.text.SystemClockConfig))
+<P><STRONG><a name="[7b]"></a>SystemClockConfig</STRONG> (Thumb, 124 bytes, Stack size 80 bytes, main.o(.text.SystemClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = SystemClockConfig &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_ErrorHandler
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_ErrorHandler
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4f]"></a>gpio_irq_handler</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, drv_gpio.o(.text.gpio_irq_handler))
+<P><STRONG><a name="[54]"></a>gpio_irq_handler</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, drv_gpio.o(.text.gpio_irq_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = gpio_irq_handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
@@ -781,86 +823,145 @@ Local Symbols
 <LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[7d]"></a>uart_configure_irq_priority</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, drv_uart.o(.text.uart_configure_irq_priority))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = uart_configure_irq_priority &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
-</UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
-</UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
-</UL>
-
-<P><STRONG><a name="[73]"></a>is_uart_initialized</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, drv_uart.o(.text.is_uart_initialized))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = is_uart_initialized &rArr; get_uart_device
-</UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_uart_device
-</UL>
-<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_receive
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
-</UL>
-
-<P><STRONG><a name="[74]"></a>get_uart_device</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, drv_uart.o(.text.get_uart_device))
+<P><STRONG><a name="[81]"></a>get_uart_device</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, drv_uart.o(.text.get_uart_device))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = get_uart_device
 </UL>
-<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
+<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
 </UL>
 
-<P><STRONG><a name="[5d]"></a>__NVIC_SetPriorityGrouping</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, py32f403_hal_cortex.o(.text.__NVIC_SetPriorityGrouping))
+<P><STRONG><a name="[80]"></a>is_uart_initialized</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, drv_uart.o(.text.is_uart_initialized))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = is_uart_initialized &rArr; get_uart_device
+</UL>
+<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_uart_device
+</UL>
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+</UL>
+
+<P><STRONG><a name="[78]"></a>uart_start_tx_from_ring_buffer</STRONG> (Thumb, 210 bytes, Stack size 24 bytes, drv_uart.o(.text.uart_start_tx_from_ring_buffer))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_peek_multiple
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
+</UL>
+<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
+</UL>
+
+<P><STRONG><a name="[73]"></a>uart_dma_process_full_data</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, drv_uart.o(.text.uart_dma_process_full_data))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = uart_dma_process_full_data &rArr; ring_buffer_put_multiple &rArr; ring_buffer_free_space
+</UL>
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
+</UL>
+<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+</UL>
+
+<P><STRONG><a name="[60]"></a>__NVIC_SetPriorityGrouping</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, py32f403_hal_cortex.o(.text.__NVIC_SetPriorityGrouping))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __NVIC_SetPriorityGrouping
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
 </UL>
 
-<P><STRONG><a name="[5a]"></a>__NVIC_GetPriorityGrouping</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, py32f403_hal_cortex.o(.text.__NVIC_GetPriorityGrouping))
-<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<P><STRONG><a name="[5d]"></a>__NVIC_GetPriorityGrouping</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, py32f403_hal_cortex.o(.text.__NVIC_GetPriorityGrouping))
+<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 </UL>
 
-<P><STRONG><a name="[5b]"></a>NVIC_EncodePriority</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, py32f403_hal_cortex.o(.text.NVIC_EncodePriority))
+<P><STRONG><a name="[5e]"></a>NVIC_EncodePriority</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, py32f403_hal_cortex.o(.text.NVIC_EncodePriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = NVIC_EncodePriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 </UL>
 
-<P><STRONG><a name="[5c]"></a>__NVIC_SetPriority</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, py32f403_hal_cortex.o(.text.__NVIC_SetPriority))
+<P><STRONG><a name="[5f]"></a>__NVIC_SetPriority</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, py32f403_hal_cortex.o(.text.__NVIC_SetPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 </UL>
 
-<P><STRONG><a name="[59]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 48 bytes, Stack size 4 bytes, py32f403_hal_cortex.o(.text.__NVIC_EnableIRQ))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __NVIC_EnableIRQ
-</UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
-</UL>
-
-<P><STRONG><a name="[66]"></a>SysTick_Config</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, py32f403_hal_cortex.o(.text.SysTick_Config))
+<P><STRONG><a name="[67]"></a>SysTick_Config</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, py32f403_hal_cortex.o(.text.SysTick_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SysTick_Config &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
 </UL>
 
-<P><STRONG><a name="[65]"></a>RCC_Delay</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, py32f403_hal_rcc.o(.text.RCC_Delay))
+<P><STRONG><a name="[56]"></a>DMA_SetConfig</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, py32f403_hal_dma.o(.text.DMA_SetConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DMA_SetConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Start_IT
+</UL>
+
+<P><STRONG><a name="[66]"></a>RCC_Delay</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, py32f403_hal_rcc.o(.text.RCC_Delay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = RCC_Delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 </UL>
 
-<P><STRONG><a name="[6b]"></a>UART_SetConfig</STRONG> (Thumb, 462 bytes, Stack size 24 bytes, py32f403_hal_uart.o(.text.UART_SetConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = UART_SetConfig &rArr; HAL_RCC_GetPCLK1Freq
+<P><STRONG><a name="[4a]"></a>UART_DMATransmitCplt</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.UART_DMATransmitCplt))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = UART_DMATransmitCplt &rArr; HAL_UART_TxCpltCallback &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK1Freq
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK2Freq
+<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
 </UL>
-<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<BR>[Address Reference Count : 1]<UL><LI> py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
+</UL>
+<P><STRONG><a name="[4b]"></a>UART_DMATxHalfCplt</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.UART_DMATxHalfCplt))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = UART_DMATxHalfCplt &rArr; HAL_UART_TxHalfCpltCallback
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxHalfCpltCallback
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
+</UL>
+<P><STRONG><a name="[4c]"></a>UART_DMAError</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, py32f403_hal_uart.o(.text.UART_DMAError))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = UART_DMAError &rArr; HAL_UART_ErrorCallback
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTxTransfer
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
+</UL>
+<P><STRONG><a name="[7e]"></a>UART_EndTxTransfer</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, py32f403_hal_uart.o(.text.UART_EndTxTransfer))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = UART_EndTxTransfer
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMAError
 </UL>
 
-<P><STRONG><a name="[6c]"></a>UART_AdvFeatureConfig</STRONG> (Thumb, 78 bytes, Stack size 4 bytes, py32f403_hal_uart.o(.text.UART_AdvFeatureConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = UART_AdvFeatureConfig
+<P><STRONG><a name="[6c]"></a>UART_EndRxTransfer</STRONG> (Thumb, 40 bytes, Stack size 4 bytes, py32f403_hal_uart.o(.text.UART_EndRxTransfer))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = UART_EndRxTransfer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMAError
+</UL>
+
+<P><STRONG><a name="[6b]"></a>UART_Receive_IT</STRONG> (Thumb, 182 bytes, Stack size 24 bytes, py32f403_hal_uart.o(.text.UART_Receive_IT))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = UART_Receive_IT &rArr; HAL_UART_RxCpltCallback &rArr; uart_dma_process_full_data &rArr; ring_buffer_put_multiple &rArr; ring_buffer_free_space
+</UL>
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
+</UL>
+
+<P><STRONG><a name="[49]"></a>UART_DMAAbortOnError</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.UART_DMAAbortOnError))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = UART_DMAAbortOnError &rArr; HAL_UART_ErrorCallback
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> py32f403_hal_uart.o(.text.HAL_UART_IRQHandler)
+</UL>
+<P><STRONG><a name="[70]"></a>UART_Transmit_IT</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.UART_Transmit_IT))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = UART_Transmit_IT
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
+</UL>
+
+<P><STRONG><a name="[71]"></a>UART_EndTransmit_IT</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.UART_EndTransmit_IT))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = UART_EndTransmit_IT &rArr; HAL_UART_TxCpltCallback &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 </UL>
 <P>
 <H3>

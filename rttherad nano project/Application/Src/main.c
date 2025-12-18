@@ -61,13 +61,12 @@ Info------------------------------------------------
 // #include "gpio_example.h"
 
 // UART 示例
-//#include "uart_example.h"
+// #include "uart_example.h"
 
 // OSAL 示例
 // #include "osal_examplie.h"
 
 #define LED_PIN GET_PIN(B, 2)
-
 
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClockConfig(void);
@@ -79,47 +78,32 @@ static void SystemClockConfig(void);
 int main(void)
 {
   /* 外设复位，初始化SysTick */
-//  HAL_Init();
-//  /* 配置系统时钟 */
-//  SystemClockConfig();
+  //  HAL_Init();
+  //  /* 配置系统时钟 */
+  //  SystemClockConfig();
 
   /* 选择示例 */
-    gpio_init();
-    gpio_mode(LED_PIN, GPIO_MODE_OUTPUT_PP);
-    
-    while (1)
-    {
-        /* 点亮LED */
-        gpio_write(LED_PIN, GPIO_PIN_SET);
-        HAL_Delay(500);
+  gpio_init();
+  gpio_mode(LED_PIN, GPIO_MODE_OUTPUT_PP);
 
-        /* 熄灭LED */
-        gpio_write(LED_PIN, GPIO_PIN_RESET);
-        HAL_Delay(500);
+  while (1)
+  {
+    /* 点亮LED */
+    gpio_write(LED_PIN, GPIO_PIN_SET);
+    HAL_Delay(500);
 
-        /* 翻转LED */
-        gpio_toggle(LED_PIN);
-        HAL_Delay(500);
-    }
+    /* 熄灭LED */
+    gpio_write(LED_PIN, GPIO_PIN_RESET);
+    HAL_Delay(500);
+
+    /* 翻转LED */
+    gpio_toggle(LED_PIN);
+    HAL_Delay(500);
+  }
 }
 
 
-/***********************************Printf重定向********************************************************/
-// int fputc(int ch, FILE* f)
-//{
-//	HAL_UART_Transmit_DMA(&huart2,(uint8_t *)&ch,1);//,1000
-//
-//     return (ch);
-// }
-// int fgetc(FILE *f)
-//{
-
-//  uint8_t ch = 0;
-//	HAL_UART_Receive(&huart2,&ch,1,0xffff);
-//	return ch;
-//}
 /*******************************************************************************************/
-
 
 #ifdef USE_FULL_ASSERT
 /**

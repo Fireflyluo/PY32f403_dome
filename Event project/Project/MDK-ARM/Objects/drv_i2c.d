@@ -1,6 +1,5 @@
 ./objects/drv_i2c.o: ..\..\..\BSP\py32_drivers\Src\drv_i2c.c \
-  ..\..\..\BSP\py32_drivers\Inc\drv_i2c.h \
-  ..\..\..\BSP\py32_drivers\Inc\drv_gpio.h \
+  ..\..\..\BSP\py32_drivers\Inc\drv_i2c.h ..\..\Application\Inc\main.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h \
   ..\..\Application\Inc\py32f403_hal_conf.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h \
@@ -23,4 +22,5 @@
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
-  ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h
+  ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h \
+  ..\..\..\BSP\board.h ..\..\..\BSP\py32_drivers\Inc\drv_gpio.h

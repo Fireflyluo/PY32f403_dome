@@ -490,6 +490,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\BSP\py32_drivers\Src\drv_iwdg.c</FilePath>
             </File>
+            <File>
+              <FileName>drv_include.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\BSP\py32_drivers\Inc\drv_include.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

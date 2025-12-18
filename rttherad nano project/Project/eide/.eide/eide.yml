@@ -17,11 +17,6 @@ virtualFolder:
         - path: ../../Application/Inc/py32f403_hal_conf.h
         - path: ../../Application/Inc/py32f403_it.h
       folders: []
-    - name: example
-      files:
-        - path: ../../../BSP/example/uart/uart_polling_example.c
-        - path: ../../../BSP/example/gpio/gpio_example.c
-      folders: []
     - name: py32_drivers
       files:
         - path: ../../../BSP/py32_drivers/Src/drv_gpio.c
@@ -37,6 +32,31 @@ virtualFolder:
         - path: ../../../BSP/py32_drivers/Inc/drv_uart_config.h
         - path: ../../../BSP/py32_drivers/Src/drv_tool.c
         - path: ../../../BSP/py32_drivers/Inc/drv_tool.h
+        - path: ../../../BSP/py32_drivers/Src/drv_iwdg.c
+      folders: []
+    - name: rtthread
+      files:
+        - path: ../../../rtthread-nano/rtconfig.h
+        - path: ../../../rtthread-nano/board.c
+        - path: ../../../rtthread-nano/src/clock.c
+        - path: ../../../rtthread-nano/src/components.c
+        - path: ../../../rtthread-nano/src/cpu.c
+        - path: ../../../rtthread-nano/src/device.c
+        - path: ../../../rtthread-nano/src/idle.c
+        - path: ../../../rtthread-nano/src/ipc.c
+        - path: ../../../rtthread-nano/src/irq.c
+        - path: ../../../rtthread-nano/src/kservice.c
+        - path: ../../../rtthread-nano/src/mem.c
+        - path: ../../../rtthread-nano/src/memheap.c
+        - path: ../../../rtthread-nano/src/mempool.c
+        - path: ../../../rtthread-nano/src/object.c
+        - path: ../../../rtthread-nano/src/scheduler.c
+        - path: ../../../rtthread-nano/src/signal.c
+        - path: ../../../rtthread-nano/src/slab.c
+        - path: ../../../rtthread-nano/src/thread.c
+        - path: ../../../rtthread-nano/src/timer.c
+        - path: ../../../rtthread-nano/libcpu/arm/cortex-m4/cpuport.c
+        - path: ../../../rtthread-nano/libcpu/arm/cortex-m4/context_rvds.S
       folders: []
     - name: Library
       files:
@@ -113,6 +133,11 @@ targets:
         - ../../../BSP
         - ../../../BSP/example/uart
         - ../../../BSP/example/gpio
+        - ../../../BSP/example/osal
+        - ../../../rtthread-nano/src
+        - ../../../rtthread-nano/include
+        - ../../../rtthread-nano/libcpu/arm/cortex-m4
+        - ../../../rtthread-nano
         - .cmsis/include
         - ../MDK-ARM/RTE/_Target 1
       libList: []

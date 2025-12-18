@@ -77,10 +77,10 @@ int main(void)
   /* 选择示例 */
   // gpio_example();
   // uart_polling_example();
-   uart_it_example();
+//   uart_it_example();
   
  // 启动操作系统调度器
- //    os_scheduler();
+     os_scheduler();
 }
 
 /**
