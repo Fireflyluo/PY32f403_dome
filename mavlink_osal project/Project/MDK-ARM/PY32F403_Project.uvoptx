@@ -152,22 +152,6 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>85</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>..\..\Middleware\mavlink\mavlink_hal.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
           <LineNumber>608</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>52</Address>
@@ -182,7 +166,7 @@
           <Expression>\\PY32F403_Project\../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_uart.c\608</Expression>
         </Bp>
         <Bp>
-          <Number>2</Number>
+          <Number>1</Number>
           <Type>0</Type>
           <LineNumber>623</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -198,7 +182,7 @@
           <Expression>\\PY32F403_Project\../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_uart.c\623</Expression>
         </Bp>
         <Bp>
-          <Number>3</Number>
+          <Number>2</Number>
           <Type>0</Type>
           <LineNumber>1253</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -214,39 +198,39 @@
           <Expression>\\PY32F403_Project\../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_uart.c\1253</Expression>
         </Bp>
         <Bp>
-          <Number>4</Number>
+          <Number>3</Number>
           <Type>0</Type>
-          <LineNumber>868</LineNumber>
+          <LineNumber>49</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134239780</Address>
+          <Address>134232230</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\..\BSP\py32_drivers\Src\drv_uart.c</Filename>
+          <Filename>..\..\Application\Src\mav_task.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\PY32F403_Project\../../../BSP/py32_drivers/Src/drv_uart.c\868</Expression>
+          <Expression>\\PY32F403_Project\../../Application/Src/mav_task.c\49</Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>44</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134234262</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\Middleware\mavlink\mavlink_hal.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\PY32F403_Project\../../Middleware/mavlink/mavlink_hal.c\44</Expression>
         </Bp>
         <Bp>
           <Number>5</Number>
-          <Type>0</Type>
-          <LineNumber>126</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134231312</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\..\BSP\py32_drivers\Src\drv_uart.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\PY32F403_Project\../../../BSP/py32_drivers/Src/drv_uart.c\126</Expression>
-        </Bp>
-        <Bp>
-          <Number>6</Number>
           <Type>0</Type>
           <LineNumber>149</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -262,7 +246,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>7</Number>
+          <Number>6</Number>
           <Type>0</Type>
           <LineNumber>777</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -274,38 +258,6 @@
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>0</BreakIfRCount>
           <Filename>..\..\..\BSP\py32_drivers\Src\drv_uart.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>8</Number>
-          <Type>0</Type>
-          <LineNumber>47</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>..\..\Application\Src\mav_task.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>9</Number>
-          <Type>0</Type>
-          <LineNumber>41</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>..\..\Middleware\mavlink\mavlink_hal.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression></Expression>
         </Bp>
@@ -625,7 +577,7 @@
 
   <Group>
     <GroupName>osal</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -749,7 +701,7 @@
 
   <Group>
     <GroupName>py32_drivers</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1509,7 +1461,7 @@
 
   <Group>
     <GroupName>star</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

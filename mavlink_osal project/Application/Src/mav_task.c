@@ -19,6 +19,8 @@ void mav_task_init(uint8 task_id)
    mavlink_init();
     // 启动定时器，每1000ms触发一次心跳包
     osal_start_reload_timer(mav_task_id, MAV_HEAR_EVENT, 1000);
+    //position_target
+     osal_start_reload_timer(mav_task_id, MAV_TARGET_EVENT, 500);
 }
 uint16 mav_task_event_process(uint8 task_id, uint16 task_event)
 {
@@ -47,6 +49,12 @@ uint16 mav_task_event_process(uint8 task_id, uint16 task_event)
         mavlink_send_heartbeat();
         return task_event ^ MAV_HEAR_EVENT;
     }
-
+if (task_event & MAV_TARGET_EVENT)
+    {
+        // 发送mavlink 目标位置
+       
+        send_position_target(0.0f, 0.0f, -3.0f, 0.0f);
+        return task_event ^ MAV_TARGET_EVENT;
+    }
   return 0;
 }

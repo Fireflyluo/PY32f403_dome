@@ -1,18 +1,12 @@
 #ifndef __DRV_UART_CONFIG_H__
 #define __DRV_UART_CONFIG_H__
 #include "main.h"
+/* ========== DMA模式配置 ========== */
+/* 注释或设置为0禁用DMA模式，设置为1启用DMA模式 */
+#define UART_USE_DMA 1
 
-/* ========== 模式选择宏定义 ========== */
-
-/* 工作模式选择 (必须三选一) */
-#define UART_MODE_INTERRUPT 1 /* 中断模式 */
-#define UART_MODE_DMA 2       /* DMA模式 */
-#define UART_MODE_POLLING 3   /* 轮询模式 */
-
-/* 选择工作模式 */
-#ifndef UART_WORK_MODE
-#define UART_WORK_MODE UART_MODE_DMA /* 默认模式 */
-#endif
+/* DMA空闲检测配置（仅在DMA模式下有效） */
+#define UART_USE_DMA_IDLE_DETECTION 1
 
 /* 缓冲区配置 */
 #define RING_BUFFER_ENABLED
@@ -37,26 +31,6 @@
 /* 超时配置 */
 #define UART_DEFAULT_TIMEOUT_MS 1000 /* 默认超时时间 */
 
-/* ========== 根据模式选择自动配置 ========== */
-
-#if (UART_WORK_MODE == UART_MODE_INTERRUPT)
-#define UART_USE_INTERRUPT 1
-#define UART_USE_DMA 0
-#define UART_USE_POLLING 0
-
-#elif (UART_WORK_MODE == UART_MODE_DMA)
-#define UART_USE_INTERRUPT 0
-#define UART_USE_DMA 1
-#define UART_USE_POLLING 0
-
-#elif (UART_WORK_MODE == UART_MODE_POLLING)
-#define UART_USE_INTERRUPT 0
-#define UART_USE_DMA 0
-#define UART_USE_POLLING 1
-
-#else
-#error "Invalid UART_WORK_MODE! Please choose UART_MODE_INTERRUPT, UART_MODE_DMA or UART_MODE_POLLING"
-#endif
 
 /* ========== 硬件相关配置 ========== */
 
@@ -68,24 +42,22 @@
 #define UART2_RX_DMA_STREAM DMA1_Stream5
 // 其他UART实例的DMA映射...
 #elif defined(PY32F403xD)
-#define UART1_TX_DMA_CHANNEL        NULL
-#define UART1_RX_DMA_CHANNEL        NULL
+#define UART1_TX_DMA_CHANNEL NULL
+#define UART1_RX_DMA_CHANNEL NULL
 
-#define UART2_TX_DMA_CHANNEL        DMA1_Channel1
-#define UART2_RX_DMA_CHANNEL        DMA1_Channel2
+#define UART2_TX_DMA_CHANNEL DMA1_Channel1
+#define UART2_RX_DMA_CHANNEL DMA1_Channel2
 
-#define UART3_TX_DMA_CHANNEL        NULL
-#define UART3_RX_DMA_CHANNEL        NULL
+#define UART3_TX_DMA_CHANNEL NULL
+#define UART3_RX_DMA_CHANNEL NULL
 
-#define UART4_TX_DMA_CHANNEL        NULL
-#define UART4_RX_DMA_CHANNEL        NULL
+#define UART4_TX_DMA_CHANNEL NULL
+#define UART4_RX_DMA_CHANNEL NULL
 
-#define UART5_TX_DMA_CHANNEL        NULL
-#define UART5_RX_DMA_CHANNEL        NULL
+#define UART5_TX_DMA_CHANNEL NULL
+#define UART5_RX_DMA_CHANNEL NULL
 // 其他UART实例的DMA映射...
 #endif
-
-
 
 /* ========== 编译时检查 ========== */
 

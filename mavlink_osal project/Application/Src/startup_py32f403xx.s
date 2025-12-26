@@ -48,7 +48,7 @@
 ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-Stack_Size      EQU     0x00000400
+Stack_Size      EQU     0x00000800
 
                 AREA    STACK, NOINIT, READWRITE, ALIGN=3
 Stack_Mem       SPACE   Stack_Size
@@ -58,7 +58,7 @@ __initial_sp
 ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-Heap_Size       EQU     0x00000400
+Heap_Size       EQU     0x00000800
 
                 AREA    HEAP, NOINIT, READWRITE, ALIGN=3
 __heap_base
@@ -164,6 +164,18 @@ Reset_Handler   PROC
                 EXPORT  Reset_Handler             [WEAK]
                 IMPORT  __main
                 IMPORT  SystemInit
+				
+				; === 启用FPU ===
+                LDR     R0, =0xE000ED88      ; CPACR寄存器地址
+                LDR     R1, [R0]             ; 读取当前值
+                ORR     R1, R1, #(0xF << 20) ; 设置CP10和CP11为全访问(启用FPU)
+                STR     R1, [R0]             ; 写回CPACR
+                
+                ; 数据同步屏障和指令同步屏障
+                DSB
+                ISB
+                ; === FPU启用完成 ===
+				
                 LDR     R0, =SystemInit
                 BLX     R0               
                 LDR     R0, =__main

@@ -1,13 +1,13 @@
-
 #include "main.h"
 #include "board.h"
+#include "drv_gpio.h"
 #include "task_event.h"
 void osal_main(void)
 {
 
     // 系统硬件、外设等初始化
     gpio_init();
-    bsp_uart_init();
+//    bsp_uart_init();
     // ....
 
     // 禁止中断
@@ -18,7 +18,7 @@ void osal_main(void)
 
     // 添加任务
     osal_add_Task(led_task_init, led_task_event_process, 1);
-    osal_add_Task(mav_task_init, mav_task_event_process, 1);
+//    osal_add_Task(mav_task_init, mav_task_event_process, 1);
     // osal_add_Task(statistics_task_init, statistics_task_event_process, 2);
 
     // 添加的任务统一进行初始化

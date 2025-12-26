@@ -38,6 +38,14 @@ extern "C"
         UART_INSTANCE_MAX
     } uart_instance_t;
 
+    /* 工作模式枚举 */
+    typedef enum
+    {
+        UART_MODE_POLLING = 0, /* 轮询模式 */
+        UART_MODE_INTERRUPT,   /* 中断模式 */
+        UART_MODE_DMA          /* DMA模式 */
+    } uart_mode_t;
+
     /* DMA模式配置 */
     typedef enum
     {
@@ -50,12 +58,17 @@ extern "C"
     typedef void (*uart_rx_complete_callback_t)(uart_instance_t instance, void *arg);
     typedef void (*uart_rx_half_complete_callback_t)(uart_instance_t instance, void *arg);
     typedef void (*uart_error_callback_t)(uart_instance_t instance, void *arg);
-    typedef void (*uart_dma_idle_callback_t)(uart_instance_t instance, uint16_t data_size, void *arg);
 
+#if (UART_USE_DMA == 1)
+    typedef void (*uart_dma_idle_callback_t)(uart_instance_t instance, uint16_t data_size, void *arg);
+#endif
     /* API函数声明 */
     /* 基础功能 */
-    uart_err_t uart_init(uart_instance_t instance, uint32_t baudrate);
+    uart_err_t uart_init(uart_instance_t instance, uint32_t baudrate, uart_mode_t mode);
     uart_err_t uart_deinit(uart_instance_t instance);
+
+    uart_err_t uart_set_mode(uart_instance_t instance, uart_mode_t mode);
+    uart_mode_t uart_get_mode(uart_instance_t instance);
 
     /* 数据传输 */
     uart_err_t uart_send(uart_instance_t instance, const uint8_t *data, uint16_t size, uint32_t timeout);
@@ -71,9 +84,6 @@ extern "C"
     uart_err_t uart_dma_stop_tx(uart_instance_t instance);
     bool uart_dma_is_rx_busy(uart_instance_t instance);
     bool uart_dma_is_tx_busy(uart_instance_t instance);
- 
-
-
 
     /* 新增DMA环形缓冲区操作 */
     uint16_t uart_read_from_ring_buffer(uart_instance_t instance, uint8_t *buffer, uint16_t size);
@@ -96,8 +106,9 @@ extern "C"
 
     /* 中断优先级配置 */
     uart_err_t uart_set_irq_priority(uart_instance_t instance, uint8_t preempt_priority, uint8_t sub_priority);
+#if (UART_USE_DMA == 1)
     uart_err_t uart_set_dma_irq_priority(uart_instance_t instance, uint8_t preempt_priority, uint8_t sub_priority);
-
+#endif
 #ifdef __cplusplus
 }
 #endif

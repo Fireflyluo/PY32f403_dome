@@ -8,6 +8,9 @@ typedef struct
 {
     UART_HandleTypeDef huart;
 
+    /* 工作模式 */
+    uart_mode_t mode;
+
     /* 回调函数 */
     uart_tx_complete_callback_t tx_complete_callback;
     void *tx_complete_callback_arg;
@@ -90,23 +93,21 @@ static const uint32_t uart_dma_rx_channel_map[UART_INSTANCE_MAX] = {
     DMA_CHANNEL_MAP_USART3_RD,
     DMA_CHANNEL_MAP_USART4_RD,
     DMA_CHANNEL_MAP_USART5_RD};
-    
+
 /* DMA通道映射数组定义 */
-static const DMA_Channel_TypeDef* const uart_dma_tx_channels[UART_INSTANCE_MAX] = {
+static const DMA_Channel_TypeDef *const uart_dma_tx_channels[UART_INSTANCE_MAX] = {
     UART1_TX_DMA_CHANNEL,
-    UART2_TX_DMA_CHANNEL, 
+    UART2_TX_DMA_CHANNEL,
     UART3_TX_DMA_CHANNEL,
     UART4_TX_DMA_CHANNEL,
-    UART5_TX_DMA_CHANNEL
-};
+    UART5_TX_DMA_CHANNEL};
 
-static const DMA_Channel_TypeDef* const uart_dma_rx_channels[UART_INSTANCE_MAX] = {
+static const DMA_Channel_TypeDef *const uart_dma_rx_channels[UART_INSTANCE_MAX] = {
     UART1_RX_DMA_CHANNEL,
     UART2_RX_DMA_CHANNEL,
-    UART3_RX_DMA_CHANNEL, 
+    UART3_RX_DMA_CHANNEL,
     UART4_RX_DMA_CHANNEL,
-    UART5_RX_DMA_CHANNEL
-};
+    UART5_RX_DMA_CHANNEL};
 /* ==================== 静态函数前向声明 ==================== */
 static uart_err_t uart_configure_irq_priority(uart_instance_t instance);
 
@@ -143,11 +144,18 @@ static bool is_uart_initialized(uart_instance_t instance)
 /**
  * @brief 初始化UART实例
  */
-uart_err_t uart_init(uart_instance_t instance, uint32_t baudrate)
+uart_err_t uart_init(uart_instance_t instance, uint32_t baudrate, uart_mode_t mode)
 {
     if (instance >= UART_INSTANCE_MAX)
     {
         return UART_ERROR_PARAM;
+    }
+    /* 检查模式有效性 */
+    if (mode == UART_MODE_DMA)
+    {
+#if (UART_USE_DMA != 1)
+        return UART_ERROR_MODE; /* DMA模式未启用 */
+#endif
     }
 
     uart_device_t *dev = &uart_devices[instance];
@@ -180,19 +188,22 @@ uart_err_t uart_init(uart_instance_t instance, uint32_t baudrate)
 
 #if (UART_USE_DMA == 1)
     /* 初始化DMA */
-    uart_err_t dma_result = uart_dma_init(instance);
-    if (dma_result != UART_OK)
+    if (mode == UART_MODE_DMA)
     {
-        HAL_UART_DeInit(&dev->huart);
-        return dma_result;
+        uart_err_t dma_result = uart_dma_init(instance);
+        if (dma_result != UART_OK)
+        {
+            HAL_UART_DeInit(&dev->huart);
+            return dma_result;
+        }
     }
 #endif
 
-#if (UART_USE_DMA == 1 || UART_USE_INTERRUPT == 1)
-    /* 配置中断优先级 */
-    uart_configure_irq_priority(instance);
-#endif
-
+    if (mode != UART_MODE_POLLING)
+    {
+        /* 配置中断优先级 */
+        uart_configure_irq_priority(instance);
+    }
     return UART_OK;
 }
 
@@ -209,8 +220,11 @@ uart_err_t uart_deinit(uart_instance_t instance)
     uart_device_t *dev = &uart_devices[instance];
 
 #if (UART_USE_DMA == 1)
-    /* 反初始化DMA */
-    uart_dma_deinit(instance);
+    if (dev->mode == UART_MODE_DMA)
+    {
+        /* 反初始化DMA */
+        uart_dma_deinit(instance);
+    }
 #endif
 
     /* 停止UART */
@@ -236,7 +250,7 @@ static uart_err_t uart_dma_init(uart_instance_t instance)
 
     /* 初始化TX DMA */
     memset(&dev->hdma_tx, 0, sizeof(DMA_HandleTypeDef));
-    dev->hdma_tx.Instance = (DMA_Channel_TypeDef*)uart_dma_tx_channels[instance]; // 根据实例动态设置
+    dev->hdma_tx.Instance = (DMA_Channel_TypeDef *)uart_dma_tx_channels[instance]; // 根据实例动态设置
     dev->hdma_tx.Init.Direction = DMA_MEMORY_TO_PERIPH;
     dev->hdma_tx.Init.PeriphInc = DMA_PINC_DISABLE;
     dev->hdma_tx.Init.MemInc = DMA_MINC_ENABLE;
@@ -255,7 +269,7 @@ static uart_err_t uart_dma_init(uart_instance_t instance)
 
     /* 初始化RX DMA - 配置为循环模式并开启中断 */
     memset(&dev->hdma_rx, 0, sizeof(DMA_HandleTypeDef));
-    dev->hdma_rx.Instance = (DMA_Channel_TypeDef*)uart_dma_rx_channels[instance]; // 根据实例动态设置
+    dev->hdma_rx.Instance = (DMA_Channel_TypeDef *)uart_dma_rx_channels[instance]; // 根据实例动态设置
     dev->hdma_rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
     dev->hdma_rx.Init.PeriphInc = DMA_PINC_DISABLE;
     dev->hdma_rx.Init.MemInc = DMA_MINC_ENABLE;
@@ -329,7 +343,11 @@ uart_err_t uart_dma_start_rx(uart_instance_t instance, uart_dma_mode_t mode)
     }
 
     uart_device_t *dev = &uart_devices[instance];
-
+    /* 检查是否为DMA模式 */
+    if (dev->mode != UART_MODE_DMA)
+    {
+        return UART_ERROR_MODE;
+    }
     /* 停止之前的DMA接收 */
     HAL_UART_DMAStop(&dev->huart);
 
@@ -377,7 +395,11 @@ uart_err_t uart_dma_stop_rx(uart_instance_t instance)
     }
 
     uart_device_t *dev = &uart_devices[instance];
-
+    /* 检查是否为DMA模式 */
+    if (dev->mode != UART_MODE_DMA)
+    {
+        return UART_ERROR_MODE;
+    }
     /* 关闭串口空闲中断 */
     __HAL_UART_DISABLE_IT(&dev->huart, UART_IT_IDLE);
 
@@ -549,6 +571,11 @@ uint16_t uart_read_from_ring_buffer(uart_instance_t instance, uint8_t *buffer, u
     }
 
     uart_device_t *dev = &uart_devices[instance];
+    /* 检查是否为DMA模式 */
+    if (dev->mode != UART_MODE_DMA)
+    {
+        return UART_ERROR_MODE;
+    }
     return ring_buffer_get_multiple(&dev->rx_ring_buffer, buffer, size);
 }
 
@@ -563,6 +590,11 @@ uint16_t uart_write_to_ring_buffer(uart_instance_t instance, const uint8_t *data
     }
 
     uart_device_t *dev = &uart_devices[instance];
+    /* 检查是否为DMA模式 */
+    if (dev->mode != UART_MODE_DMA)
+    {
+        return UART_ERROR_MODE;
+    }
     uint16_t written = ring_buffer_put_multiple(&dev->tx_ring_buffer, data, size);
 
     /* 如果DMA发送空闲，自动启动发送 */
@@ -585,7 +617,12 @@ static uart_err_t uart_start_tx_from_ring_buffer(uart_instance_t instance)
     }
 
     uart_device_t *dev = &uart_devices[instance];
-
+    /* 检查是否为DMA模式 */
+    if (dev->mode != UART_MODE_DMA)
+    {
+        return UART_ERROR_MODE;
+    }
+    /* 检查环形缓冲区是否为空 */
     if (dev->dma_tx_busy)
     {
         return UART_ERROR_BUSY;
@@ -626,7 +663,11 @@ uart_err_t uart_dma_start_tx(uart_instance_t instance, const uint8_t *data, uint
     }
 
     uart_device_t *dev = &uart_devices[instance];
-
+    /* 检查是否为DMA模式 */
+    if (dev->mode != UART_MODE_DMA)
+    {
+        return UART_ERROR_MODE;
+    }
     if (dev->dma_tx_busy)
     {
         return UART_ERROR_BUSY;
@@ -730,8 +771,6 @@ bool uart_dma_is_tx_busy(uart_instance_t instance)
     return uart_devices[instance].dma_tx_busy;
 }
 
-
-
 #endif /* UART_USE_DMA */
 
 /* ==================================== 中断相关函数 ==================================================== */
@@ -752,10 +791,13 @@ static uart_err_t uart_configure_irq_priority(uart_instance_t instance)
 #if (UART_USE_DMA == 1)
     /* 设置DMA中断优先级 */
     uart_device_t *dev = &uart_devices[instance];
-    HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, UART_DMA_IRQ_PRIORITY, UART_DMA_IRQ_SUB_PRIORITY);
-    HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, UART_DMA_IRQ_PRIORITY, UART_DMA_IRQ_SUB_PRIORITY);
-    HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
-    HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
+    if (dev->mode == UART_MODE_DMA)
+    {
+        HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, UART_DMA_IRQ_PRIORITY, UART_DMA_IRQ_SUB_PRIORITY);
+        HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, UART_DMA_IRQ_PRIORITY, UART_DMA_IRQ_SUB_PRIORITY);
+        HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+        HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
+    }
 #endif
 
     return UART_OK;
@@ -811,6 +853,81 @@ uart_err_t uart_set_dma_irq_priority(uart_instance_t instance, uint8_t preempt_p
     return UART_ERROR_MODE;
 #endif
 }
+/* ==================== 模式配置函数 ==================== */
+/**
+ * @brief 设置UART工作模式
+ */
+uart_err_t uart_set_mode(uart_instance_t instance, uart_mode_t mode)
+{
+    if (!is_uart_initialized(instance) || mode >= 3)
+    {
+        return UART_ERROR_PARAM;
+    }
+
+    /* 检查模式有效性 */
+    if (mode == UART_MODE_DMA)
+    {
+#if (UART_USE_DMA != 1)
+        return UART_ERROR_MODE; /* DMA模式未启用 */
+#endif
+    }
+
+    uart_device_t *dev = &uart_devices[instance];
+
+    /* 如果模式相同，直接返回 */
+    if (dev->mode == mode)
+    {
+        return UART_OK;
+    }
+
+    /* 停止当前传输 */
+    if (dev->tx_busy || dev->rx_busy)
+    {
+        return UART_ERROR_BUSY;
+    }
+
+#if (UART_USE_DMA == 1)
+    /* 如果当前是DMA模式，反初始化DMA */
+    if (dev->mode == UART_MODE_DMA)
+    {
+        uart_dma_deinit(instance);
+    }
+
+    /* 如果切换到DMA模式，初始化DMA */
+    if (mode == UART_MODE_DMA)
+    {
+        uart_err_t result = uart_dma_init(instance);
+        if (result != UART_OK)
+        {
+            return result;
+        }
+    }
+#endif
+
+    /* 更新模式 */
+    dev->mode = mode;
+
+    /* 重新配置中断优先级 */
+    if (mode != UART_MODE_POLLING)
+    {
+        uart_configure_irq_priority(instance);
+    }
+
+    return UART_OK;
+}
+/**
+ * @brief 获取UART工作模式
+ */
+uart_mode_t uart_get_mode(uart_instance_t instance)
+{
+    if (!is_uart_initialized(instance))
+    {
+        return UART_MODE_POLLING; /* 返回默认值 */
+    }
+
+    return uart_devices[instance].mode;
+}
+
 /* ==================================== 数据传输 ==================================================== */
 /** 发送数据
  * @brief  通过指定UART实例发送数据
@@ -841,61 +958,78 @@ uart_err_t uart_send(uart_instance_t instance, const uint8_t *data, uint16_t siz
     uart_device_t *dev = &uart_devices[instance];
 
     /* 根据模式选择发送方式 */
-#if (UART_USE_POLLING == 1)
-    /* 轮询模式 */
-
-    HAL_StatusTypeDef status = HAL_UART_Transmit(&dev->huart, (uint8_t *)data, size, timeout);
-    if (status == HAL_OK)
+    switch (dev->mode)
     {
-        dev->tx_total += size;
-        return UART_OK;
-    }
-#elif (UART_USE_INTERRUPT == 1)
-    /* 中断模式 */
-    if (dev->tx_busy)
-    {
-        return UART_ERROR_BUSY;
-    }
-    HAL_StatusTypeDef status = HAL_UART_Transmit_IT(&dev->huart, (uint8_t *)data, size);
-    if (status == HAL_OK)
-    {
-        dev->tx_busy = true;
-        dev->tx_total += size;
-        return UART_OK;
-    }
-#elif (UART_USE_DMA == 1)
-    /* DMA模式 */
-    if (dev->dma_tx_busy)
-    {
-        /* 如果DMA忙，将数据写入环形缓冲区 */
-        uint16_t written = uart_write_to_ring_buffer(instance, data, size);
-        return (written == size) ? UART_OK : UART_ERROR_BUFFER;
-    }
-    else
-    {
-        /* DMA空闲，直接发送 */
-        uint16_t send_size = (size > UART_DMA_BUFFER_SIZE) ? UART_DMA_BUFFER_SIZE : size;
-
-        /* 复制数据到DMA发送缓冲区 */
-        memcpy(dev->dma_tx_buffer, data, send_size);
-
-        HAL_StatusTypeDef status = HAL_UART_Transmit_DMA(&dev->huart, dev->dma_tx_buffer, send_size);
-        if (status == HAL_OK)
+    case UART_MODE_POLLING:
+        /* 轮询模式 */
         {
-            dev->tx_busy = true;
-            dev->dma_tx_busy = true;
-            dev->tx_total += send_size;
-
-            /* 如果还有剩余数据，放入环形缓冲区 */
-            if (size > send_size)
+            HAL_StatusTypeDef status = HAL_UART_Transmit(&dev->huart, (uint8_t *)data, size, timeout);
+            if (status == HAL_OK)
             {
-                ring_buffer_put_multiple(&dev->tx_ring_buffer, data + send_size, size - send_size);
+                dev->tx_total += size;
+                return UART_OK;
             }
-            return UART_OK;
+            else if (status == HAL_TIMEOUT)
+            {
+                return UART_ERROR_TIMEOUT;
+            }
         }
-    }
-#endif
+        break;
 
+    case UART_MODE_INTERRUPT:
+        /* 中断模式 */
+        if (dev->tx_busy)
+        {
+            return UART_ERROR_BUSY;
+        }
+        {
+            HAL_StatusTypeDef status = HAL_UART_Transmit_IT(&dev->huart, (uint8_t *)data, size);
+            if (status == HAL_OK)
+            {
+                dev->tx_busy = true;
+                dev->tx_total += size;
+                return UART_OK;
+            }
+        }
+        break;
+    case UART_MODE_DMA:
+
+#if (UART_USE_DMA == 1)
+        /* DMA模式 */
+        if (dev->dma_tx_busy)
+        {
+            /* 如果DMA忙，将数据写入环形缓冲区 */
+            uint16_t written = uart_write_to_ring_buffer(instance, data, size);
+            return (written == size) ? UART_OK : UART_ERROR_BUFFER;
+        }
+        else
+        {
+            /* DMA空闲，直接发送 */
+            uint16_t send_size = (size > UART_DMA_BUFFER_SIZE) ? UART_DMA_BUFFER_SIZE : size;
+
+            /* 复制数据到DMA发送缓冲区 */
+            memcpy(dev->dma_tx_buffer, data, send_size);
+
+            HAL_StatusTypeDef status = HAL_UART_Transmit_DMA(&dev->huart, dev->dma_tx_buffer, send_size);
+            if (status == HAL_OK)
+            {
+                dev->tx_busy = true;
+                dev->dma_tx_busy = true;
+                dev->tx_total += send_size;
+
+                /* 如果还有剩余数据，放入环形缓冲区 */
+                if (size > send_size)
+                {
+                    ring_buffer_put_multiple(&dev->tx_ring_buffer, data + send_size, size - send_size);
+                }
+                return UART_OK;
+            }
+        }
+#else
+        return UART_ERROR_MODE; /* DMA模式未启用 */
+#endif
+        break;
+    }
     return UART_ERROR;
 }
 
@@ -928,68 +1062,90 @@ uart_err_t uart_receive(uart_instance_t instance, uint8_t *buffer, uint16_t size
     uart_device_t *dev = &uart_devices[instance];
 
     /* 根据模式选择接收方式 */
-#if (UART_USE_POLLING == 1)
-    /* 轮询模式 */
-    HAL_StatusTypeDef status = HAL_UART_Receive(&dev->huart, buffer, size, timeout);
-    if (status == HAL_OK)
+    switch (dev->mode)
     {
-        dev->tx_total += size;
-        return UART_OK;
-    }
-    else if (status == HAL_TIMEOUT)
-    {
-        return UART_ERROR_TIMEOUT;
-    }
+    case UART_MODE_POLLING:
+        /* 轮询模式 */
+        {
+            HAL_StatusTypeDef status = HAL_UART_Receive(&dev->huart, buffer, size, timeout);
+            if (status == HAL_OK)
+            {
+                dev->rx_total += size;
+                return UART_OK;
+            }
+            else if (status == HAL_TIMEOUT)
+            {
+                return UART_ERROR_TIMEOUT;
+            }
+        }
+        break;
 
-#elif (UART_USE_INTERRUPT == 1)
-    /* 中断模式 */
-    if (dev->rx_busy)
+    case UART_MODE_INTERRUPT:
+        /* 中断模式 */
+        if (dev->rx_busy)
+        {
+            return UART_ERROR_BUSY;
+        }
+        {
+            HAL_StatusTypeDef status = HAL_UART_Receive_IT(&dev->huart, buffer, size);
+            if (status == HAL_OK)
+            {
+                dev->rx_busy = true;
+                return UART_OK;
+            }
+        }
+        break;
+
+    case UART_MODE_DMA:
+#if (UART_USE_DMA == 1)
     {
-        return UART_ERROR_BUSY;
+        /* DMA模式：从环形缓冲区读取数据 */
+        uint16_t read_size = uart_read_from_ring_buffer(instance, buffer, size);
+        if (read_size == size)
+        {
+            dev->rx_total += size;
+            return UART_OK;
+        }
+        else
+        {
+            return UART_ERROR_BUFFER;
+        }
     }
-    HAL_StatusTypeDef status = HAL_UART_Receive_IT(&dev->huart, buffer, size);
-    if (status == HAL_OK)
-    {
-        dev->rx_busy = true;
-        return UART_OK;
-    }
-#elif (UART_USE_DMA == 1)
-    /* DMA模式：从环形缓冲区读取数据 */
-    uint16_t read_size = uart_read_from_ring_buffer(instance, buffer, size);
-    if (read_size == size)
-    {
-        dev->rx_total += size;
-        return UART_OK;
-    }
-    else
-    {
-        return UART_ERROR_BUFFER;
-    }
+#else
+        return UART_ERROR_MODE; /* DMA模式未启用 */
 #endif
-
+    break;
+    }
     return UART_ERROR;
 }
 
 /* 异步发送 */
 uart_err_t uart_send_async(uart_instance_t instance, const uint8_t *data, uint16_t size)
 {
-#if (UART_USE_POLLING == 1)
-    /* 轮询模式不支持异步发送 */
-    return UART_ERROR_MODE;
-#else
+    uart_device_t *dev = &uart_devices[instance];
+
+    if (dev->mode == UART_MODE_POLLING)
+    {
+        /* 轮询模式不支持异步发送 */
+        return UART_ERROR_MODE;
+    }
     return uart_send(instance, data, size, HAL_MAX_DELAY);
-#endif
+
 }
 
 /* 异步接收 */
 uart_err_t uart_receive_async(uart_instance_t instance, uint8_t *buffer, uint16_t size)
 {
-#if (UART_USE_POLLING == 1)
-    /* 轮询模式不支持异步接收 */
-    return UART_ERROR_MODE;
-#else
+    uart_device_t *dev = &uart_devices[instance];
+
+    if (dev->mode == UART_MODE_POLLING)
+    {
+        /* 轮询模式不支持异步接收 */
+        return UART_ERROR_MODE;
+    }
+
     return uart_receive(instance, buffer, size, HAL_MAX_DELAY);
-#endif
+
 }
 
 /* ==================================== 回调函数管理 ==================================================== */
@@ -1075,6 +1231,11 @@ uart_err_t uart_register_dma_idle_callback(uart_instance_t instance, uart_dma_id
     }
 
     uart_device_t *dev = &uart_devices[instance];
+    /* 检查是否为DMA模式 */
+    if (dev->mode != UART_MODE_DMA)
+    {
+        return UART_ERROR_MODE;
+    }
     dev->dma_idle_callback = callback;
     dev->dma_idle_callback_arg = arg;
 
@@ -1111,8 +1272,8 @@ const char *uart_get_instance_name(uart_instance_t instance)
     return uart_instance_names[instance];
 }
 
-/* =========================================== HAL回调处理 ======================================================== */
-#if (UART_USE_DMA == 1 || UART_USE_INTERRUPT == 1) // 使用中断或DMA模式
+/* ====================================== HAL回调处理 ============================================ */
+
 void USART2_IRQHandler(void)
 {
     HAL_UART_IRQHandler(&uart_devices[1].huart);
@@ -1127,7 +1288,7 @@ void DMA1_Channel2_IRQHandler(void)
     HAL_DMA_IRQHandler(uart_devices[1].huart.hdmarx);
 }
 #endif
-#endif
+
 /* 发送完成回调 */
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {

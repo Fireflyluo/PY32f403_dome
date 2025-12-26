@@ -23,6 +23,7 @@ void mavlink_init(void);
 void mavlink_receive_byte(uint8_t byte);
 void mavlink_periodic_task(void);
 void mavlink_send_heartbeat(void);
+void send_position_target(float x, float y, float z, float yaw) ;
 void mavlink_send_message(const mavlink_message_t *msg);
 
 #endif

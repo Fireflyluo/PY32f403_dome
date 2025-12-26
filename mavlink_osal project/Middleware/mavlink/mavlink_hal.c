@@ -46,7 +46,7 @@ uart_send(mav_handl.uart_instamce, buffer, len, 100);
 
 }
 
-// ����������
+
 void mavlink_send_heartbeat(void)
 {
     static uint32_t sequence = 0;
@@ -66,14 +66,52 @@ void mavlink_send_heartbeat(void)
                                  &msg, 
                                  &heartbeat);
     
-    // �������к�
+
     msg.seq = sequence++;
     if(sequence > 255) sequence = 0;
     
     mavlink_send_message(&msg);
 }
 
-// ��������
+// 发送位置目标函数
+void send_position_target(float x, float y, float z, float yaw) 
+{
+    mavlink_message_t msg;
+    mavlink_set_position_target_local_ned_t sp;
+    
+    sp.time_boot_ms = HAL_GetTick();
+    sp.target_system = 1;      // PX4 ID
+    sp.target_component = 1;   // PX4组件ID
+    sp.coordinate_frame = MAV_FRAME_LOCAL_NED;  // 使用NED坐标系
+    sp.type_mask = 0xFF8;      // 只控制位置（不控制速度、加速度）
+    
+    sp.x = x;      // 北向（米）
+    sp.y = y;      // 东向（米）
+    sp.z = z;      // 地向（米，向下为正，所以高度为负值）
+    sp.yaw = yaw;  // 偏航角（弧度）
+    
+    // 设置速度和加速度为0（虽然被屏蔽，但最好设置）
+    sp.vx = 0.0f;
+    sp.vy = 0.0f;
+    sp.vz = 0.0f;
+    sp.afx = 0.0f;
+    sp.afy = 0.0f;
+    sp.afz = 0.0f;
+    sp.yaw_rate = 0.0f;
+    
+    // 编码消息
+    mavlink_msg_set_position_target_local_ned_encode(
+        mavlink_system_id,
+        mavlink_component_id,
+        &msg,
+        &sp
+    );
+    
+    // 发送消息
+    mavlink_send_message(&msg);
+
+}
+
 void mavlink_periodic_task(void)
 {
     uint32_t now = HAL_GetTick();

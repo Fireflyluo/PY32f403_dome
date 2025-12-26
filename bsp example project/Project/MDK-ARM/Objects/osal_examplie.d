@@ -23,6 +23,7 @@
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
   ..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h \
+  ..\..\..\BSP\board.h ..\..\..\BSP\py32_drivers\Inc\drv_gpio.h \
   ..\..\..\BSP\example\osal\task_event.h ..\..\..\OSAL\osal.h \
   ..\..\..\OSAL\type.h ..\..\..\OSAL\osal_timer.h \
   ..\..\..\OSAL\hal\timer.h ..\..\..\OSAL\osal_event.h \

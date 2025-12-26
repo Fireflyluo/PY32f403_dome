@@ -41,10 +41,10 @@ uint16 mav_task_event_process(uint8 task_id, uint16 task_event);
 
 // LED任务事件定义
 #define LED_BLINK_EVENT 0x0001
-#define LED_PATTERN_EVENT 0x0002
-// mavlink 任务的任务事件定义
-#define MAV_HEAR_EVENT 0X0001 // mavlink 心跳包事件
 
+// mavlink 任务的任务事件定义
+#define MAV_HEAR_EVENT 0X0002 // mavlink 心跳包事件
+#define MAV_TARGET_EVENT 0X0003
 // 统计任务的系统消息事件定义
 #define PRINTF_STATISTICS 1 // 打印统计消息事件
 

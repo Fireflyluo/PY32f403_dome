@@ -10,7 +10,7 @@
 #include "main.h"
 #include <string.h>
 
-#if (UART_WORK_MODE == UART_MODE_INTERRUPT)
+#if (UART_EXAMPLE_MODE == UART_EXAMPLE_INTERRUPT)
 /* 配置为轮询模式 */
 
 #if (UART_WORK_MODE != UART_MODE_INTERRUPT)
@@ -24,7 +24,7 @@ static uart_instance_t g_uart_instance = UART_INSTANCE_2;
  */
 uart_err_t uart_it_init(void)
 {
-    uart_err_t ret = uart_init(g_uart_instance, 115200);
+    uart_err_t ret = uart_init(g_uart_instance, 115200,UART_MODE_INTERRUPT);
     if (ret != UART_OK)
     {
         //        printf("UART2初始化失败: %d\n", ret);

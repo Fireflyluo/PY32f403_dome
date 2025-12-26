@@ -11,7 +11,7 @@
 #include "main.h"
 #include <string.h>
 
-#if (UART_WORK_MODE == UART_MODE_DMA)
+#if (UART_EXAMPLE_MODE == UART_EXAMPLE_DMA)
 /* 配置为DMA模式 */
 
 #if (UART_WORK_MODE != UART_MODE_DMA)
@@ -25,7 +25,7 @@ static uart_instance_t g_uart_instance = UART_INSTANCE_2;
  */
 uart_err_t uart_dma_init(void)
 {
-    uart_err_t ret = uart_init(g_uart_instance, 115200);
+    uart_err_t ret = uart_init(g_uart_instance, 115200,UART_MODE_DMA);
     if (ret != UART_OK)
     {
         return ret;

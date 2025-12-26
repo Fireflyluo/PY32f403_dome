@@ -5,6 +5,11 @@
 extern "C"
 {
 #endif
+#define UART_EXAMPLE_MODE UART_EXAMPLE_POLLING
+
+#define UART_EXAMPLE_POLLING 1
+#define UART_EXAMPLE_INTERRUPT 2
+#define UART_EXAMPLE_DMA 3
 
     int uart_polling_example(void);
     int uart_it_example(void);
