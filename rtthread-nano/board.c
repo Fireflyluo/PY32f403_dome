@@ -75,7 +75,7 @@ static uart_instance_t g_uart_instance = UART_INSTANCE_2;
 // 控制台串口初始化
 static int console_uart_init(void)
 {
-     uart_err_t ret = uart_init(g_uart_instance, 115200);
+     uart_err_t ret = uart_init(g_uart_instance, 115200,UART_MODE_POLLING);
     if (ret != UART_OK)
     {
         return ret;

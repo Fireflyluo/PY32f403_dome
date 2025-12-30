@@ -33,5 +33,4 @@
   ..\..\..\BSP\py32_drivers\Inc\drv_gpio.h \
   ..\..\..\BSP\py32_drivers\Inc\drv_uart.h \
   ..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h \
-  ..\..\Application\Inc\main.h ..\..\..\BSP\board.h \
-  ..\..\..\BSP\py32_drivers\Inc\drv_tool.h
+  ..\..\Application\Inc\main.h ..\..\..\BSP\py32_drivers\Inc\drv_tool.h

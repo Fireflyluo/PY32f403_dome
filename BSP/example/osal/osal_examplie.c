@@ -6,8 +6,8 @@ void osal_main(void)
 {
 
     // 系统硬件、外设等初始化
-    gpio_init();
-//    bsp_uart_init();
+    board_init();
+
     // ....
 
     // 禁止中断

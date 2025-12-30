@@ -19,6 +19,7 @@ extern "C"
         volatile uint16_t head;  // 写入位置
         volatile uint16_t tail;  // 读取位置
         volatile uint16_t count; // 当前数据量
+
     } ring_buffer_t;
 
     /* 环形缓冲区API */
