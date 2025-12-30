@@ -2,7 +2,7 @@
 #define __DRV_IIC_H
 
 #include "main.h"
-#include "board.h"
+//#include "board.h"
 #include "py32f4xx_hal.h"
 
 #include <stdint.h>

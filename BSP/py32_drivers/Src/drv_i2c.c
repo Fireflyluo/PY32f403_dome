@@ -250,7 +250,7 @@ void MX_I2C2_Init(void)
   hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
   if (HAL_I2C_Init(&hi2c2) != HAL_OK)
   {
-    APP_ErrorHandler();
+//    APP_ErrorHandler();
   }
   /* USER CODE BEGIN I2C2_Init 2 */
 

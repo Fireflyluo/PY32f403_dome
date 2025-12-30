@@ -5,7 +5,7 @@
 #include "drv_gpio.h"
 #include "board.h"
 
-
+#define LED_PIN GET_PIN(B, 2)
 uint8 led_task_id;
 static uint8 led_state = 0;
 

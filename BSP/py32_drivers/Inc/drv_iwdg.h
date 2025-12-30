@@ -8,7 +8,7 @@ extern "C"
 
 #include "main.h"
 
-#include "board.h"
+//#include "board.h"
 #include "py32f4xx_hal.h"
 
     extern IWDG_HandleTypeDef hiwdg;
