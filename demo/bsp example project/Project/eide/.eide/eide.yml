@@ -19,74 +19,81 @@ virtualFolder:
       folders: []
     - name: example
       files:
-        - path: ../../../BSP/example/uart/uart_polling_example.c
-        - path: ../../../BSP/example/gpio/gpio_example.c
+        - path: ../../../../BSP/example/gpio/gpio_example.c
+        - path: ../../../../BSP/example/osal/led_task.c
+        - path: ../../../../BSP/example/osal/osal_examplie.c
+        - path: ../../../../BSP/example/uart/uart_dma_example.c
+        - path: ../../../../BSP/example/uart/uart_it_example.c
+        - path: ../../../../BSP/example/uart/uart_polling_example.c
+      folders: []
+    - name: osal
+      files:
+        - path: ../../../../OSAL/osal.c
+        - path: ../../../../OSAL/osal_event.c
+        - path: ../../../../OSAL/osal_memory.c
+        - path: ../../../../OSAL/osal_msg.c
+        - path: ../../../../OSAL/osal_timer.c
+        - path: ../../../../OSAL/hal/timer.c
       folders: []
     - name: py32_drivers
       files:
-        - path: ../../../BSP/py32_drivers/Src/drv_gpio.c
-        - path: ../../../BSP/py32_drivers/Inc/drv_gpio.h
-        - path: ../../../BSP/py32_drivers/Src/drv_i2c.c
-        - path: ../../../BSP/py32_drivers/Inc/drv_i2c.h
-        - path: ../../../BSP/py32_drivers/Src/drv_spi.c
-        - path: ../../../BSP/py32_drivers/Inc/drv_spi.h
-        - path: ../../../BSP/py32_drivers/Src/drv_tim.c
-        - path: ../../../BSP/py32_drivers/Inc/drv_tim.h
-        - path: ../../../BSP/py32_drivers/Src/drv_uart.c
-        - path: ../../../BSP/py32_drivers/Inc/drv_uart.h
-        - path: ../../../BSP/py32_drivers/Inc/drv_uart_config.h
-        - path: ../../../BSP/py32_drivers/Src/drv_tool.c
-        - path: ../../../BSP/py32_drivers/Inc/drv_tool.h
+        - path: ../../../../BSP/py32_drivers/Src/drv_gpio.c
+        - path: ../../../../BSP/py32_drivers/Src/drv_i2c.c
+        - path: ../../../../BSP/py32_drivers/Src/drv_iwdg.c
+        - path: ../../../../BSP/py32_drivers/Src/drv_spi.c
+        - path: ../../../../BSP/py32_drivers/Src/drv_tim.c
+        - path: ../../../../BSP/py32_drivers/Src/drv_tool.c
+        - path: ../../../../BSP/py32_drivers/Src/drv_uart.c
       folders: []
     - name: Library
       files:
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_adc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_adc_ex.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_canfd.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_cortex.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_crc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_ctc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_dma.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_esmc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_exti.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_flash.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_gpio.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_i2c.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_i2s.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_irda.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_iwdg.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_pwr.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_pwr_ex.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_rcc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_rcc_ex.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_rtc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_rtc_ex.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_sd.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_smartcard.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_spi.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_spi_ex.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_tim.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_tim_ex.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_uart.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_usart.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_wwdg.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_adc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_crc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_ctc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_dma.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_exti.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_gpio.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_i2c.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_pwr.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_rcc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_rtc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_sdmmc.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_spi.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_tim.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_usart.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_utils.c
-        - path: ../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include/py32f403xD.h
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_adc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_adc_ex.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_canfd.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_cortex.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_crc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_ctc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_dma.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_esmc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_exti.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_flash.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_gpio.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_i2c.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_i2s.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_irda.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_iwdg.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_pwr.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_pwr_ex.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_rcc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_rcc_ex.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_rtc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_rtc_ex.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_sd.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_smartcard.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_spi.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_spi_ex.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_tim.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_tim_ex.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_uart.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_usart.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_hal_wwdg.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_adc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_crc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_ctc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_dma.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_exti.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_gpio.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_i2c.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_pwr.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_rcc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_rtc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_sdmmc.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_spi.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_tim.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_usart.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_utils.c
+        - path: ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include/py32f403xD.h
       folders: []
     - name: star
       files:
@@ -105,14 +112,18 @@ targets:
         - PY32F403xD
       incList:
         - .
-        - ../../../BSP/PY32f403_Firmware_Library/CMSIS/Include
-        - ../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include
-        - ../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc
+        - ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include
+        - ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include
+        - ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc
+        - ../../../../BSP/py32_drivers/Inc
+        - ../../../../BSP
+        - ../../../../BSP/example/uart
+        - ../../../../BSP/example/gpio
+        - ../../../../BSP/example/osal
+        - ../../../../OSAL/MemMang
+        - ../../../../OSAL
+        - ../../../../OSAL/hal
         - ../../Application/Inc
-        - ../../../BSP/py32_drivers/Inc
-        - ../../../BSP
-        - ../../../BSP/example/uart
-        - ../../../BSP/example/gpio
         - .cmsis/include
         - ../MDK-ARM/RTE/_Target 1
       libList: []

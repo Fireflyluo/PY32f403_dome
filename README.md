@@ -33,14 +33,20 @@
 │   ├── example                     -- 示例工程
 │   ├── py32_drivers                -- PY32外设驱动库
 │   └── PY32f403_Firmware_Library  
-├── example project               -- BSP驱动包示例工程  
-├── I2C               -- i2c相关芯片驱动工程
-│   ├── qmi8658a         -- 外部设备的驱动库
-│   └── ...             
-├── SPI               -- spi相关芯片驱动工程        
-│   ├── si24r1         -- 外部设备的驱动库
-│   └── ...             
+├── demo                  -- 示例工程
+│   ├─I2C                   -- i2c相关芯片驱动工程
+│   │  ├── qmi8658a           -- 陀螺仪驱动库
+│   │  └── ...
+│   ├── SPI               -- spi相关芯片驱动工程        
+│   │  ├── si24r1            -- 射频模块驱动库
+│   │  └── ...  
+│   ├── bsp example project         -- BSP驱动包示例工程  
+│   ├── mavlink_osal project        -- mavlink事件驱动框架
+│   ├── osal project                -- osal事件驱动框架
+│   ├── rtthread nano project       -- rtthread nano RTOS
+│   └── xmake              
 ├── OSAL               -- osal事件驱动框架
+├── Event OS           -- 事件驱动框架
 ├── rtthread-nano  
 └── Readme.md         --文档
 ```
@@ -147,9 +153,9 @@
 
 
 
-## 更新日志
+## 最近更新
 
-- **2025-09-12**: 初始版本提交
+- **2025-12-25**: 更改工程结构
   - 添加LED控制示例
   - 添加I2C基础通信示例
   - 添加陀螺仪QMI8658A驱动

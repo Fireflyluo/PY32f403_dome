@@ -28,5 +28,4 @@
   ..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h \
   ..\..\Application\Inc\main.h \
   ..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h \
-  ..\..\Application\Inc\board.h \
   ..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h
