@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\PY32F403_Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\PY32F403_Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Tue Dec 30 16:00:01 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Tue Dec 30 16:16:38 2025
 <BR><P>
 <H3>Maximum Stack Usage =        256 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1306,9 +1306,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalFindTask
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sensor_task_event_process
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerUpdate
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sensor_task_event_process
 </UL>
 
 <P><STRONG><a name="[e5]"></a>osal_start_reload_timer</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, osal_timer.o(.text.osal_start_reload_timer))
@@ -1484,8 +1484,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_write_to_ring_buffer
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_dma_process_full_data
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sensor_task_event_process
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sensor_task_event_process
 </UL>
 
 <P><STRONG><a name="[bf]"></a>ring_buffer_skip</STRONG> (Thumb, 114 bytes, Stack size 24 bytes, drv_tool.o(.text.ring_buffer_skip))

@@ -14,6 +14,20 @@ Section Cross References
     main.o(.text.SystemClockConfig) refers to py32f403_hal_rcc.o(.text.HAL_RCC_ClockConfig) for HAL_RCC_ClockConfig
     main.o(.ARM.exidx.text.SystemClockConfig) refers to main.o(.text.SystemClockConfig) for [Anonymous Symbol]
     main.o(.ARM.exidx.text.APP_ErrorHandler) refers to main.o(.text.APP_ErrorHandler) for [Anonymous Symbol]
+    osal_main.o(.text.osal_main) refers to board.o(.text.board_init) for board_init
+    osal_main.o(.text.osal_main) refers to drv_i2c.o(.text.I2C2_ScanDevices) for I2C2_ScanDevices
+    osal_main.o(.text.osal_main) refers to osal.o(.text.osal_init_system) for osal_init_system
+    osal_main.o(.text.osal_main) refers to led_task.o(.text.led_task_init) for led_task_init
+    osal_main.o(.text.osal_main) refers to led_task.o(.text.led_task_event_process) for led_task_event_process
+    osal_main.o(.text.osal_main) refers to osal_event.o(.text.osal_add_Task) for osal_add_Task
+    osal_main.o(.text.osal_main) refers to print_task.o(.text.print_task_init) for print_task_init
+    osal_main.o(.text.osal_main) refers to print_task.o(.text.print_task_event_process) for print_task_event_process
+    osal_main.o(.text.osal_main) refers to sensor_task.o(.text.sensor_task_init) for sensor_task_init
+    osal_main.o(.text.osal_main) refers to sensor_task.o(.text.sensor_task_event_process) for sensor_task_event_process
+    osal_main.o(.text.osal_main) refers to osal_event.o(.text.osal_Task_init) for osal_Task_init
+    osal_main.o(.text.osal_main) refers to osal_memory.o(.text.osal_mem_kick) for osal_mem_kick
+    osal_main.o(.text.osal_main) refers to osal.o(.text.osal_start_system) for osal_start_system
+    osal_main.o(.ARM.exidx.text.osal_main) refers to osal_main.o(.text.osal_main) for [Anonymous Symbol]
     board.o(.text.board_init) refers to drv_gpio.o(.text.gpio_init) for gpio_init
     board.o(.text.board_init) refers to drv_gpio.o(.text.gpio_mode) for gpio_mode
     board.o(.text.board_init) refers to board.o(.data.log_uart_instance) for log_uart_instance
@@ -56,20 +70,6 @@ Section Cross References
     led_task.o(.text.led_task_event_process) refers to osal_msg.o(.text.osal_msg_deallocate) for osal_msg_deallocate
     led_task.o(.text.led_task_event_process) refers to drv_gpio.o(.text.gpio_toggle) for gpio_toggle
     led_task.o(.ARM.exidx.text.led_task_event_process) refers to led_task.o(.text.led_task_event_process) for [Anonymous Symbol]
-    osal_main.o(.text.osal_main) refers to board.o(.text.board_init) for board_init
-    osal_main.o(.text.osal_main) refers to drv_i2c.o(.text.I2C2_ScanDevices) for I2C2_ScanDevices
-    osal_main.o(.text.osal_main) refers to osal.o(.text.osal_init_system) for osal_init_system
-    osal_main.o(.text.osal_main) refers to led_task.o(.text.led_task_init) for led_task_init
-    osal_main.o(.text.osal_main) refers to led_task.o(.text.led_task_event_process) for led_task_event_process
-    osal_main.o(.text.osal_main) refers to osal_event.o(.text.osal_add_Task) for osal_add_Task
-    osal_main.o(.text.osal_main) refers to print_task.o(.text.print_task_init) for print_task_init
-    osal_main.o(.text.osal_main) refers to print_task.o(.text.print_task_event_process) for print_task_event_process
-    osal_main.o(.text.osal_main) refers to sensor_task.o(.text.sensor_task_init) for sensor_task_init
-    osal_main.o(.text.osal_main) refers to sensor_task.o(.text.sensor_task_event_process) for sensor_task_event_process
-    osal_main.o(.text.osal_main) refers to osal_event.o(.text.osal_Task_init) for osal_Task_init
-    osal_main.o(.text.osal_main) refers to osal_memory.o(.text.osal_mem_kick) for osal_mem_kick
-    osal_main.o(.text.osal_main) refers to osal.o(.text.osal_start_system) for osal_start_system
-    osal_main.o(.ARM.exidx.text.osal_main) refers to osal_main.o(.text.osal_main) for [Anonymous Symbol]
     print_task.o(.text.print_task_init) refers to print_task.o(.bss.print_task_id) for print_task_id
     print_task.o(.text.print_task_init) refers to osal_timer.o(.text.osal_start_reload_timer) for osal_start_reload_timer
     print_task.o(.ARM.exidx.text.print_task_init) refers to print_task.o(.text.print_task_init) for [Anonymous Symbol]
@@ -1813,6 +1813,8 @@ Removing Unused input sections from the image.
     Removing main.o(.ARM.exidx.text.SystemClockConfig), (8 bytes).
     Removing main.o(.ARM.exidx.text.APP_ErrorHandler), (8 bytes).
     Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing osal_main.o(.text), (0 bytes).
+    Removing osal_main.o(.ARM.exidx.text.osal_main), (8 bytes).
     Removing board.o(.text), (0 bytes).
     Removing board.o(.ARM.exidx.text.board_init), (8 bytes).
     Removing board.o(.ARM.exidx.text.fputc), (8 bytes).
@@ -1841,8 +1843,6 @@ Removing Unused input sections from the image.
     Removing led_task.o(.text), (0 bytes).
     Removing led_task.o(.ARM.exidx.text.led_task_init), (8 bytes).
     Removing led_task.o(.ARM.exidx.text.led_task_event_process), (8 bytes).
-    Removing osal_main.o(.text), (0 bytes).
-    Removing osal_main.o(.ARM.exidx.text.osal_main), (8 bytes).
     Removing print_task.o(.text), (0 bytes).
     Removing print_task.o(.ARM.exidx.text.print_task_init), (8 bytes).
     Removing print_task.o(.ARM.exidx.text.print_task_event_process), (8 bytes).
@@ -3889,13 +3889,13 @@ Memory Map of the image
     0x0800065a   0x0800065a   0x00000024   Code   RO         1844    .text               mc_w.l(llsshr.o)
     0x0800067e   0x0800067e   0x000000ba   Code   RO         1846    .text               mf_w.l(depilogue.o)
     0x08000738   0x08000738   0x00000004   Code   RO            6    .text.APP_ErrorHandler  main.o
-    0x0800073c   0x0800073c   0x00000004   Code   RO           51    .text.BusFault_Handler  py32f403_it.o
+    0x0800073c   0x0800073c   0x00000004   Code   RO           59    .text.BusFault_Handler  py32f403_it.o
     0x08000740   0x08000740   0x00000014   Code   RO          562    .text.DMA1_Channel1_IRQHandler  drv_uart.o
     0x08000754   0x08000754   0x00000014   Code   RO          564    .text.DMA1_Channel2_IRQHandler  drv_uart.o
-    0x08000768   0x08000768   0x00000002   Code   RO           65    .text.DMA2_Channel1_IRQHandler  py32f403_it.o
+    0x08000768   0x08000768   0x00000002   Code   RO           73    .text.DMA2_Channel1_IRQHandler  py32f403_it.o
     0x0800076a   0x0800076a   0x00000002   PAD
     0x0800076c   0x0800076c   0x00000050   Code   RO          760    .text.DMA_SetConfig  py32f403_hal_dma.o
-    0x080007bc   0x080007bc   0x00000002   Code   RO           57    .text.DebugMon_Handler  py32f403_it.o
+    0x080007bc   0x080007bc   0x00000002   Code   RO           65    .text.DebugMon_Handler  py32f403_it.o
     0x080007be   0x080007be   0x00000002   PAD
     0x080007c0   0x080007c0   0x00000028   Code   RO          399    .text.EXTI0_IRQHandler  drv_gpio.o
     0x080007e8   0x080007e8   0x000000f4   Code   RO          413    .text.EXTI15_10_IRQHandler  drv_gpio.o
@@ -3941,7 +3941,7 @@ Memory Map of the image
     0x08002528   0x08002528   0x00000008   Code   RO         1044    .text.HAL_I2C_MemTxCpltCallback  py32f403_hal_i2c.o
     0x08002530   0x08002530   0x00000464   Code   RO          958    .text.HAL_I2C_Mem_Read  py32f403_hal_i2c.o
     0x08002994   0x08002994   0x00000214   Code   RO          954    .text.HAL_I2C_Mem_Write  py32f403_hal_i2c.o
-    0x08002ba8   0x08002ba8   0x00000088   Code   RO           34    .text.HAL_I2C_MspInit  py32f403_hal_msp.o
+    0x08002ba8   0x08002ba8   0x00000088   Code   RO           42    .text.HAL_I2C_MspInit  py32f403_hal_msp.o
     0x08002c30   0x08002c30   0x00000008   Code   RO         1038    .text.HAL_I2C_SlaveRxCpltCallback  py32f403_hal_i2c.o
     0x08002c38   0x08002c38   0x00000008   Code   RO         1036    .text.HAL_I2C_SlaveTxCpltCallback  py32f403_hal_i2c.o
     0x08002c40   0x08002c40   0x0000001a   Code   RO          610    .text.HAL_IncTick   py32f403_hal.o
@@ -3949,7 +3949,7 @@ Memory Map of the image
     0x08002c5c   0x08002c5c   0x00000016   Code   RO          600    .text.HAL_Init      py32f403_hal.o
     0x08002c72   0x08002c72   0x00000002   PAD
     0x08002c74   0x08002c74   0x00000070   Code   RO          602    .text.HAL_InitTick  py32f403_hal.o
-    0x08002ce4   0x08002ce4   0x0000007e   Code   RO           30    .text.HAL_MspInit   py32f403_hal_msp.o
+    0x08002ce4   0x08002ce4   0x0000007e   Code   RO           38    .text.HAL_MspInit   py32f403_hal_msp.o
     0x08002d62   0x08002d62   0x00000002   PAD
     0x08002d64   0x08002d64   0x00000014   Code   RO          699    .text.HAL_NVIC_EnableIRQ  py32f403_hal_cortex.o
     0x08002d78   0x08002d78   0x00000032   Code   RO          691    .text.HAL_NVIC_SetPriority  py32f403_hal_cortex.o
@@ -3978,7 +3978,7 @@ Memory Map of the image
     0x08003c70   0x08003c70   0x000000aa   Code   RO         1536    .text.HAL_UART_Init  py32f403_hal_uart.o
     0x08003d1a   0x08003d1a   0x00000002   PAD
     0x08003d1c   0x08003d1c   0x00000008   Code   RO         1552    .text.HAL_UART_MspDeInit  py32f403_hal_uart.o
-    0x08003d24   0x08003d24   0x00000096   Code   RO           32    .text.HAL_UART_MspInit  py32f403_hal_msp.o
+    0x08003d24   0x08003d24   0x00000096   Code   RO           40    .text.HAL_UART_MspInit  py32f403_hal_msp.o
     0x08003dba   0x08003dba   0x00000002   PAD
     0x08003dbc   0x08003dbc   0x0000007e   Code   RO          568    .text.HAL_UART_RxCpltCallback  drv_uart.o
     0x08003e3a   0x08003e3a   0x00000002   PAD
@@ -3991,7 +3991,7 @@ Memory Map of the image
     0x08004150   0x08004150   0x000000a6   Code   RO          566    .text.HAL_UART_TxCpltCallback  drv_uart.o
     0x080041f6   0x080041f6   0x00000002   PAD
     0x080041f8   0x080041f8   0x00000008   Code   RO         1630    .text.HAL_UART_TxHalfCpltCallback  py32f403_hal_uart.o
-    0x08004200   0x08004200   0x00000004   Code   RO           47    .text.HardFault_Handler  py32f403_it.o
+    0x08004200   0x08004200   0x00000004   Code   RO           55    .text.HardFault_Handler  py32f403_it.o
     0x08004204   0x08004204   0x00000010   Code   RO          432    .text.I2C1_ER_IRQHandler  drv_i2c.o
     0x08004214   0x08004214   0x00000010   Code   RO          430    .text.I2C1_EV_IRQHandler  drv_i2c.o
     0x08004224   0x08004224   0x00000012   Code   RO          436    .text.I2C2_ER_IRQHandler  drv_i2c.o
@@ -4040,8 +4040,8 @@ Memory Map of the image
     0x08005d06   0x08005d06   0x00000002   PAD
     0x08005d08   0x08005d08   0x00000094   Code   RO          918    .text.I2C_WaitOnTXEFlagUntilTimeout  py32f403_hal_i2c.o
     0x08005d9c   0x08005d9c   0x00000044   Code   RO          438    .text.MX_I2C2_Init  drv_i2c.o
-    0x08005de0   0x08005de0   0x00000004   Code   RO           49    .text.MemManage_Handler  py32f403_it.o
-    0x08005de4   0x08005de4   0x00000002   Code   RO           45    .text.NMI_Handler   py32f403_it.o
+    0x08005de0   0x08005de0   0x00000004   Code   RO           57    .text.MemManage_Handler  py32f403_it.o
+    0x08005de4   0x08005de4   0x00000002   Code   RO           53    .text.NMI_Handler   py32f403_it.o
     0x08005de6   0x08005de6   0x00000002   PAD
     0x08005de8   0x08005de8   0x0000006c   Code   RO          697    .text.NVIC_EncodePriority  py32f403_hal_cortex.o
     0x08005e54   0x08005e54   0x00000002   Code   RO          279    .text.OSAL_TIMER_TICKINIT  timer.o
@@ -4050,18 +4050,18 @@ Memory Map of the image
     0x08005e5a   0x08005e5a   0x00000002   PAD
     0x08005e5c   0x08005e5c   0x00000002   Code   RO          283    .text.OSAL_TIMER_TICKSTOP  timer.o
     0x08005e5e   0x08005e5e   0x00000002   PAD
-    0x08005e60   0x08005e60   0x00000002   Code   RO           59    .text.PendSV_Handler  py32f403_it.o
+    0x08005e60   0x08005e60   0x00000002   Code   RO           67    .text.PendSV_Handler  py32f403_it.o
     0x08005e62   0x08005e62   0x00000002   PAD
     0x08005e64   0x08005e64   0x0000003a   Code   RO         1156    .text.RCC_Delay     py32f403_hal_rcc.o
     0x08005e9e   0x08005e9e   0x00000002   PAD
-    0x08005ea0   0x08005ea0   0x00000002   Code   RO           55    .text.SVC_Handler   py32f403_it.o
+    0x08005ea0   0x08005ea0   0x00000002   Code   RO           63    .text.SVC_Handler   py32f403_it.o
     0x08005ea2   0x08005ea2   0x00000002   PAD
     0x08005ea4   0x08005ea4   0x00000054   Code   RO          713    .text.SysTick_Config  py32f403_hal_cortex.o
-    0x08005ef8   0x08005ef8   0x00000012   Code   RO           61    .text.SysTick_Handler  py32f403_it.o
+    0x08005ef8   0x08005ef8   0x00000012   Code   RO           69    .text.SysTick_Handler  py32f403_it.o
     0x08005f0a   0x08005f0a   0x00000002   PAD
     0x08005f0c   0x08005f0c   0x0000007c   Code   RO            4    .text.SystemClockConfig  main.o
     0x08005f88   0x08005f88   0x00000010   Code   RO         1743    .text.SystemInit    system_py32f403.o
-    0x08005f98   0x08005f98   0x00000002   Code   RO           63    .text.TIM2_IRQHandler  py32f403_it.o
+    0x08005f98   0x08005f98   0x00000002   Code   RO           71    .text.TIM2_IRQHandler  py32f403_it.o
     0x08005f9a   0x08005f9a   0x00000002   PAD
     0x08005f9c   0x08005f9c   0x0000004e   Code   RO         1542    .text.UART_AdvFeatureConfig  py32f403_hal_uart.o
     0x08005fea   0x08005fea   0x00000002   PAD
@@ -4082,17 +4082,17 @@ Memory Map of the image
     0x080063dc   0x080063dc   0x0000009c   Code   RO         1624    .text.UART_Transmit_IT  py32f403_hal_uart.o
     0x08006478   0x08006478   0x0000009c   Code   RO         1556    .text.UART_WaitOnFlagUntilTimeout  py32f403_hal_uart.o
     0x08006514   0x08006514   0x00000014   Code   RO          560    .text.USART2_IRQHandler  drv_uart.o
-    0x08006528   0x08006528   0x00000004   Code   RO           53    .text.UsageFault_Handler  py32f403_it.o
+    0x08006528   0x08006528   0x00000004   Code   RO           61    .text.UsageFault_Handler  py32f403_it.o
     0x0800652c   0x0800652c   0x00000030   Code   RO          701    .text.__NVIC_EnableIRQ  py32f403_hal_cortex.o
     0x0800655c   0x0800655c   0x00000010   Code   RO          693    .text.__NVIC_GetPriorityGrouping  py32f403_hal_cortex.o
     0x0800656c   0x0800656c   0x00000042   Code   RO          695    .text.__NVIC_SetPriority  py32f403_hal_cortex.o
     0x080065ae   0x080065ae   0x00000002   PAD
     0x080065b0   0x080065b0   0x0000003c   Code   RO          689    .text.__NVIC_SetPriorityGrouping  py32f403_hal_cortex.o
-    0x080065ec   0x080065ec   0x0000002e   Code   RO           16    .text.board_init    board.o
+    0x080065ec   0x080065ec   0x0000002e   Code   RO           24    .text.board_init    board.o
     0x0800661a   0x0800661a   0x00000002   PAD
     0x0800661c   0x0800661c   0x00000084   Code   RO          304    .text.convert_accel  qmi8658a_driver.o
     0x080066a0   0x080066a0   0x00000084   Code   RO          306    .text.convert_gyro  qmi8658a_driver.o
-    0x08006724   0x08006724   0x00000024   Code   RO           18    .text.fputc         board.o
+    0x08006724   0x08006724   0x00000024   Code   RO           26    .text.fputc         board.o
     0x08006748   0x08006748   0x00000034   Code   RO          582    .text.get_uart_device  drv_uart.o
     0x0800677c   0x0800677c   0x0000003e   Code   RO          379    .text.gpio_get_pin  drv_gpio.o
     0x080067ba   0x080067ba   0x00000002   PAD
@@ -4103,8 +4103,8 @@ Memory Map of the image
     0x08006940   0x08006940   0x00000036   Code   RO          389    .text.gpio_toggle   drv_gpio.o
     0x08006976   0x08006976   0x00000002   PAD
     0x08006978   0x08006978   0x00000034   Code   RO          506    .text.is_uart_initialized  drv_uart.o
-    0x080069ac   0x080069ac   0x00000078   Code   RO           78    .text.led_task_event_process  led_task.o
-    0x08006a24   0x08006a24   0x0000002e   Code   RO           76    .text.led_task_init  led_task.o
+    0x080069ac   0x080069ac   0x00000078   Code   RO           86    .text.led_task_event_process  led_task.o
+    0x08006a24   0x08006a24   0x0000002e   Code   RO           84    .text.led_task_init  led_task.o
     0x08006a52   0x08006a52   0x00000002   PAD
     0x08006a54   0x08006a54   0x00000012   Code   RO            2    .text.main          main.o
     0x08006a66   0x08006a66   0x00000002   PAD
@@ -4128,7 +4128,7 @@ Memory Map of the image
     0x08006ec6   0x08006ec6   0x00000002   PAD
     0x08006ec8   0x08006ec8   0x0000001e   Code   RO          127    .text.osal_init_system  osal.o
     0x08006ee6   0x08006ee6   0x00000002   PAD
-    0x08006ee8   0x08006ee8   0x0000006e   Code   RO           88    .text.osal_main     osal_main.o
+    0x08006ee8   0x08006ee8   0x0000006e   Code   RO           16    .text.osal_main     osal_main.o
     0x08006f56   0x08006f56   0x00000002   PAD
     0x08006f58   0x08006f58   0x00000236   Code   RO          178    .text.osal_mem_alloc  osal_memory.o
     0x0800718e   0x0800718e   0x00000002   PAD
@@ -4229,7 +4229,7 @@ Memory Map of the image
 
     0x20000000   0x08009af0   0x00000004   Data   RW         1813    .data               mc_w.l(stdout.o)
     0x20000004   0x08009af4   0x00000004   Data   RW         1747    .data.SystemCoreClock  system_py32f403.o
-    0x20000008   0x08009af8   0x00000001   Data   RW           22    .data.log_uart_instance  board.o
+    0x20000008   0x08009af8   0x00000001   Data   RW           30    .data.log_uart_instance  board.o
     0x20000009   0x08009af9   0x00000003   PAD
     0x2000000c   0x08009afc   0x00000004   Data   RW          196    .data.theHeap       osal_memory.o
     0x20000010   0x08009b00   0x00000001   Data   RW          675    .data.uwTickFreq    py32f403_hal.o
@@ -4257,7 +4257,7 @@ Memory Map of the image
     0x20002214        -       0x00000100   Zero   RW          442    .bss.i2c_devices    drv_i2c.o
     0x20002314        -       0x00001000   Zero   RW          117    .bss.imu_buffer     sensor_task.o
     0x20003314        -       0x0000000c   Zero   RW          116    .bss.imu_ring_buffer  sensor_task.o
-    0x20003320        -       0x00000001   Zero   RW           80    .bss.led_task_id    led_task.o
+    0x20003320        -       0x00000001   Zero   RW           88    .bss.led_task_id    led_task.o
     0x20003321   0x08009b08   0x00000001   PAD
     0x20003322        -       0x00000002   Zero   RW          202    .bss.memAlo         osal_memory.o
     0x20003324        -       0x00000002   Zero   RW          204    .bss.memMax         osal_memory.o
@@ -4294,7 +4294,7 @@ Image component sizes
        146          0          0          0          0       1657   main.o
        176          0          0          0          4       2172   osal.o
        576          0          0          0         10       2419   osal_event.o
-       110          0          0          0          0        410   osal_main.o
+       110          0          0          0          0        432   osal_main.o
        870          0          0          4       8211       2750   osal_memory.o
        306          0          0          0          0       3031   osal_msg.o
        776          0          0          0         10       3819   osal_timer.o
@@ -4316,7 +4316,7 @@ Image component sizes
          6          0          0          0          0        579   timer.o
 
     ----------------------------------------------------------------------
-     33408         56       2482         20      20784     182599   Object Totals
+     33408         56       2482         20      20784     182621   Object Totals
          0          0         32          0          0          0   (incl. Generated)
        196          0          8          6         20          0   (incl. Padding)
 
@@ -4373,8 +4373,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     37182        164       2482         24      20784     183175   Grand Totals
-     37182        164       2482         24      20784     183175   ELF Image Totals
+     37182        164       2482         24      20784     183197   Grand Totals
+     37182        164       2482         24      20784     183197   ELF Image Totals
      37182        164       2482         24          0          0   ROM Totals
 
 ==============================================================================

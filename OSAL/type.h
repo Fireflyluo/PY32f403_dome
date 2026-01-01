@@ -8,7 +8,9 @@
 #define NO_TIMER_AVAIL            5
 #define TASK_NO_TASK              6
 #define MSG_BUFFER_NOT_AVAIL      7
+
 #include "py32f4xx_hal.h"
+
 typedef unsigned char       BOOL;
 
 //芯片硬件字长

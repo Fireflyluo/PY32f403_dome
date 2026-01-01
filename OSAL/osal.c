@@ -52,6 +52,11 @@ void osal_start_system(void)
     uint16 events;
     uint16 retEvents;
 
+#ifdef OSAL_PT_ENABLE
+    osal_pt_scheduler_t sched;
+    osal_pt_scheduler_init(&sched); // 初始化协程调度器
+#endif
+
     while (1)
     {
         TaskActive = osalNextActiveTask();
@@ -77,6 +82,10 @@ void osal_start_system(void)
                 }
             }
         }
+#ifdef OSAL_PT_ENABLE
+        // 协程调度
+        osal_pt_schedule(&sched);
+#endif
     }
 }
 

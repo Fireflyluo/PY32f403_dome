@@ -396,6 +396,16 @@
               <FilePath>..\..\Application\Inc\main.h</FilePath>
             </File>
             <File>
+              <FileName>osal_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Application\Src\osal_main.c</FilePath>
+            </File>
+            <File>
+              <FileName>osal_main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Application\Inc\osal_main.h</FilePath>
+            </File>
+            <File>
               <FileName>board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Application\Src\board.c</FilePath>
@@ -439,11 +449,6 @@
               <FileName>led_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Task\led_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>osal_main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Task\osal_main.c</FilePath>
             </File>
             <File>
               <FileName>print_task.c</FileName>

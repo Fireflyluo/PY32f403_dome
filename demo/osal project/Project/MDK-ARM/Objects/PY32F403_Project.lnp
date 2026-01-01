@@ -1,10 +1,10 @@
 --cpu=Cortex-M4.fp.sp
 ".\objects\main.o"
+".\objects\osal_main.o"
 ".\objects\board.o"
 ".\objects\py32f403_hal_msp.o"
 ".\objects\py32f403_it.o"
 ".\objects\led_task.o"
-".\objects\osal_main.o"
 ".\objects\print_task.o"
 ".\objects\sensor_task.o"
 ".\objects\osal.o"

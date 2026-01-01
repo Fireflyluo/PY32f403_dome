@@ -1,4 +1,4 @@
-./objects/osal_main.o: ..\..\Task\osal_main.c \
+./objects/osal_main.o: ..\..\Application\Src\osal_main.c \
   ..\..\Application\Inc\main.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h \
   ..\..\Application\Inc\py32f403_hal_conf.h \
