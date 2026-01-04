@@ -18,22 +18,22 @@ add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
 -- 添加脚本目录到模块搜索路径
 add_moduledirs("scripts")
 -- 添加自定义构建后处理任务
-task("post-build")
-    on_run(function ()
-        import("core.project.project")
-        local target = project.target("arm_mcu")
-        if target then
-            import("post_build")  -- 从 scripts 目录导入
-            post_build.main(target)
-        else
-            print("错误: 找不到目标 'arm_mcu'")
-        end
-    end)
+-- task("post-build")
+--     on_run(function ()
+--         import("core.project.project")
+--         local target = project.target("arm_mcu")
+--         if target then
+--             import("post_build")  -- 从 scripts 目录导入
+--             post_build.main(target)
+--         else
+--             print("错误: 找不到目标 'arm_mcu'")
+--         end
+--     end)
 
-    set_menu {
-        usage = "xmake post-build",
-        description = "执行构建后处理(生成bin/hex,显示内存使用情况)"
-    }
+--     set_menu {
+--         usage = "xmake post-build",
+--         description = "执行构建后处理(生成bin/hex,显示内存使用情况)"
+--     }
 
 
 
@@ -46,10 +46,13 @@ target("arm_mcu")
     add_files("startup/startup_py32f403xx.s")
     add_files("src/*.c")
     add_files("src/syscalls.c")
+    add_files("BSP/py32_drivers/Src/*.c")
+    add_files("BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/*.c")
     
     -- 包含路径
     add_includedirs("inc")
     add_includedirs("BSP/py32_drivers")
+    add_includedirs("BSP/py32_drivers/Inc")
     add_includedirs("BSP/PY32f403_Firmware_Library/CMSIS/Include")
     add_includedirs("BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc")
     add_includedirs("BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include")
@@ -92,9 +95,9 @@ target("arm_mcu")
 
 
   -- 构建后处理 - 调用外部脚本
-    after_build(function (target)
-        import("post_build")
-        post_build.main(target)
-    end)
+    -- after_build(function (target)
+    --     import("post_build")
+    --     post_build.main(target)
+    -- end)
 
    
