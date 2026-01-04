@@ -8,32 +8,37 @@ set_plat("cross")
 set_arch("arm")
 -- set_toolchains("gnu-rm")
 -- 设置交叉编译工具链路径
-set_toolchains("gnu-rm", {sdkdir = "D:/APP/path/arm-gcc-14.2"})
+-- set_toolchains("gnu-rm", {sdkdir = "D:/APP/path/arm-gcc-14.2"})
 
+set_toolchains("gnu-rm", {
+    sdkdir = "D:/APP/path/arm-gcc-15.2",
+    bin_prefix = "arm-none-eabi-",
+    cross = "arm-none-eabi-"
+})
 -- 设置语言标准
-set_languages("c11", "c++17")
+set_languages("c17", "c++20")
 -- 自动生成 VSCode 的 compile_commands.json 文件
 add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
 
 -- 添加脚本目录到模块搜索路径
 add_moduledirs("scripts")
 -- 添加自定义构建后处理任务
--- task("post-build")
---     on_run(function ()
---         import("core.project.project")
---         local target = project.target("arm_mcu")
---         if target then
---             import("post_build")  -- 从 scripts 目录导入
---             post_build.main(target)
---         else
---             print("错误: 找不到目标 'arm_mcu'")
---         end
---     end)
+task("post-build")
+    on_run(function ()
+        import("core.project.project")
+        local target = project.target("arm_mcu")
+        if target then
+            import("post_build")  -- 从 scripts 目录导入
+            post_build.main(target)
+        else
+            print("错误: 找不到目标 'arm_mcu'")
+        end
+    end)
 
---     set_menu {
---         usage = "xmake post-build",
---         description = "执行构建后处理(生成bin/hex,显示内存使用情况)"
---     }
+    set_menu {
+        usage = "xmake post-build",
+        description = "执行构建后处理(生成bin/hex,显示内存使用情况)"
+    }
 
 
 
@@ -61,12 +66,24 @@ target("arm_mcu")
     add_defines("ARM_MATH_CM4", "USE_STDPERIPH_DRIVER", "PY32F403xD")
     
     -- 编译选项
-    add_cflags("-mcpu=cortex-m4", "-mthumb", "-mfpu=fpv4-sp-d16", "-mfloat-abi=hard",
-               "-Wall", "-Wextra", "-Wno-unused-parameter", 
-               "-ffunction-sections", "-fdata-sections",
+    add_cflags("-mcpu=cortex-m4",
+               "-mthumb", 
+               "-mfpu=fpv4-sp-d16",
+               "-mfloat-abi=hard",
+               "-Wall",
+                "-Wextra",
+                 "-Wno-unused-parameter", 
+               "-ffunction-sections",
+                "-fdata-sections",
                {force = true})
     
-    add_cxflags("-std=c11", {force = true})
+    -- C++选项（如果使用）
+    add_cxxflags(
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-use-cxa-atexit",
+        {force = true}
+    )
     
     -- 调试选项
     if is_mode("debug") then
@@ -78,11 +95,14 @@ target("arm_mcu")
     end
     
     -- 链接选项
-    add_ldflags("-mcpu=cortex-m4", "-mthumb", "-mfpu=fpv4-sp-d16", "-mfloat-abi=hard",
+    add_ldflags("-mcpu=cortex-m4",
+                 "-mthumb",
+                  "-mfpu=fpv4-sp-d16",
+                   "-mfloat-abi=hard",
                 "-Wl,--gc-sections",
                 {force = true})
     
-    add_ldflags("-Wl,--no-warn-rwx-segments", {force = true})
+    add_ldflags("-W", {force = true})
     add_ldflags("-Tldscripts/py32f403xd.ld", {force = true})
     
     -- 系统库
@@ -95,9 +115,9 @@ target("arm_mcu")
 
 
   -- 构建后处理 - 调用外部脚本
-    -- after_build(function (target)
-    --     import("post_build")
-    --     post_build.main(target)
-    -- end)
+    after_build(function (target)
+        import("post_build")
+        post_build.main(target)
+    end)
 
    
