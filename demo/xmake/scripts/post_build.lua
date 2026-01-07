@@ -102,7 +102,9 @@ function main(target)
             error("生成十六进制文件 [失败]")
             all_success = false
         end
-        
+
+
+
         return all_success
     end
     

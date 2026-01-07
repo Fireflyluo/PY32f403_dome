@@ -1,6 +1,7 @@
 -- 设置项目名称
 set_project("arm_m4_project")
 
+
 add_rules("mode.debug", "mode.release")
 
 -- 设置交叉编译工具链和目标平台
@@ -18,7 +19,7 @@ set_toolchains("gnu-rm", {
 -- 设置语言标准
 set_languages("c17", "c++20")
 -- 自动生成 VSCode 的 compile_commands.json 文件
-add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
+-- add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
 
 -- 添加脚本目录到模块搜索路径
 add_moduledirs("scripts")
@@ -46,6 +47,7 @@ task("post-build")
 -- 定义目标
 target("arm_mcu")
     set_kind("binary")
+    set_extension(".elf")
     
     -- 添加文件
     add_files("startup/startup_py32f403xx.s")
@@ -64,7 +66,7 @@ target("arm_mcu")
     
     -- 预处理器定义
     add_defines("ARM_MATH_CM4", "USE_STDPERIPH_DRIVER", "PY32F403xD")
-    
+    add_defines("PY32F403xD")
     -- 编译选项
     add_cflags("-mcpu=cortex-m4",
                "-mthumb", 
@@ -93,6 +95,7 @@ target("arm_mcu")
         add_cflags("-Os", {force = true})
         add_defines("NDEBUG=1")
     end
+    
     
     -- 链接选项
     add_ldflags("-mcpu=cortex-m4",

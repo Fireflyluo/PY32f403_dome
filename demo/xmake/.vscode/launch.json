@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug PY32F403",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "D:\\Desktop\\Ad Hoc Network\\PY32f403_dome\\demo\\xmake",
+            "executable": "D:/Desktop/Ad Hoc Network/PY32f403_dome/demo/xmake/build/cross/arm/debug/arm_mcu.elf",
+            "servertype": "pyocd",
+            "serverpath": "pyocd",
+            // 使用默认端口 3333
+            "serverArgs": [
+                "--target",
+                "py32f403xd"
+            ],
+            "gdbPath": "D:/APP/path/arm-gcc-15.2/bin/arm-none-eabi-gdb.exe",
+            "runToEntryPoint": "main",
+            "toolchainPrefix": "arm-none-eabi",
+            // 指定连接端口为 3333
+            "gdbTarget": "localhost:3333",
+            //  "overrideGDBServerStartedRegex": "STDIO server started on port \\d+ \\(core \\d+\\)",//增加
+            "overrideGDBServerStartedRegex": "GDB server listening on port \\d+",
+        }
+    ]
+}

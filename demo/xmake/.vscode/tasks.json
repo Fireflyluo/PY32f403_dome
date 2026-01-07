@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "clear all",
+            "type": "shell",
+            "command": "xmake",
+            "args": [
+                "clean",
+                "-a"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "flash",
+            "type": "shell",
+            "command": "pyocd ",
+            "args": [
+                "flash",
+                "-t",
+                "py32f403xd",
+                "-f",
+                "10M",
+                "D:/Desktop/Ad Hoc Network/PY32f403_dome/demo/xmake/build/cross/arm/debug/arm_mcu.elf"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
