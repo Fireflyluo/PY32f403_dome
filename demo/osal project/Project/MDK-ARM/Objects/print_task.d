@@ -34,4 +34,5 @@
   ..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h \
   ..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h \
   ..\..\Sensor\QMI8658A\qmi8658a_driver.h \
-  ..\..\Sensor\QMI8658A\qmi8658a_reg.h
+  ..\..\Sensor\QMI8658A\qmi8658a_reg.h \
+  ..\..\data_protocol\data_protocol.h

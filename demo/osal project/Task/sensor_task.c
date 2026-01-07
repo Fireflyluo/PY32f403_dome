@@ -29,7 +29,7 @@ void sensor_task_init(uint8 task_id)
     ring_buffer_init(&imu_ring_buffer, imu_buffer, sizeof(imu_buffer));
 
     // 启动定时器，每100ms触发一次传感器采集
-    osal_start_reload_timer(sensor_task_id, SENSOR_COLLECT_EVENT, 100);
+    osal_start_reload_timer(sensor_task_id, SENSOR_COLLECT_EVENT, 10);
 }
 uint16 sensor_task_event_process(uint8 task_id, uint16 task_event)
 {
@@ -72,11 +72,11 @@ uint16 sensor_task_event_process(uint8 task_id, uint16 task_event)
                 uint16_t current_count = ring_buffer_available(&imu_ring_buffer) / SENSOR_DATA_SIZE;
                 uint16_t max_count = sizeof(imu_buffer) / SENSOR_DATA_SIZE;
 
-                printf("[%u] Data stored. Count: %d/%d, Seq: %d\n",
-                       data.timestamp, current_count, max_count, data.sequence);
+//                printf("[%u] Data stored. Count: %d/%d, Seq: %d\n",
+//                       data.timestamp, current_count, max_count, data.sequence);
 
                 // 检查缓冲区是否达到阈值，触发发送任务
-                if (current_count >= 10)
+                if (current_count >= 64)
                 {
                     osal_set_event(print_task_id, DATA_SEND_EVENT);
                 }

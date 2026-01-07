@@ -28,14 +28,10 @@ virtualFolder:
         - path: ../../Task/print_task.c
         - path: ../../Task/sensor_task.c
       folders: []
-    - name: osal
+    - name: data_protocol
       files:
-        - path: ../../../../OSAL/osal.c
-        - path: ../../../../OSAL/osal_event.c
-        - path: ../../../../OSAL/osal_memory.c
-        - path: ../../../../OSAL/osal_msg.c
-        - path: ../../../../OSAL/osal_timer.c
-        - path: ../../../../OSAL/hal/timer.c
+        - path: ../../data_protocol/data_protocol.c
+        - path: ../../data_protocol/data_protocol.h
       folders: []
     - name: sensor
       files:
@@ -113,6 +109,15 @@ virtualFolder:
         - path: ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Src/py32f403_ll_utils.c
         - path: ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include/py32f403xD.h
       folders: []
+    - name: osal
+      files:
+        - path: ../../../../OSAL/osal.c
+        - path: ../../../../OSAL/osal_event.c
+        - path: ../../../../OSAL/osal_memory.c
+        - path: ../../../../OSAL/osal_msg.c
+        - path: ../../../../OSAL/osal_timer.c
+        - path: ../../../../OSAL/hal/timer.c
+      folders: []
     - name: star
       files:
         - path: ../../Application/Src/startup_py32f403xx.s
@@ -140,6 +145,7 @@ targets:
         - ../../Application/Inc
         - ../../Task
         - ../../Sensor/QMI8658A
+        - ../../data_protocol
         - .cmsis/include
         - ../MDK-ARM/RTE/_Target 1
       libList: []

@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,PY32F403xD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include;..\..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include;..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc;..\..\..\..\BSP\py32_drivers\Inc;..\..\..\..\OSAL\MemMang;..\..\..\..\OSAL;..\..\..\..\OSAL\hal;..\..\Application\Inc;..\..\Task;..\..\Sensor\QMI8658A</IncludePath>
+              <IncludePath>..\..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include;..\..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include;..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc;..\..\..\..\BSP\py32_drivers\Inc;..\..\..\..\OSAL\MemMang;..\..\..\..\OSAL;..\..\..\..\OSAL\hal;..\..\Application\Inc;..\..\Task;..\..\Sensor\QMI8658A;..\..\data_protocol</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -463,37 +463,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>osal</GroupName>
+          <GroupName>data_protocol</GroupName>
           <Files>
             <File>
-              <FileName>osal.c</FileName>
+              <FileName>data_protocol.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\osal.c</FilePath>
+              <FilePath>..\..\data_protocol\data_protocol.c</FilePath>
             </File>
             <File>
-              <FileName>osal_event.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\osal_event.c</FilePath>
-            </File>
-            <File>
-              <FileName>osal_memory.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\osal_memory.c</FilePath>
-            </File>
-            <File>
-              <FileName>osal_msg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\osal_msg.c</FilePath>
-            </File>
-            <File>
-              <FileName>osal_timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\osal_timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\hal\timer.c</FilePath>
+              <FileName>data_protocol.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\data_protocol\data_protocol.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -844,6 +824,41 @@
               <FileName>py32f403xD.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include\py32f403xD.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>osal</GroupName>
+          <Files>
+            <File>
+              <FileName>osal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\OSAL\osal.c</FilePath>
+            </File>
+            <File>
+              <FileName>osal_event.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\OSAL\osal_event.c</FilePath>
+            </File>
+            <File>
+              <FileName>osal_memory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\OSAL\osal_memory.c</FilePath>
+            </File>
+            <File>
+              <FileName>osal_msg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\OSAL\osal_msg.c</FilePath>
+            </File>
+            <File>
+              <FileName>osal_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\OSAL\osal_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\OSAL\hal\timer.c</FilePath>
             </File>
           </Files>
         </Group>

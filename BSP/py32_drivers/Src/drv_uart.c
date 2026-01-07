@@ -168,7 +168,7 @@ uart_err_t uart_init(uart_instance_t instance, uint32_t baudrate, uart_mode_t mo
 
     /* 初始化设备结构 */
     memset(dev, 0, sizeof(uart_device_t));
-
+    dev->mode = mode;
     /* 配置UART句柄 */
     dev->huart.Instance = uart_bases[instance];
     dev->huart.Init.BaudRate = baudrate;
@@ -466,12 +466,12 @@ static void uart_dma_process_full_data(uart_instance_t instance)
 static uint16_t uart_dma_process_idle_data(uart_instance_t instance)
 {
     uart_device_t *dev = &uart_devices[instance];
-    uint16_t current_pos = UART_DMA_BUFFER_SIZE - __HAL_DMA_GET_COUNTER(dev->huart.hdmarx);
+    uint16_t current_pos = sizeof(dev->dma_rx_buffer) - __HAL_DMA_GET_COUNTER(dev->huart.hdmarx);
     dev->dma_rx_current_pos = current_pos;
     uint16_t half_size = UART_DMA_BUFFER_SIZE / 2;
     uint16_t data_start, data_end, data_size = 0;
 
-    /* 修正后的逻辑 - 保持乒乓缓存思想 */
+   
     if (current_pos >= half_size)
     {
         /* 数据主要在后半部分 */
@@ -798,6 +798,7 @@ static uart_err_t uart_configure_irq_priority(uart_instance_t instance)
         HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
         HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
     }
+    __HAL_UART_ENABLE_IT(&dev->huart, UART_IT_IDLE);
 #endif
 
     return UART_OK;
@@ -1398,7 +1399,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 
 #if (UART_USE_DMA == 1) && (UART_USE_DMA_IDLE_DETECTION == 1)
 /* UART空闲中断回调（用于DMA空闲检测） */
-void HAL_UART_IdleCallback(UART_HandleTypeDef *huart)
+void HAL_UART_IdleFrameDetectCpltCallback(UART_HandleTypeDef *huart)
 {
     for (int i = 0; i < UART_INSTANCE_MAX; i++)
     {

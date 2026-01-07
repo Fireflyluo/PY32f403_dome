@@ -43,12 +43,12 @@ uint16 sensor_task_event_process(uint8 task_id, uint16 task_event);
 #define LED_BLINK_EVENT 0x0001
 
 // print 任务的任务事件定义
-#define LOG_PRINT_EVENT 0x0001 
-#define DATA_SEND_EVENT 0x0002
+#define CMD_PRINT_EVENT 0x0001 // 日志打印事件
+#define DATA_SEND_EVENT 0x0002 // 数据发送事件
 
 // 传感器任务事件定义
 #define SENSOR_COLLECT_EVENT 0x0001 // 传感器采集
-
+#define CMD_PARSE_EVENT 0x0002      // 命令解析事件
 // 统计任务的系统消息事件定义
 #define PRINTF_STATISTICS 1 // 打印统计消息事件
 
