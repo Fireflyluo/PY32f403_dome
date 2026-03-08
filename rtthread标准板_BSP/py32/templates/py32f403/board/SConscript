@@ -1,0 +1,33 @@
+import os
+import rtconfig
+from building import *
+
+Import('SDK_LIB')
+
+cwd = GetCurrentDir()
+
+# add general drivers
+src = Split('''
+board.c
+CubeMX_Config/Src/py32f403_hal_msp.c
+''')
+
+path =  [cwd]
+path += [cwd + '/CubeMX_Config/Inc']
+
+startup_path_prefix = SDK_LIB
+
+if rtconfig.PLATFORM in ['gcc']:
+    src += [startup_path_prefix + '/PY32F403_HAL/CMSIS/Device/PUYA/PY32F403/Source/Templates/gcc/startup_py32f403xx.s']
+elif rtconfig.PLATFORM in ['armcc', 'armclang']:
+    src += [startup_path_prefix + '/PY32F403_HAL/CMSIS/Device/PUYA/PY32F403/Source/Templates/arm/startup_py32f403xx.s']
+elif rtconfig.PLATFORM in ['iccarm']:
+    src += [startup_path_prefix + '/PY32F403_HAL/CMSIS/Device/PUYA/PY32F403/Source/Templates/iar/startup_py32f403xx.s']
+
+
+# PY32F403
+# You can select chips from the list above
+CPPDEFINES = ['PY32F403xD']
+group = DefineGroup('Drivers', src, depend = [''], CPPPATH = path, CPPDEFINES = CPPDEFINES)
+
+Return('group')

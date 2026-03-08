@@ -1,0 +1,15 @@
+{
+    find_program = {
+        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\Tools\MSVC\14.50.35717\bin\HostX64\x64\cl.exe]],
+        nim = false
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolsh"] = {
+        ["arm-none-eabi-g++"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-g++]]
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolld"] = {
+        ["arm-none-eabi-g++"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-g++]]
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolcxx"] = {
+        ["arm-none-eabi-gcc"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-gcc]]
+    }
+}

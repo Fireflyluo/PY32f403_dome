@@ -28,7 +28,6 @@
   ..\..\..\..\BSP\py32_drivers\Inc\drv_uart.h \
   ..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h \
   ..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h \
-  ..\..\Application\Inc\board.h \
   ..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h \
   ..\..\Middleware\mavlink\common\mavlink.h \
   ..\..\Middleware\mavlink\common\version.h \

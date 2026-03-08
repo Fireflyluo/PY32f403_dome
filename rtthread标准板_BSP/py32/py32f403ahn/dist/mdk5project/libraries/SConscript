@@ -1,0 +1,26 @@
+Import('RTT_ROOT')
+Import('rtconfig')
+from building import *
+import os
+
+cwd = GetCurrentDir()
+group = []
+src = ['drv_common.c']
+path = [cwd]
+
+if not GetDepend('PKG_CMSIS_CORE'):
+    path += [os.path.join(cwd, 'CMSIS', 'Include')]
+    path += [os.path.join(cwd, 'HAL_Drivers', 'CMSIS', 'Include')]
+
+# Add PY32F403 HAL include paths
+path += [os.path.join(cwd, 'PY32F403_HAL', 'PY32F403_HAL_Driver', 'Inc')]
+path += [os.path.join(cwd, 'PY32F403_HAL', 'CMSIS', 'Device', 'PUYA', 'PY32F403', 'Include')]
+
+if GetDepend(['RT_USING_NANO']):
+    group = group + SConscript(os.path.join(cwd, 'nano', 'SConscript'))
+else:
+    group = group + SConscript(os.path.join(cwd, 'drivers', 'SConscript'))
+
+group = group + DefineGroup('Drivers', src, depend = [''], CPPPATH = path)
+
+Return('group')

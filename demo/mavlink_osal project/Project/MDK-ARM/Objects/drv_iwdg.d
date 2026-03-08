@@ -23,11 +23,4 @@
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
-  ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h \
-  ..\..\Application\Inc\board.h \
-  ..\..\..\..\BSP\py32_drivers\Inc\drv_include.h \
-  ..\..\..\..\BSP\py32_drivers\Inc\drv_gpio.h \
-  ..\..\..\..\BSP\py32_drivers\Inc\drv_uart.h \
-  ..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h \
-  ..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h \
-  ..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h
+  ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h

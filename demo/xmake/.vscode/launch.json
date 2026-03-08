@@ -19,8 +19,8 @@
             "toolchainPrefix": "arm-none-eabi",
             // 指定连接端口为 3333
             "gdbTarget": "localhost:3333",
-            //  "overrideGDBServerStartedRegex": "STDIO server started on port \\d+ \\(core \\d+\\)",//增加
-            "overrideGDBServerStartedRegex": "GDB server listening on port \\d+",
+            "overrideGDBServerStartedRegex": "STDIO server started on port \\d+ \\(core \\d+\\)", //增加
+            // "overrideGDBServerStartedRegex": "GDB server listening on port \\d+",
         }
     ]
 }

@@ -110,13 +110,13 @@ I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_ha
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart.h)(0x694E46EB)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h)(0x694E4CE9)
 I (..\..\Application\Inc\main.h)(0x692EDCE8)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69536E4A)
+I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69538586)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h)(0x6953740D)
 F (..\..\Application\Inc\board.h)(0x69437EB2)()
 F (..\..\Application\Src\mav_task.c)(0x6943B2A2)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/mav_task.o -MMD)
 I (..\..\..\..\BSP\example\osal\task_event.h)(0x6943AF7F)
-I (..\..\..\..\OSAL\osal.h)(0x6878778E)
-I (..\..\..\..\OSAL\type.h)(0x69396C26)
+I (..\..\..\..\OSAL\osal.h)(0x69562851)
+I (..\..\..\..\OSAL\type.h)(0x6956280E)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h)(0x671EF613)
 I (..\..\Application\Inc\py32f403_hal_conf.h)(0x69391F87)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h)(0x671EF613)
@@ -151,8 +151,7 @@ I (..\..\..\..\BSP\py32_drivers\Inc\drv_include.h)(0x695362F0)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_gpio.h)(0x692EDC96)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart.h)(0x694E46EB)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h)(0x694E4CE9)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69536E4A)
-I (..\..\Application\Inc\board.h)(0x69437EB2)
+I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69538586)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h)(0x6953740D)
 I (..\..\Middleware\mavlink\common\mavlink.h)(0x6943708C)
 I (..\..\Middleware\mavlink\common\version.h)(0x6943708D)
@@ -432,11 +431,11 @@ I (..\..\..\..\BSP\py32_drivers\Inc\drv_include.h)(0x695362F0)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_gpio.h)(0x692EDC96)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart.h)(0x694E46EB)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h)(0x694E4CE9)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69536E4A)
+I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69538586)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h)(0x6953740D)
 I (..\..\..\..\BSP\example\osal\task_event.h)(0x6943AF7F)
-I (..\..\..\..\OSAL\osal.h)(0x6878778E)
-I (..\..\..\..\OSAL\type.h)(0x69396C26)
+I (..\..\..\..\OSAL\osal.h)(0x69562851)
+I (..\..\..\..\OSAL\type.h)(0x6956280E)
 I (..\..\..\..\OSAL\osal_timer.h)(0x6878778E)
 I (..\..\..\..\OSAL\hal\timer.h)(0x693947E2)
 I (..\..\..\..\OSAL\osal_event.h)(0x6878778E)
@@ -444,8 +443,8 @@ I (..\..\..\..\OSAL\osal_memory.h)(0x6943ABBC)
 I (..\..\..\..\OSAL\osal_msg.h)(0x6878778E)
 F (..\..\..\..\BSP\example\osal\led_task.c)(0x695381D5)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/led_task.o -MMD)
 I (..\..\..\..\BSP\example\osal\task_event.h)(0x6943AF7F)
-I (..\..\..\..\OSAL\osal.h)(0x6878778E)
-I (..\..\..\..\OSAL\type.h)(0x69396C26)
+I (..\..\..\..\OSAL\osal.h)(0x69562851)
+I (..\..\..\..\OSAL\type.h)(0x6956280E)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h)(0x671EF613)
 I (..\..\Application\Inc\py32f403_hal_conf.h)(0x69391F87)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h)(0x671EF613)
@@ -480,11 +479,11 @@ I (..\..\..\..\BSP\py32_drivers\Inc\drv_include.h)(0x695362F0)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart.h)(0x694E46EB)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h)(0x694E4CE9)
 I (..\..\Application\Inc\main.h)(0x692EDCE8)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69536E4A)
+I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69538586)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h)(0x6953740D)
-F (..\..\..\..\OSAL\osal.c)(0x69393C0E)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/osal.o -MMD)
-I (..\..\..\..\OSAL\osal.h)(0x6878778E)
-I (..\..\..\..\OSAL\type.h)(0x69396C26)
+F (..\..\..\..\OSAL\osal.c)(0x6956277D)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/osal.o -MMD)
+I (..\..\..\..\OSAL\osal.h)(0x69562851)
+I (..\..\..\..\OSAL\type.h)(0x6956280E)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h)(0x671EF613)
 I (..\..\Application\Inc\py32f403_hal_conf.h)(0x69391F87)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h)(0x671EF613)
@@ -514,7 +513,7 @@ I (..\..\..\..\OSAL\hal\timer.h)(0x693947E2)
 I (..\..\..\..\OSAL\osal_memory.h)(0x6943ABBC)
 F (..\..\..\..\OSAL\osal_event.c)(0x69393D3C)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/osal_event.o -MMD)
 I (..\..\..\..\OSAL\osal_event.h)(0x6878778E)
-I (..\..\..\..\OSAL\type.h)(0x69396C26)
+I (..\..\..\..\OSAL\type.h)(0x6956280E)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h)(0x671EF613)
 I (..\..\Application\Inc\py32f403_hal_conf.h)(0x69391F87)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h)(0x671EF613)
@@ -543,7 +542,7 @@ I (..\..\..\..\OSAL\hal\timer.h)(0x693947E2)
 I (..\..\..\..\OSAL\osal_memory.h)(0x6943ABBC)
 F (..\..\..\..\OSAL\osal_memory.c)(0x6878778E)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/osal_memory.o -MMD)
 I (..\..\..\..\OSAL\osal_memory.h)(0x6943ABBC)
-I (..\..\..\..\OSAL\type.h)(0x69396C26)
+I (..\..\..\..\OSAL\type.h)(0x6956280E)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h)(0x671EF613)
 I (..\..\Application\Inc\py32f403_hal_conf.h)(0x69391F87)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h)(0x671EF613)
@@ -569,8 +568,8 @@ I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_ha
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h)(0x671EF613)
 F (..\..\..\..\OSAL\osal_msg.c)(0x69393CE9)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/osal_msg.o -MMD)
 I (..\..\..\..\OSAL\osal_msg.h)(0x6878778E)
-I (..\..\..\..\OSAL\osal.h)(0x6878778E)
-I (..\..\..\..\OSAL\type.h)(0x69396C26)
+I (..\..\..\..\OSAL\osal.h)(0x69562851)
+I (..\..\..\..\OSAL\type.h)(0x6956280E)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h)(0x671EF613)
 I (..\..\Application\Inc\py32f403_hal_conf.h)(0x69391F87)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h)(0x671EF613)
@@ -600,7 +599,7 @@ I (..\..\..\..\OSAL\osal_timer.h)(0x6878778E)
 I (..\..\..\..\OSAL\hal\timer.h)(0x693947E2)
 F (..\..\..\..\OSAL\osal_timer.c)(0x69393C73)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/osal_timer.o -MMD)
 I (..\..\..\..\OSAL\osal_timer.h)(0x6878778E)
-I (..\..\..\..\OSAL\type.h)(0x69396C26)
+I (..\..\..\..\OSAL\type.h)(0x6956280E)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h)(0x671EF613)
 I (..\..\Application\Inc\py32f403_hal_conf.h)(0x69391F87)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h)(0x671EF613)
@@ -629,7 +628,7 @@ I (..\..\..\..\OSAL\osal_memory.h)(0x6943ABBC)
 I (..\..\..\..\OSAL\osal_event.h)(0x6878778E)
 F (..\..\..\..\OSAL\hal\timer.c)(0x6878778E)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/timer.o -MMD)
 I (..\..\..\..\OSAL\hal\timer.h)(0x693947E2)
-I (..\..\..\..\OSAL\type.h)(0x69396C26)
+I (..\..\..\..\OSAL\type.h)(0x6956280E)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h)(0x671EF613)
 I (..\..\Application\Inc\py32f403_hal_conf.h)(0x69391F87)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h)(0x671EF613)
@@ -685,8 +684,7 @@ I (..\..\..\..\BSP\py32_drivers\Inc\drv_include.h)(0x695362F0)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_gpio.h)(0x692EDC96)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart.h)(0x694E46EB)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h)(0x694E4CE9)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69536E4A)
-I (..\..\Application\Inc\board.h)(0x69437EB2)
+I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69538586)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h)(0x6953740D)
 I (..\..\Middleware\mavlink\common\mavlink.h)(0x6943708C)
 I (..\..\Middleware\mavlink\common\version.h)(0x6943708D)
@@ -961,7 +959,7 @@ I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_ha
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h)(0x671EF613)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h)(0x671EF613)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h)(0x671EF613)
-F (..\..\..\..\BSP\py32_drivers\Src\drv_i2c.c)(0x69536F63)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/drv_i2c.o -MMD)
+F (..\..\..\..\BSP\py32_drivers\Src\drv_i2c.c)(0x69972DC6)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/drv_i2c.o -MMD)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_include.h)(0x695362F0)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_gpio.h)(0x692EDC96)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h)(0x671EF613)
@@ -990,11 +988,10 @@ I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_ha
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart.h)(0x694E46EB)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h)(0x694E4CE9)
 I (..\..\Application\Inc\main.h)(0x692EDCE8)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69536E4A)
-I (..\..\Application\Inc\board.h)(0x69437EB2)
+I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69538586)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h)(0x6953740D)
 F (..\..\..\..\BSP\py32_drivers\Src\drv_iwdg.c)(0x6942C7B5)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/drv_iwdg.o -MMD)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_iwdg.h)(0x69391EBE)
+I (..\..\..\..\BSP\py32_drivers\Inc\drv_iwdg.h)(0x6953858F)
 I (..\..\Application\Inc\main.h)(0x692EDCE8)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h)(0x671EF613)
 I (..\..\Application\Inc\py32f403_hal_conf.h)(0x69391F87)
@@ -1019,13 +1016,6 @@ I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_ha
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h)(0x671EF613)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h)(0x671EF613)
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h)(0x671EF613)
-I (..\..\Application\Inc\board.h)(0x69437EB2)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_include.h)(0x695362F0)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_gpio.h)(0x692EDC96)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart.h)(0x694E46EB)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h)(0x694E4CE9)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h)(0x69536E4A)
-I (..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h)(0x6953740D)
 F (..\..\..\..\BSP\py32_drivers\Src\drv_spi.c)(0x692EA867)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/drv_spi.o -MMD)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_spi.h)(0x692EA8A0)
 I (..\..\Application\Inc\main.h)(0x692EDCE8)
@@ -1080,7 +1070,7 @@ I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_ha
 I (..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h)(0x671EF613)
 F (..\..\..\..\BSP\py32_drivers\Src\drv_tool.c)(0x69537413)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/drv_tool.o -MMD)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h)(0x6953740D)
-F (..\..\..\..\BSP\py32_drivers\Src\drv_uart.c)(0x694E4C4C)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/drv_uart.o -MMD)
+F (..\..\..\..\BSP\py32_drivers\Src\drv_uart.c)(0x695B4E8C)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Include -I ../../../../BSP/PY32f403_Firmware_Library/CMSIS/Device/PUYA/PY32F403/Include -I ../../../../BSP/PY32f403_Firmware_Library/PY32F403_HAL_Driver/Inc -I ../../Application/Inc -I ../../../../BSP/py32_drivers/Inc -I ../../../../BSP -I ../../../../OSAL/MemMang -I ../../../../OSAL -I ../../../../OSAL/hal -I ../../Middleware/mavlink -I ../../Middleware/mavlink/common -I ../../Middleware/mavlink/minimal -I ../../Middleware/mavlink/standard -I ../../../../BSP/example/osal-ID:/APP/Keil_v5/ARM/PACK/Puya/PY32F4xx_DFP/1.0.1/Drivers/CMSIS/Device/PUYA/PY32F4xx/Include-D__UVISION_VERSION="543" -DUSE_HAL_DRIVER -DPY32F403xD-o ./objects/drv_uart.o -MMD)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart.h)(0x694E46EB)
 I (..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h)(0x694E4CE9)
 I (..\..\Application\Inc\main.h)(0x692EDCE8)

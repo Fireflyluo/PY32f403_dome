@@ -1,0 +1,11 @@
+config SOC_FAMILY_PY32
+    bool
+
+config SOC_SERIES_PY32F4
+    bool
+    select ARCH_ARM_CORTEX_M4
+    select SOC_FAMILY_PY32
+
+config SOC_PY32F403
+    bool
+    select SOC_SERIES_PY32F4

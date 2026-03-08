@@ -1,0 +1,67 @@
+import rtconfig
+from building import *
+
+# get current directory
+cwd = GetCurrentDir()
+
+# The set of source files associated with this SConscript file.
+
+src = Split('''
+CMSIS/Device/PUYA/PY32F403/Source/Templates/system_py32f403.c
+PY32F403_HAL_Driver/Src/py32f403_hal.c
+PY32F403_HAL_Driver/Src/py32f403_hal_cortex.c
+PY32F403_HAL_Driver/Src/py32f403_hal_crc.c
+PY32F403_HAL_Driver/Src/py32f403_hal_dma.c
+PY32F403_HAL_Driver/Src/py32f403_hal_pwr.c
+PY32F403_HAL_Driver/Src/py32f403_hal_pwr_ex.c
+PY32F403_HAL_Driver/Src/py32f403_hal_rcc.c
+PY32F403_HAL_Driver/Src/py32f403_hal_rcc_ex.c
+PY32F403_HAL_Driver/Src/py32f403_hal_gpio.c
+''')
+
+if GetDepend(['RT_USING_SERIAL']) or GetDepend(['RT_USING_NANO', 'RT_USING_CONSOLE']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_uart.c']
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_usart.c']
+
+if GetDepend(['RT_USING_I2C']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_i2c.c']
+
+if GetDepend(['RT_USING_SPI']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_spi.c']
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_spi_ex.c']
+
+if GetDepend(['RT_USING_CAN']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_canfd.c']
+
+if GetDepend(['RT_USING_HWTIMER']) or GetDepend(['RT_USING_PWM']) or GetDepend(['RT_USING_PULSE_ENCODER']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_tim.c']
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_tim_ex.c']
+
+if GetDepend(['RT_USING_ADC']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_adc.c']
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_adc_ex.c']
+
+if GetDepend(['RT_USING_RTC']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_rtc.c']
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_rtc_ex.c']
+
+if GetDepend(['RT_USING_WDT']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_iwdg.c']
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_wwdg.c']
+
+if GetDepend(['RT_USING_SDIO']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_sd.c']
+
+if GetDepend(['RT_USING_AUDIO']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_i2s.c']
+
+if GetDepend(['BSP_USING_ON_CHIP_FLASH']):
+    src += ['PY32F403_HAL_Driver/Src/py32f403_hal_flash.c']
+
+path = [cwd + '/PY32F403_HAL_Driver/Inc',
+    cwd + '/CMSIS/Device/PUYA/PY32F403/Include']
+
+CPPDEFINES = ['USE_HAL_DRIVER']
+group = DefineGroup('Libraries', src, depend = [''], CPPPATH = path, CPPDEFINES = CPPDEFINES)
+
+Return('group')

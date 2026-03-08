@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\PY32F403_Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\PY32F403_Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Tue Dec 30 15:47:39 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Sun Mar  8 18:59:45 2026
 <BR><P>
 <H3>Maximum Stack Usage =       1444 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -12,7 +12,7 @@ mav_task_event_process &rArr; send_position_target &rArr; mavlink_msg_set_positi
 <H3>
 Mutually Recursive functions
 </H3> <LI><a href="#[1c]">ADC1_2_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1c]">ADC1_2_IRQHandler</a><BR>
- <LI><a href="#[ca]">osal_mem_alloc</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[d4]">osal_mem_init</a><BR>
+ <LI><a href="#[cb]">osal_mem_alloc</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[d5]">osal_mem_init</a><BR>
 </UL>
 <P>
 <H3>
@@ -109,7 +109,7 @@ Global Symbols
 <P><STRONG><a name="[48]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(.text)
 </UL>
-<P><STRONG><a name="[e3]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[e4]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[52]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -119,15 +119,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[e4]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[e5]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[e5]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[e6]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[e6]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[e7]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[e7]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[e8]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[e8]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[e9]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, startup_py32f403xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
@@ -269,38 +269,38 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
 <P><STRONG><a name="[7b]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_update
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_set_position_target_local_ned_pack
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_to_send_buffer
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<BR><BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_update
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_set_position_target_local_ned_pack
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_to_send_buffer
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
 
-<P><STRONG><a name="[e9]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[ea]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[ea]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[eb]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
 <P><STRONG><a name="[55]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[eb]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[ec]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[ec]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[ed]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[54]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_final_48
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_final_48
 </UL>
 
-<P><STRONG><a name="[a0]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_init
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
+<P><STRONG><a name="[a1]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_init
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
 </UL>
 
-<P><STRONG><a name="[ed]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[ee]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[56]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -312,10 +312,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[ee]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[ef]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[a1]"></a>APP_ErrorHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, main.o(.text.APP_ErrorHandler))
-<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
+<P><STRONG><a name="[a2]"></a>APP_ErrorHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, main.o(.text.APP_ErrorHandler))
+<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
 </UL>
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, py32f403_it.o(.text.BusFault_Handler))
@@ -398,7 +398,7 @@ Global Symbols
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 </UL>
 
-<P><STRONG><a name="[9c]"></a>HAL_DMA_GetState</STRONG> (Thumb, 14 bytes, Stack size 4 bytes, py32f403_hal_dma.o(.text.HAL_DMA_GetState))
+<P><STRONG><a name="[9d]"></a>HAL_DMA_GetState</STRONG> (Thumb, 14 bytes, Stack size 4 bytes, py32f403_hal_dma.o(.text.HAL_DMA_GetState))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_DMA_GetState
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Slave_STOPF
@@ -416,38 +416,38 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
 </UL>
 
-<P><STRONG><a name="[aa]"></a>HAL_GPIO_Init</STRONG> (Thumb, 846 bytes, Stack size 40 bytes, py32f403_hal_gpio.o(.text.HAL_GPIO_Init))
+<P><STRONG><a name="[ab]"></a>HAL_GPIO_Init</STRONG> (Thumb, 846 bytes, Stack size 40 bytes, py32f403_hal_gpio.o(.text.HAL_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
+<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
 </UL>
 
-<P><STRONG><a name="[ac]"></a>HAL_GPIO_TogglePin</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, py32f403_hal_gpio.o(.text.HAL_GPIO_TogglePin))
+<P><STRONG><a name="[ad]"></a>HAL_GPIO_TogglePin</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, py32f403_hal_gpio.o(.text.HAL_GPIO_TogglePin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_GPIO_TogglePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_toggle
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_toggle
 </UL>
 
 <P><STRONG><a name="[79]"></a>HAL_GetTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, py32f403_hal.o(.text.HAL_GetTick))
-<BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_position_target
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_init
+<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_position_target
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_init
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
 
-<P><STRONG><a name="[92]"></a>HAL_I2C_AbortCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_AbortCpltCallback))
+<P><STRONG><a name="[93]"></a>HAL_I2C_AbortCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_AbortCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_I2C_AbortCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_ITError
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DMAAbort
 </UL>
 
-<P><STRONG><a name="[9b]"></a>HAL_I2C_AddrCallback</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_AddrCallback))
+<P><STRONG><a name="[9c]"></a>HAL_I2C_AddrCallback</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_AddrCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_I2C_AddrCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Slave_ADDR
@@ -485,14 +485,14 @@ Global Symbols
 <LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C1_EV_IRQHandler
 </UL>
 
-<P><STRONG><a name="[93]"></a>HAL_I2C_ErrorCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_ErrorCallback))
+<P><STRONG><a name="[94]"></a>HAL_I2C_ErrorCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_ErrorCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_I2C_ErrorCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_ITError
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DMAAbort
 </UL>
 
-<P><STRONG><a name="[94]"></a>HAL_I2C_ListenCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_ListenCpltCallback))
+<P><STRONG><a name="[95]"></a>HAL_I2C_ListenCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_ListenCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_I2C_ListenCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Slave_STOPF
@@ -500,49 +500,49 @@ Global Symbols
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Slave_AF
 </UL>
 
-<P><STRONG><a name="[96]"></a>HAL_I2C_MasterRxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_MasterRxCpltCallback))
+<P><STRONG><a name="[97]"></a>HAL_I2C_MasterRxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_MasterRxCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_I2C_MasterRxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterReceive_BTF
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterReceive_RXNE
 </UL>
 
-<P><STRONG><a name="[97]"></a>HAL_I2C_MasterTxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_MasterTxCpltCallback))
+<P><STRONG><a name="[98]"></a>HAL_I2C_MasterTxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_MasterTxCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_I2C_MasterTxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransmit_BTF
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransmit_TXE
 </UL>
 
-<P><STRONG><a name="[95]"></a>HAL_I2C_MemRxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_MemRxCpltCallback))
+<P><STRONG><a name="[96]"></a>HAL_I2C_MemRxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_MemRxCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_I2C_MemRxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterReceive_BTF
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterReceive_RXNE
 </UL>
 
-<P><STRONG><a name="[98]"></a>HAL_I2C_MemTxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_MemTxCpltCallback))
+<P><STRONG><a name="[99]"></a>HAL_I2C_MemTxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_MemTxCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_I2C_MemTxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransmit_BTF
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransmit_TXE
 </UL>
 
-<P><STRONG><a name="[99]"></a>HAL_I2C_SlaveRxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_SlaveRxCpltCallback))
+<P><STRONG><a name="[9a]"></a>HAL_I2C_SlaveRxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_SlaveRxCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_I2C_SlaveRxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_SlaveReceive_RXNE
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Slave_STOPF
 </UL>
 
-<P><STRONG><a name="[9a]"></a>HAL_I2C_SlaveTxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_SlaveTxCpltCallback))
+<P><STRONG><a name="[9b]"></a>HAL_I2C_SlaveTxCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_i2c.o(.text.HAL_I2C_SlaveTxCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_I2C_SlaveTxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_SlaveTransmit_TXE
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Slave_AF
 </UL>
 
-<P><STRONG><a name="[9d]"></a>HAL_IncTick</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, py32f403_hal.o(.text.HAL_IncTick))
+<P><STRONG><a name="[9e]"></a>HAL_IncTick</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, py32f403_hal.o(.text.HAL_IncTick))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
@@ -597,7 +597,7 @@ Global Symbols
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
+<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
 </UL>
 
 <P><STRONG><a name="[7a]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 236 bytes, Stack size 104 bytes, py32f403_hal_rcc.o(.text.HAL_RCC_GetSysClockFreq))
@@ -614,7 +614,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
+<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
 </UL>
 
 <P><STRONG><a name="[80]"></a>HAL_SYSTICK_Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, py32f403_hal_cortex.o(.text.HAL_SYSTICK_Callback))
@@ -649,8 +649,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = HAL_UART_IRQHandler &rArr; UART_EndTransmit_IT &rArr; HAL_UART_TxCpltCallback &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort_IT
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IdleFrameDetectCpltCallback
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTransmit_IT
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Transmit_IT
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Receive_IT
@@ -659,56 +659,58 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 </UL>
 
-<P><STRONG><a name="[86]"></a>HAL_UART_IdleFrameDetectCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_uart.o(.text.HAL_UART_IdleFrameDetectCpltCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_UART_IdleFrameDetectCpltCallback
+<P><STRONG><a name="[86]"></a>HAL_UART_IdleFrameDetectCpltCallback</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, drv_uart.o(.text.HAL_UART_IdleFrameDetectCpltCallback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_UART_IdleFrameDetectCpltCallback &rArr; uart_dma_process_idle_data &rArr; ring_buffer_put_multiple &rArr; ring_buffer_free_space
+</UL>
+<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_dma_process_idle_data
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 </UL>
 
-<P><STRONG><a name="[89]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, drv_uart.o(.text.HAL_UART_RxCpltCallback))
+<P><STRONG><a name="[8a]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, drv_uart.o(.text.HAL_UART_RxCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = HAL_UART_RxCpltCallback &rArr; uart_dma_process_full_data &rArr; ring_buffer_put_multiple &rArr; ring_buffer_free_space
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_dma_process_full_data
+<BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_dma_process_full_data
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Receive_IT
 </UL>
 
-<P><STRONG><a name="[8b]"></a>HAL_UART_Transmit</STRONG> (Thumb, 374 bytes, Stack size 48 bytes, py32f403_hal_uart.o(.text.HAL_UART_Transmit))
+<P><STRONG><a name="[8c]"></a>HAL_UART_Transmit</STRONG> (Thumb, 374 bytes, Stack size 48 bytes, py32f403_hal_uart.o(.text.HAL_UART_Transmit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
 </UL>
 
-<P><STRONG><a name="[8d]"></a>HAL_UART_Transmit_DMA</STRONG> (Thumb, 246 bytes, Stack size 32 bytes, py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA))
+<P><STRONG><a name="[8e]"></a>HAL_UART_Transmit_DMA</STRONG> (Thumb, 246 bytes, Stack size 32 bytes, py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Start_IT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
 </UL>
 
-<P><STRONG><a name="[e1]"></a>HAL_UART_Transmit_IT</STRONG> (Thumb, 162 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.HAL_UART_Transmit_IT))
+<P><STRONG><a name="[e2]"></a>HAL_UART_Transmit_IT</STRONG> (Thumb, 162 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.HAL_UART_Transmit_IT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_UART_Transmit_IT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
 </UL>
 
-<P><STRONG><a name="[8e]"></a>HAL_UART_TxCpltCallback</STRONG> (Thumb, 166 bytes, Stack size 24 bytes, drv_uart.o(.text.HAL_UART_TxCpltCallback))
+<P><STRONG><a name="[8f]"></a>HAL_UART_TxCpltCallback</STRONG> (Thumb, 166 bytes, Stack size 24 bytes, drv_uart.o(.text.HAL_UART_TxCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = HAL_UART_TxCpltCallback &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_skip
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_skip
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
 </UL>
 <BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTransmit_IT
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMATransmitCplt
 </UL>
 
-<P><STRONG><a name="[a3]"></a>HAL_UART_TxHalfCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_uart.o(.text.HAL_UART_TxHalfCpltCallback))
+<P><STRONG><a name="[a4]"></a>HAL_UART_TxHalfCpltCallback</STRONG> (Thumb, 8 bytes, Stack size 4 bytes, py32f403_hal_uart.o(.text.HAL_UART_TxHalfCpltCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_UART_TxHalfCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMATxHalfCplt
@@ -751,16 +753,16 @@ Global Symbols
 <P><STRONG><a name="[1]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, py32f403_it.o(.text.NMI_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
-<P><STRONG><a name="[cc]"></a>OSAL_TIMER_TICKINIT</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, timer.o(.text.OSAL_TIMER_TICKINIT))
-<BR><BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerInit
+<P><STRONG><a name="[cd]"></a>OSAL_TIMER_TICKINIT</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, timer.o(.text.OSAL_TIMER_TICKINIT))
+<BR><BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerInit
 </UL>
 
-<P><STRONG><a name="[dc]"></a>OSAL_TIMER_TICKSTART</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, timer.o(.text.OSAL_TIMER_TICKSTART))
-<BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_hw_setup
+<P><STRONG><a name="[dd]"></a>OSAL_TIMER_TICKSTART</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, timer.o(.text.OSAL_TIMER_TICKSTART))
+<BR><BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_hw_setup
 </UL>
 
-<P><STRONG><a name="[dd]"></a>OSAL_TIMER_TICKSTOP</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, timer.o(.text.OSAL_TIMER_TICKSTOP))
-<BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_hw_setup
+<P><STRONG><a name="[de]"></a>OSAL_TIMER_TICKSTOP</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, timer.o(.text.OSAL_TIMER_TICKSTOP))
+<BR><BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_hw_setup
 </UL>
 
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, py32f403_it.o(.text.PendSV_Handler))
@@ -772,9 +774,9 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, py32f403_it.o(.text.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = SysTick_Handler &rArr; osalTimerUpdate &rArr; osal_mem_free &rArr; osal_mem_init &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerUpdate
+<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerUpdate
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
@@ -794,26 +796,26 @@ Global Symbols
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, py32f403_it.o(.text.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_py32f403xx.o(RESET)
 </UL>
-<P><STRONG><a name="[b1]"></a>gpio_init</STRONG> (Thumb, 158 bytes, Stack size 20 bytes, drv_gpio.o(.text.gpio_init))
+<P><STRONG><a name="[b2]"></a>gpio_init</STRONG> (Thumb, 158 bytes, Stack size 20 bytes, drv_gpio.o(.text.gpio_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = gpio_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_task_init
 </UL>
 
-<P><STRONG><a name="[a8]"></a>gpio_mode</STRONG> (Thumb, 160 bytes, Stack size 48 bytes, drv_gpio.o(.text.gpio_mode))
+<P><STRONG><a name="[a9]"></a>gpio_mode</STRONG> (Thumb, 160 bytes, Stack size 48 bytes, drv_gpio.o(.text.gpio_mode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = gpio_mode &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_get_pin
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_get_pin
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_task_init
 </UL>
 
-<P><STRONG><a name="[ab]"></a>gpio_toggle</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, drv_gpio.o(.text.gpio_toggle))
+<P><STRONG><a name="[ac]"></a>gpio_toggle</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, drv_gpio.o(.text.gpio_toggle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = gpio_toggle &rArr; gpio_get_pin
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_get_pin
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_get_pin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_task_event_process
 </UL>
@@ -821,534 +823,535 @@ Global Symbols
 <P><STRONG><a name="[4f]"></a>led_task_event_process</STRONG> (Thumb, 120 bytes, Stack size 24 bytes, led_task.o(.text.led_task_event_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = led_task_event_process &rArr; osal_msg_deallocate &rArr; osal_mem_free &rArr; osal_mem_init &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_toggle
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_deallocate
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_toggle
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_deallocate
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> osal_examplie.o(.text.osal_main)
 </UL>
 <P><STRONG><a name="[4e]"></a>led_task_init</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, led_task.o(.text.led_task_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = led_task_init &rArr; gpio_mode &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_reload_timer
+<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_reload_timer
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> osal_examplie.o(.text.osal_main)
 </UL>
 <P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = main &rArr; SystemClockConfig &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockConfig
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
 <P><STRONG><a name="[51]"></a>mav_task_event_process</STRONG> (Thumb, 164 bytes, Stack size 24 bytes, mav_task.o(.text.mav_task_event_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1444<LI>Call Chain = mav_task_event_process &rArr; send_position_target &rArr; mavlink_msg_set_position_target_local_ned_encode &rArr; mavlink_msg_set_position_target_local_ned_pack &rArr; mavlink_finalize_message &rArr; mavlink_finalize_message_chan &rArr; mavlink_finalize_message_buffer &rArr; mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_position_target
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_heartbeat
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_deallocate
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_position_target
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_heartbeat
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_deallocate
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> osal_examplie.o(.text.osal_main)
 </UL>
 <P><STRONG><a name="[50]"></a>mav_task_init</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, mav_task.o(.text.mav_task_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = mav_task_init &rArr; osal_start_reload_timer &rArr; osalAddTimer &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_reload_timer
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_init
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_reload_timer
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> osal_examplie.o(.text.osal_main)
 </UL>
-<P><STRONG><a name="[b6]"></a>mavlink_init</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, mavlink_hal.o(.text.mavlink_init))
+<P><STRONG><a name="[b7]"></a>mavlink_init</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, mavlink_hal.o(.text.mavlink_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = mavlink_init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mav_task_init
 </UL>
 
-<P><STRONG><a name="[b4]"></a>mavlink_send_heartbeat</STRONG> (Thumb, 104 bytes, Stack size 312 bytes, mavlink_hal.o(.text.mavlink_send_heartbeat))
+<P><STRONG><a name="[b5]"></a>mavlink_send_heartbeat</STRONG> (Thumb, 104 bytes, Stack size 312 bytes, mavlink_hal.o(.text.mavlink_send_heartbeat))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1252<LI>Call Chain = mavlink_send_heartbeat &rArr; mavlink_msg_heartbeat_encode &rArr; mavlink_msg_heartbeat_pack &rArr; mavlink_finalize_message &rArr; mavlink_finalize_message_chan &rArr; mavlink_finalize_message_buffer &rArr; mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_message
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_heartbeat_encode
+<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_message
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_heartbeat_encode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mav_task_event_process
 </UL>
 
-<P><STRONG><a name="[c2]"></a>mavlink_send_message</STRONG> (Thumb, 46 bytes, Stack size 304 bytes, mavlink_hal.o(.text.mavlink_send_message))
+<P><STRONG><a name="[c3]"></a>mavlink_send_message</STRONG> (Thumb, 46 bytes, Stack size 304 bytes, mavlink_hal.o(.text.mavlink_send_message))
 <BR><BR>[Stack]<UL><LI>Max Depth = 488<LI>Call Chain = mavlink_send_message &rArr; uart_send &rArr; uart_write_to_ring_buffer &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_to_send_buffer
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_to_send_buffer
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_position_target
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_heartbeat
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_position_target
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_heartbeat
 </UL>
 
-<P><STRONG><a name="[c8]"></a>osalAddTimer</STRONG> (Thumb, 182 bytes, Stack size 32 bytes, osal_timer.o(.text.osalAddTimer))
+<P><STRONG><a name="[c9]"></a>osalAddTimer</STRONG> (Thumb, 182 bytes, Stack size 32 bytes, osal_timer.o(.text.osalAddTimer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = osalAddTimer &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalFindTimer
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_alloc
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalFindTimer
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_alloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_reload_timer
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_reload_timer
 </UL>
 
-<P><STRONG><a name="[d2]"></a>osalFindTask</STRONG> (Thumb, 66 bytes, Stack size 12 bytes, osal_event.o(.text.osalFindTask))
+<P><STRONG><a name="[d3]"></a>osalFindTask</STRONG> (Thumb, 66 bytes, Stack size 12 bytes, osal_event.o(.text.osalFindTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = osalFindTask
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_clear_event
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_set_event
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_clear_event
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_set_event
 </UL>
 
-<P><STRONG><a name="[c9]"></a>osalFindTimer</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, osal_timer.o(.text.osalFindTimer))
+<P><STRONG><a name="[ca]"></a>osalFindTimer</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, osal_timer.o(.text.osalFindTimer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = osalFindTimer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalAddTimer
+<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalAddTimer
 </UL>
 
-<P><STRONG><a name="[da]"></a>osalNextActiveTask</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, osal_event.o(.text.osalNextActiveTask))
+<P><STRONG><a name="[db]"></a>osalNextActiveTask</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, osal_event.o(.text.osalNextActiveTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = osalNextActiveTask
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_system
+<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_system
 </UL>
 
-<P><STRONG><a name="[cb]"></a>osalTimerInit</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, osal_timer.o(.text.osalTimerInit))
+<P><STRONG><a name="[cc]"></a>osalTimerInit</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, osal_timer.o(.text.osalTimerInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = osalTimerInit &rArr; osal_timer_activate &rArr; osal_timer_hw_setup
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_activate
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSAL_TIMER_TICKINIT
+<BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_activate
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSAL_TIMER_TICKINIT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_init_system
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_init_system
 </UL>
 
-<P><STRONG><a name="[9e]"></a>osalTimerUpdate</STRONG> (Thumb, 284 bytes, Stack size 32 bytes, osal_timer.o(.text.osalTimerUpdate))
+<P><STRONG><a name="[9f]"></a>osalTimerUpdate</STRONG> (Thumb, 284 bytes, Stack size 32 bytes, osal_timer.o(.text.osalTimerUpdate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = osalTimerUpdate &rArr; osal_mem_free &rArr; osal_mem_init &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_free
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_set_event
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_free
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_set_event
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[d6]"></a>osal_Task_init</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, osal_event.o(.text.osal_Task_init))
+<P><STRONG><a name="[d7]"></a>osal_Task_init</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, osal_event.o(.text.osal_Task_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = osal_Task_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
 </UL>
 
-<P><STRONG><a name="[d0]"></a>osal_add_Task</STRONG> (Thumb, 166 bytes, Stack size 32 bytes, osal_event.o(.text.osal_add_Task))
+<P><STRONG><a name="[d1]"></a>osal_add_Task</STRONG> (Thumb, 166 bytes, Stack size 32 bytes, osal_event.o(.text.osal_add_Task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = osal_add_Task &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_alloc
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_alloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
 </UL>
 
-<P><STRONG><a name="[d1]"></a>osal_clear_event</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, osal_event.o(.text.osal_clear_event))
+<P><STRONG><a name="[d2]"></a>osal_clear_event</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, osal_event.o(.text.osal_clear_event))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = osal_clear_event &rArr; osalFindTask
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalFindTask
+<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalFindTask
 </UL>
-<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
-</UL>
-
-<P><STRONG><a name="[d5]"></a>osal_init_TaskHead</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, osal_event.o(.text.osal_init_TaskHead))
-<BR><BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_init_system
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
 </UL>
 
-<P><STRONG><a name="[d3]"></a>osal_init_system</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, osal.o(.text.osal_init_system))
+<P><STRONG><a name="[d6]"></a>osal_init_TaskHead</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, osal_event.o(.text.osal_init_TaskHead))
+<BR><BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_init_system
+</UL>
+
+<P><STRONG><a name="[d4]"></a>osal_init_system</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, osal.o(.text.osal_init_system))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = osal_init_system &rArr; osal_mem_init &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_init_TaskHead
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerInit
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_init
+<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_init_TaskHead
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerInit
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
 </UL>
 
-<P><STRONG><a name="[b3]"></a>osal_main</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, osal_examplie.o(.text.osal_main))
+<P><STRONG><a name="[b4]"></a>osal_main</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, osal_examplie.o(.text.osal_main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = osal_main &rArr; osal_add_Task &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_system
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_kick
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_Task_init
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_add_Task
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_init_system
+<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_system
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_kick
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_Task_init
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_add_Task
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_init_system
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ca]"></a>osal_mem_alloc</STRONG> (Thumb, 566 bytes, Stack size 32 bytes, osal_memory.o(.text.osal_mem_alloc))
+<P><STRONG><a name="[cb]"></a>osal_mem_alloc</STRONG> (Thumb, 566 bytes, Stack size 32 bytes, osal_memory.o(.text.osal_mem_alloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + In Cycle
 <LI>Call Chain = osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_init
+<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalAddTimer
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_init
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_add_Task
+<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalAddTimer
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_init
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_add_Task
 </UL>
 
-<P><STRONG><a name="[cf]"></a>osal_mem_free</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, osal_memory.o(.text.osal_mem_free))
+<P><STRONG><a name="[d0]"></a>osal_mem_free</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, osal_memory.o(.text.osal_mem_free))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = osal_mem_free &rArr; osal_mem_init &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_init
+<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_deallocate
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerUpdate
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_deallocate
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerUpdate
 </UL>
 
-<P><STRONG><a name="[d4]"></a>osal_mem_init</STRONG> (Thumb, 146 bytes, Stack size 24 bytes, osal_memory.o(.text.osal_mem_init))
+<P><STRONG><a name="[d5]"></a>osal_mem_init</STRONG> (Thumb, 146 bytes, Stack size 24 bytes, osal_memory.o(.text.osal_mem_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = osal_mem_init &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_alloc
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_alloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_free
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_alloc
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_init_system
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_free
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_alloc
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_init_system
 </UL>
 
-<P><STRONG><a name="[d7]"></a>osal_mem_kick</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, osal_memory.o(.text.osal_mem_kick))
+<P><STRONG><a name="[d8]"></a>osal_mem_kick</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, osal_memory.o(.text.osal_mem_kick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = osal_mem_kick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
 </UL>
 
-<P><STRONG><a name="[b0]"></a>osal_msg_deallocate</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, osal_msg.o(.text.osal_msg_deallocate))
+<P><STRONG><a name="[b1]"></a>osal_msg_deallocate</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, osal_msg.o(.text.osal_msg_deallocate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = osal_msg_deallocate &rArr; osal_mem_free &rArr; osal_mem_init &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_free
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mem_free
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_task_event_process
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mav_task_event_process
 </UL>
 
-<P><STRONG><a name="[d9]"></a>osal_msg_extract</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, osal_msg.o(.text.osal_msg_extract))
+<P><STRONG><a name="[da]"></a>osal_msg_extract</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, osal_msg.o(.text.osal_msg_extract))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = osal_msg_extract
 </UL>
-<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
 </UL>
 
-<P><STRONG><a name="[af]"></a>osal_msg_receive</STRONG> (Thumb, 162 bytes, Stack size 32 bytes, osal_msg.o(.text.osal_msg_receive))
+<P><STRONG><a name="[b0]"></a>osal_msg_receive</STRONG> (Thumb, 162 bytes, Stack size 32 bytes, osal_msg.o(.text.osal_msg_receive))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = osal_msg_receive &rArr; osal_clear_event &rArr; osalFindTask
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_extract
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_clear_event
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_set_event
+<BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_extract
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_clear_event
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_set_event
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_task_event_process
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mav_task_event_process
 </UL>
 
-<P><STRONG><a name="[ce]"></a>osal_set_event</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, osal_event.o(.text.osal_set_event))
+<P><STRONG><a name="[cf]"></a>osal_set_event</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, osal_event.o(.text.osal_set_event))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = osal_set_event &rArr; osalFindTask
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalFindTask
+<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalFindTask
 </UL>
-<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerUpdate
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_msg_receive
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerUpdate
 </UL>
 
-<P><STRONG><a name="[b2]"></a>osal_start_reload_timer</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, osal_timer.o(.text.osal_start_reload_timer))
+<P><STRONG><a name="[b3]"></a>osal_start_reload_timer</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, osal_timer.o(.text.osal_start_reload_timer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = osal_start_reload_timer &rArr; osalAddTimer &rArr; osal_mem_alloc &rArr;  osal_mem_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalAddTimer
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_activate
+<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalAddTimer
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_activate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_task_init
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mav_task_init
 </UL>
 
-<P><STRONG><a name="[d8]"></a>osal_start_system</STRONG> (Thumb, 146 bytes, Stack size 24 bytes, osal.o(.text.osal_start_system))
+<P><STRONG><a name="[d9]"></a>osal_start_system</STRONG> (Thumb, 146 bytes, Stack size 24 bytes, osal.o(.text.osal_start_system))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = osal_start_system &rArr; osalNextActiveTask
 </UL>
-<BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalNextActiveTask
+<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalNextActiveTask
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_main
 </UL>
 
-<P><STRONG><a name="[cd]"></a>osal_timer_activate</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, osal_timer.o(.text.osal_timer_activate))
+<P><STRONG><a name="[ce]"></a>osal_timer_activate</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, osal_timer.o(.text.osal_timer_activate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = osal_timer_activate &rArr; osal_timer_hw_setup
 </UL>
-<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_hw_setup
+<BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_hw_setup
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerInit
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_reload_timer
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osalTimerInit
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_start_reload_timer
 </UL>
 
-<P><STRONG><a name="[db]"></a>osal_timer_hw_setup</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, osal_timer.o(.text.osal_timer_hw_setup))
+<P><STRONG><a name="[dc]"></a>osal_timer_hw_setup</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, osal_timer.o(.text.osal_timer_hw_setup))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = osal_timer_hw_setup
 </UL>
-<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSAL_TIMER_TICKSTOP
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSAL_TIMER_TICKSTART
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSAL_TIMER_TICKSTOP
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSAL_TIMER_TICKSTART
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_activate
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_timer_activate
 </UL>
 
-<P><STRONG><a name="[90]"></a>ring_buffer_available</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, drv_tool.o(.text.ring_buffer_available))
+<P><STRONG><a name="[91]"></a>ring_buffer_available</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, drv_tool.o(.text.ring_buffer_available))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ring_buffer_available
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_skip
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_peek_multiple
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_skip
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_peek_multiple
 </UL>
 
-<P><STRONG><a name="[e0]"></a>ring_buffer_free_space</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, drv_tool.o(.text.ring_buffer_free_space))
+<P><STRONG><a name="[e1]"></a>ring_buffer_free_space</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, drv_tool.o(.text.ring_buffer_free_space))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ring_buffer_free_space
 </UL>
-<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
+<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
 </UL>
 
-<P><STRONG><a name="[de]"></a>ring_buffer_peek_multiple</STRONG> (Thumb, 228 bytes, Stack size 40 bytes, drv_tool.o(.text.ring_buffer_peek_multiple))
+<P><STRONG><a name="[df]"></a>ring_buffer_peek_multiple</STRONG> (Thumb, 228 bytes, Stack size 40 bytes, drv_tool.o(.text.ring_buffer_peek_multiple))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = ring_buffer_peek_multiple &rArr; ring_buffer_available
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
 </UL>
 
-<P><STRONG><a name="[df]"></a>ring_buffer_put_multiple</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, drv_tool.o(.text.ring_buffer_put_multiple))
+<P><STRONG><a name="[e0]"></a>ring_buffer_put_multiple</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, drv_tool.o(.text.ring_buffer_put_multiple))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = ring_buffer_put_multiple &rArr; ring_buffer_free_space
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_free_space
+<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_free_space
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_write_to_ring_buffer
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_dma_process_full_data
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_write_to_ring_buffer
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_dma_process_idle_data
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_dma_process_full_data
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
 </UL>
 
-<P><STRONG><a name="[8f]"></a>ring_buffer_skip</STRONG> (Thumb, 114 bytes, Stack size 24 bytes, drv_tool.o(.text.ring_buffer_skip))
+<P><STRONG><a name="[90]"></a>ring_buffer_skip</STRONG> (Thumb, 114 bytes, Stack size 24 bytes, drv_tool.o(.text.ring_buffer_skip))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ring_buffer_skip &rArr; ring_buffer_available
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
 </UL>
 
-<P><STRONG><a name="[b5]"></a>send_position_target</STRONG> (Thumb, 122 bytes, Stack size 376 bytes, mavlink_hal.o(.text.send_position_target))
+<P><STRONG><a name="[b6]"></a>send_position_target</STRONG> (Thumb, 122 bytes, Stack size 376 bytes, mavlink_hal.o(.text.send_position_target))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1420<LI>Call Chain = send_position_target &rArr; mavlink_msg_set_position_target_local_ned_encode &rArr; mavlink_msg_set_position_target_local_ned_pack &rArr; mavlink_finalize_message &rArr; mavlink_finalize_message_chan &rArr; mavlink_finalize_message_buffer &rArr; mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_message
+<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_message
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_set_position_target_local_ned_encode
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_set_position_target_local_ned_encode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mav_task_event_process
 </UL>
 
-<P><STRONG><a name="[c3]"></a>uart_send</STRONG> (Thumb, 468 bytes, Stack size 48 bytes, drv_uart.o(.text.uart_send))
+<P><STRONG><a name="[c4]"></a>uart_send</STRONG> (Thumb, 468 bytes, Stack size 48 bytes, drv_uart.o(.text.uart_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = uart_send &rArr; uart_write_to_ring_buffer &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_IT
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_write_to_ring_buffer
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
+<BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_IT
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_write_to_ring_buffer
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_message
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_message
 </UL>
 
-<P><STRONG><a name="[e2]"></a>uart_write_to_ring_buffer</STRONG> (Thumb, 162 bytes, Stack size 32 bytes, drv_uart.o(.text.uart_write_to_ring_buffer))
+<P><STRONG><a name="[e3]"></a>uart_write_to_ring_buffer</STRONG> (Thumb, 162 bytes, Stack size 32 bytes, drv_uart.o(.text.uart_write_to_ring_buffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = uart_write_to_ring_buffer &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
 </UL>
 
-<P><STRONG><a name="[ef]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[f0]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[f0]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[f1]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[f1]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[f2]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[9f]"></a>SystemClockConfig</STRONG> (Thumb, 124 bytes, Stack size 80 bytes, main.o(.text.SystemClockConfig))
+<P><STRONG><a name="[a0]"></a>SystemClockConfig</STRONG> (Thumb, 124 bytes, Stack size 80 bytes, main.o(.text.SystemClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = SystemClockConfig &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_ErrorHandler
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_ErrorHandler
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bc]"></a>mavlink_get_channel_status</STRONG> (Thumb, 30 bytes, Stack size 4 bytes, mavlink_hal.o(.text.mavlink_get_channel_status))
+<P><STRONG><a name="[bd]"></a>mavlink_get_channel_status</STRONG> (Thumb, 30 bytes, Stack size 4 bytes, mavlink_hal.o(.text.mavlink_get_channel_status))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = mavlink_get_channel_status
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_chan
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_chan
 </UL>
 
-<P><STRONG><a name="[c1]"></a>mavlink_msg_to_send_buffer</STRONG> (Thumb, 350 bytes, Stack size 32 bytes, mavlink_hal.o(.text.mavlink_msg_to_send_buffer))
+<P><STRONG><a name="[c2]"></a>mavlink_msg_to_send_buffer</STRONG> (Thumb, 350 bytes, Stack size 32 bytes, mavlink_hal.o(.text.mavlink_msg_to_send_buffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = mavlink_msg_to_send_buffer &rArr; _mav_trim_payload
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mav_trim_payload
+<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mav_trim_payload
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_message
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_message
 </UL>
 
-<P><STRONG><a name="[ba]"></a>_mav_trim_payload</STRONG> (Thumb, 74 bytes, Stack size 12 bytes, mavlink_hal.o(.text._mav_trim_payload))
+<P><STRONG><a name="[bb]"></a>_mav_trim_payload</STRONG> (Thumb, 74 bytes, Stack size 12 bytes, mavlink_hal.o(.text._mav_trim_payload))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = _mav_trim_payload
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_to_send_buffer
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_to_send_buffer
 </UL>
 
-<P><STRONG><a name="[bd]"></a>mavlink_msg_heartbeat_encode</STRONG> (Thumb, 76 bytes, Stack size 48 bytes, mavlink_hal.o(.text.mavlink_msg_heartbeat_encode))
+<P><STRONG><a name="[be]"></a>mavlink_msg_heartbeat_encode</STRONG> (Thumb, 76 bytes, Stack size 48 bytes, mavlink_hal.o(.text.mavlink_msg_heartbeat_encode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 940<LI>Call Chain = mavlink_msg_heartbeat_encode &rArr; mavlink_msg_heartbeat_pack &rArr; mavlink_finalize_message &rArr; mavlink_finalize_message_chan &rArr; mavlink_finalize_message_buffer &rArr; mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_heartbeat_pack
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_heartbeat_pack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_heartbeat
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_send_heartbeat
 </UL>
 
-<P><STRONG><a name="[be]"></a>mavlink_msg_heartbeat_pack</STRONG> (Thumb, 146 bytes, Stack size 48 bytes, mavlink_hal.o(.text.mavlink_msg_heartbeat_pack))
+<P><STRONG><a name="[bf]"></a>mavlink_msg_heartbeat_pack</STRONG> (Thumb, 146 bytes, Stack size 48 bytes, mavlink_hal.o(.text.mavlink_msg_heartbeat_pack))
 <BR><BR>[Stack]<UL><LI>Max Depth = 892<LI>Call Chain = mavlink_msg_heartbeat_pack &rArr; mavlink_finalize_message &rArr; mavlink_finalize_message_chan &rArr; mavlink_finalize_message_buffer &rArr; mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_heartbeat_encode
+<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_heartbeat_encode
 </UL>
 
-<P><STRONG><a name="[bf]"></a>mavlink_msg_set_position_target_local_ned_encode</STRONG> (Thumb, 120 bytes, Stack size 48 bytes, mavlink_hal.o(.text.mavlink_msg_set_position_target_local_ned_encode))
+<P><STRONG><a name="[c0]"></a>mavlink_msg_set_position_target_local_ned_encode</STRONG> (Thumb, 120 bytes, Stack size 48 bytes, mavlink_hal.o(.text.mavlink_msg_set_position_target_local_ned_encode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1044<LI>Call Chain = mavlink_msg_set_position_target_local_ned_encode &rArr; mavlink_msg_set_position_target_local_ned_pack &rArr; mavlink_finalize_message &rArr; mavlink_finalize_message_chan &rArr; mavlink_finalize_message_buffer &rArr; mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_set_position_target_local_ned_pack
+<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_set_position_target_local_ned_pack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_position_target
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_position_target
 </UL>
 
-<P><STRONG><a name="[c0]"></a>mavlink_msg_set_position_target_local_ned_pack</STRONG> (Thumb, 236 bytes, Stack size 152 bytes, mavlink_hal.o(.text.mavlink_msg_set_position_target_local_ned_pack))
+<P><STRONG><a name="[c1]"></a>mavlink_msg_set_position_target_local_ned_pack</STRONG> (Thumb, 236 bytes, Stack size 152 bytes, mavlink_hal.o(.text.mavlink_msg_set_position_target_local_ned_pack))
 <BR><BR>[Stack]<UL><LI>Max Depth = 996<LI>Call Chain = mavlink_msg_set_position_target_local_ned_pack &rArr; mavlink_finalize_message &rArr; mavlink_finalize_message_chan &rArr; mavlink_finalize_message_buffer &rArr; mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_set_position_target_local_ned_encode
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_set_position_target_local_ned_encode
 </UL>
 
-<P><STRONG><a name="[a7]"></a>crc_init</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, mavlink_hal.o(.text.crc_init))
+<P><STRONG><a name="[a8]"></a>crc_init</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, mavlink_hal.o(.text.crc_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = crc_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_calculate
+<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_calculate
 </UL>
 
-<P><STRONG><a name="[a5]"></a>crc_accumulate</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, mavlink_hal.o(.text.crc_accumulate))
+<P><STRONG><a name="[a6]"></a>crc_accumulate</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, mavlink_hal.o(.text.crc_accumulate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = crc_accumulate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_accumulate_buffer
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_calculate
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_accumulate_buffer
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_calculate
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
 </UL>
 
-<P><STRONG><a name="[c7]"></a>mavlink_sha256_init</STRONG> (Thumb, 114 bytes, Stack size 4 bytes, mavlink_hal.o(.text.mavlink_sha256_init))
+<P><STRONG><a name="[c8]"></a>mavlink_sha256_init</STRONG> (Thumb, 114 bytes, Stack size 4 bytes, mavlink_hal.o(.text.mavlink_sha256_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = mavlink_sha256_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sign_packet
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sign_packet
 </UL>
 
-<P><STRONG><a name="[c5]"></a>mavlink_sha256_update</STRONG> (Thumb, 246 bytes, Stack size 120 bytes, mavlink_hal.o(.text.mavlink_sha256_update))
+<P><STRONG><a name="[c6]"></a>mavlink_sha256_update</STRONG> (Thumb, 246 bytes, Stack size 120 bytes, mavlink_hal.o(.text.mavlink_sha256_update))
 <BR><BR>[Stack]<UL><LI>Max Depth = 436<LI>Call Chain = mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_calc
+<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_calc
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sign_packet
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_final_48
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sign_packet
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_final_48
 </UL>
 
-<P><STRONG><a name="[c4]"></a>mavlink_sha256_final_48</STRONG> (Thumb, 202 bytes, Stack size 104 bytes, mavlink_hal.o(.text.mavlink_sha256_final_48))
+<P><STRONG><a name="[c5]"></a>mavlink_sha256_final_48</STRONG> (Thumb, 202 bytes, Stack size 104 bytes, mavlink_hal.o(.text.mavlink_sha256_final_48))
 <BR><BR>[Stack]<UL><LI>Max Depth = 540<LI>Call Chain = mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_update
+<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_update
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sign_packet
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sign_packet
 </UL>
 
-<P><STRONG><a name="[c6]"></a>mavlink_sha256_calc</STRONG> (Thumb, 420 bytes, Stack size 316 bytes, mavlink_hal.o(.text.mavlink_sha256_calc))
+<P><STRONG><a name="[c7]"></a>mavlink_sha256_calc</STRONG> (Thumb, 420 bytes, Stack size 316 bytes, mavlink_hal.o(.text.mavlink_sha256_calc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = mavlink_sha256_calc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_update
+<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_update
 </UL>
 
-<P><STRONG><a name="[b7]"></a>mavlink_finalize_message</STRONG> (Thumb, 82 bytes, Stack size 32 bytes, mavlink_hal.o(.text.mavlink_finalize_message))
+<P><STRONG><a name="[b8]"></a>mavlink_finalize_message</STRONG> (Thumb, 82 bytes, Stack size 32 bytes, mavlink_hal.o(.text.mavlink_finalize_message))
 <BR><BR>[Stack]<UL><LI>Max Depth = 844<LI>Call Chain = mavlink_finalize_message &rArr; mavlink_finalize_message_chan &rArr; mavlink_finalize_message_buffer &rArr; mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_chan
+<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_chan
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_set_position_target_local_ned_pack
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_heartbeat_pack
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_set_position_target_local_ned_pack
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_msg_heartbeat_pack
 </UL>
 
-<P><STRONG><a name="[b8]"></a>mavlink_finalize_message_chan</STRONG> (Thumb, 98 bytes, Stack size 48 bytes, mavlink_hal.o(.text.mavlink_finalize_message_chan))
+<P><STRONG><a name="[b9]"></a>mavlink_finalize_message_chan</STRONG> (Thumb, 98 bytes, Stack size 48 bytes, mavlink_hal.o(.text.mavlink_finalize_message_chan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 812<LI>Call Chain = mavlink_finalize_message_chan &rArr; mavlink_finalize_message_buffer &rArr; mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_get_channel_status
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_get_channel_status
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message
+<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message
 </UL>
 
-<P><STRONG><a name="[b9]"></a>mavlink_finalize_message_buffer</STRONG> (Thumb, 558 bytes, Stack size 72 bytes, mavlink_hal.o(.text.mavlink_finalize_message_buffer))
+<P><STRONG><a name="[ba]"></a>mavlink_finalize_message_buffer</STRONG> (Thumb, 558 bytes, Stack size 72 bytes, mavlink_hal.o(.text.mavlink_finalize_message_buffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 764<LI>Call Chain = mavlink_finalize_message_buffer &rArr; mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sign_packet
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_accumulate_buffer
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_calculate
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_accumulate
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mav_trim_payload
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sign_packet
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_accumulate_buffer
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_calculate
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_accumulate
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mav_trim_payload
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_chan
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_chan
 </UL>
 
-<P><STRONG><a name="[a6]"></a>crc_calculate</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, mavlink_hal.o(.text.crc_calculate))
+<P><STRONG><a name="[a7]"></a>crc_calculate</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, mavlink_hal.o(.text.crc_calculate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = crc_calculate &rArr; crc_accumulate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_accumulate
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_init
+<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_accumulate
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
 </UL>
 
-<P><STRONG><a name="[a4]"></a>crc_accumulate_buffer</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, mavlink_hal.o(.text.crc_accumulate_buffer))
+<P><STRONG><a name="[a5]"></a>crc_accumulate_buffer</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, mavlink_hal.o(.text.crc_accumulate_buffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = crc_accumulate_buffer &rArr; crc_accumulate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_accumulate
+<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_accumulate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
 </UL>
 
-<P><STRONG><a name="[bb]"></a>mavlink_sign_packet</STRONG> (Thumb, 194 bytes, Stack size 152 bytes, mavlink_hal.o(.text.mavlink_sign_packet))
+<P><STRONG><a name="[bc]"></a>mavlink_sign_packet</STRONG> (Thumb, 194 bytes, Stack size 152 bytes, mavlink_hal.o(.text.mavlink_sign_packet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 692<LI>Call Chain = mavlink_sign_packet &rArr; mavlink_sha256_final_48 &rArr; mavlink_sha256_update &rArr; mavlink_sha256_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_final_48
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_update
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_init
+<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_final_48
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_update
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_sha256_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mavlink_finalize_message_buffer
 </UL>
 
-<P><STRONG><a name="[a9]"></a>gpio_get_pin</STRONG> (Thumb, 62 bytes, Stack size 12 bytes, drv_gpio.o(.text.gpio_get_pin))
+<P><STRONG><a name="[aa]"></a>gpio_get_pin</STRONG> (Thumb, 62 bytes, Stack size 12 bytes, drv_gpio.o(.text.gpio_get_pin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = gpio_get_pin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_toggle
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_toggle
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
 </UL>
 
 <P><STRONG><a name="[59]"></a>gpio_irq_handler</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, drv_gpio.o(.text.gpio_irq_handler))
@@ -1363,40 +1366,48 @@ Local Symbols
 <LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[ae]"></a>get_uart_device</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, drv_uart.o(.text.get_uart_device))
+<P><STRONG><a name="[af]"></a>get_uart_device</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, drv_uart.o(.text.get_uart_device))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = get_uart_device
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
 </UL>
 
-<P><STRONG><a name="[ad]"></a>is_uart_initialized</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, drv_uart.o(.text.is_uart_initialized))
+<P><STRONG><a name="[ae]"></a>is_uart_initialized</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, drv_uart.o(.text.is_uart_initialized))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = is_uart_initialized &rArr; get_uart_device
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_uart_device
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_uart_device
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_write_to_ring_buffer
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_write_to_ring_buffer
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_start_tx_from_ring_buffer
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send
 </UL>
 
-<P><STRONG><a name="[91]"></a>uart_start_tx_from_ring_buffer</STRONG> (Thumb, 230 bytes, Stack size 24 bytes, drv_uart.o(.text.uart_start_tx_from_ring_buffer))
+<P><STRONG><a name="[92]"></a>uart_start_tx_from_ring_buffer</STRONG> (Thumb, 230 bytes, Stack size 24 bytes, drv_uart.o(.text.uart_start_tx_from_ring_buffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_peek_multiple
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
+<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_uart_initialized
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_peek_multiple
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_available
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_write_to_ring_buffer
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_write_to_ring_buffer
 </UL>
 
-<P><STRONG><a name="[8a]"></a>uart_dma_process_full_data</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, drv_uart.o(.text.uart_dma_process_full_data))
+<P><STRONG><a name="[8b]"></a>uart_dma_process_full_data</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, drv_uart.o(.text.uart_dma_process_full_data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = uart_dma_process_full_data &rArr; ring_buffer_put_multiple &rArr; ring_buffer_free_space
 </UL>
-<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
+<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+</UL>
+
+<P><STRONG><a name="[89]"></a>uart_dma_process_idle_data</STRONG> (Thumb, 468 bytes, Stack size 32 bytes, drv_uart.o(.text.uart_dma_process_idle_data))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = uart_dma_process_idle_data &rArr; ring_buffer_put_multiple &rArr; ring_buffer_free_space
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ring_buffer_put_multiple
+</UL>
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IdleFrameDetectCpltCallback
 </UL>
 
 <P><STRONG><a name="[77]"></a>__NVIC_SetPriorityGrouping</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, py32f403_hal_cortex.o(.text.__NVIC_SetPriorityGrouping))
@@ -1439,8 +1450,8 @@ Local Symbols
 <P><STRONG><a name="[4d]"></a>I2C_DMAAbort</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, py32f403_hal_i2c.o(.text.I2C_DMAAbort))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = I2C_DMAAbort &rArr; HAL_I2C_AbortCpltCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_AbortCpltCallback
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ErrorCallback
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_AbortCpltCallback
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ErrorCallback
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> py32f403_hal_i2c.o(.text.I2C_ITError)
 <LI> py32f403_hal_i2c.o(.text.I2C_Slave_STOPF)
@@ -1449,9 +1460,9 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = I2C_ITError &rArr; HAL_DMA_Abort_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort_IT
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ListenCpltCallback
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_AbortCpltCallback
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ErrorCallback
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ListenCpltCallback
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_AbortCpltCallback
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ErrorCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Slave_STOPF
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ER_IRQHandler
@@ -1484,8 +1495,8 @@ Local Symbols
 <P><STRONG><a name="[64]"></a>I2C_MasterTransmit_TXE</STRONG> (Thumb, 502 bytes, Stack size 24 bytes, py32f403_hal_i2c.o(.text.I2C_MasterTransmit_TXE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = I2C_MasterTransmit_TXE &rArr; HAL_I2C_MemTxCpltCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MemTxCpltCallback
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterTxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MemTxCpltCallback
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterTxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 </UL>
@@ -1493,8 +1504,8 @@ Local Symbols
 <P><STRONG><a name="[65]"></a>I2C_MasterTransmit_BTF</STRONG> (Thumb, 220 bytes, Stack size 16 bytes, py32f403_hal_i2c.o(.text.I2C_MasterTransmit_BTF))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = I2C_MasterTransmit_BTF &rArr; HAL_I2C_MemTxCpltCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MemTxCpltCallback
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterTxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MemTxCpltCallback
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterTxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 </UL>
@@ -1502,8 +1513,8 @@ Local Symbols
 <P><STRONG><a name="[66]"></a>I2C_MasterReceive_RXNE</STRONG> (Thumb, 236 bytes, Stack size 16 bytes, py32f403_hal_i2c.o(.text.I2C_MasterReceive_RXNE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = I2C_MasterReceive_RXNE &rArr; HAL_I2C_MasterRxCpltCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterRxCpltCallback
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MemRxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterRxCpltCallback
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MemRxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 </UL>
@@ -1511,8 +1522,8 @@ Local Symbols
 <P><STRONG><a name="[67]"></a>I2C_MasterReceive_BTF</STRONG> (Thumb, 414 bytes, Stack size 16 bytes, py32f403_hal_i2c.o(.text.I2C_MasterReceive_BTF))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = I2C_MasterReceive_BTF &rArr; HAL_I2C_MasterRxCpltCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterRxCpltCallback
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MemRxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterRxCpltCallback
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MemRxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 </UL>
@@ -1520,7 +1531,7 @@ Local Symbols
 <P><STRONG><a name="[68]"></a>I2C_Slave_ADDR</STRONG> (Thumb, 174 bytes, Stack size 24 bytes, py32f403_hal_i2c.o(.text.I2C_Slave_ADDR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = I2C_Slave_ADDR &rArr; HAL_I2C_AddrCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_AddrCallback
+<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_AddrCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 </UL>
@@ -1529,10 +1540,10 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = I2C_Slave_STOPF &rArr; I2C_ITError &rArr; HAL_DMA_Abort_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_ITError
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_GetState
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_GetState
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort_IT
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ListenCpltCallback
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_SlaveRxCpltCallback
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ListenCpltCallback
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_SlaveRxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 </UL>
@@ -1540,7 +1551,7 @@ Local Symbols
 <P><STRONG><a name="[6a]"></a>I2C_SlaveTransmit_TXE</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, py32f403_hal_i2c.o(.text.I2C_SlaveTransmit_TXE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = I2C_SlaveTransmit_TXE &rArr; HAL_I2C_SlaveTxCpltCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_SlaveTxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_SlaveTxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 </UL>
@@ -1554,7 +1565,7 @@ Local Symbols
 <P><STRONG><a name="[6c]"></a>I2C_SlaveReceive_RXNE</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, py32f403_hal_i2c.o(.text.I2C_SlaveReceive_RXNE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = I2C_SlaveReceive_RXNE &rArr; HAL_I2C_SlaveRxCpltCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_SlaveRxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_SlaveRxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 </UL>
@@ -1568,8 +1579,8 @@ Local Symbols
 <P><STRONG><a name="[5d]"></a>I2C_Slave_AF</STRONG> (Thumb, 222 bytes, Stack size 24 bytes, py32f403_hal_i2c.o(.text.I2C_Slave_AF))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = I2C_Slave_AF &rArr; HAL_I2C_ListenCpltCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ListenCpltCallback
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_SlaveTxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ListenCpltCallback
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_SlaveTxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ER_IRQHandler
 </UL>
@@ -1580,25 +1591,25 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 </UL>
 
-<P><STRONG><a name="[8c]"></a>UART_WaitOnFlagUntilTimeout</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, py32f403_hal_uart.o(.text.UART_WaitOnFlagUntilTimeout))
+<P><STRONG><a name="[8d]"></a>UART_WaitOnFlagUntilTimeout</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, py32f403_hal_uart.o(.text.UART_WaitOnFlagUntilTimeout))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 
 <P><STRONG><a name="[4a]"></a>UART_DMATransmitCplt</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.UART_DMATransmitCplt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = UART_DMATransmitCplt &rArr; HAL_UART_TxCpltCallback &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
 </UL>
 <P><STRONG><a name="[4b]"></a>UART_DMATxHalfCplt</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.UART_DMATxHalfCplt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = UART_DMATxHalfCplt &rArr; HAL_UART_TxHalfCpltCallback
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxHalfCpltCallback
+<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxHalfCpltCallback
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
 </UL>
@@ -1607,11 +1618,11 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTxTransfer
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTxTransfer
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> py32f403_hal_uart.o(.text.HAL_UART_Transmit_DMA)
 </UL>
-<P><STRONG><a name="[a2]"></a>UART_EndTxTransfer</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, py32f403_hal_uart.o(.text.UART_EndTxTransfer))
+<P><STRONG><a name="[a3]"></a>UART_EndTxTransfer</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, py32f403_hal_uart.o(.text.UART_EndTxTransfer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = UART_EndTxTransfer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMAError
@@ -1627,7 +1638,7 @@ Local Symbols
 <P><STRONG><a name="[82]"></a>UART_Receive_IT</STRONG> (Thumb, 182 bytes, Stack size 24 bytes, py32f403_hal_uart.o(.text.UART_Receive_IT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = UART_Receive_IT &rArr; HAL_UART_RxCpltCallback &rArr; uart_dma_process_full_data &rArr; ring_buffer_put_multiple &rArr; ring_buffer_free_space
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 </UL>
@@ -1648,7 +1659,7 @@ Local Symbols
 <P><STRONG><a name="[88]"></a>UART_EndTransmit_IT</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, py32f403_hal_uart.o(.text.UART_EndTransmit_IT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = UART_EndTransmit_IT &rArr; HAL_UART_TxCpltCallback &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
+<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 </UL>

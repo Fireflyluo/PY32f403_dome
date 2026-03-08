@@ -1,0 +1,68 @@
+{
+    find_program = {
+        ["C:\\APP\\Env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc"] = [[c:\app\env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-gcc.exe]],
+        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\Tools\MSVC\14.50.35717\bin\HostX64\x64\cl.exe]],
+        nim = false
+    },
+    ["lib.detect.has_flags"] = {
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__as_cxflags__-MMD -MF"] = true,
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__cc_cxflags__-MMD -MF"] = true,
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__as_cxflags__-fdiagnostics-color=always"] = true,
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__cc_cxflags__-DNDEBUG"] = true,
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__cc_cxflags__-Wno-gnu-line-marker -Werror"] = true,
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__cc_cxflags__-fdiagnostics-color=always"] = true,
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__as___-O3"] = true,
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__cc___-O3"] = true
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolsh"] = {
+        ["arm-none-eabi-g++"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-g++]]
+    },
+    ["core.tools.gcc.has_cflags"] = {
+        ["c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe_"] = {
+            ["-save-temps"] = true,
+            ["-pass-exit-codes"] = true,
+            ["-Xassembler"] = true,
+            ["-E"] = true,
+            ["-print-multi-lib"] = true,
+            ["-no-canonical-prefixes"] = true,
+            ["-S"] = true,
+            ["--param"] = true,
+            ["-print-multiarch"] = true,
+            ["--version"] = true,
+            ["-v"] = true,
+            ["-time"] = true,
+            ["--help"] = true,
+            ["--target-help"] = true,
+            ["-print-sysroot-headers-suffix"] = true,
+            ["-x"] = true,
+            ["-pipe"] = true,
+            ["-print-search-dirs"] = true,
+            ["-print-multi-directory"] = true,
+            ["-dumpversion"] = true,
+            ["-print-libgcc-file-name"] = true,
+            ["-print-multi-os-directory"] = true,
+            ["-shared"] = true,
+            ["-dumpmachine"] = true,
+            ["-Xlinker"] = true,
+            ["-o"] = true,
+            ["-c"] = true,
+            ["-B"] = true,
+            ["-print-sysroot"] = true,
+            ["-dumpspecs"] = true,
+            ["-pie"] = true,
+            ["-Xpreprocessor"] = true
+        }
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolas"] = {
+        ["arm-none-eabi-gcc"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-gcc]]
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolld"] = {
+        ["arm-none-eabi-g++"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-g++]]
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolcxx"] = {
+        ["arm-none-eabi-gcc"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-gcc]]
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolcc"] = {
+        ["arm-none-eabi-gcc"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-gcc]]
+    }
+}

@@ -1,0 +1,6 @@
+{
+    cmdlines = {
+        [[xmake lua E:\APP\xmake\modules\private\utils\statistics.lua]],
+        [[xmake lua E:\APP\xmake\actions\build\cleaner.lua]]
+    }
+}

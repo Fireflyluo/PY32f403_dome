@@ -128,11 +128,11 @@ i2c_err_t i2c_init(i2c_instance_t instance, i2c_mode_t mode)
 
   /* 配置 i2c 句柄 */
   /* I2C initialization */
-  dev->hi2c.Instance = i2c_bases[instance];                /* I2C */
-  dev->hi2c.Init.ClockSpeed = I2C_SPEEDCLOCK;              /* I2C communication speed */
-  dev->hi2c.Init.DutyCycle = I2C_DUTYCYCLE_2;                /* I2C Duty cycle */
-  dev->hi2c.Init.OwnAddress1 = 0;                /* I2C address */
-  dev->hi2c.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT; /* 7-bit Addressing mode */
+  dev->hi2c.Instance = i2c_bases[instance];                 /* I2C */
+  dev->hi2c.Init.ClockSpeed = I2C_SPEEDCLOCK;               /* I2C communication speed */
+  dev->hi2c.Init.DutyCycle = I2C_DUTYCYCLE_2;               /* I2C Duty cycle */
+  dev->hi2c.Init.OwnAddress1 = 0;                           /* I2C address */
+  dev->hi2c.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;  /* 7-bit Addressing mode */
   dev->hi2c.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE; /* Do not enable dual address */
   /* dev->hi2c.Init.OwnAddress2     = I2C_ADDRESS; */       /* Second address */
   dev->hi2c.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE; /* Disable general call */
@@ -250,7 +250,7 @@ void MX_I2C2_Init(void)
   hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
   if (HAL_I2C_Init(&hi2c2) != HAL_OK)
   {
-//    APP_ErrorHandler();
+    //    APP_ErrorHandler();
   }
   /* USER CODE BEGIN I2C2_Init 2 */
 
