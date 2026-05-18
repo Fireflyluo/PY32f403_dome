@@ -74,13 +74,13 @@ Reset_Handler:
   ldr   r0, =_estack
   mov   sp, r0          /* set stack pointer */
 
-  /* Enable FPU */
-  LDR   R0, =0xE000ED88      /* CPACR register */
-  LDR   R1, [R0]
-  ORR   R1, R1, #(0xF << 20) /* Set CP10/CP11 full access */
-  STR   R1, [R0]
-  DSB
-  ISB
+/* Enable FPU CPACR for Cortex-M4 */
+  ldr  r0, =0xE000ED88
+  ldr  r1, [r0]
+  orr  r1, r1, #(0xF << 20)
+  str  r1, [r0]
+  dsb
+  isb
 
 /* Copy the data segment initializers from flash to SRAM */
   ldr r0, =_sdata
@@ -115,10 +115,10 @@ LoopFillZerobss:
 
 /* Call the clock system intitialization function.*/
     bl  SystemInit
-/* Call static constructors */
+/* Call static constructors — disabled: PY32 GCC init_array has NULL entries */
     /* bl __libc_init_array */
-/* Call the RT-Thread entry point.*/
-  bl  entry
+/* Call the RT-Thread entry point */
+    bl  entry
 
 LoopForever:
     b LoopForever

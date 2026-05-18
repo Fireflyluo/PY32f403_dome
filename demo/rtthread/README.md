@@ -37,7 +37,7 @@ demo/rtthread/
 │   ├── board.h            #   板级宏 + 堆内存边界
 │   ├── linker_scripts/    #   链接脚本（384KB Flash / 64KB SRAM）
 │   └── CubeMX_Config/     #   HAL 配置 + MSP 初始化
-├── drivers/               # 外设驱动（RTT 设备框架）
+├── lib/drivers/           # 外设驱动（RTT 设备框架）
 │   ├── drv_gpio.c/h       #   GPIO / PIN（中断 + 输出 + 输入）
 │   ├── drv_usart.c/h      #   UART 串口（中断 + DMA）
 │   ├── drv_spi.c/h        #   SPI（中断 + DMA）
@@ -96,7 +96,7 @@ demo/rtthread/
 ## 如何添加新的外设
 
 1. 在 `os/rtconfig.h` 中添加对应的 `BSP_USING_XXX` 宏
-2. 对应驱动配置文件已在 `drivers/config/py32f4/` 就绪
+2. 对应驱动配置文件已在 `lib/drivers/config/py32f4/` 就绪
 3. 外设 MSP 初始化在 `bsp/CubeMX_Config/Src/py32f403_hal_msp.c`
 4. Shell 测试命令可在 `app/main.c` 中添加
 

@@ -1,0 +1,29 @@
+# ── 构建产物 ──
+**/build/
+**/dist/
+**/.build_cache/
+
+# ── xmake 缓存 ──
+**/.xmake/
+
+# ── 编辑器 / IDE 备份文件 ──
+*.swp
+*.swo
+*~
+
+# ── 备份文件 ──
+*.bak
+
+# ── Python ──
+**/__pycache__/
+*.pyc
+
+# ── menuconfig 运行时输出 ──
+**/.config
+**/.config.old
+
+# ── RTT 在线包（用户用 pkgs --update 下载） ──
+packages/
+
+# ── OS 符号链接（如果使用外部 RTT 树引用代替自包含模式） ──
+rt-thread

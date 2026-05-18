@@ -3,7 +3,7 @@
 
 #include "drv_common.h"
 #include "drv_gpio.h"
-#include <py32f4xx_hal.h>
+#include <py32f4xx.h>
 #include <rtthread.h>
 
 #ifdef __cplusplus

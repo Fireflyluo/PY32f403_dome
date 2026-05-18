@@ -5,6 +5,7 @@
 extern "C" {
 #endif
 
+/* ########################## Module Selection ############################## */
 #define HAL_MODULE_ENABLED
 #define HAL_CORTEX_MODULE_ENABLED
 #define HAL_DMA_MODULE_ENABLED
@@ -17,16 +18,19 @@ extern "C" {
 #define HAL_PWR_MODULE_ENABLED
 #define HAL_TIM_MODULE_ENABLED
 #define HAL_UART_MODULE_ENABLED
+#define HAL_ADC_MODULE_ENABLED
+#define HAL_RTC_MODULE_ENABLED
 #define HAL_IWDG_MODULE_ENABLED
 
-#define USE_HAL_ADC_REGISTER_CALLBACKS          0U
-#define USE_HAL_CAN_REGISTER_CALLBACKS          0U
-#define USE_HAL_I2C_REGISTER_CALLBACKS          0U
-#define USE_HAL_SPI_REGISTER_CALLBACKS          0U
-#define USE_HAL_TIM_REGISTER_CALLBACKS          0U
-#define USE_HAL_UART_REGISTER_CALLBACKS         0U
-#define USE_HAL_USART_REGISTER_CALLBACKS        0U
+/* ########################## Register Callback ############################## */
+#define USE_HAL_ADC_REGISTER_CALLBACKS   0U
+#define USE_HAL_I2C_REGISTER_CALLBACKS   0U
+#define USE_HAL_SPI_REGISTER_CALLBACKS   0U
+#define USE_HAL_TIM_REGISTER_CALLBACKS   0U
+#define USE_HAL_UART_REGISTER_CALLBACKS  0U
+#define USE_HAL_USART_REGISTER_CALLBACKS 0U
 
+/* ########################## HSE/HSI Values ################################ */
 #if !defined(HSE_VALUE)
 #define HSE_VALUE 16000000U
 #endif
@@ -37,7 +41,7 @@ extern "C" {
 #endif
 
 #if !defined(HSI48_VALUE)
-#define HSI48_VALUE (48000000UL)
+#define HSI48_VALUE 48000000U
 #endif
 
 #if !defined(LSI_VALUE)
@@ -47,6 +51,7 @@ extern "C" {
 #if !defined(LSE_VALUE)
 #define LSE_VALUE 32768U
 #endif
+
 #if !defined(LSE_STARTUP_TIMEOUT)
 #define LSE_STARTUP_TIMEOUT 5000U
 #endif
@@ -58,6 +63,7 @@ extern "C" {
 
 #include "py32f403_hal_def.h"
 
+/* ########################## HAL headers ################################### */
 #ifdef HAL_CORTEX_MODULE_ENABLED
 #include "py32f403_hal_cortex.h"
 #endif
@@ -91,6 +97,12 @@ extern "C" {
 #ifdef HAL_UART_MODULE_ENABLED
 #include "py32f403_hal_uart.h"
 #endif
+#ifdef HAL_ADC_MODULE_ENABLED
+#include "py32f403_hal_adc.h"
+#endif
+#ifdef HAL_RTC_MODULE_ENABLED
+#include "py32f403_hal_rtc.h"
+#endif
 #ifdef HAL_IWDG_MODULE_ENABLED
 #include "py32f403_hal_iwdg.h"
 #endif
@@ -103,4 +115,4 @@ extern "C" {
 }
 #endif
 
-#endif
+#endif /* __PY32F403_HAL_CONF_H */
