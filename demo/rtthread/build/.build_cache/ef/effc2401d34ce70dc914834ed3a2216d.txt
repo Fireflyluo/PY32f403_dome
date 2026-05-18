@@ -1,0 +1,18 @@
+{
+    errdata = "os\\rt-thread\\src\\scheduler_comm.c: In function 'rt_sched_thread_init_ctx':\
+os\\rt-thread\\src\\scheduler_comm.c:30:5: warning: implicit declaration of function 'rt_sched_thread_init_priv'; did you mean 'rt_sched_thread_init_ctx'? [-Wimplicit-function-declaration]\
+   30 |     rt_sched_thread_init_priv(thread, tick, priority);\
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~\
+      |     rt_sched_thread_init_ctx\
+os\\rt-thread\\src\\scheduler_comm.c: In function 'rt_sched_thread_ready':\
+os\\rt-thread\\src\\scheduler_comm.c:140:13: warning: implicit declaration of function 'rt_sched_insert_thread' [-Wimplicit-function-declaration]\
+  140 |             rt_sched_insert_thread(thread);\
+      |             ^~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\scheduler_comm.c: In function 'rt_sched_thread_change_priority':\
+os\\rt-thread\\src\\scheduler_comm.c:184:9: warning: implicit declaration of function 'rt_sched_remove_thread' [-Wimplicit-function-declaration]\
+  184 |         rt_sched_remove_thread(thread);\
+      |         ^~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\scheduler_comm.c: At top level:\
+cc1.exe: note: unrecognized command-line option '-Wno-gnu-line-marker' may have been intended to silence earlier diagnostics\
+"
+}

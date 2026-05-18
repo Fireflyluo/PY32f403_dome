@@ -1,0 +1,21 @@
+{
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": false,
+    "editor.fontFamily": "Maple Mono NF CN, Jetbrains Mono, Menlo, Consolas, monospace",
+    "terminal.integrated.env.windows": {
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+    },
+    "VsCodeTaskButtons.tasks": [
+        { "label": "$(package) Build", "task": "build", "tooltip": "编译项目" },
+        { "label": "$(zap) Flash", "task": "flash", "tooltip": "使用 pyocd 烧录" },
+        { "label": "$(debug-alt) Flash & Debug", "task": "flash", "tooltip": "烧录并调试" },
+        { "label": "$(trash) Clean", "task": "clean", "tooltip": "清理编译产物" }
+    ],
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/.vscode",
+        "--header-insertion=never"
+    ],
+    "cortex-debug.variableUseNaturalFormat": false,
+    "cortex-debug.armToolchainPath": "C:/APP/Env/tools/gnu_gcc/arm_gcc/mingw/bin"
+}

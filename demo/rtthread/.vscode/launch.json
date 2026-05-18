@@ -1,0 +1,53 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PyOCD Flash & Debug",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/dist/rtthread.elf",
+            "servertype": "pyocd",
+            "serverpath": "pyocd-gdbserver",
+            "targetId": "py32f403xd",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "flash",
+            "armToolchainPath": "C:/APP/Env/tools/gnu_gcc/arm_gcc/mingw/bin",
+            "gdbPath": "C:/APP/Env/tools/gnu_gcc/arm_gcc/mingw/bin/arm-none-eabi-gdb.exe",
+            "svdFile": "${workspaceFolder}/sdk/CMSIS/Device/PUYA/PY32F403/Source/Templates/system_py32f403.c",
+            "rttConfig": {
+                "enabled": false,
+                "address": "",
+                "decoder": null
+            },
+            "overrideGDBServerStartedRegex": "GDB server started on port (\\d+).*",
+            "serialWireOutput": true
+        },
+        {
+            "name": "PyOCD Debug (No Flash)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/dist/rtthread.elf",
+            "servertype": "pyocd",
+            "serverpath": "pyocd-gdbserver",
+            "targetId": "py32f403xd",
+            "runToEntryPoint": "main",
+            "armToolchainPath": "C:/APP/Env/tools/gnu_gcc/arm_gcc/mingw/bin",
+            "gdbPath": "C:/APP/Env/tools/gnu_gcc/arm_gcc/mingw/bin/arm-none-eabi-gdb.exe",
+            "overrideGDBServerStartedRegex": "GDB server started on port (\\d+).*"
+        },
+        {
+            "name": "PyOCD Attach",
+            "type": "cortex-debug",
+            "request": "attach",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/dist/rtthread.elf",
+            "servertype": "pyocd",
+            "serverpath": "pyocd-gdbserver",
+            "targetId": "py32f403xd",
+            "armToolchainPath": "C:/APP/Env/tools/gnu_gcc/arm_gcc/mingw/bin",
+            "gdbPath": "C:/APP/Env/tools/gnu_gcc/arm_gcc/mingw/bin/arm-none-eabi-gdb.exe"
+        }
+    ]
+}

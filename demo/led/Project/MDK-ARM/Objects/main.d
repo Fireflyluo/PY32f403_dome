@@ -7,15 +7,7 @@
   ..\..\Libraries\CMSIS\Device\PUYA\PY32F403\Include\py32f4xx.h \
   ..\..\Libraries\CMSIS\Device\PUYA\PY32F403\Include\py32f403xD.h \
   ..\..\Libraries\CMSIS\Include\core_cm4.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\..\Libraries\CMSIS\Include\cmsis_version.h \
-  ..\..\Libraries\CMSIS\Include\cmsis_compiler.h \
-  ..\..\Libraries\CMSIS\Include\cmsis_armclang.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\..\Libraries\CMSIS\Device\PUYA\PY32F403\Include\system_py32f4xx.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   ..\..\Libraries\PY32F403_HAL_Driver\Inc\py32f403_hal_dma.h \
   ..\..\Libraries\PY32F403_HAL_Driver\Inc\py32f403_hal_dma_ex.h \
   ..\..\Libraries\PY32F403_HAL_Driver\Inc\py32f403_hal_exti.h \
@@ -30,9 +22,5 @@
   ..\..\Libraries\PY32F403_HAL_Driver\Inc\py32f403_hal_tim.h \
   ..\..\Libraries\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\BSP\MCU_Peripheral\Inc\gpio.h ..\..\BSP\MCU_Peripheral\Inc\tim.h \
-  ..\..\BSP\Device_REG\ws2812.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  ..\..\Drivers\dev_led.h ..\..\Drivers\dev_common.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  D:\APP\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h
+  ..\..\BSP\Device_REG\ws2812.h ..\..\Drivers\dev_led.h \
+  ..\..\Drivers\dev_common.h

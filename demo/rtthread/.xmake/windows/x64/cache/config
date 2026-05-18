@@ -1,0 +1,11 @@
+{
+    options = {
+        clean = true,
+        mode = "release"
+    },
+    recheck = false,
+    mtimes = {
+        ["xmake.lua"] = 1779096062,
+        ["toolchain.lua"] = 1779026295
+    }
+}

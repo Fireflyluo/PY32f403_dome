@@ -1,0 +1,37 @@
+[ 工具 ] 生成 hex / bin / lst ...
+
+  rtthread.lst
+
++---------+-----------+-----------+--------+
+| C 文件  | C++ 文件  | 汇编文件  |  总计  |
++---------+-----------+-----------+--------+
+| 53      | 0         | 2         | 55     |
++---------+-----------+-----------+--------+
+
+Program Size: Code=32424 RO-data=0 RW-data=1724 ZI-data=1220
+
+Total RO  Size (Code + RO Data)             32424 (   31.66 kB)
+Total RW  Size (RW Data + ZI Data)           2944 (    2.88 kB)
+Total ROM Size (Code + RO Data + RW Data)   34148 (   33.35 kB)
+
+Total Memory Usage:
+
+  RAM: [#                       ]   4.5%     2.9KB/  64.0KB
+  ROM: [##                      ]   8.7%    33.3KB/ 384.0KB
+
+Section Memory Usage:
+
+  Flash (0x08000000): [##                      ]   8.7%    33.3KB/ 384.0KB
+    - .text/.isr_vector :  32424 bytes
+    - .rodata           :      0 bytes
+    - .data             :   1724 bytes
+
+  RAM   (0x20000000): [#                       ]   4.5%     2.9KB/  64.0KB
+    - .data             :   1724 bytes
+    - .bss              :   1220 bytes
+
+[ 完成 ] 构建完成
+
+create ok!
+compile_commands.json updated!
+[100%]: build ok, spent 0.297s

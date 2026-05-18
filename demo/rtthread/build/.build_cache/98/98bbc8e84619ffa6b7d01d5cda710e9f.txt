@@ -1,0 +1,24 @@
+{
+    errdata = "os\\rt-thread\\src\\ipc.c: In function 'rt_susp_list_dequeue':\
+os\\rt-thread\\src\\ipc.c:118:17: warning: implicit declaration of function 'rt_sched_thread_ready' [-Wimplicit-function-declaration]\
+  118 |         error = rt_sched_thread_ready(thread);\
+      |                 ^~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\ipc.c: In function 'rt_susp_list_enqueue':\
+os\\rt-thread\\src\\ipc.c:262:21: warning: implicit declaration of function 'rt_sched_thread_get_curr_prio' [-Wimplicit-function-declaration]\
+  262 |                 if (rt_sched_thread_get_curr_prio(thread) < rt_sched_thread_get_curr_prio(sthread))\
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\ipc.c: In function '_thread_get_mutex_priority':\
+os\\rt-thread\\src\\ipc.c:849:27: warning: implicit declaration of function 'rt_sched_thread_get_init_prio' [-Wimplicit-function-declaration]\
+  849 |     rt_uint8_t priority = rt_sched_thread_get_init_prio(thread);\
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\ipc.c: In function '_thread_update_priority':\
+os\\rt-thread\\src\\ipc.c:876:11: warning: implicit declaration of function 'rt_sched_thread_change_priority' [-Wimplicit-function-declaration]\
+  876 |     ret = rt_sched_thread_change_priority(thread, priority);\
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\ipc.c:878:26: warning: implicit declaration of function 'rt_sched_thread_is_suspended' [-Wimplicit-function-declaration]\
+  878 |     while ((ret == RT_EOK) && rt_sched_thread_is_suspended(thread))\
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\ipc.c: At top level:\
+cc1.exe: note: unrecognized command-line option '-Wno-gnu-line-marker' may have been intended to silence earlier diagnostics\
+"
+}

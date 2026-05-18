@@ -1,0 +1,63 @@
+mainmenu "RT-Thread Project Configuration"
+
+config BSP_DIR
+    string
+    option env="BSP_ROOT"
+    default "."
+
+config RTT_DIR
+    string
+    option env="RTT_ROOT"
+    default "D:/MCU/6.OS/RTT/rt-thread-v5.1.0"
+
+config PKGS_DIR
+    string
+    option env="PKGS_ROOT"
+    default "packages"
+
+config SOC_PY32F403C1D
+    bool
+    select SOC_PY32F403
+    select SOC_SERIES_PY32F4
+    select SOC_FAMILY_PY32
+    select ARCH_ARM
+    select ARCH_ARM_CORTEX_M
+    select ARCH_ARM_CORTEX_M4
+    select RT_USING_COMPONENTS_INIT
+    select RT_USING_USER_MAIN
+    default y
+
+source "$RTT_DIR/Kconfig"
+source "$PKGS_DIR/Kconfig"
+
+config SOC_FAMILY_PY32
+    bool
+
+config SOC_SERIES_PY32F4
+    bool
+    select SOC_FAMILY_PY32
+
+config SOC_PY32F403
+    bool
+    select SOC_SERIES_PY32F4
+
+menu "Hardware Drivers Config"
+    config BSP_USING_GPIO
+        bool "Enable GPIO"
+        select RT_USING_PIN
+        default y
+
+    menuconfig BSP_USING_UART
+        bool "Enable UART"
+        default y
+        select RT_USING_SERIAL
+        if BSP_USING_UART
+            config BSP_USING_UART1
+                bool "Enable UART1"
+                default y
+
+            config BSP_USING_UART2
+                bool "Enable UART2"
+                default y
+        endif
+endmenu

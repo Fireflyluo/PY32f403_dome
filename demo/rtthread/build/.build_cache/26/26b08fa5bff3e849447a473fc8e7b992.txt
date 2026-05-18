@@ -1,0 +1,25 @@
+{
+    errdata = "os\\rt-thread\\src\\scheduler_up.c: In function 'rt_system_scheduler_start':\
+os\\rt-thread\\src\\scheduler_up.c:180:5: warning: implicit declaration of function 'rt_sched_remove_thread' [-Wimplicit-function-declaration]\
+  180 |     rt_sched_remove_thread(to_thread);\
+      |     ^~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\scheduler_up.c: In function 'rt_schedule':\
+os\\rt-thread\\src\\scheduler_up.c:249:21: warning: implicit declaration of function 'rt_sched_insert_thread' [-Wimplicit-function-declaration]\
+  249 |                     rt_sched_insert_thread(from_thread);\
+      |                     ^~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\scheduler_up.c: At top level:\
+os\\rt-thread\\src\\scheduler_up.c:370:6: warning: conflicting types for 'rt_sched_insert_thread'\
+  370 | void rt_sched_insert_thread(struct rt_thread *thread)\
+      |      ^~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\scheduler_up.c:249:21: note: previous implicit declaration of 'rt_sched_insert_thread' was here\
+  249 |                     rt_sched_insert_thread(from_thread);\
+      |                     ^~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\scheduler_up.c:422:6: warning: conflicting types for 'rt_sched_remove_thread'\
+  422 | void rt_sched_remove_thread(struct rt_thread *thread)\
+      |      ^~~~~~~~~~~~~~~~~~~~~~\
+os\\rt-thread\\src\\scheduler_up.c:180:5: note: previous implicit declaration of 'rt_sched_remove_thread' was here\
+  180 |     rt_sched_remove_thread(to_thread);\
+      |     ^~~~~~~~~~~~~~~~~~~~~~\
+cc1.exe: note: unrecognized command-line option '-Wno-gnu-line-marker' may have been intended to silence earlier diagnostics\
+"
+}

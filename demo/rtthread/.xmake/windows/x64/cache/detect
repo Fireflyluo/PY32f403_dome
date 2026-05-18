@@ -1,0 +1,27 @@
+{
+    ["lib.detect.has_flags"] = {
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__cc_cxflags__-DNDEBUG"] = true,
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__cc___-O3"] = true,
+        ["windows_x64_c:\\app\\env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc.exe__as___-O3"] = true
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolld"] = {
+        ["arm-none-eabi-g++"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-g++]]
+    },
+    find_program = {
+        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\Tools\MSVC\14.50.35717\bin\HostX64\x64\cl.exe]],
+        nim = false,
+        ["C:\\APP\\Env\\tools\\gnu_gcc\\arm_gcc\\mingw\\bin\\arm-none-eabi-gcc"] = [[c:\app\env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-gcc.exe]]
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolcxx"] = {
+        ["arm-none-eabi-gcc"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-gcc]]
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolsh"] = {
+        ["arm-none-eabi-g++"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-g++]]
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolcc"] = {
+        ["arm-none-eabi-gcc"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-gcc]]
+    },
+    ["find_program_arm-none-eabi_arch_x64_plat_windows_checktoolas"] = {
+        ["arm-none-eabi-gcc"] = [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-gcc]]
+    }
+}

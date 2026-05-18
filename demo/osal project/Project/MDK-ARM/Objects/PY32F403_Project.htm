@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\PY32F403_Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\PY32F403_Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Mon Jan  5 16:07:12 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Mon May 18 13:14:57 2026
 <BR><P>
 <H3>Maximum Stack Usage =       1000 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1540,7 +1540,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_uart_command
 </UL>
 
-<P><STRONG><a name="[53]"></a>print_task_event_process</STRONG> (Thumb, 592 bytes, Stack size 368 bytes, print_task.o(.text.print_task_event_process))
+<P><STRONG><a name="[53]"></a>print_task_event_process</STRONG> (Thumb, 604 bytes, Stack size 368 bytes, print_task.o(.text.print_task_event_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1000<LI>Call Chain = print_task_event_process &rArr; process_uart_commands &rArr; process_uart_command &rArr; send_error_response &rArr; uart_send_async &rArr; uart_send &rArr; uart_write_to_ring_buffer &rArr; uart_start_tx_from_ring_buffer &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;build_report_msg

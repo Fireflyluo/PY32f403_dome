@@ -1,0 +1,29 @@
+{
+    files = {
+        [[build\.objs\bare-test\windows\x64\debug\sdk\CMSIS\Device\PUYA\PY32F403\Source\Templates\gcc\startup_py32f403xx.s.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\app\main.c.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\sdk\CMSIS\Device\PUYA\PY32F403\Source\Templates\system_py32f403.c.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\sdk\PY32F403_HAL_Driver\Src\py32f403_hal.c.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\sdk\PY32F403_HAL_Driver\Src\py32f403_hal_cortex.c.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\sdk\PY32F403_HAL_Driver\Src\py32f403_hal_gpio.c.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\sdk\PY32F403_HAL_Driver\Src\py32f403_hal_rcc.c.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\sdk\PY32F403_HAL_Driver\Src\py32f403_hal_rcc_ex.c.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\sdk\PY32F403_HAL_Driver\Src\py32f403_hal_flash.c.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\sdk\PY32F403_HAL_Driver\Src\py32f403_hal_pwr.c.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\sdk\PY32F403_HAL_Driver\Src\py32f403_hal_pwr_ex.c.obj]],
+        [[build\.objs\bare-test\windows\x64\debug\sdk\PY32F403_HAL_Driver\Src\py32f403_hal_uart.c.obj]]
+    },
+    values = {
+        [[C:\APP\Env\tools\gnu_gcc\arm_gcc\mingw\bin\arm-none-eabi-g++]],
+        {
+            "-g",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-Wl,--gc-sections",
+            "-T",
+            "bsp/linker_scripts/link.lds"
+        }
+    }
+}

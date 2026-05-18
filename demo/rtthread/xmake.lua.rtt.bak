@@ -1,0 +1,134 @@
+add_rules("mode.debug", "mode.release")
+add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
+
+set_project("rtthread-py32f403")
+set_version("1.0.0")
+
+add_moduledirs("scripts")
+includes("toolchain.lua")
+
+target("rtthread")
+    set_kind("binary")
+    set_toolchains("arm-none-eabi")
+    set_filename("rtthread.elf")
+    set_targetdir("dist")
+
+    on_load(function(target)
+        local rtt = import("os.rtt", {rootdir = os.scriptdir()})
+        rtt.config_add(target)
+        rtt.kernel_add(target)
+        -- 方式一：基础组件（finsh + device + ipc + pin + serial）
+        rtt.components_base_add(target)
+        -- 方式二：自动扫描 rtconfig.h，按需加载所有已启用组件
+        -- rtt.components_auto_add(target)
+    end)
+
+    -- 用户代码头文件
+    add_includedirs(
+        "app",
+        "bsp",
+        "bsp/CubeMX_Config/Inc",
+        "drivers",
+        "drivers/config"
+    )
+
+    -- SDK HAL 头文件
+    add_includedirs(
+        "sdk/CMSIS/Include",
+        "sdk/CMSIS/Device/PUYA/PY32F403/Include",
+        "sdk/PY32F403_HAL_Driver/Inc"
+    )
+
+    -- 应用 + BSP + 驱动源文件
+    add_files(
+        "app/main.c",
+        "bsp/board.c",
+        "bsp/CubeMX_Config/Src/py32f403_hal_msp.c",
+        "drivers/drv_common.c",
+        "drivers/drv_gpio.c",
+        "drivers/drv_usart.c",
+        "drivers/drv_spi.c",
+        "drivers/drv_hard_i2c.c",
+        "drivers/drv_tim.c",
+        "drivers/drv_pwm.c",
+        "drivers/drv_adc.c",
+        "drivers/drv_wdt.c",
+        "drivers/drv_rtc.c"
+    )
+
+    -- SDK HAL 源文件
+    add_files(
+        "sdk/CMSIS/Device/PUYA/PY32F403/Source/Templates/gcc/startup_py32f403xx.s",
+        "sdk/CMSIS/Device/PUYA/PY32F403/Source/Templates/system_py32f403.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_cortex.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_dma.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_exti.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_flash.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_gpio.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_pwr.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_pwr_ex.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_rcc.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_rcc_ex.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_tim.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_uart.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_spi.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_i2c.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_adc.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_rtc.c",
+        "sdk/PY32F403_HAL_Driver/Src/py32f403_hal_iwdg.c"
+    )
+
+    -- 编译选项
+    add_cflags(
+        "-mcpu=cortex-m4", "-mthumb",
+        "-ffunction-sections", "-fdata-sections",
+        "-Wall", "-Wno-unused-parameter", "-g",
+        {force = true}
+    )
+    add_cxxflags(
+        "-mcpu=cortex-m4", "-mthumb",
+        "-ffunction-sections", "-fdata-sections", "-g",
+        {force = true}
+    )
+    add_asflags(
+        "-c", "-mcpu=cortex-m4", "-mthumb",
+        "-x", "assembler-with-cpp",
+        "-Wa,-mimplicit-it=thumb", "-g",
+        {force = true}
+    )
+    add_ldflags(
+        "-mcpu=cortex-m4", "-mthumb",
+        "-ffunction-sections", "-fdata-sections",
+        "-Wl,--gc-sections", "-Wl,--print-memory-usage",
+        "-T", "bsp/linker_scripts/link.lds",
+        {force = true}
+    )
+
+    if is_mode("debug") then
+        add_cflags("-Og", {force = true})
+    else
+        add_cflags("-Os", {force = true})
+    end
+
+    after_build(function(target)
+        import("post_build")
+        post_build.main(target)
+    end)
+
+task("menuconfig")
+    set_menu({
+        usage = "xmake menuconfig",
+        description = "Run RT-Thread menuconfig (requires Python + kconfiglib)"
+    })
+    on_run(function()
+        local rtt_root = "D:/MCU/6.OS/RTT/rt-thread-v5.1.0"
+        local kconfig_file = path.join(os.scriptdir(), "os/Kconfig")
+        os.setenv("RTT_ROOT", rtt_root)
+        os.setenv("BSP_ROOT", os.scriptdir())
+        os.setenv("PKGS_ROOT", path.join(os.scriptdir(), "packages"))
+        os.execv("python", {
+            path.join(rtt_root, "tools/menuconfig.py"),
+            "--kconfig", kconfig_file
+        })
+    end)

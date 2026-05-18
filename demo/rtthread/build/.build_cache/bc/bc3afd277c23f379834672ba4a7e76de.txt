@@ -1,0 +1,52 @@
+{
+    errdata = "D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c: In function '_thread_exit':\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:92:5: warning: implicit declaration of function 'rt_sched_remove_thread' [-Wimplicit-function-declaration]\
+   92 |     rt_sched_remove_thread(thread);\
+      |     ^~~~~~~~~~~~~~~~~~~~~~\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:98:5: warning: implicit declaration of function 'rt_sched_thread_close' [-Wimplicit-function-declaration]\
+   98 |     rt_sched_thread_close(thread);\
+      |     ^~~~~~~~~~~~~~~~~~~~~\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c: In function '_thread_timeout':\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:134:11: warning: implicit declaration of function 'rt_sched_thread_is_suspended' [-Wimplicit-function-declaration]\
+  134 |     RT_ASSERT(rt_sched_thread_is_suspended(thread));\
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:142:5: warning: implicit declaration of function 'rt_sched_insert_thread' [-Wimplicit-function-declaration]\
+  142 |     rt_sched_insert_thread(thread);\
+      |     ^~~~~~~~~~~~~~~~~~~~~~\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c: In function '_thread_init':\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:193:5: warning: implicit declaration of function 'rt_sched_thread_init_ctx' [-Wimplicit-function-declaration]\
+  193 |     rt_sched_thread_init_ctx(thread, tick, priority);\
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c: In function 'rt_thread_startup':\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:404:5: warning: implicit declaration of function 'rt_sched_thread_startup'; did you mean 'rt_thread_startup'? [-Wimplicit-function-declaration]\
+  404 |     rt_sched_thread_startup(thread);\
+      |     ^~~~~~~~~~~~~~~~~~~~~~~\
+      |     rt_thread_startup\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c: In function '_thread_detach':\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:452:21: warning: implicit declaration of function 'rt_sched_thread_get_stat' [-Wimplicit-function-declaration]\
+  452 |     thread_status = rt_sched_thread_get_stat(thread);\
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c: In function 'rt_thread_yield':\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:583:5: warning: implicit declaration of function 'rt_sched_thread_yield'; did you mean 'rt_thread_yield'? [-Wimplicit-function-declaration]\
+  583 |     rt_sched_thread_yield(rt_thread_self());\
+      |     ^~~~~~~~~~~~~~~~~~~~~\
+      |     rt_thread_yield\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c: In function 'rt_thread_control':\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:786:21: warning: implicit declaration of function 'rt_sched_thread_change_priority' [-Wimplicit-function-declaration]\
+  786 |             error = rt_sched_thread_change_priority(thread, *(rt_uint8_t *)arg);\
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:819:20: warning: implicit declaration of function 'rt_sched_thread_bind_cpu' [-Wimplicit-function-declaration]\
+  819 |             return rt_sched_thread_bind_cpu(thread, cpu);\
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c: In function 'rt_thread_suspend_to_list':\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:949:5: warning: implicit declaration of function 'rt_sched_thread_timer_stop' [-Wimplicit-function-declaration]\
+  949 |     rt_sched_thread_timer_stop(thread);\
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c: In function 'rt_thread_resume':\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c:1007:13: warning: implicit declaration of function 'rt_sched_thread_ready' [-Wimplicit-function-declaration]\
+ 1007 |     error = rt_sched_thread_ready(thread);\
+      |             ^~~~~~~~~~~~~~~~~~~~~\
+D:\\MCU\\6.OS\\RTT\\rt-thread-v5.1.0\\src\\thread.c: At top level:\
+cc1.exe: note: unrecognized command-line option '-Wno-gnu-line-marker' may have been intended to silence earlier diagnostics\
+"
+}
