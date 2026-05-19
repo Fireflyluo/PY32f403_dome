@@ -1,5 +1,5 @@
-./objects/osal_memory.o: ..\..\..\..\OSAL\osal_memory.c \
-  ..\..\..\..\OSAL\osal_memory.h ..\..\..\..\OSAL\type.h \
+./objects/osal_memory.o: ..\..\..\..\LIB\OSAL\osal_memory.c \
+  ..\..\..\..\LIB\OSAL\osal_memory.h ..\..\..\..\LIB\OSAL\type.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h \
   ..\..\Application\Inc\py32f403_hal_conf.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h \

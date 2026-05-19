@@ -18,5 +18,5 @@ uart_err_t bsp_uart_init(void)
 
 uart_err_t bsp_uart_send(uint8_t *buff,uint16_t len)
 {
-    return uart_send(UART_INSTANCE_2, buff, len, NULL);
+    return uart_send(UART_INSTANCE_2, buff, len, 0);
 }

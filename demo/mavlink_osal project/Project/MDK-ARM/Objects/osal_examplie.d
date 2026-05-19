@@ -30,7 +30,7 @@
   ..\..\..\..\BSP\py32_drivers\Inc\drv_uart_config.h \
   ..\..\..\..\BSP\py32_drivers\Inc\drv_i2c.h \
   ..\..\..\..\BSP\py32_drivers\Inc\drv_tool.h \
-  ..\..\..\..\BSP\example\osal\task_event.h ..\..\..\..\OSAL\osal.h \
-  ..\..\..\..\OSAL\type.h ..\..\..\..\OSAL\osal_timer.h \
-  ..\..\..\..\OSAL\hal\timer.h ..\..\..\..\OSAL\osal_event.h \
-  ..\..\..\..\OSAL\osal_memory.h ..\..\..\..\OSAL\osal_msg.h
+  ..\..\..\..\BSP\example\osal\task_event.h ..\..\..\..\LIB\OSAL\osal.h \
+  ..\..\..\..\LIB\OSAL\type.h ..\..\..\..\LIB\OSAL\osal_timer.h \
+  ..\..\..\..\LIB\OSAL\hal\timer.h ..\..\..\..\LIB\OSAL\osal_event.h \
+  ..\..\..\..\LIB\OSAL\osal_memory.h ..\..\..\..\LIB\OSAL\osal_msg.h

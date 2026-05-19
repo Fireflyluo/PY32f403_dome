@@ -4640,15 +4640,15 @@ Image component sizes
        404          0         53          0        453       7587   drv_i2c.o
        868          0          0          0          0       3617   drv_tool.o
       3768          0        105          0       6660      19155   drv_uart.o
-       166          0          0          0          1       1229   led_task.o
+       166          0          0          0          1       1233   led_task.o
        146          0          0          0          0       1657   main.o
-       176          0          0          0          4       2174   osal.o
-       576          0          0          0         10       2419   osal_event.o
+       176          0          0          0          4       2182   osal.o
+       576          0          0          0         10       2427   osal_event.o
        110          0          0          0          0        432   osal_main.o
-       870          0          0          4       8211       2750   osal_memory.o
-       306          0          0          0          0       3031   osal_msg.o
-       776          0          0          0         10       3819   osal_timer.o
-      1206          4         88          0        763       4365   print_task.o
+       870          0          0          4       8211       2758   osal_memory.o
+       306          0          0          0          0       3039   osal_msg.o
+       776          0          0          0         10       3827   osal_timer.o
+      1206          4         88          0        763       4369   print_task.o
        238          0          0          5          4       8137   py32f403_hal.o
        494          0          0          0          0       7960   py32f403_hal_cortex.o
       3536          0          0          0          0       8411   py32f403_hal_dma.o
@@ -4660,13 +4660,13 @@ Image component sizes
         46          0          0          0          0       2830   py32f403_it.o
       1102         36         24          0         20       5191   qmi8658a_driver.o
        482          0          0          0          0      12230   qmi8658a_reg.o
-       394          0         52          0       4110       2414   sensor_task.o
+       394          0         52          0       4110       2418   sensor_task.o
         60         14        304          0       8192        908   startup_py32f403xx.o
         16          0         24          4          0       2351   system_py32f403.o
-         6          0          0          0          0        579   timer.o
+         6          0          0          0          0        587   timer.o
 
     ----------------------------------------------------------------------
-     38660         68       2456         20      29228     196212   Object Totals
+     38660         68       2456         20      29228     196272   Object Totals
          0          0         32          0          0          0   (incl. Generated)
        222          0          7          6         20          0   (incl. Padding)
 
@@ -4732,8 +4732,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     43128        202       2456         36      29228     197212   Grand Totals
-     43128        202       2456         36      29228     197212   ELF Image Totals
+     43128        202       2456         36      29228     197272   Grand Totals
+     43128        202       2456         36      29228     197272   ELF Image Totals
      43128        202       2456         36          0          0   ROM Totals
 
 ==============================================================================

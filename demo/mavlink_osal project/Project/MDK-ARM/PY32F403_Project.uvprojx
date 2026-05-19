@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,PY32F403xD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include;..\..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include;..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc;..\..\Application\Inc;..\..\..\..\BSP\py32_drivers\Inc;..\..\..\..\BSP;..\..\..\..\OSAL\MemMang;..\..\..\..\OSAL;..\..\..\..\OSAL\hal;..\..\Middleware\mavlink;..\..\Middleware\mavlink\common;..\..\Middleware\mavlink\minimal;..\..\Middleware\mavlink\standard;..\..\..\..\BSP\example\osal</IncludePath>
+              <IncludePath>..\..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Include;..\..\..\..\BSP\PY32f403_Firmware_Library\CMSIS\Device\PUYA\PY32F403\Include;..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc;..\..\Application\Inc;..\..\..\..\BSP\py32_drivers\Inc;..\..\..\..\BSP;..\..\Middleware\mavlink;..\..\Middleware\mavlink\common;..\..\Middleware\mavlink\minimal;..\..\Middleware\mavlink\standard;..\..\..\..\BSP\example\osal;..\..\..\..\LIB\OSAL;..\..\..\..\LIB\OSAL\hal;..\..\..\..\LIB\OSAL\MemMang</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -458,32 +458,32 @@
             <File>
               <FileName>osal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\osal.c</FilePath>
+              <FilePath>..\..\..\..\LIB\OSAL\osal.c</FilePath>
             </File>
             <File>
               <FileName>osal_event.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\osal_event.c</FilePath>
+              <FilePath>..\..\..\..\LIB\OSAL\osal_event.c</FilePath>
             </File>
             <File>
               <FileName>osal_memory.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\osal_memory.c</FilePath>
+              <FilePath>..\..\..\..\LIB\OSAL\osal_memory.c</FilePath>
             </File>
             <File>
               <FileName>osal_msg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\osal_msg.c</FilePath>
+              <FilePath>..\..\..\..\LIB\OSAL\osal_msg.c</FilePath>
             </File>
             <File>
               <FileName>osal_timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\osal_timer.c</FilePath>
+              <FilePath>..\..\..\..\LIB\OSAL\osal_timer.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\OSAL\hal\timer.c</FilePath>
+              <FilePath>..\..\..\..\LIB\OSAL\hal\timer.c</FilePath>
             </File>
           </Files>
         </Group>

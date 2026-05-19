@@ -4,16 +4,16 @@ add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
 set_project("rtthread-py32f403")
 set_version("1.0.0")
 
-includes("toolchain.lua")
+includes("../toolchains/arm-none-eabi.lua")
 
 add_moduledirs("scripts")
 
 local RTT_ROOT = "os/rt-thread"
-local TOOLCHAIN_BIN = "C:/APP/Env/tools/gnu_gcc/arm_gcc/mingw/bin"
+local TOOLCHAIN_BIN = "D:/APP/path/arm-gcc-15.2/bin"
 
 target("rtthread")
     set_kind("binary")
-    set_toolchains("arm-none-eabi")
+    set_toolchains("arm-none-eabi", {sdkdir = "D:/APP/path/arm-gcc-15.2"})
     set_filename("rtthread.elf")
     set_targetdir("dist")
 

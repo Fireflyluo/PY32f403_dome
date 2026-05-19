@@ -1,5 +1,5 @@
-./objects/timer.o: ..\..\..\..\OSAL\hal\timer.c \
-  ..\..\..\..\OSAL\hal\timer.h ..\..\..\..\OSAL\type.h \
+./objects/timer.o: ..\..\..\..\LIB\OSAL\hal\timer.c \
+  ..\..\..\..\LIB\OSAL\hal\timer.h ..\..\..\..\LIB\OSAL\type.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h \
   ..\..\Application\Inc\py32f403_hal_conf.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h \
@@ -23,4 +23,4 @@
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h \
-  ..\..\..\..\OSAL\osal_timer.h
+  ..\..\..\..\LIB\OSAL\osal_timer.h

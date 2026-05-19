@@ -29,24 +29,30 @@
 ## 项目结构
 
 ```
-├── BSP                           -- 板级支持包
-│   ├── example                     -- 示例工程
+├── BSP                           -- 板级支持包(已逐步迁移至sdk/)
+│   ├── example                     -- 示例工程 (已移至 bsp example project 内部)
 │   ├── py32_drivers                -- PY32外设驱动库
 │   └── PY32f403_Firmware_Library  
+├── sdk                   -- 公共SDK (统一资源目录)
+│   ├── toolchains                  -- xmake 工具链定义 (arm-none-eabi.lua)
+│   ├── scripts                     -- xmake 构建后处理脚本
+│   ├── py32_drivers                -- PY32外设驱动库
+│   └── PY32f403_Firmware_Library
+│       ├── CMSIS                   -- ARM CMSIS 层
+│       ├── PY32F403_HAL_Driver     -- HAL 驱动库
+│       └── startup/gcc             -- GCC 启动文件 + 链接脚本
 ├── demo                  -- 示例工程
-│   ├─I2C                   -- i2c相关芯片驱动工程
-│   │  ├── qmi8658a           -- 陀螺仪驱动库
-│   │  └── ...
-│   ├── SPI               -- spi相关芯片驱动工程        
-│   │  ├── si24r1            -- 射频模块驱动库
-│   │  └── ...  
-│   ├── bsp example project         -- BSP驱动包示例工程  
-│   ├── mavlink_osal project        -- mavlink事件驱动框架
-│   ├── osal project                -- osal事件驱动框架
-│   ├── rtthread nano project       -- rtthread nano RTOS
-│   └── xmake              
-├── OSAL               -- osal事件驱动框架
-├── Event OS           -- 事件驱动框架
+│   ├── i2c                 -- i2c相关芯片驱动工程
+│   ├── spi                 -- spi相关芯片驱动工程        
+│   ├── bsp example project         -- BSP驱动包示例工程 (xmake)
+│   ├── mavlink_osal project        -- mavlink事件驱动框架 (xmake)
+│   ├── osal project                -- osal事件驱动框架 (xmake)
+│   ├── rtthread                    -- RT-Thread 标准版 (xmake)
+│   ├── rttherad nano project       -- rtthread nano RTOS (xmake)
+│   └── xmake                       -- 裸机 xmake 示例
+├── LIB                             -- 公共库
+│   ├── OSAL                        -- OSAL 事件驱动框架
+│   └── Event OS                    -- 事件驱动框架
 ├── rtthread-nano  
 └── Readme.md         --文档
 ```
@@ -89,13 +95,14 @@
 
 ## 开发环境
 
-
-- **IDE/编译器**: keil/vscode eide
+- **IDE/编译器**: keil / vscode eide / xmake
 - **编程语言**: C
 - **调试工具**: dap-link
-- **依赖库**: HAL库
+- **工具链**: ARM GCC 15.2 (`D:/APP/path/arm-gcc-15.2`)
 
 ## 快速开始
+
+### Keil / EIDE
 
 1. **克隆项目**
    ```bash
@@ -116,6 +123,33 @@
    - 目前可运行的示例：
      - LED闪烁示例（led目录）
      - I2C扫描示例（i2c目录）
+
+### Xmake 构建
+
+部分工程已支持 xmake 构建（ARM GCC 15.2 工具链）：
+
+```bash
+# 进入支持 xmake 的工程目录
+cd demo/bsp\ example\ project
+
+# 首次配置（指定交叉编译平台）
+xmake f -c -p cross -a arm
+
+# 构建
+xmake
+
+# 生成的文件在 dist/ 目录下
+```
+
+**切换工具链版本**：修改 `sdk/toolchains/arm-none-eabi.lua` 中的路径即可。
+
+支持 xmake 构建的工程：
+- `demo/bsp example project` — BSP 驱动包示例
+- `demo/mavlink_osal project` — MAVLink + OSAL 事件驱动框架
+- `demo/osal project` — OSAL 事件驱动框架
+- `demo/rttherad nano project` — RT-Thread Nano
+- `demo/rtthread` — RT-Thread 标准版
+- `demo/xmake` — 裸机 xmake 示例
 
 ## 已实现功能
 
@@ -164,6 +198,11 @@
 
 - **2026-3-8**: 移植rtthread 标准板
   - py32f403 bsp 移植完成
+
+- **2026-5-19**: 统一 xmake 构建体系
+  - 抽取公共 sdk/ 目录（工具链、脚本、启动文件、链接脚本、HAL库）
+  - bsp example / mavlink_osal / osal / rttherad nano 等项目添加 xmake 构建
+  - demo/xmake、demo/rtthread 更新为引用公共 sdk/ 资源
 
 
 ## 联系方式

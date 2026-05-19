@@ -139,7 +139,7 @@ function main(target)
     local ld = path.join(os.projectdir(), "bsp/linker_scripts/link.lds")
     local flash_kb, ram_kb = _parse_ldscript(ld)
 
-    local tc_bin = "C:/APP/Env/tools/gnu_gcc/arm_gcc/mingw/bin"
+    local tc_bin = "D:/APP/path/arm-gcc-15.2/bin"
     local objcopy = path.join(tc_bin, "arm-none-eabi-objcopy.exe")
     local objdump = path.join(tc_bin, "arm-none-eabi-objdump.exe")
 

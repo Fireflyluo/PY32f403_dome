@@ -1,6 +1,6 @@
 ./objects/mav_task.o: ..\..\Application\Src\mav_task.c \
-  ..\..\..\..\BSP\example\osal\task_event.h ..\..\..\..\OSAL\osal.h \
-  ..\..\..\..\OSAL\type.h \
+  ..\..\..\..\BSP\example\osal\task_event.h ..\..\..\..\LIB\OSAL\osal.h \
+  ..\..\..\..\LIB\OSAL\type.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f4xx_hal.h \
   ..\..\Application\Inc\py32f403_hal_conf.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_cortex.h \
@@ -24,9 +24,9 @@
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_tim_ex.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_uart.h \
   ..\..\..\..\BSP\PY32f403_Firmware_Library\PY32F403_HAL_Driver\Inc\py32f403_hal_iwdg.h \
-  ..\..\..\..\OSAL\osal_timer.h ..\..\..\..\OSAL\hal\timer.h \
-  ..\..\..\..\OSAL\osal_event.h ..\..\..\..\OSAL\osal_memory.h \
-  ..\..\..\..\OSAL\osal_msg.h ..\..\Middleware\mavlink\mavlink_hal.h \
+  ..\..\..\..\LIB\OSAL\osal_timer.h ..\..\..\..\LIB\OSAL\hal\timer.h \
+  ..\..\..\..\LIB\OSAL\osal_event.h ..\..\..\..\LIB\OSAL\osal_memory.h \
+  ..\..\..\..\LIB\OSAL\osal_msg.h ..\..\Middleware\mavlink\mavlink_hal.h \
   ..\..\Application\Inc\main.h \
   ..\..\..\..\BSP\py32_drivers\Inc\drv_include.h \
   ..\..\..\..\BSP\py32_drivers\Inc\drv_gpio.h \
